@@ -1,0 +1,15 @@
+#    -*- mode: org -*-
+
+
+Archived entries from file /home/cole/Dropbox/org/controller.org
+
+
+* DONE [#A] Finalize v0.38
+:PROPERTIES:
+:ARCHIVE_TIME: 2020-01-29 Wed 12:29
+:ARCHIVE_FILE: ~/Dropbox/org/controller.org
+:ARCHIVE_CATEGORY: controller
+:ARCHIVE_TODO: DONE
+:END:
+Added B1R8 and A8F2. Actually added them this time. The export process seems convoluted..
+Maybe clean up the code base just a little bit and also update the TCP command documentation.  

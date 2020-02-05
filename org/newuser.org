@@ -1,0 +1,58 @@
+#+options: ':nil *:t -:t ::t <:t H:3 \n:nil ^:t arch:headline
+#+options: author:t broken-links:nil c:nil creator:nil
+#+options: d:(not "LOGBOOK") date:t e:t email:nil f:t inline:t num:nil
+#+options: p:nil pri:nil prop:nil stat:t tags:t tasks:t tex:t
+#+options: timestamp:nil title:t toc:nil todo:t |:t
+#+title: X-Microwave New Employee Login
+#+date: 2019-12-05 Thu
+#+author: {{{Name}}}
+#+language: en
+#+select_tags: export
+#+exclude_tags: noexport
+#+creator: Emacs 26.3 (Org mode 9.2.5)
+
+#+LATEX_HEADER: \usepackage[margin=0.5in]{geometry}
+#+LATEX_HEADER: \usepackage{fontspec}
+#+LATEX_HEADER: \setmainfont{Ubuntu Mono}
+#+LATEX_HEADER: \linespread{0.8}
+
+#+MACRO: First   Alyssa
+#+MACRO: Last    Munguia
+#+MACRO: pw      Rava2052
+
+#+MACRO: acct  \MakeLowercase{{{{First}}}}.\MakeLowercase{{{{Last}}}}
+#+MACRO: Name   {{{First}}} {{{Last}}}
+
+The following account passwords are valid only for your first login. You will be asked to change your password when you gain access to each account.
+* _Domain Account_ (Computer Login)
+User Name: *{{{acct}}}* \\
+Password: {{{pw}}} \\
+Domain (if needed): XMICROWAVE
+
+** _LAN File Storage_
+File Explorer > Network > warehouse14 \\
+Login: Same as domain login.
+
+** _Gmail_
+User Name: *{{{acct}}}@xmicrowave.com* \\
+Password: {{{pw}}} \\
+[[https://mail.google.com]]
+
+** _Microsoft (Sharepoint)_
+User Name: *{{{acct}}}@xmicrowave.com* \\
+Password: {{{pw}}} \\
+[[https://xmicrowave.sharepoint.com]]
+* _General Wifi_
+For phones and other personal devices:
+- =XM-EMPL-5G= or =XM-EMPL-2G4=
+- Password: =73bCRPx6PyJS=
+/Note: Company devices should automatically connect to XM-SEC-5G (hidden network)/
+
+* _IT Password & Security Best Practices_
+Most company data breaches are due to:
+1. Poor passwords
+2. Rogue email attachments
+3. Rogue emails that look real, causing you to enter your username and password
+
+Strong passwords are considered over 8 characters in length and comprise of letters, numbers and symbols. They contain letters in both uppercase and lowercase. 
+

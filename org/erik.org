@@ -1,0 +1,11 @@
+#+setupfile: setupfile
+----------------------
+* WAIT [#C] Store T-Lines as single Category
+Cascade uses the Part database categories as the names that are put on the website. Currently all transmission lines are labeled as "T-Line_90deg" because the cascade db treats them as the same type and grabs the first association in the lookup table. Right now we are hard-coding the name "T-Line" to apply to all of the categories in cascade. 
+* WAIT [#D] PCB photos
+- [ ] 0953B
+- [ ] 1061 REV B no photo
+- [ ] 0540 No screw holes
+- [ ] 1205 White screw holes
+- [ ] 0559 White screw holes
+- [ ] 0569 Half-white screw holes

@@ -1,0 +1,43 @@
+This script will allow you to run commands on the X-MW Controller.
+
+In order to do this you need to make sure the command server is enabled
+  1. You will need to make sure that you can use SSH
+     - on windows you can install an SSH client like PuTTY
+     - on Linux/Mac you can use the built in SSH command
+  2. connect the X-MW Controller to the same network as your computer via an ethernet cable
+  3. find the ip address of the Controller
+     - click the Home icon in the top right
+       (if you just started the Controller it should already show the Home screen)
+     - click the Question icon in the top right
+     - if you connected it directly to your computer use the "192.168.10.2"
+       otherwise use the other ipv4 address
+  3. Login via SSH at that address with username: "pi", password: "raspberry"
+     example: "ssh pi@192.168.1.146"
+  4. You should see a prompt like this "pi@raspberrypi:~ $"
+  5. Edit the X-MW.ini file
+     - type "nano ~/.X-MW.ini" and press ENTER
+     - go to the line that says "host_cmd = default" and change it to "host_cmd = true"
+     - save and exit the file by pressing CTRL+X then "Y" to the "Save modified buffer" prompt
+     - then press ENTER when it asks for the filename to save it into
+  6. Reboot the controller by typing "sudo reboot" then ENTER
+
+Now the command server is enabled
+
+to use the command server follow these steps
+  1. make sure the Controller is connected to the network like in the previous steps
+  2. You will need Python 3.5 or later installed on your computer
+     (most Mac and Linux systems already have this)
+     - on windows you can get Python 3.5 or later by going to "https://python.org/download"
+  3. run this script by opening a terminal in the directory where you downloaded the code
+     and typing "python ./X_MWcontroller-interactive.py" when the script prompts you for the hostname,
+     enter the ip address
+     make sure you run this in python 3 (on Linux/Mac the command is "python3") on windows
+     you may need to find the python3 executable and run that passing script as an argument
+  4. you should now be in an interactive prompt. you can type commands here and press ENTER
+     to send them to the Controller.
+  5. to see a list of all the commands or to learn how to use the commands type "help"
+     - now you type commands
+
+You may also use the python script as a module and import it into other scripts.
+the only variable you need to import is class XMWController.
+To see how to create a python script that runs these commands similar

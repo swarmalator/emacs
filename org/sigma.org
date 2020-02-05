@@ -1,0 +1,46 @@
+#+setupfile: setupfile
+----------------------
+* TODO [#C] Setup Microsoft Teams
+
+* TODO [#C] UPS automatic graceful shut down
+Waiting for the new server to get in to do this. For now, the UPS client is running on the Filemaker machine and is sending status notifications to my email.
+  - Periodic extra drive backup.
+- iDRAC?\
+- [[http://aka.ms/WindowsAdminCenter][Windows Admin Center]]?
+* TODO [#C] Migrate FileMaker Server
+* TODO [#C] Migrate all vsphere-01 VMs
+* TODO [#C] Configure phone(s)
+Tried to configure some old Grandstream phones but I couldn't get them to work. Looked on 3CX and the provisioning seemed to be the same as the other phones. On the phone's display it kept saying that it wasn't configured. Seems like we need to just order some new phones that are the same kind as the others.
+
+Erik's phone is the model GXP2170
+[[https://www.amazon.com/Grandstream-GS-GXP2170-VoIP-Phone-Device/dp/B019X06IFS/ref=sr_1_1?keywords=gpx+2170&qid=1578338057&sr=8-1][amazon link]]
+* TODO [#B] Configure NUMA
+- AMD EPYC 7302
+- 2 sockets
+- 64 Logical processors
+- 16 cores per socket
+- Hyperthreading enabled
+* TODO [#E] iDRAC
+* TODO [#F] NIST Compliance
+* TODO [#F] Domain Controller setup/migration
+Learn how to configure Certificate Authorities
+* TODO [#F] Figure out AD certificates issue
+[[https://social.technet.microsoft.com/Forums/windowsserver/en-US/e150a463-7826-4151-9623-a6e655b6540e/issuing-cas-crl-checking-not-working?forum=winserversecurity][See this discussion]]
+
+[2020-01-06 Mon]
+- *AIA*: Authority Information Access
+- *CDP*: Certificate Distribution Point
+- *CRL*: Certificate Revocation List
+
+[2019-12-31 Tue]
+Service specific error: 2148081683
+
+Tried to add the revocation checking back into the certificate services with the following:
+
+certutil –setreg ca\CRLFlags -CRLF_REVCHECK_IGNORE_OFFLINE
+
+net stop certsvc
+net start certsvc
+
+But I had to add it back because doing this gave me that error. Changed the minus to a plus before CRLF_REVCHECK_IGNORE_OFFLINE.
+

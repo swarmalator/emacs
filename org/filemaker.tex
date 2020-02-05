@@ -1,0 +1,188 @@
+% Created 2020-01-13 Mon 10:09
+% Intended LaTeX compiler: lualatex
+\documentclass[11pt]{article}
+\usepackage{graphicx}
+\usepackage{grffile}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\author{Cole Turner}
+\date{\today}
+\title{}
+\hypersetup{
+ pdfauthor={Cole Turner},
+ pdftitle={},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 26.3 (Org mode 9.2.5)}, 
+ pdflang={English}}
+\begin{document}
+
+\tableofcontents
+
+\#\#+setupfile: setupfile
+
+\noindent\rule{\textwidth}{0.5pt}
+\section{{\bfseries\sffamily DONE} \framebox{\#A} Import sharepoint to FileMaker}
+\label{sec:org90952e4}
+\section{{\bfseries\sffamily TODO} \framebox{\#B} Add missing FormFactors}
+\label{sec:org93329eb}
+\section{{\bfseries\sffamily TODO} \framebox{\#B} Remove unnecessary sparams}
+\label{sec:org827afec}
+Remove sparam file names for PLLs, PLL-VCOs and stuff like that. Also make sure that the cascade export doesn't create the "models" entry when there is no sparam.
+\section{{\bfseries\sffamily TODO} \framebox{\#B} Check all missing properties}
+\label{sec:org8e3e8ee}
+catId=BSF
+  H20LF=N/A for all
+  XM-A2C4-0604D L20LF=N/A L40LF=N/A H40LF=N/A
+catId=BPF
+  L40LF=N/A and H40LF=N/A for some
+catId=SP2
+  AMP\textsubscript{BAL}=N/A for most
+  PHASE\textsubscript{BAL}=N/A for most
+catId=CPL
+  ISO=N/A for most
+  AMP\textsubscript{BAL}=N/A for most
+  PHASE\textsubscript{BAL}=N/A for most
+  DIRECTIVITY=N/A for all
+catId=SW2 is good
+catId=EQL
+  HPWRL=N/A for all
+  SLOPE=N/A for some
+catId=PAD is good
+catId=DSA
+  VDD=N/A for all
+  HFREQ=N/A for some (but LFREQ is defined for some of those)
+  LFREQ=N/A (if LFREQ=N/A then HFREQ=N/A for those parts)
+catId=TVA
+  LFREQ=N/A for few
+  HFREQ=N/A for some
+catId=VVA
+  IDD=N/A for some
+catId=TML
+  LFREQ=N/A for few
+  HFREQ=N/A for all
+  IL=N/A for all
+catId=DTC
+  IDD=N/A for all
+catId=BTE
+  IDD=N/A for all
+catId=BLN
+  everything but XM-A7F8-0409D: PHASE\textsubscript{BAL}=N/A
+  XM-B2F5-0409D ISO=N/A, AMP\textsubscript{BAL}=N/A
+  XM-B5Y8-0409D ISO=N/A, AMP\textsubscript{BAL}=N/A
+catId=CIR (only has 2 parts)
+   ISO=N/A for all
+catId=CMP (only has 1 part)
+  HVOUT=N/A for all
+catId=DPX
+  HIGH\textsubscript{FREQ}\textsubscript{2}\textsubscript{MHZ}=N/A for all
+
+catId=SYN
+  XM-C6K5-0409D PWR = N/A
+catId=PSH
+  VDD = N/A
+catId=PLM
+  IL = N/A for most of them
+  HPWRL = N/A for most of them
+catId=AMP
+  XM-A2R5-1204D
+    everything but GAIN and HFREQ is undefined
+  XM-A2R6-1204, XM-A2R7-1204
+    everything is undefined
+  XM-A9R3-0804D
+    IDD=N/A
+  XM-A9R7-0804D
+    IP3=N/A, VDD=N/A, IDD=N/A
+  XM-B8U8-0404D
+    NF=N/A, P1DB=N/A, VDD=N/A, IDD=N/A
+catId=MXR is good
+catId=MOD is good
+catId=UPC
+  CONV\textsubscript{LOSS}=N/A
+  GAIN=N/A
+catId=DMD
+  CONV\textsubscript{LOSS}=N/A
+  GAIN=N/A
+catId=DNC
+  CONV\textsubscript{LOSS}=N/A
+  GAIN=N/A
+catId=MUL
+  LIPWR=N/A for most of them
+  HIPWR=N/A for all of them
+  XM-B5H5-0404D CONV\textsubscript{LOSS}=N/A
+catId=DIV
+  XM-A2A2-0804D all attributes are N/A
+  XM-A2K5-0804D POUT=N/A, IDD=N/A
+  XM-B4U5-0804D LIPWR=N/A, HIPWR=N/A, POUT=N/A, VDD=N/A, IDD=N/A
+catId=LPF
+  40LF=N/A for most
+  20LF=N/A for some
+  3LF=N/A for a few
+catId=HPF
+  XM-B818-0204D all attributes
+  IL=N/A for some
+  3LF=N/A for few
+  20LF=N/A for few
+  40LF=N/A for some
+catId=DSA (LFREQ\&HFREQ problem)
+catId=TVA (LFREQ\&HFREQ problem)
+catId=TML (LFREQ\&HFREQ problem)
+\section{{\bfseries\sffamily TODO} \framebox{\#C} Add Connectors from X-cessories}
+\label{sec:org52e52a6}
+\section{{\bfseries\sffamily TODO} \framebox{\#C} Cascade SVG generate paths}
+\label{sec:orga611e3f}
+\section{{\bfseries\sffamily TODO} \framebox{\#C} Get categories with valid/cascadeable sparams}
+\label{sec:org114eda1}
+\begin{itemize}
+\item Amplifier
+\item Attn
+\item Bal
+\item Bias controller
+\item Bias Tees
+\item Circulator/Isolator
+\item Comparators
+\item Converters/Modulators - nonStandard s2p only
+\item Couplers
+\item Detectors - voltage output .s2p if has RF out
+\item Diodes
+\item Diplexers
+\item Dividers .csv and .cti only
+\item Equalizers
+\item Filters
+\item Gain and Phase Detectors - same as detectors
+\item Limiters
+\item Loads
+\item Mixers non-standard .s2p
+\item Multipliers .csv and .cti only
+\item Oscillators - no saved data
+\item PAC
+\item PLL -ask Britney
+\item PLL/VCO
+\item Phase shifter
+\item Splitter/Combiner
+\item Switches
+\item Transmission lines
+\end{itemize}
+\section{{\bfseries\sffamily TODO} \framebox{\#C} Add more housings to Xcessories and cascade}
+\label{sec:orgee85306}
+Check in the HOU Formfactors for supported housings that aren't in the database yet.  
+\section{{\bfseries\sffamily TODO} \framebox{\#D} PCB 0953B is not blue}
+\label{sec:org4cd3efe}
+\section{{\bfseries\sffamily TODO} \framebox{\#D} rebuild A9G1 and Diplexers in blockbuilder}
+\label{sec:org7a55b5f}
+\section{{\bfseries\sffamily TODO} \framebox{\#D} Website exports database}
+\label{sec:org86e792c}
+
+\section{{\bfseries\sffamily TODO} \framebox{\#F} Universal Part Formfactors}
+\label{sec:orgeab477a}
+\section{{\bfseries\sffamily TODO} \framebox{\#A} Fix parts excluded by web PCB revision change\hfill{}\textsc{erik}}
+\label{sec:org6759a9f}
+Some parts were not included in the last cascade export because the PCB web revision value was changed, and there was not an image associated with the built SVG URL. Each part is exported only if the URL is valid on S3.
+\end{document}

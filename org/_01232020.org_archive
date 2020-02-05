@@ -1,0 +1,457 @@
+#    -*- mode: org -*-
+
+Archived entries from file /home/cole/Dropbox/orgsite/cascade.org
+* DONE [#B] Add "has sparam" column to partSelector
+:PROPERTIES:
+:ARCHIVE_TIME: 2020-01-06 Mon 14:54
+:ARCHIVE_FILE: ~/Dropbox/orgsite/cascade.org
+:ARCHIVE_CATEGORY: cascade
+:ARCHIVE_TODO: DONE
+:END:
+
+* DONE [#A] Validate imported and hard-coded slugs (e.g. PWR)
+:PROPERTIES:
+:ARCHIVE_TIME: 2020-01-10 Fri 17:19
+:ARCHIVE_FILE: ~/Dropbox/orgsite/cascade.org
+:ARCHIVE_CATEGORY: cascade
+:ARCHIVE_TODO: DONE
+:END:
+See Constants.js.
+
+* DONE [#A] Hide Diodes, Combined Blocks, MPAC categories
+:PROPERTIES:
+:ARCHIVE_TIME: 2020-01-10 Fri 17:19
+:ARCHIVE_FILE: ~/Dropbox/orgsite/cascade.org
+:ARCHIVE_CATEGORY: cascade
+:ARCHIVE_TODO: DONE
+:END:
+
+* DONE [#A] Simplify quicklook tables
+:PROPERTIES:
+:ARCHIVE_TIME: 2020-01-10 Fri 17:19
+:ARCHIVE_FILE: ~/Dropbox/orgsite/cascade.org
+:ARCHIVE_CATEGORY: cascade
+:ARCHIVE_TODO: DONE
+:END:
+Use the following values from the partselector table for each category:
+- 50O: lfreq, hfreq, load
+- BAL: lfreq, hfreq, ratio, il, iso
+- BPF: center freq, 3dbbw, insertion loss, l20lf, h20lf
+- BSF: center freq, insertion loss, l20lf, h20lf6
+- BTE: Lfreq, hfreq il, iso
+- CIR: lfreq, hfreq, il, iso
+- CMP: lvin, hvin, lvout, hvout
+- CPL: lfreq, hfreq, cplg, ISO, il
+- DET: lipwr, hipwr, lfreq, hfreq
+- DPX: lfreq1, hfreq1, il1, lfreq2, hfreq2, il2
+- DSA: IL, grng (attenuation range), gstp, lfreq, hfreq
+- EQL: hfreq, slope, low freq gain, high freq gain
+- HPF: lfreq, hfreq, il, 3lf, 20lf
+- LPF: lfreq, high freq, IL, 3lf, 20lf
+- OSC: freq, freqac, PN
+- PLL: lfreq, hfreq
+- PLM: Lfreq, Hfreq, IL, lpwrl (as Flat lkg)
+- PSH: Lfreq, hfreq, range, IL
+- SP2: lfreq, hfreq, il
+- SW2: lfreq, hfreq, il
+- SYN: lfreq, hfreq, pwr (as POUT)
+- TML: lfreq, hfreq, il
+- TVA: attn, slope, pwr, lfreq, hfreq
+- VCO: lfreq, hfreq, PWR (as POUT)
+- VVA: lfreq, hfreq, grng, il
+
+* DONE [#A] Publish Print button cascade
+:PROPERTIES:
+:ARCHIVE_TIME: 2020-01-10 Fri 17:19
+:ARCHIVE_FILE: ~/Dropbox/orgsite/cascade.org
+:ARCHIVE_CATEGORY: cascade
+:ARCHIVE_TODO: DONE
+:END:
+Cascade sparamters is in progress.
+Use query parameter casc_sp=1
+
+* DONE [#A] Partselector hide "null" named props
+:PROPERTIES:
+:ARCHIVE_TIME: 2020-01-10 Fri 17:19
+:ARCHIVE_FILE: ~/Dropbox/orgsite/cascade.org
+:ARCHIVE_CATEGORY: cascade
+:ARCHIVE_TODO: DONE
+:END:
+Cascade needs to be able to read part data props in a way such that the "null" elements of the categories props are ignored. Basically, every prop slug has a order index position and a boolean "show" value predefined in filemaker, and the cascade database will fill only those indexes that are shown. The result is that there will be null elements between the filled ones, and nothing if there is not a non-null prop after a null one in the list. (If the last element in the list is hidden, it is omitted from the list).
+
+The parts.json will always have the same or fewer properties per part as it's category does, depending on if the last prop(s) happen to be hidden.
+
+* DONE [#A] Fix Partdata table errors (see Limiters - IL)
+:PROPERTIES:
+:ARCHIVE_TIME: 2020-01-10 Fri 17:19
+:ARCHIVE_FILE: ~/Dropbox/orgsite/cascade.org
+:ARCHIVE_CATEGORY: cascade
+:ARCHIVE_TODO: DONE
+:END:
+
+* DONE [#B] Add "has sparam" column to partSelector
+:PROPERTIES:
+:ARCHIVE_TIME: 2020-01-10 Fri 17:19
+:ARCHIVE_FILE: ~/Dropbox/orgsite/cascade.org
+:ARCHIVE_CATEGORY: cascade
+:ARCHIVE_TODO: DONE
+:END:
+
+* DONE [#A] Fix parts excluded by web PCB revision change
+:PROPERTIES:
+:ARCHIVE_TIME: 2020-01-13 Mon 17:09
+:ARCHIVE_FILE: ~/Dropbox/orgsite/filemaker.org
+:ARCHIVE_CATEGORY: filemaker
+:ARCHIVE_TODO: DONE
+:END:
+Some parts were not included in the last cascade export because the PCB web revision value was changed, and there was not an image associated with the built SVG URL. Each part is exported only if the URL is valid on S3.
+
+* DONE [#A] Fix Cascade [13/14]
+:PROPERTIES:
+:ARCHIVE_TIME: 2020-01-14 Tue 14:14
+:ARCHIVE_FILE: ~/Dropbox/orgsite/cascade.org
+:ARCHIVE_CATEGORY: cascade
+:ARCHIVE_TODO: DONE
+:END:
+- visual glitch ports grow in size if you click on them weirdly. (Hard to replicate, I tried repeatedly clickng on them to get it to happen)
+- [X] OSC: No output
+- CIR: Not implemented
+- [X] MXR: No output (Max =HF= ??? or RF?)
+- [X] TML: Wrong category name and properties/columns
+- [X] DPX: IL1 and IL2 not implemented
+- [X] DPX: Lfreq1 and hfreq1 not implemented
+- [X] Configurable don't work in cascade (Insertion loss = 3 becomes NaN)
+- [X] Band Pass Tunable Filter category (A7L5)
+- [X] A2W4 missing 2 ports
+- [X] CMP: Has no ports (A4H4)
+- [X] TVA: All EMC TS** TVAs mismatched category props
+- [X] VVA: No IL data
+- [X] BTE: Insertion Loss: N/A
+- [X] SW2: Can't change switch path
+
+* DONE [#B] Fix showCat position of LPF, BPT
+CLOSED: [2020-01-14 Tue 11:34]
+:PROPERTIES:
+:ARCHIVE_TIME: 2020-01-14 Tue 14:15
+:ARCHIVE_FILE: ~/Dropbox/orgsite/cascade.org
+:ARCHIVE_CATEGORY: cascade
+:ARCHIVE_TODO: DONE
+:END:
+Isaac uploaded a new showCategories to s3
+* DONE [#A] Flip Control boards
+CLOSED: [2020-01-15 Wed 14:26]
+:PROPERTIES:
+:ARCHIVE_TIME: 2020-01-17 Fri 13:21
+:ARCHIVE_FILE: ~/Dropbox/orgsite/cascade.org
+:ARCHIVE_CATEGORY: cascade
+:ARCHIVE_TODO: DONE
+:END:
+* DONE [#A] Switches be bad
+:PROPERTIES:
+:ARCHIVE_TIME: 2020-01-15 Wed 13:36
+:ARCHIVE_FILE: ~/Dropbox/orgsite/cascade.org
+:ARCHIVE_CATEGORY: cascade
+:ARCHIVE_TODO: DONE
+:END:
+switch uses the wrong S21/S31 value (-60dB gain @1GHz with A2L8)
+
+* DONE [#B] Change out Balun icon
+:PROPERTIES:
+:ARCHIVE_TIME: 2020-01-17 Fri 13:21
+:ARCHIVE_FILE: ~/Dropbox/orgsite/cascade.org
+:ARCHIVE_CATEGORY: cascade
+:ARCHIVE_TODO: DONE
+:END:
+** DONE [#B] Remake Balun formfactors with new icon
+* DONE [#A] BUG: SRC and PNS cannot be cloned like other parts
+:PROPERTIES:
+:ARCHIVE_TIME: 2020-01-17 Fri 13:21
+:ARCHIVE_FILE: ~/Dropbox/orgsite/cascade.org
+:ARCHIVE_CATEGORY: cascade
+:ARCHIVE_TODO: TODO
+:END:
+[2020-01-17 Fri 11:13]
+When you CTRL+Click and drag a part it is supposed to clone the part and place the clone where you mouse is pointing when you release the mouse.
+
+* DONE [#A] Correct Browser notification on startup
+CLOSED: [2020-01-20 Mon 07:25]
+:PROPERTIES:
+:ARCHIVE_TIME: 2020-01-20 Mon 10:48
+:ARCHIVE_FILE: ~/Dropbox/orgsite/cascade.org
+:ARCHIVE_CATEGORY: cascade
+:ARCHIVE_TODO: DONE
+:END:
+Same thing for Sparameter viewer. people keep emailing using internet explorer when it doesn't work. Need to notify people so they don't email us.
+
+* DONE [#B] Check all missing properties
+:PROPERTIES:
+:ARCHIVE_TIME: 2020-01-21 Tue 13:23
+:ARCHIVE_FILE: ~/Dropbox/orgsite/filemaker.org
+:ARCHIVE_CATEGORY: filemaker
+:ARCHIVE_TODO: DONE
+:END:
+catId=BSF
+  H20LF=N/A for all
+  XM-A2C4-0604D L20LF=N/A L40LF=N/A H40LF=N/A
+catId=BPF
+  L40LF=N/A and H40LF=N/A for some
+catId=SP2
+  AMP_BAL=N/A for most
+  PHASE_BAL=N/A for most
+catId=CPL
+  ISO=N/A for most
+  AMP_BAL=N/A for most
+  PHASE_BAL=N/A for most
+  DIRECTIVITY=N/A for all
+catId=SW2 is good
+catId=EQL
+  HPWRL=N/A for all
+  SLOPE=N/A for some
+catId=PAD is good
+catId=DSA
+  VDD=N/A for all
+  HFREQ=N/A for some (but LFREQ is defined for some of those)
+  LFREQ=N/A (if LFREQ=N/A then HFREQ=N/A for those parts)
+catId=TVA
+  LFREQ=N/A for few
+  HFREQ=N/A for some
+catId=VVA
+  IDD=N/A for some
+catId=TML
+  LFREQ=N/A for few
+  HFREQ=N/A for all
+  IL=N/A for all
+catId=DTC
+  IDD=N/A for all
+catId=BTE
+  IDD=N/A for all
+catId=BLN
+  everything but XM-A7F8-0409D: PHASE_BAL=N/A
+  XM-B2F5-0409D ISO=N/A, AMP_BAL=N/A
+  XM-B5Y8-0409D ISO=N/A, AMP_BAL=N/A
+catId=CIR (only has 2 parts)
+   ISO=N/A for all
+catId=CMP (only has 1 part)
+  HVOUT=N/A for all
+catId=DPX
+  HIGH_FREQ_2_MHZ=N/A for all
+
+catId=SYN
+  XM-C6K5-0409D PWR = N/A
+catId=PSH
+  VDD = N/A
+catId=PLM
+  IL = N/A for most of them
+  HPWRL = N/A for most of them
+catId=AMP
+  XM-A2R5-1204D
+    everything but GAIN and HFREQ is undefined
+  XM-A2R6-1204, XM-A2R7-1204
+    everything is undefined
+  XM-A9R3-0804D
+    IDD=N/A
+  XM-A9R7-0804D
+    IP3=N/A, VDD=N/A, IDD=N/A
+  XM-B8U8-0404D
+    NF=N/A, P1DB=N/A, VDD=N/A, IDD=N/A
+catId=MXR is good
+catId=MOD is good
+catId=UPC
+  CONV_LOSS=N/A
+  GAIN=N/A
+catId=DMD
+  CONV_LOSS=N/A
+  GAIN=N/A
+catId=DNC
+  CONV_LOSS=N/A
+  GAIN=N/A
+catId=MUL
+  LIPWR=N/A for most of them
+  HIPWR=N/A for all of them
+  XM-B5H5-0404D CONV_LOSS=N/A
+catId=DIV
+  XM-A2A2-0804D all attributes are N/A
+  XM-A2K5-0804D POUT=N/A, IDD=N/A
+  XM-B4U5-0804D LIPWR=N/A, HIPWR=N/A, POUT=N/A, VDD=N/A, IDD=N/A
+catId=LPF
+  40LF=N/A for most
+  20LF=N/A for some
+  3LF=N/A for a few
+catId=HPF
+  XM-B818-0204D all attributes
+  IL=N/A for some
+  3LF=N/A for few
+  20LF=N/A for few
+  40LF=N/A for some
+catId=DSA (LFREQ&HFREQ problem)
+catId=TVA (LFREQ&HFREQ problem)
+catId=TML (LFREQ&HFREQ problem)
+
+* DONE [#A] rebuild Diplexers in blockbuilder
+:PROPERTIES:
+:ARCHIVE_TIME: 2020-01-21 Tue 13:23
+:ARCHIVE_FILE: ~/Dropbox/orgsite/filemaker.org
+:ARCHIVE_CATEGORY: filemaker
+:ARCHIVE_TODO: DONE
+:END:
+* DONE [#A] XM-A183 s-parameters is negative
+:PROPERTIES:
+:ARCHIVE_TIME: 2020-01-21 Tue 16:31
+:ARCHIVE_FILE: ~/Dropbox/orgsite/cascade.org
+:ARCHIVE_CATEGORY: cascade
+:ARCHIVE_TODO: DONE
+:END:
+[2020-01-20 Mon 09:50]
+
+* DONE [#F] Document software licenses
+:PROPERTIES:
+:ARCHIVE_TIME: 2020-01-10 Fri 17:19
+:ARCHIVE_FILE: ~/Dropbox/orgsite/it.org
+:ARCHIVE_CATEGORY: it
+:ARCHIVE_TODO: DONE
+:END:
+Going to make a table of all the Keysight licenses and who's using them.
+
+| User   | MAC Address  | License File                    | Notes                                        |
+|--------+--------------+---------------------------------+----------------------------------------------|
+| Imre   | 5A4D5700ADA0 | 5A4D5700ADA0_20190327164949.lic | ADS, EMPro, Momentum, FEM bundle             |
+| John   | 5A4D5700ADA1 | 5A4D5700ADA1_20190327164919.lic | ADS, EMPro, Momentum, FEM bundle             |
+| Mike   | 5A4D5700ADB0 | 5A4D5700ADA0_20190327164949.lic | ADS Core                                     |
+| Susana | 5A4D5700ADB1 | 5A4D5700ADB1_20190327164937.lic | ADS Core                                     |
+| Markus | 5A4D5700ADB2 | 5A4D5700ADB2_20190327164943.lic | ADS Core                                     |
+| Justin | 54BF6483C90A | 54BF6483C90A_20190502154352.lic | ADS Core?  * Not in E_Drive/ADS/License/2019 |
+| Amy    |              |                                 |                                              |
+* DONE [#A] Quickbooks for Amy
+SCHEDULED: <2020-01-06 Mon 11:30>
+:PROPERTIES:
+:ARCHIVE_TIME: 2020-01-10 Fri 17:19
+:ARCHIVE_FILE: ~/Dropbox/orgsite/it.org
+:ARCHIVE_CATEGORY: it
+:ARCHIVE_TODO: DONE
+:END:
+* DONE [#A] New engineer laptop setup
+:PROPERTIES:
+:ARCHIVE_TIME: 2020-01-10 Fri 17:19
+:ARCHIVE_FILE: ~/Dropbox/orgsite/it.org
+:ARCHIVE_CATEGORY: it
+:ARCHIVE_TODO: DONE
+:END:
+
+Already set this up
+* DONE [#A] Save IT configuration backups
+CLOSED: [2020-01-06 Mon 16:19]
+:PROPERTIES:
+:ARCHIVE_TIME: 2020-01-10 Fri 17:19
+:ARCHIVE_FILE: ~/Dropbox/orgsite/it.org
+:ARCHIVE_CATEGORY: it
+:ARCHIVE_TODO: DONE
+:END:
+- [X] 3CX
+- [X] Pfsense
+- [X] QNAP
+- [X] Edgeswitch
+  E_Drive/_IT
+- [X] Edgeswitch 2
+  E_Drive/_IT
+- [X] Modem
+  E_Drive/_IT
+- [X] CyberPower
+  Default settings. PowerPanel Business Local
+* DONE [#C] Add sparam viewer option in place of phase noise
+:PROPERTIES:
+:ARCHIVE_TIME: 2020-01-10 Fri 17:19
+:ARCHIVE_FILE: ~/Dropbox/orgsite/cascade.org
+:ARCHIVE_CATEGORY: cascade
+:ARCHIVE_TODO: DONE
+:END:
+- Preview s parameter using graph library for phase noise
+- Add download s parameter file option
+** TODO [#C] Cascading Sparam plots
+Learn the full matrix calculation of sparams and implement in cascade
+[[http://www.rfcafe.com/references/articles/Joe-Cahak/Computing-Scattering-Parameters.htm][see s params]]
+* DONE [#A] Import sharepoint to FileMaker
+:PROPERTIES:
+:ARCHIVE_TIME: 2020-01-13 Mon 10:11
+:ARCHIVE_FILE: ~/Dropbox/orgsite/filemaker.org
+:ARCHIVE_CATEGORY: filemaker
+:ARCHIVE_TODO: DONE
+:END:
+* DONE [#A] Setup my VM and login to quickbooks
+:PROPERTIES:
+:ARCHIVE_TIME: 2020-01-14 Tue 16:04
+:ARCHIVE_FILE: ~/Dropbox/orgsite/it.org
+:ARCHIVE_CATEGORY: it
+:ARCHIVE_TODO: DONE
+:END:
+* DONE [#A] Fix John's phone
+:PROPERTIES:
+:ARCHIVE_TIME: 2020-01-14 Tue 16:04
+:ARCHIVE_FILE: ~/Dropbox/orgsite/it.org
+:ARCHIVE_CATEGORY: it
+:ARCHIVE_TODO: DONE
+:END:
+* DONE [#A] Setup my VM and login to quickbooks
+:PROPERTIES:
+:ARCHIVE_TIME: 2020-01-14 Tue 16:22
+:ARCHIVE_FILE: ~/Dropbox/orgsite/it.org
+:ARCHIVE_CATEGORY: it
+:ARCHIVE_TODO: DONE
+:END:
+* DONE [#A] Fix John's phone
+:PROPERTIES:
+:ARCHIVE_TIME: 2020-01-14 Tue 16:22
+:ARCHIVE_FILE: ~/Dropbox/orgsite/it.org
+:ARCHIVE_CATEGORY: it
+:ARCHIVE_TODO: DONE
+:END:
+* DONE [#F] org todo capture
+:PROPERTIES:
+:ARCHIVE_TIME: 2020-01-14 Tue 16:29
+:ARCHIVE_FILE: ~/Dropbox/orgsite/misc.org
+:ARCHIVE_CATEGORY: misc
+:ARCHIVE_TODO: DONE
+:END:
+* DONE [#A] Release version 0.38
+:PROPERTIES:
+:ARCHIVE_TIME: 2020-01-14 Tue 16:30
+:ARCHIVE_FILE: ~/Dropbox/orgsite/controller.org
+:ARCHIVE_CATEGORY: controller
+:ARCHIVE_TODO: DONE
+:END:
+* DONE [#C] Add part search feature
+:PROPERTIES:
+:ARCHIVE_TIME: 2020-01-14 Tue 16:30
+:ARCHIVE_FILE: ~/Dropbox/orgsite/controller.org
+:ARCHIVE_CATEGORY: controller
+:ARCHIVE_TODO: DONE
+:END:
+* DONE [#A] Michael’s MS office expires
+DEADLINE: <2020-01-17 Fri>
+:PROPERTIES:
+:ARCHIVE_TIME: 2020-01-20 Mon 09:05
+:ARCHIVE_FILE: ~/Dropbox/orgsite/it.org
+:ARCHIVE_CATEGORY: it
+:ARCHIVE_TODO: DONE
+:END:
+* DONE [#F] Update FMD
+:PROPERTIES:
+:ARCHIVE_TIME: 2020-01-21 Tue 13:23
+:ARCHIVE_FILE: ~/Dropbox/orgsite/it.org
+:ARCHIVE_CATEGORY: it
+:ARCHIVE_TODO: DONE
+:END:
+* DONE [#A] Bring SSD
+CLOSED: [2020-01-17 Fri 10:55] DEADLINE: <2020-01-17 Fri 6:30>
+:PROPERTIES:
+:ARCHIVE_TIME: 2020-01-21 Tue 13:23
+:ARCHIVE_FILE: ~/Dropbox/orgsite/it.org
+:ARCHIVE_CATEGORY: it
+:ARCHIVE_TODO: DONE
+:END:
+* DONE [#D] Big number BPT
+:PROPERTIES:
+:ARCHIVE_TIME: 2020-01-21 Tue 16:31
+:ARCHIVE_FILE: ~/Dropbox/orgsite/cascade.org
+:ARCHIVE_CATEGORY: cascade
+:ARCHIVE_TODO: DONE
+:END:

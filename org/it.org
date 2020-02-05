@@ -1,0 +1,45 @@
+#+setupfile: setupfile
+----------------------
+* TODO [#A] Update and Restart NAS
+* TODO [#C] Solidworks for John
+  - Remember to turn off antivirus software during install
+* TODO [#C] Shipping room general login
+Need to not have this computer use Dwayne's login
+* TODO [#E] Make labelmaker data faster
+quickbooks -> sharepoint -> filemaker label thing
+
+Need to ask Kristen: "What do you do when you create labels for spring pin boards"
+
+1. Auto serialize parts
+2. Spring pin boards
+* WAIT [#D] ADS Licensing solution
+- look for ADS software viewer and not editor.
+- look into sharing ADS on server
+** ADS license for Amy
+* WIP [#B] Get Engineering Laptops 
+* TODO [#C] New big monitor for engineering
+* TODO [#C] Low latency configuration for RDP servers?
+* TODO [#A] CentOS NCentral installs
+* TODO [#A] Justin ADS Expiration?
+On Justin's computer. 
+Cam350 expires in 30 days? 
+ADS expires in 29 days?
+* TODO [#B] Computer Inventory
+Start with engineering. New monitors? Will computers be able to drive another monitor?
+* TODO [#D] Setup new computer
+SCHEDULED: <2020-02-07 Fri>
+* TODO [#C] Sigma list for 2/16
+DEADLINE: <2020-02-16 Sun>
+
+- Deployment of Carbon Black EDR to all nodes
+- Creation of Sigma accounts to replace shared administration accounts
+- Confirm receipt of all ordered hardware for potential install on 2/16/2020
+- [ ] Disable any extraneous old employee or administrator accounts in AD (X-Microwave to disable or provide list)
+- [ ] Confirm with John/Erik/Cole on potential downtime during 2/16/2020 to install new hardware (X-Microwave to decide best day/time)
+- [ ] Confirm all regulatory requirements – ie SOC, NIST, ISO – needed at X-Microwave for their clients (X-Microwave to provide)
+- [ ] Automated patching schedule for workstation (X-Microwave to decide best times)
+- [ ] Manual patching/maintenance schedules for Servers (X-Microwave to decide best times)
+- [ ] Verify N-Central portal for all new N-Central installs from today (Sigma to check, X-Microwave to install any missing nodes)
+- [ ] Deploy VEEAM Backup client (Requested by X-Microwave to hold off VEEAM deployment until the new servers were in place)
+* TODO [#A] Setup Brenda's computer
+SCHEDULED: <2020-02-06 Thu>

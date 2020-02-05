@@ -1,0 +1,47 @@
+#+SETUPFILE: setupfile
+----------------------
+* TODO [#A] Bug: Cannot use keyboard shortcuts after placing configurable
+In Firefox this happens. Console Warnings as well
+* WAIT [#B] Run FormFactors and BRD Image checker
+I have updated the cascade database on S3 since Isaac sent me those emails with the lists of bad parts. We should run those tests again to see what is left to edit.
+* TODO [#A] List all non cascade functional categories and prioritize
+John said to make a list of all the parts that don't currently work in cascade and then together we can prioritize which ones customers will probably like use more than others.  
+
+- Circulator
+
+* TODO [#C] Check parameters by category
+[2020-01-20 Mon 10:07]
+
+Configurable
+- correct sign
+- limit to valid range i.e. no negative NF
+
+- IL = (+)pos
+- NF = (+)pos
+* WAIT [#D] Support for cascading circulator
+[2020-01-20 Mon 10:43]
+Circulators are supposed to act like directional couplers with the thru port being the immediate next port around the circle and the cpl port being the next one after that
+* TODO [#D] search part always drop in view area
+* Fixes
+** TODO [#A] Has S-Param column is not accurate
+** WIP [#A] Fix Print button scaling
+** TODO [#B] Rebuild Demod/UPCs
+** TODO [#B] Rebuild detectors
+** TODO [#D] Quicker switch path editing
+** TODO [#D] TML Size 1608 needs to be curved 
+** TODO [#E] Done button for customDataEntry is not immediately obvious
+[2020-01-17 Fri 14:12]
+Too many buttons between #customDataEntry
+And #modeSelector
+* Additions
+** TODO [#B] 'X' to close cascade windows 
+** TODO [#D] BOM count number of screws
+
+** TODO [#D] Outside Frequency Range indication
+Just thought perhaps we could make the ports turn red or something whenever someone tried to provide an input that is not within the acceptable range, lfreq hfreq, of that part.  
+** WIP [#C] Auto lids to cascade tool
+Can be done but not finished.
+
+Alright I spent enough time thinking about the automatic lids algorithm. The walls algorithms also needs some tweaking it seems. What I came up with was thinking about Pieces fitting together in terms of male and female pieces. The lids have four points of contact. The regular lids have three female sides and one male side. The T-Lid has all four female. Walls have only one point of contact, and are always male. Walls can have much different lengths, though. 
+** TODO [#B] Make dividers, switches, DSAs "programmable"
+We need to be able to change things like the switch path and have the part not turn purple. We will add a new divider category soon with multiple division options. (Would this apply to DSAs as well? Need to think of a way to implement)

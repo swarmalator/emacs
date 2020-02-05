@@ -1,0 +1,88 @@
+module PowerSeries where
+
+import Prelude as P hiding (zipWith, map, (<*>), (*>), head, tail, take, cycle, repeat)
+import Data.Stream
+
+(<+>) :: Num a => Stream a -> Stream a -> Stream a
+(<+>) = zipWith (+)
+
+(<->) :: Num a => Stream a -> Stream a -> Stream a
+(<->) = zipWith (-)
+
+(*>) :: Num a => a -> Stream a -> Stream a
+(*>) x = map (x*)
+
+(<*>) :: Num a => Stream a -> Stream a -> Stream a
+(<*>) xs ys = (head xs *> ys) <+> (0 <:> (tail xs <*> ys))
+
+(</>) :: Fractional a => Stream a -> Stream a -> Stream a
+(</>) xs ys = r <:> ((tail (xs <-> (r *> ys)) </> ys))
+  where r = head xs / head ys
+
+diff :: (Enum a, Num a) => Stream a -> Stream a
+diff = zipWith (*) (fromList [1..]) . tail
+
+int :: (Enum a, Fractional a) => a -> Stream a -> Stream a
+int c xs = c <:> zipWith (/) xs (fromList [1..])
+
+expS, sinS, cosS, gausS :: (Enum a, Fractional a) => Stream a
+expS = map (1/) (fromList (scanl (*) 1 [1..]))
+sinS = zipWith (*) (cycle [0,1,0,-1]) expS
+cosS = zipWith (*) (cycle [1,0,-1,0]) expS
+gausS = intersperse 0 $ zipWith (*) (cycle [1,-1]) $ map (1/) (fromList (scanl (*) 1 [1..])) 
+
+dsp :: Stream a -> [a]
+dsp = take 10
+
+sde1 y0 =
+  let
+    y   = int y0 y'
+    y'  = int (0.01) y''
+    y'' = 2 *> (y' <*> y)
+  in dsp y
+
+(<++>) :: Num a => Stream (Stream  a) -> Stream (Stream  a) -> Stream (Stream a)
+(<++>) = zipWith (<+>)
+
+(<-->) :: Num a => Stream (Stream  a) -> Stream (Stream  a) -> Stream (Stream a)
+(<-->) = zipWith (<->)
+
+(**>) :: Num a => a -> Stream (Stream  a) -> Stream (Stream a)
+(**>) x = map (x*>)
+
+(<**>) :: Num a => Stream (Stream  a) -> Stream (Stream  a) -> Stream (Stream a)
+(<**>) fs gs = (map (head fs <*>) gs) <++> (repeat 0 <:> (tail fs <**> gs))
+
+(<//>) :: Fractional a => Stream (Stream  a) -> Stream (Stream  a) -> Stream (Stream a)
+(<//>) fs gs = q <:> ((tail (fs <--> (map (q <*>) gs)) <//> gs))
+  where q = head fs </> head gs
+
+delt :: (Num a, Enum a) => Stream (Stream a) -> Stream (Stream a)
+delt = map diff 
+
+delx :: (Num a, Enum a) => Stream (Stream a) -> Stream (Stream a)
+delx = zipWith (*>) (fromList [1..]) . tail
+
+intt :: (Enum a, Fractional a) => Stream a -> Stream (Stream a) -> Stream (Stream a)
+intt f0 fs = zipWith (<:>) f0 $ zipWith (*>) (map (1/) (fromList [1..])) fs
+
+-- int c xs = c <:> zipWith (/) xs (fromList [1..])
+
+dsp2 = take 10 . map dsp
+
+spde :: (Enum a, Fractional a) => a -> Stream a -> Stream (Stream a)
+spde gam f0 =
+  let
+    f = intt f0 f'
+    f' = gam **> delx (delx f)
+    -- f' = gam **> delx f
+  in f
+
+powers x = map (x^) (fromList [0..])
+
+eval :: Num a => Int -> a -> Stream a -> a
+eval n x = sum . take n . zipWith (*) (map (x^) (fromList [0..]))
+-- eval n f x = sum $ take n $ zipWith (*) f $ map (x^) (fromList [0..])
+
+eval2 :: Num a => Int -> Stream (Stream a) -> a -> a -> a
+eval2 n fs t x = eval n x $ map (eval n t) fs

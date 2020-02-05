@@ -1,0 +1,7 @@
+* Monday, 12/16/2019
+** 13:01
+This is the journal file. Going to type about what I am about to start working on. I need to fix the cascade stuff. Going to have to make it so that the data for cascading parts together registers with the new slugs. I already fixed most of them by just making them uppercase in the categories. One other thing I could do is remove unnecessary stuff. I think there should be one template written down somewhere for guidelines on how to represent everything. Do I need to see the IP3 for every part? For some parts it doesn't apply. For some categories, I mean. I think I am going to go through and remove some of them now. I am in the Constants.js file. The _DataTransformations.js file is where the mapping is from the name of the attribute to the cascade value. From attenuation to gain, for example. Going to add some functions to account for insertion loss and conversion loss.   
+** 16:38
+balun insertion loss only
+** 18:14
+Just realized why Isaac kept gain in there as gain and not insertion loss or some other category-specific name. Would have to change the display for each category. Can work on this some other time. 

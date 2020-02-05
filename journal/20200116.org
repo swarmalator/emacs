@@ -1,0 +1,23 @@
+* Thursday, 01/16/2020
+** 08:05
+that is subjective that is subjective
+** 08:26 
+This is the pw for Alyssa google account
+A65RN&nm
+
+** 13:28
+** 13:45
+I am working on a explanation of the IT architecture that we want for X-Microwave. Currently trying to see if ADS can be run remotely on the hardware that we currently have. I was looking into SSDs while the ADS files are copying over to the server. Now I am going to try and flesh out the rest of the list.
+
+- Modem
+- Router
+- Switch
+- R6525 x 2 (Phineas and Ferb)
+- Power Supply
+
+** 15:44
+I wrote a diagram of the infrastructure. Going to make a list that will go along with that. 
+
+
+** 17:05
+Okay I am going to leave now but I am currently exporting a parts.json on FileMaker and I am transferring the latest backup of filemaker to the E_Drive. I can finish these things tomorrow. Boom. 

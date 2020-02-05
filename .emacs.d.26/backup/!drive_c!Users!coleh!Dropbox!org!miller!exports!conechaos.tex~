@@ -1,0 +1,122 @@
+% Created 2018-06-03 Sun 05:13
+% Intended LaTeX compiler: pdflatex
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{grffile}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\usepackage[""]{exam}
+\newcommand{\scr}{\mathscr}
+\author{Cole Turner}
+\date{\today}
+\title{Cone Chaos}
+\hypersetup{
+ pdfauthor={Cole Turner},
+ pdftitle={Cone Chaos},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 25.1.1 (Org mode 9.0.5)}, 
+ pdflang={English}}
+\begin{document}
+
+\maketitle
+
+
+\section{Introduction}
+\label{sec:org5c2882d}
+
+\section{The Billiard}
+\label{sec:org41f925e}
+
+We consider a spherical billiard with radius \(R\), initially in contact
+with the inner surface of an overturned cone of angle \(\theta\), as
+seen in [FIGURE]. Note that the position (\(\vec{r}\)) of the center of
+this sphere will have a range identical to that of the infinitessimal
+billiard, considering that the cone is only vertically separated from
+the sphere's center by a distance \(R\sec\theta\). The velocity
+(\(\vec{v}\)) of the center of mass of this billiard is just as before,
+however we now introduce the angular velocity \(\vec{\omega}\) in
+addition to the translational velocity in an effort to simulate a more
+realistic system.
+
+In spherical coordinates:
+
+\begin{align*}
+\vec{r} &= (r, \theta, \phi) \\
+\vec{v} &= (v_r, v_\theta, v_\phi) \\
+\vec{\omega} &= (\omega_r, \omega_\theta, \omega_\phi).
+\end{align*}
+
+To reduce complication, we take the billiard to be initially in
+contact with the cone and in motion, as though the sphere has just
+undergone a collision with the immediate surface. Given initial values
+of \(\vec{r}\), \(\vec{v}\), and the gravitational strength \(g\), we may
+compute the time (\(\tau\)) until the next collision with the cone as
+the smallest positive root of the cubic equation [CITE]:
+
+\begin{equation}
+\frac{1}{4}g^2\tau^3-gv_z\tau^2+\left(v_z^2-gz-v_{xy}^2\cot^2\theta\right)\tau+2z\left(v_z+v_{xy}\cos\varphi\cot\theta\right)=0.
+\end{equation}
+Cartesian notation is used here only for brevity, where
+\(z=r\cos\theta\), \(\vec{v}=(v_x,v_y,v_z)\), in conjunction with
+the ordinary cylindrical representation of the velocity:
+\begin{align*}
+v_{xy} &= \sqrt{v_x^2+v_y^2} \\
+\varphi &= \tan^{-1}\left(\frac{v_y}{v_x}\right) \\
+v_z &= v_z
+\end{align*}
+Though the desired root of this cubic equation may be expressed
+analytically via a reduction to the depressed form and substitution of
+a triple angle formula [CITE], we have found no clear insight offered
+there other than for computational simplicity.  With the correct
+flight time and gravitational acceleration, application of regular
+three-dimensional kinematics to the initial state
+\(\vec{\psi}=(\vec{r},\vec{v},\vec{\omega})\) yields a transformation to
+the new state of the billiard \(\vec{\psi}\rightarrow\vec{\psi}'\), just
+prior to impact.
+
+\section{Collisions}
+\label{sec:orge5da9fc}
+
+[Overview]
+
+\subsection{The Impulse Model}
+\label{sec:org3b4ab16}
+
+Since our analysis rests on the assumption that any redirection occurs
+instantaneously, this ideal billiard must then be effectively
+incompressible, making contact with the cone only ever at a single
+point (\(P\)). From this, it follows that any collision between the
+sphere and the cone is identical to one between that sphere and a flat
+surface which is tangent to the cone at the point \(P\) (and also
+parallel to the to the \$r\(\phi\)\$-plane).
+
+This situation of a sphere and a hard plane has been already been
+solved by Kane and Levinson, where ordinary conditions
+for slipping and sticking are considered. Such a model will be the
+general framework of our collision simulations, including our own
+revisions to the model and further simplifications.
+
+First we will begin with the simplest of such simulations, admittedly most 
+deviant from physical reality, included only for ease of analysis.
+
+ \{I\}\(_{\parallel}\)\$ and \(\scr{I}_\perp\),
+representing the impulse \(\vec{R}_p = R\hat{\theta}\), and
+\(\hat{\theta}\) represents a unit vector in the direction of increasing
+spherical coordinate \(\theta\).
+
+Next, with the incident state known, we split the impulse vector into
+perpendicular and parallel components with respect to the plane that
+is tangent to the cone at \(P\), of the cone, various cases for the
+exit velocities of a billiard. Those cases by first considering two
+basic components
+\end{document}

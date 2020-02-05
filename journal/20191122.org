@@ -1,0 +1,79 @@
+* Friday, 11/22/2019
+** IT meeting with Carson
+*** 13:19 - CASCADE DB
+- deploy.sh - *CI/CD* instance
+- DockerFile
+  - alpine Linux, layered cache
+  - creates docker container on CI/CD instance
+  - CI/CD uploads on gitlab
+  - =.gitlab-ci.yml= how it's deployed
+    - then =deploy.sh=
+      - kills docker container
+      - removes it
+      - manage secret variables 
+      - replace and run
+      - traefik: port router within docker
+      - network web: docker vLan equiv
+    - /Portainer is just a convenient human tool/
+
+*** 14:47 Networking
+- See networking in the wiki
+- CIDR networking concepts
+- pfBlocker Black list
+*** 14:55 UPS
+- don't rely on automatic shut down stuff currently
+
+** DONE Update Cascade database
+** Isaac List
+*** Cascade
+** DONE 1013/1014 BOM
+
+** 15:39
+
+** DC-01
+- AD 
+** FMS
+- FileMaker Server
+** vsphere-01
+- 3CX
+- Dokuwiki
+- Genesys
+- gitlab-runner
+- InternalTools
+  - TestTool
+  - Cascade DB Editor
+  - Search Tool
+  - S-parameter viewer
+  - LabelMaker
+  - Blockbuilder
+- Unifi Controller
+- Erik Remote Desktop (quickbooks)
+
+
+** 16:41
+I just disabled the revocation service on the domain controller. This is the command I put in:
+
+certutil –setreg ca\CRLFlags +CRLF_REVCHECK_IGNORE_OFFLINE
+
+** 17:45
+Need to write a piece of software that automates the build instructions. Ideally someone would go to the website and put together something and then hit a button that exports a list of instructions on how to build it. The manufacturing instructions are another thing. That is already pretty much done in filemaker. What would be cool is if the part was associated with an order number or something - or just a diagram number for one particular order. 
+
+I need to take all of the parts on the site from a cascade file and enumerate them. The jumpers don't need to be enumerated. Just the blocks and the control boards as well. First step is to screw in the control boards. Then you want to put down the actual blocks on the top. I guess I can just enumerate them like you would for some Lego instructions. The parts aren't enumerated when you get them though. I want to ask Kristen how they are packaged.
+
+Going to think about this more on the weekend. Feels nice to type on this keyboard. Before Monday, what else might I want to do? Come to work on the weekend? Maybe on Sunday? Tomorrow I have a bunch of stuff going on.
+
+** 11:06
+Last Friday I added the following parts to the cascade tool:
+- B915
+- B916
+- B912
+- B5Y8
+- B2F5
+- B6H5
+- A7A2
+
+And also A3K8 to the next version of the raspbery pi
+
+** 14:29
+Going to spec out some servers. Need two 3TB drives. Or 6 hard drives if the servers can hold three each.      
+

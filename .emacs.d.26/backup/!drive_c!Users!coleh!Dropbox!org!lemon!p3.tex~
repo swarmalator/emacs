@@ -1,0 +1,223 @@
+% Created 2018-06-04 Mon 00:25
+% Intended LaTeX compiler: pdflatex
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{grffile}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\usepackage[""]{exam}
+\usepackage{indentfirst}
+\setlength{\parskip}{1em}
+\setlength{\parindent}{4em}
+\renewcommand{\baselinestretch}{1.5}
+\author{Cole Turner}
+\date{\today}
+\title{Project \#3}
+\hypersetup{
+ pdfauthor={Cole Turner},
+ pdftitle={Project \#3},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 25.1.1 (Org mode 9.0.5)}, 
+ pdflang={English}}
+\begin{document}
+
+\maketitle
+
+\section*{``A Song About Naps'' by Grynpyret}
+\label{sec:org8233583}
+
+It is a quiet morning. Nothing but the distant murmur of an old TV and
+the steady drone of good ol' Texas summer approved hospital air
+conditioning. Two extra doctors are in today -- not for any sort of
+work, though. 
+
+``Good morning,'' they both whisper, first her, then
+him. 
+
+Surely the two of them did not just wake and greet eachother now, in
+the nursery. There is someone else here.
+
+``Do you want to show off? Hm? Do you want to say hi?,'' she says
+softly, at a bit higher pitch than usual. Fingers with red nails
+slowly reach and pull, ``There you are, look at you.''
+
+The other doc stands nearby; He doesn't have his coat on. His right
+hand, wedged behind the strap of a Hitachi VHS camcorder, slowly moves
+toward the little human. Hearing someone call him `Dad' is going to take
+some getting used to.
+
+It was just another napping newborn, a boy, the same boy that would
+wait until his twenties to find and watch that tape his father was
+recording. 
+
+\section*{``Aminals'' by Baths}
+\label{sec:orgf48acb4}
+
+There's a new sheriff in town today. Hair as blond as it will ever be,
+jean shorts, socks that come up just a touch too high, and a rocking
+pair of silver Sketchers that yes, he can tie by himself. Sometimes he
+goes by the name `goober' -- tongue out and hands on his face,
+stretching the skin around two wide blue eyes, holding back the grin
+and giggles just for a moment. Soon, Thomas and the other trains will
+need him, the unfinished circuits of wood and plastic in the other
+room beckon for the touch of an aspiring architect. He builds alone
+but doesn't mind. After all, this town ain't big enough for two.
+
+\section*{``7:00 AM'' by Tennyson}
+\label{sec:orgbed7ccc}
+
+It was a quiet morning. Nothing but a gentle beeping on the nightstand
+and the usual soft rustling from the bed. No more bunk beds, the age
+of sleepovers was over (he'd say he was too old for them). A familiar
+smell of coffee slowly creeps it's way under the door -- grown-ups were
+awake and it was time for school.
+
+``Good morning'' the adults say, first her, then him.
+
+Two fresh waffles sit on the counter for the siblings, each dressed
+with syrup over a thick spread of peanut butter served with a hearty
+glass of milk. The high schooler was first to come down as usual,
+little sister known to be a heavy sleeper. The old Wrangler in the
+garage would be his soon, but today the parental chauffeurs make a
+trip to band rehearsal and then the clinic.
+
+\begin{center}
+\(\ast\) \(\ast\) \(\ast\)
+\end{center}
+
+Asphalt still cool from the night, a perfect line of seven drums and
+harnesses lie still in the parking lot. Sneakers screech and scratch across the pavement, drummers
+rushing to pick them up and strap in.
+
+A sharp voice cracks across the parking lot, ``Set!''
+
+Earplugs in, eyes forward, sticks flat, chin up, look tough. 
+
+``Eight on a hand, here we go!''
+
+Drumline is life.
+
+\section*{``Whoa!'' by Alizzz}
+\label{sec:org95089c7}
+
+There's a new student at the university today. Hair a bit darker than
+it used to be, basketball shorts, flip-flops, and a flimsy drawstring
+bag on his back that had only a few spiral notebooks, no laptop, and a
+pencil that yes, he probably picked up off the ground. Sometimes he
+goes by the name `guy in the back' -- leaning back, arms crossed,
+circles of skin around his blue-gray eyes stretched by the last
+night's Call of Duty rounds. Soon, he will need to figure out how to
+get his shit together and start listening to his
+professors. Insurmountably beautiful mathematics and ideas, spoken
+about right there at the front of the class, grope for the ears of a
+curious soul. To these he'll think: \emph{Woah}.
+
+\section*{``Awake'' by Tycho}
+\label{sec:org331f586}
+
+A boy, looking out the back seat window, spies some distant clouds bathed
+in sunlight from behind. The kind of scene where rays extend from
+every plush fold in the sky. He remembers sixth grade biology and
+learning about the water cycle, the names: stratus, cumulus,
+cumulonimbus. A familiar state of mind, road-trip boredom turned to
+questioning reality. 
+
+Miles later, he hands his iPod silently forward to his mother in the
+truck's passenger seat. Ambitious yet naive; the Notes app is open.
+
+\begin{quote}
+I want to be able to look around, wherever I am, and fully understand
+everything before me, and when the complexities of space or the quarks
+and leptons of atoms test my knowledge of things, I will strive to
+understand as much as my brain and my time here will allow.\\
+\hspace{5cm} -- March 11, 2013
+\end{quote}
+
+\section*{``Extreme Northern Lights'' by Majuere}
+\label{sec:org5b6fbf8}
+
+Fifth floor, the elevator dings. Bland carpet, the smell of paper, one
+flickering light at the end of the floor -- exactly what you might
+expect from the Perry-Castañeda Library downtown. A student walks to
+the north side of the building, thumbs under the straps of a swollen
+Columbia backpack, hoping to find an empty booth by the window. An
+older foreign-looking light-skinned man reads at a smaller table near
+the booths, where he has also been on almost every day at that same
+time. Walking by, the student notices stacks of books on Hebrew and
+bible translations, where it appears the man is handwriting something
+illegible on plain copy paper. 
+
+Books are unloaded from the backpack onto a table at the window. \\
+\emph{Fundamentals of Statistical and Thermal Physics}, Reif \\
+\emph{Complexity}, Waldrop \\
+\emph{Stocism and Emotion}, Graver \\
+\emph{The Philosophy of Karl Popper}, Keuth \\
+
+A whiteboard stands on the other side of the floor, behind bookshelves
+and out of sight. In the middle is a phrase written in the student's
+handwriting from days before. He remembers this and comes to find it
+still there.
+
+\begin{quote}
+``Is it possible that what I believe is untrue?''
+\end{quote}
+
+and underneath,
+
+\begin{quote}
+``Believe in yourself. \\
+Think positive!
+
+But anything's \\
+possible if you just \\
+believe``
+\end{quote}
+
+The moment becomes thick, swelling in his chest. Two wide blue eyes,
+holding back the delight and tears just for a moment.
+
+\begin{center}
+\(\ast\) \(\ast\) \(\ast\)
+\end{center}
+
+\begin{quote}
+Sonder \\
+\emph{n}. the realization that each random passerby is living a life as vivid
+and complex as your own.
+\end{quote}
+
+\section*{``Images Of Broken Light'' by Chihei Hatakeyama}
+\label{sec:org11597a1}
+
+It is a quiet morning. Nothing but faint chatter from down the hall
+and familiar Texas air conditioning. A door is propped open, just a ways from the 
+physics department office. A sheet on the door reads, ``physics tutoring hours,'' and 
+a chart of times is listed. 
+
+\begin{quote}
+Friday -- 9:00 AM until 12:00 PM. 
+\end{quote}
+
+In the room is a round table with scattered chairs, enough to seat
+ten; whiteboards on every wall. A phone buzzes on the table, with the
+notification: ``Student Research Symposium.'' 
+
+Two extra doctors are in Fort Worth today.
+
+\begin{quote}
+``Some people say, how can you live without knowing? I do not know what
+they mean. I always live without knowing. That is easy. How you get to
+know is what I want to know.''
+\hspace{5cm} -- R. Feynman
+\end{quote}
+\end{document}

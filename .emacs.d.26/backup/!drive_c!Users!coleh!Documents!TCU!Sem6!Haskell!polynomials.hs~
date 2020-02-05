@@ -1,0 +1,151 @@
+{-
+https://mail.haskell.org/pipermail/haskell-cafe/2004-May/006192.html
+
+Henning Thielemann iakd0 at clusterf.urz.uni-halle.de
+Sat May 22 16:50:21 EDT 2004
+
+I've attached a Haskell module demonstrating the beauty of solving ordinary differential equations in terms of power series. A power series is expressed by the (infinite) list of its coefficients. What do you think about that? 
+
+-}
+module Polynomials where
+
+{-
+-- polynomial evaluation
+horner :: Num a => a -> [a] -> a
+horner x = foldr (\c sum -> c+x*sum) 0
+
+-- Horner's scheme for arbitrary rings
+horner_ring :: c -> (a -> b -> c) -> (c -> b) -> [a] -> c
+horner_ring zero add scale = foldr (\c sum -> add c (scale sum)) zero
+
+-- express horner using horner_ring
+horner_ring_poly :: Num a => a -> [a] -> a
+horner_ring_poly x = horner_ring 0 (+) (x*)
+-}
+
+-- add two polynomials or series
+add :: Num a => [a] -> [a] -> [a]
+add [] ys = ys
+add xs [] = xs
+add (x:xs) (y:ys) = x+y:(add xs ys)
+
+-- subtract two polynomials or series
+sub :: Num a => [a] -> [a] -> [a]
+sub [] ys = map negate ys
+sub xs [] = xs
+sub (x:xs) (y:ys) = x-y:(sub xs ys)
+
+-- scale a polynomial or series by a factor
+scl :: Num a => a -> [a] -> [a]
+scl s = map (s*)
+
+{-
+-- multiply a polynomial by a monomial
+--shift :: Num a => Int -> [a] -> [a]
+shift n x =
+   if n>=0
+   then replicate n 0 ++ x
+   else if (head x) == 0
+        then shift (n+1) (tail x)
+        else error "shift impossible"
+-}
+
+-- multiply two polynomials or series
+mul :: Num a => [a] -> [a] -> [a]
+mul [] _ = [] mul (x:xs) ys = add (scl x ys) (0:(mul xs ys))
+
+-- divide two series, walks from low exponents to high ones
+--  this behaviour is uncommon for polynomials
+divSeries :: Fractional a => [a] -> [a] -> [a]
+divSeries [] _ = []
+--divSeries (0:xs) (0:ys) = divSeries xs ys
+divSeries (x:xs) (y:ys) =
+   let q = x/y
+   in  q : divSeries (sub xs (scl q ys)) (y:ys)
+
+differentiate :: (Enum a, Num a) => [a] -> [a]
+differentiate x = zipWith (*) (tail x) [1..]
+
+integrate :: (Enum a, Fractional a) => a -> [a] -> [a]
+integrate c x = c : (zipWith (/) x [1..])
+
+expSeries, sinSeries, cosSeries :: (Enum a, Fractional a) => [a]
+expSeries = map (1/) (scanl (*) 1 [1..])
+sinSeries = zipWith (*) (cycle [0,1,0,-1]) expSeries
+cosSeries = zipWith (*) (cycle [1,0,-1,0]) expSeries
+
+
+{-
+  Lazy evaluation allows for the solution
+   of differential equations in terms of power series.
+  Whenever you can express the highest derivative of the solution
+   as explicit expression of the lower derivatives
+   where each coefficient of the solution series
+   depends only on lower coefficients,
+   the recursive algorithm will work.
+-}
+
+{-
+  Example for a linear equation:
+     Setup a differential equation for y with
+      y   t = (exp (-t)) * (sin t)
+      y'  t = -(exp (-t)) * (sin t) + (exp (-t)) * (cos t)
+      y'' t = -2 * (exp (-t)) * (cos t)
+
+  Thus the differential equation
+    y'' = -2 * (y' + y)
+  holds.
+  
+  The following function generates
+  a power series for (exp (-t)) * (sin t)
+  by solving the differential equation.
+-}
+
+solveDiffEq0 :: (Fractional a, Enum a) => a -> [a]
+
+solveDiffEq0 y0 =
+   let -- the initial conditions are passed to "integrate"
+       y   = integrate y0 y'
+       y'  = integrate 1 y''
+       y'' = scl (-2) (add y' y)
+   in  y
+
+-- verifyDiffEq0 = mul (zipWith (*) (iterate ((-1)*) 1) expSeries) sinSeries
+
+{-
+  We are not restricted to linear equations!
+   Let the solution be y with
+    y   t =   (1-t)^-1
+    y'  t =   (1-t)^-2
+    y'' t = 2*(1-t)^-3
+   then it holds
+    y'' = 2 * y' * y
+-}
+solveDiffEq1 :: (Fractional a, Enum a) => a -> [a]
+
+solveDiffEq1 y0 =
+   let -- the initial conditions are passed to "integrate"
+       y   = integrate y0 y'
+       y'  = integrate (0.01) y''
+       y'' = scl 2 (mul y' y)
+   in  y
+
+-- verifyDiffEq1 = divSeries [1] [1,(-1)]
+
+solveDiffEq2 :: (Fractional a, Enum a) => a -> [a]
+
+solveDiffEq2 y0 =
+  let
+    y = integrate y0 y'
+    y' =add (scl (-2) y) (mul y (mul y y))
+  in y
+
+solveDiffEq3 :: (Fractional a, Enum a) => (a,a) -> ([a],[a])
+
+solveDiffEq3 (x0,y0) =
+  let
+    x = integrate x0 x'
+    y = integrate y0 y'
+    x'= sub y x
+    y'= add x y
+  in (x,y)

@@ -1,0 +1,39 @@
+#+OPTIONS: ':nil *:t -:t ::t <:t H:3 \n:nil ^:t arch:headline
+#+OPTIONS: author:t broken-links:nil c:nil creator:nil
+#+OPTIONS: d:(not "LOGBOOK") date:t e:t email:nil f:t inline:t num:t
+#+OPTIONS: p:nil pri:nil prop:nil stat:t tags:t tasks:t tex:t
+#+OPTIONS: timestamp:t title:t toc:nil todo:t |:t
+#+TITLE: hana
+#+DATE: [2018-05-30 Wed]
+#+AUTHOR: Cole Turner
+#+EMAIL: c.h.turner@tcu.edu
+#+LANGUAGE: en
+#+SELECT_TAGS: export
+#+EXCLUDE_TAGS: noexport
+#+CREATOR: Emacs 25.1.1 (Org mode 9.0.5)
+
+* 2018
+** 2018-W22
+*** 2018-05-30 Wednesday
+[2018-05-30 Wed]
+**** TODO [#1] LaTeX Update
+SCHEDULED: <2018-06-03 Sun>
+:LOGBOOK:
+- State "TODO"       from              [2018-05-30 Wed 21:30]
+:END:
+**** TODO [#3] Draft Research Paper
+:LOGBOOK:
+- State "TODO"       from              [2018-05-30 Wed 18:07]
+:END:
+**** TODO [#2] Schedule Dr. Richardson
+SCHEDULED: <2018-06-02 Sat 10:30>
+:LOGBOOK:
+- State "TODO"       from              [2018-06-02 Sat 01:59]
+:END:
+*** 2018-06-02 Saturday
+[2018-06-02 Sat]
+**** TODO Print [[file:hana/Hafner17_GR_metrics.pdf][Discussion Paper]]
+DEADLINE: <2018-06-06 Wed>
+:LOGBOOK:
+- State "TODO"       from              [2018-06-02 Sat 16:51]
+:END:

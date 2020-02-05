@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2018-10-18 Thu 15:16 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Thoughts - swarmalator.io</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="Cole Turner" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" type="text/css" href="css/site.css"/>
+<link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet" type="text/css">
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2013 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<div id="swarm"><canvas></canvas></div>
+<script src="js/swarm.js"></script>
+<h1 class="title">swarmalator.io</h1>
+<div class="table">
+<div id="navigation">
+<ul class="org-ul">
+<li><a href="index.html">About</a></li>
+<li><a href="creations.html">Creations</a></li>
+<li><a href="quotes.html">Quotes</a></li>
+<li><a href="resources.html">Resources</a></li>
+<li><a href="thoughts.html">Thoughts</a></li>
+</ul>
+</div>
+</div>
+<hr/>
+
+<div class="ABSTRACT">
+<p>
+The thoughts here are to be unfiltered, unedited and true - likely including whatever incoherent babble comes to mind and plenty of typos. I had in mind that this might be good for my own self-reflection (and perhaps some sort of mental accountability?) and maybe mildly interesting to whoever else might be wandering here. I kind of like to think of it as an experiment in self-correction by being fully open and honest - or something like that.
+</p>
+
+</div>
+
+<div id="outline-container-org65a38bf" class="outline-2">
+<h2 id="org65a38bf">Wednesday, 10/17/2018</h2>
+<div class="outline-text-2" id="text-org65a38bf">
+</div><div id="outline-container-org18cb1eb" class="outline-3">
+<h3 id="org18cb1eb">17:32</h3>
+<div class="outline-text-3" id="text-org18cb1eb">
+<p>
+Don&rsquo;t want to go to the other away because the other way is too far from the edge and the other people just don&rsquo;t come to the reailzation that life is short and people are stupid but not all people but not you becuase you yourself make mistakes and are therefore fallible and might you assume that others are you will be a dead man no one likes to be called out on their hypocrisy not even me though I secretly want to know where I am inconsistent so I can be a better person and hopefully help others become consistent as well.
+</p>
+
+<p>
+So many animals and sounds on the electromagnetic spectrum floating through the air and voices of people who don&rsquo;t know what they are using to transmit their voice across the air. It is incredible though even the people who use the technology don&rsquo;t have to know how it works just what it does and then they can broadcast anti-science messages using the exact things that depend on the progress of science. No one is worshiping the technology or the companies - actually companies get plenty of worship because of wank marketing. Not sure if these thoughts are useful or productive for anything.
+</p>
+
+<p>
+I wanted to do something with my website and maybe make it like a sort of on-line resume or something. Also been considering filming my life and making some sort of YouTube videos for what purpose - I don&rsquo;t know. Graduate school is definitely something that I should be focusing my efforts on now though. Need to take the Physics GRE soon. Might not even want to go to graduate school with all of the resources on the Internet nowadays.
+</p>
+
+<p>
+Things I am producing now are these journals. Don&rsquo;t have any sort of videos up now. Not going to write up extensive things on the videos because the information is dense enough there. Redundant at that point for little effect compared to the time of cost.
+</p>
+
+<p>
+Question absolutely everything including but not limited to yourself is a phrase that I had come up with a while ago to be my sort of life motto at the time. I think now that it&rsquo;s still really relevant and will likely be for a long time unless I can find a better way to express that idea.
+</p>
+
+<p>
+Playing songs and lyrics still bug me. Pillows and needless decoration here also are annoying. Not sure how people get so funky on the function and fashion scale. To me, fashion is what comes out of function. 
+</p>
+
+<p>
+This friXion pen is cool. Maybe I should start a sort of consciousness stream on my website, where all of my thought are available to whoever who reads. I don&rsquo;t want to put myself in any sort of trouble though. I do believe today in the idea of truly open source, or free access or whatever you want to call it. If I have some great idea that someone rips off and is able to produce faster than me, I bet that it would be a much better product. The fact that I introduced it would be just enough for me.
+</p>
+
+<p>
+I guess I can do this, but I might add a disclaimer that is will likely not make sense to anyone who reads it. It&rsquo;s just up for personal accountability. Is that what it&rsquo;s up for? To show people that I am actually doing something? Or perhaps that I am just writing nonsense. Or for people who genuinely think that I could be helpful to them and they can use it to get to know what my mind is like. I don&rsquo;t see any downsides to the idea currently. Hopefully I won&rsquo;t realize them when it gets too late.
+</p>
+
+<p>
+People are boring, but not you. 
+</p>
+</div>
+</div>
+
+
+
+<div id="outline-container-org1dfde2e" class="outline-3">
+<h3 id="org1dfde2e">20:22</h3>
+<div class="outline-text-3" id="text-org1dfde2e">
+<p>
+Thinking about adding stuff to the website. Perhaps not this message but maybe so, oh well. Congrats on seeing this if you&rsquo;re reading it. Just going to see if what I could put on the about page. For some reason it seems it would be a cool idea to know where I am - to keep with the openness from the thoughts section. Sounds like a not-so-popular idea. Perhaps I wouldn&rsquo;t provide information on exactly the spot I am in, just the city or surrounding area. I have a place that I might be staying that is in a specific small town in the middle of Texas, so I am not sure how revealing it would be to give this town name away. Would take minutes to drive around the whole of it, lol. It&rsquo;s near Rockdale, TX. That&rsquo;s as close as I would feel comfortable disclosing at the moment. 
+</p>
+
+<p>
+As for other places I presume that the city would be just fine. Where am I? Near Rockdale, TX. Okay now why would anyone want to know this, other than myself or my immediate friends and family? Perhaps to relate on some physical level..? Not sure. Needs more thought. 
+</p>
+
+<p>
+Okay now let&rsquo;s see if I want to add anything more. Perhaps a &ldquo;what have I made&rdquo; and a &ldquo;what have I learned&rdquo; page? The latter would be very time consuming to put together if I am to include my past education experience. Maybe it would be worth just writing a brief paragraph about each class from memory - like I did with my original resume/cv skeleton. This would be an all-day job, if not longer. So many things that I have learned and I guess it depends entirely on the scope of the thing. I&rsquo;m talking technical knowledge, of course. How to program in Java,
+for example.
+</p>
+
+<p>
+Just recalled that some of the things that I have learned were learned through the process of creating something. Especially when it comes to learning new programming/markup languages. This would be in both the learned/made sections I guess. Perhaps the made section would only include working projects that have some sort of proof of existence or the product itself. Yes this sounds like a good caption for the made page. Yes, I imagine that making and learning are independent properties of a given thing or concept.
+</p>
+
+<p>
+Okay so now for the learn page. I could make it just text-based descriptions of topics that I have taken some time to learn about? Useful information would be the amount of time spent researching something, though would be a nuisance to keep track of. Writing this retroactively, again, would be very much a pain as well because of my prior experiences. 
+</p>
+
+<p>
+Just had the interesting thought of not things I have made or learned about, but things that I have done - in the sense of following orders. Accomplishments, or achievements. This thought came after recalling my experience in the high school marching band and being section leader and memorizing several marching shows. Such a feat seemed quite hard at the time and to my mind seems unnecessary to mention on a website, but I thought of it so here we are.
+</p>
+
+<p>
+I like the idea of being able to catalog things that I have actually <i>made</i> though. Learning is one thing, but creating is another. I think Feynman has a quote on this - If I cannot make it then I do not understand it, or something.
+</p>
+
+<p>
+And then in addition to the making, do I really include the learning? What good would it do to say &ldquo;hey, I know about this one thing &rdquo; if I have not actually made anything using that knowledge? This is really sounding meaningful to me at the moment. Would save a lot of time and also have philosophical reason behind not including a &ldquo;what I&rsquo;ve learned&rdquo; section. Perhaps it doesn&rsquo;t matter until you&rsquo;ve made something.
+</p>
+
+<p>
+Okay so just a <i>make</i> section - or a &ldquo;creations&rdquo; section. Wood gasifier. Programs in Java, Haskell, C, etc. Does music count? I guess so - maybe just recordings would be good, though. I will keep a list in the file now.   
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1403d9f" class="outline-3">
+<h3 id="org1403d9f">20:53</h3>
+<div class="outline-text-3" id="text-org1403d9f">
+<p>
+I just had the question, whats the difference between a creation and a repair? Would repairing or fixing something classify as creating something? It certainly involved learning about it - or I would include only those things that I actually had to put in considerable effort to learn. Maybe how to landscape with a tractor? - cause I did that once. I did technically create a new creek crossing in the end. Or what about my Dad&rsquo;s old car that I did some quick maintenance on to get it back up and running after 10 years? Had to siphon out old gas and get a new battery and clean the intake. The 2-stroke outboard motor would also be a technically created thing. The boat is a huge one.
+</p>
+
+<p>
+Okay it seems I could go on for quite a while doing this but I haven&rsquo;t answered my question. I think it would have to depend on the actual amount of knowledge that&rsquo;s required to repair the thing. My Dad&rsquo;s old car, honestly, did not take a lot of skill to repair. Just had to know my way around an engine. Also, this is all dependent on the proof that I can give for doing such a task.
+</p>
+
+<p>
+I am also thinking about the one time I took apart a golf cart just to try and see what was causing the headlights to not be turning on. Learned quite a bit about one specific thing, though I definitely didn&rsquo;t create anything. Just diagnosed a problem, albeit successfully. To stick with my first realization about the importance of making things, I won&rsquo;t include such a thing. Whatever the post or video or online information would present would have to be some sort of proof that I actually produced something because of the knowledge I had gained previously. Until I inevitably re-think this idea, it&rsquo;ll do for now. 
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Cole Turner</p>
+<p class="date">Created: 2018-10-18 Thu 15:16</p>
+<p class="validation"></p>
+</div>
+</body>
+</html>

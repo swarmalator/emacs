@@ -1,0 +1,41 @@
+module PowerSeries where
+
+import Prelude hiding (zipWith, map, (<*>), (*>), head, tail, take, cycle)
+import Data.Stream
+
+(<+>) :: Num a => Stream a -> Stream a -> Stream a
+(<+>) = zipWith (+)
+
+(<->) :: Num a => Stream a -> Stream a -> Stream a
+(<->) = zipWith (-)
+
+(*>) :: Num a => a -> Stream a -> Stream a
+(*>) x = map (x*)
+
+(<*>) :: Num a => Stream a -> Stream a -> Stream a
+(<*>) xs ys = (head xs *> ys) <+> (0 <:> (tail xs <*> ys))
+
+(</>) :: Fractional a => Stream a -> Stream a -> Stream a
+(</>) xs ys = r <:> ((tail (xs <-> (r *> ys)) </> ys))
+  where r = head xs / head ys
+
+diff :: (Enum a, Num a) => Stream a -> Stream a
+diff = zipWith (*) (fromList [1..]) . tail
+
+int :: (Enum a, Fractional a) => a -> Stream a -> Stream a
+int c xs = c <:> zipWith (/) xs (fromList [1..])
+
+expS, sinS, cosS :: (Enum a, Fractional a) => Stream a
+expS = map (1/) (fromList (scanl (*) 1 [1..]))
+sinS = zipWith (*) (cycle [0,1,0,-1]) expS
+cosS = zipWith (*) (cycle [1,0,-1,0]) expS
+
+dsp :: Stream a -> [a]
+dsp = take 10
+
+sde1 y0 =
+  let
+    y   = int y0 y'
+    y'  = int (0.01) y''
+    y'' = 2 *> (y' <*> y)
+  in dsp y

@@ -1,0 +1,5 @@
+* Monday, 01/13/2020
+** 10:00
+Making a list. 
+** 15:26
+Looking and NUMA node stuff. [[https://itnext.io/vmware-vsphere-why-checking-numa-configuration-is-so-important-9764c16a7e73][this website]] has some important info. 

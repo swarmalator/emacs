@@ -1,0 +1,151 @@
+* Tuesday, 02/04/2020
+** 09:05
+Didn't get much sleep last night. Going to go through my list and see what I can get started on this morning. 
+** 09:10
+
+List of things that Sigma needs done before 2/16
+
+- Deployment of Carbon Black EDR to all nodes
+- Creation of Sigma accounts to replace shared administration accounts
+- Confirm receipt of all ordered hardware for potential install on 2/16/2020
+- [ ] Disable any extraneous old employee or administrator accounts in AD (X-Microwave to disable or provide list)
+- [ ] Confirm with John/Erik/Cole on potential downtime during 2/16/2020 to install new hardware (X-Microwave to decide best day/time)
+- [ ] Confirm all regulatory requirements – ie SOC, NIST, ISO – needed at X-Microwave for their clients (X-Microwave to provide)
+- [ ] Automated patching schedule for workstation (X-Microwave to decide best times)
+- [ ] Manual patching/maintenance schedules for Servers (X-Microwave to decide best times)
+- [ ] Verify N-Central portal for all new N-Central installs from today (Sigma to check, X-Microwave to install any missing nodes)
+- [ ] Deploy VEEAM Backup client (Requested by X-Microwave to hold off VEEAM deployment until the new servers were in place)
+** 11:01
+#+begin_src js
+$.fn.dataTable.ext.search.push(
+  function( settings, data, dataIndex ) {
+    return (!$('#dt-cncb').is(\":checked\") || data[0][12] == 'C');
+  }
+);
+$.fn.dataTable.ext.search.push(
+  function( settings, data, dataIndex ) {
+    return (!$('#dt-dicb').is(\":checked\") || data[0].endsWith(\"D\"));
+  }
+);
+$.fn.dataTable.ext.search.push(
+  function( settings, data, dataIndex ) {
+    return (data[2].includes($('#dt-sm').val()) || $('#dt-sm').val().startsWith(\"--\"));
+  }
+);
+$.fn.dataTable.ext.search.push(
+  function( settings, data, dataIndex ) {
+    return (data[3].includes($('#dt-st').val()) || $('#dt-st').val().startsWith(\"--\"));
+  }
+);
+$(document).ready(function() {
+  var table = $('#dt-" & $hyphCat & "').DataTable({
+    fixedHeader: true,
+    columnDefs: [
+      {
+	'targets': 1,
+	'searchable': false,
+	'orderable':false,
+	'displayLength':10,
+	'autoWidth':false,
+	'width':'100px'
+      }]
+  });
+  $('#dt-sm').on('change', function (e) {
+    table.draw();
+  });
+  $('#dt-st').on('change', function (e) {
+    table.draw();
+  });
+  $('#dt-cncb').on('click', function (e) {
+    $('#dt-cncb').prop('checked', !$('#dt-cncb').is(':checked'));
+    table.draw();
+  });
+  $('#dt-cn').on('click', function (e) {
+    if ($('#dt-cncb').is(':checked')){
+      $('#dt-cncb').prop('checked', false);
+    } else {
+      $('#dt-cncb').prop('checked', true); 
+      $('#dt-dicb').prop('checked', false);
+    }
+    table.draw();
+  } );
+  $('#dt-dicb').on('click', function (e) {
+    $('#dt-dicb').prop('checked', !$('#dt-dicb').is(':checked'));
+    table.draw();
+  });
+  $('#dt-di').on('click', function (e) {
+    if ($('#dt-dicb').is(':checked')){
+      $('#dt-dicb').prop('checked', false);
+    } else {
+      $('#dt-dicb').prop('checked', true); 
+      $('#dt-cncb').prop('checked', false);
+    }
+    table.draw();
+  } );
+  $('#dt-fb').on('click', function (e) {
+    $('#dt-ft').toggle();
+  } );
+} );
+$('#dt-ft').hide();
+#+end_src
+** 13:57
+  <script type="text/javascript">
+#+begin_src js
+$.fn.dataTable.ext.search.push(     function( settings, data, dataIndex ) {       return (!$('#dt-cncb').is(":checked") || data[0][12] == 'C');
+     } );
+ $.fn.dataTable.ext.search.push(     function( settings, data, dataIndex ) {       return (!$('#dt-dicb').is(":checked") || data[0].endsWith("D"));
+     } );
+ $.fn.dataTable.ext.search.push(     function( settings, data, dataIndex ) {       return (data[3].includes($('#dt-sm').val()) || $('#dt-sm').val().startsWith("--"));
+     } );
+ $.fn.dataTable.ext.search.push(     function( settings, data, dataIndex ) {       return (data[4].includes($('#dt-st').val()) || $('#dt-st').val().startsWith("--"));
+     } );
+ $(document).ready(function() {     var table = $('#dt-all-parts').DataTable({ fixedHeader: true, columnDefs: [ { 'targets': 1, 'searchable': false, 'orderable':false, 'autoWidth':false, 'width':'30' }] });
+ $('#dt-sm').on('change', function (e) { table.draw();
+ });
+ $('#dt-st').on('change', function (e) { table.draw();
+ });
+ $('#dt-cncb').on('click', function (e) { $('#dt-cncb').prop('checked', !$('#dt-cncb').is(':checked'));
+ table.draw();
+ });
+ $('#dt-cn').on('click', function (e) { if ($('#dt-cncb').is(':checked')){ $('#dt-cncb').prop('checked', false);
+ } else { $('#dt-cncb').prop('checked', true);
+  $('#dt-dicb').prop('checked', false);
+ } table.draw();
+     } );
+ $('#dt-dicb').on('click', function (e) { $('#dt-dicb').prop('checked', !$('#dt-dicb').is(':checked'));
+ table.draw();
+ });
+ $('#dt-di').on('click', function (e) { if ($('#dt-dicb').is(':checked')){ $('#dt-dicb').prop('checked', false);
+ } else { $('#dt-dicb').prop('checked', true);
+  $('#dt-cncb').prop('checked', false);
+ } table.draw();
+     } );
+ $('#dt-fb').on('click', function (e) { $('#dt-ft').toggle();
+     } );
+ } );
+$('#dt-ft').hide();
+
+#+end_src
+
+</script>
+** 14:40
+Link location 
+https://s3-us-west-2.amazonaws.com/tables.xmicrowave.com/digital-step-attenuator.php
+** 14:42
+- VVA: no type info
+- balun and transformer not in same category
+- bias controller no dropin/connectorized option
+- bias controller category specific? (leave old Vreg table there)
+- Balun and tnf only 6?
+- combined blocks only 1?
+
+https://s3-us-west-2.amazonaws.com/tables.xmicrowave.com/circulators-and-isolators.php
+
+https://s3-us-west-2.amazonaws.com/tables.xmicrowave.com/baluns-and-transformers.php
+
+https://s3-us-west-2.amazonaws.com/tables.xmicrowave.com/.php
+
+- some housing photo names have uppercase "PNG". and aren't substituting
+- search all / quick search template not enough width
+- Make the bottom of the screen further down from bottom of table
+  when there are few/zero results, the screen jumps back up    

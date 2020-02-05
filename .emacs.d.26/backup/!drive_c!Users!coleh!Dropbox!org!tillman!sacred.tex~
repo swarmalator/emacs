@@ -1,0 +1,137 @@
+% Created 2018-06-20 Wed 11:16
+% Intended LaTeX compiler: pdflatex
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{grffile}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\usepackage{indentfirst}
+\usepackage{exam}
+\usepackage{apacite}
+\setlength{\parindent}{4em}
+\setlength{\parskip}{1em}
+\renewcommand{\baselinestretch}{1.6}
+\author{Cole Turner}
+\date{\today}
+\title{Sacred Space}
+\hypersetup{
+ pdfauthor={Cole Turner},
+ pdftitle={Sacred Space},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 25.1.1 (Org mode 9.0.5)}, 
+ pdflang={English}}
+\begin{document}
+
+\maketitle
+\bibliographystyle{apacite}
+
+Growing up in Austin, Texas, the most obvious example of a violent
+event I know of which shaped the city would have to be the University
+of Texas Tower shooting in 1966. In fact, it has been quite difficult
+to find any other instances of large-scale heinous crimes in Austin
+from more than a couple years ago. In my quest for something less
+known, I approached my mother and father about the idea who both
+recalled a specific tree seated just near downtown Austin called the
+Treaty Oak.
+
+Looking at the wiki, the Treaty Oak is apparently one of fourteen
+original trees that together formed a grove known to the Texas natives
+as the Council Oaks, some 300 years ago \cite{wiki}. On what looks like
+an old copper plaque which is still posted in front of the tree today,
+it is stated that the grove was the site of the first boundary treaty
+between Natives and Europeans in Texas, though it may be that no
+historical records exist which support this \cite{wiki}. I imagine that
+it is also questionable whether or not the Comanche and Tonkawa tribes
+had used this unique landscape as a sacred meeting place for launching
+raids and peace treaties, or that the 7th governor of Texas Sam
+Houston actually did once rest under the Treaty Oak during the
+American Civil War \cite{wiki}. In either case, such tales as I have
+found reading various accounts of the tree seem to play a huge part in
+reflecting the admiration that Austinites have expressed for it over
+the years. But it was one year in particular which came to sharply
+ignite the bond between the city and this beloved tree, such that, at
+least for my parents who lived on the opposite side of town, it had
+become a household name.
+
+The story seems to go in a similar manner in various places all around
+the web. It is 1989 and the Treaty Oak stands as the last remaining
+member of the original fourteen Council Oaks, "the most perfect
+specimen of a tree in North America" \cite{plaque}. The tree was huge,
+poised to the side of the road in a small park just outside of
+downtown Austin. Its branches spreading a distance of 127 feet across,
+estimated by the Texas Chamber of Commerce to be somewhere around 600
+years old \cite{pfufc}. Sometime during this year, people familiar with
+the area had started oak wilt in its branches and leaves which were
+shedding out of season. Soon after, it was discovered upon
+investigation of the soil that the tree had been deliberately poisoned
+at its base with an extremely large amount of Velpar herbicide, enough
+to kill 100 trees \cite{culturemap}.
+
+Word got around quickly, as school children began sending letters,
+Native Americans in the area brought song and ritual, a herbicide
+manufacturer established a \$10,000 bounty on the felon, and Texan
+billionaire Ross Perot even gave a blank check to the local team
+tasked with saving the tree \cite{wiki,statesman}. The puzzle of
+avoiding the supposedly hundred-fold lethal dose did attract national
+attention among arbor experts, some coming to join with locals in what
+was called the "Treaty Oak Task Force" \cite{culturemap,pfufc}.
+
+When asked about how someone poisoning a tree could have possibly
+qualified as a tragic event, my mother replied in seriousness,
+describing frequent news coverage and televised vigils. One photograph
+from the same year as the poisoning shows a group of psychics who came
+from Dallas and Waco to conduct a "transference of energy" ritual on
+the tree, hoping to "release negative energy fron the tree into the
+universe" \cite{statesman}. An article from the News 8 Austin website
+can also be found on the online web archive for 2004, which describes
+the dedication of one particular spiritual admirer of Native American
+culture, "Frank Stronghorse," who claims to have used a medicine pipe
+to "bring balance back to the tree" \cite{news8}. It turns out that the
+actual poisoning of the tree was intended to be part of some sort of
+black-magic love ritual. The offender ended up being caught and sent
+to prison where he stayed for 9 years.
+
+While testimony alone should not be sufficient to illuminate the true
+reaction of the city, the sheer volume of these which have appeared in
+researching the subject, each conveying a deep admiration for the same
+especially historic landmark, indicate that this old oak has with no
+doubt become a sacred piece of Austin's geographical history.
+
+"Bend but unbowed," the Treaty Oak still stands today
+\cite{bullock}. With the majority of its main branches having been
+removed during its fight, its former glory is dearly missed
+\cite{pfufc}. The complex process of treating the Treaty Oak has also
+been well documented and studied, with the task force also including
+22 Ph.D. professional foresters and support from The American Forestry
+Association \cite{pfufc}. Decisions that were made during the process
+can also be seen today, as there are many small trees closely
+surrounding the Treaty oak, planted there to help nurse the Treaty Oak
+back to health \cite{pfufc}. It wasn't until eight years after the
+attack, in 1997, that the oak was finally able to producing its own
+crop of acorns \cite{culturemap}.
+
+There is another kind of beauty in the story of the Treaty Oak, in
+that there is no written account of the poisoning posted at the
+park. Still the same copper plaque from old times stands, with a
+non-intrusive green chain-post fence surrounding the base. Unfamiliar
+onlookers may not see anything other than a large and curiously tilted
+oak in the middle of a park, while members of the culture feel a much
+deeper connection not just to the landscape but the history,
+community, and spirit of Austin, Texas.
+
+\begin{quote}
+Austinites feel that Treaty Oak pretty much sums up the story of who we are as a community: strong, resilient, courageous, a little off-center, and here to stay \cite{bullock}.
+\end{quote}
+
+\bibliography{refs}
+\end{document}

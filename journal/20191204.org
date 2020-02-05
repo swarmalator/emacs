@@ -1,0 +1,7 @@
+* Wednesday, 12/04/2019
+** Cascade
+** Controller
+** IT
+** Emacs/Misc
+** 20:38
+Cascade stores every part. We could change that.

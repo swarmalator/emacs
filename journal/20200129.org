@@ -1,0 +1,49 @@
+* Wednesday, 01/29/2020
+** 09:03 Gitlab recovery codes
+Gitlab recovery codes
+    7a527169c33cdc7f
+    727a43ce774e51a5
+    fa63b87ef8090489
+    58972f6bee266e1c
+    6ac91ca36b086667
+    77abb1f8e42b0ef4
+    252713945ff95d5e
+    3fc1b5386b483dd1
+    4bb7e9d02dd2ed81
+    b14e1c5a78164f98
+
+
+** 09:44
+Parts for Anaren not in CASCADE:
+- [X] C428
+- [X] C574 (purple)
+- [X] C365 (use B5C2)
+- [X] B212 (use A4F2)
+- [X] A7R6
+- [X] C441
+- [X] C3V7 (Board 1463?)
+- [X] C444
+** 14:02
+- How do ADS files get sent to the board shop?
+- Separate Active Directory
+  - Requires more servers, more licensing
+- RDS server licensing instead of separate VMs
+- Separate login credentials for the RDS server
+
+N-central -> Running over server vLan 
+- Monitors all running services
+- Gives ability to remote in to any machine
+
+
+- Palo Alto got shipped
+
+Trying to plan when the migration would be
+- Saturday morning 4-5 hours of downtime
+- Earliest estimation: Feb 15th
+
+- Return Windows 10 Licenses 
+** 16:59
+
+** 17:13
+
+

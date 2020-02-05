@@ -1,0 +1,1283 @@
+% Created 2018-07-05 Thu 10:58
+% Intended LaTeX compiler: pdflatex
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{grffile}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\author{Cole Turner}
+\date{\textit{<06/04/18 Mon>}}
+\title{helms}
+\hypersetup{
+ pdfauthor={Cole Turner},
+ pdftitle={helms},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 25.1.1 (Org mode 9.0.5)}, 
+ pdflang={English}}
+\begin{document}
+
+\maketitle
+
+\section{2018}
+\label{sec:org31a19e8}
+\subsection{2018-W23}
+\label{sec:orgc0be9c8}
+\subsubsection{2018-06-04 Monday}
+\label{sec:org7c0ae86}
+\textit{<06/04/18 Mon>}
+Today we learned the details of how this course will operate, the
+expectations between the students and professor, and a recap on
+rhetoric. It was nice to meet all of our classmates in a smaller
+classroom setting.
+
+Rhetoric
+\begin{itemize}
+\item "Rhetoric is the ability in each particular case to discover the
+available means of persuasion."
+\item "Rhetoric is a mode of altering reality, not by the direct
+application of energy to objects, but by the creation of discourse
+which changes reality through the mediation of thought and action."
+\item "The use of words by human agents to form attitudes or induce
+actions in other human agents."
+\item "The use of language as a symbolic means of inducing cooperation in
+beings that by nature respond to symbols."
+\end{itemize}
+
+Freewrite:
+"What about this class excites you most?"
+\begin{itemize}
+\item It was very pleasing to hear that grades will be argued for. This is
+something that sounds very confortable to me. Having a smaller class
+size is also interesting, as it seems it may allow for more involved
+discussions or arguments.
+\end{itemize}
+
+"What about this class scares you most?"
+\begin{itemize}
+\item English courses in general tend to scare me a tad, in that the
+learning outcomes for some previously taken did not seem to
+explicitly stated -- unecessary ambiguity.
+\end{itemize}
+
+Why do we make arguments? I like this idea of argumentation, as a
+non-negative activity.
+\begin{itemize}
+\item Ethos
+\item Pathos
+\item Logos
+\item Kairos
+\item Deliberative (Future)
+\item Epideictic (Present)
+\item Forensic (Past)
+\end{itemize}
+\begin{enumerate}
+\item {\bfseries\sffamily DONE} Get EAA, 6th edition
+\label{sec:org76ac78c}
+\item {\bfseries\sffamily DONE} A.1 Learning Record
+\label{sec:org87f62dc}
+\begin{itemize}
+\item interview a close relative about your learning development
+\end{itemize}
+\item {\bfseries\sffamily DONE} A.2 Learning Record
+\label{sec:org93d104d}
+\begin{itemize}
+\item reflect on your development as it relates to the course strand
+\end{itemize}
+
+Thinking about my own capabilities as a reader and writer, it would
+seem that I generally have a very difficult time communicating my
+thoughts accurately and entirely. To second my girlfriend, I do feel
+as though I tend to spend a great deal of time thinking very deeply
+about questions. My guess would be that this causes the opinions that
+I gather to be riddled with details and nuances that take me a long
+time to generalize, or compress into more concise forms, should I be
+be asked to express myself.
+
+This being said, I also feel that when I am able to set aside enough
+time to collect all of my thoughts on some question, my arguments are
+generally quite good, per feedback from others. 
+
+Of course, considering that this response is indeed a situation in
+which I must respond to a very broad question, there are many more
+experiences that I've had and could delve into as they relate to my
+abilites in argumentation and communication. If anything, this is
+perhaps to say that I want to communicate the best judgements of
+things as possible in all my arguments, acknowledging my own perpetual
+fallibility as a human. Since it is always the case that there exists
+more to learn and that my thoughts will differ in some way from the
+truth, claiming any real knowledge of any one thing for me is
+impossble. It follows that any form of criticism of my opinions is a
+good thing - an opportunity to rethink my argument - and it is this
+kind of socratic and enlightenment style of thinking that I think has
+put me in a good position to analyze and commmunicate sound and
+informative arguments; but we'll see\ldots{}
+
+\item {\bfseries\sffamily DONE} Read EAA chs. 1 \& 2
+\label{sec:orga5aa471}
+\item {\bfseries\sffamily DONE} Class Observation
+\label{sec:orgadc17eb}
+\end{enumerate}
+\subsubsection{2018-06-05 Tuesday}
+\label{sec:org4d4c665}
+\textit{<06/05/18 Tue>}
+\begin{enumerate}
+\item {\bfseries\sffamily DONE} Read EAA chs. 3, 4, 5
+\label{sec:org5b7357e}
+\end{enumerate}
+\subsubsection{2018-06-06 Wednesday}
+\label{sec:org69c4133}
+\textit{<06/06/18 Wed>}
+"What are the Ethos statements your appearance is making today?"
+\begin{itemize}
+\item I did not think so hard about my clothing choices today
+\item Shorter hair
+\item Bland clothing, not super regular but not expressive
+\item humility, modesty, self-effacing
+\item Not attracting attention
+\end{itemize}
+
+On Wednesday we examined perceptions of ethos statements made by
+fashion choices, including a specific class comparison of those made
+by Beyonce and Taylor Swift. Later we went over the details of our
+group project and the stakeholder analysis part.
+\begin{enumerate}
+\item {\bfseries\sffamily OOPS} Read EAA chs. 16 \& 17
+\label{sec:orgf9c8dab}
+\item Project 1, Stakeholder Analysis
+\label{sec:org006a87e}
+\begin{itemize}
+\item Every team will generate a list of major stakeholders within the
+controversy that your group is studying
+\item Within your team, each group member will select one stakeholder that
+they will become an expert on, irrespective of your own position on
+the issue
+\item Each person will:
+\begin{itemize}
+\item Write a 6-page (1800 words) rhetorical analysis of one
+stakeholder's position, argument, and rhetorical strategies
+\item Cite at least one source made by the stakeholder
+\item These analyses should strive to provide a fair analysis of your
+stakeholder's position by quoting from and closely engage with
+source \emph{produced} by those stakeholders.
+\end{itemize}
+\end{itemize}
+\begin{enumerate}
+\item Focus/Purpose/genre
+\label{sec:orge0d5cdb}
+Makes an argument about the stakeholder's use of rhetoric (not about
+the issue itself). Clearly identifies a stakeholder and offers
+effective analysis of the stakeholder's position and arguments.
+\end{enumerate}
+\end{enumerate}
+\subsubsection{2018-06-07 Thursday}
+\label{sec:org64116d6}
+\textit{<06/07/18 Thu>}
+On Thursday we used Gamestop and the ESRB as examples in a rhetorical
+analysis of a stakeholder and issue. I also conducted a short
+interview with a classmate (Russel) who told me about one he know that
+most other people misunderstand (Fly fishing) as preparation for group
+project source gathering.
+
+Rhetorical Analysis: Gamestop
+\begin{itemize}
+\item What is the purpose and audience?
+\begin{itemize}
+\item Gamestop and the ESRB wants business?
+\item To seduce parents into buying kids video games?
+\item Trust accuracy of ESRB ratings?
+\end{itemize}
+\item Stakeholders
+\end{itemize}
+
+Research
+\begin{itemize}
+\item Begin with questions
+\item Write them down
+\item Online is a fine place to start
+\item Follow the research
+\item Interviews and expertise
+\end{itemize}
+
+Interview w/ Russel (Fly Fishing)
+\begin{itemize}
+\item Father got you into it
+\item Jackson Hole, WY
+\item Nature, exciting, relaxing, water constantly flowing in streams
+\item Present and aware of whats
+\item Lots of people think fishing is boring
+\end{itemize}
+
+Quotes
+\begin{itemize}
+\item Four steps
+\begin{itemize}
+\item Introduce
+\item Quote
+\item Summarize
+\item Analyze
+\end{itemize}
+\end{itemize}
+
+\subsubsection{2018-06-08 Friday}
+\label{sec:org8c75690}
+\textit{<06/08/18 Fri>}
+On Friday we discussed the process of working in a group and how to
+handle various issues in working as a team, in addition to the
+procedure/goals in developing a rhetorical analysis of a stakeholder
+in some issue. Groups met together and discussed the contents of group
+contracts that will be used for the duration of the major project.
+\subsubsection{2018-06-10 Sunday}
+\label{sec:org441680e}
+\textit{<06/10/18 Sun>}
+\begin{enumerate}
+\item {\bfseries\sffamily DONE} Stakeholder Rhetorical Analysis
+\label{sec:org50b0d0c}
+\begin{itemize}
+\item For this assignment you will submit a short proposal for your
+Stakeholder analysis essay (100-300 words) along with an analysis of
+one source (500-1000 words). The proposal should name your
+stakeholder, identify four to five possible sources for analysis,
+and two or three potential claims. This is in place of an
+introduction. Submit both as a single document.
+\end{itemize}
+\begin{enumerate}
+\item {\bfseries\sffamily DONE} Read Chapter 6
+\label{sec:org6c22989}
+\begin{itemize}
+\item specifically p. 114-119
+\end{itemize}
+\end{enumerate}
+\end{enumerate}
+\subsection{2018-W24}
+\label{sec:org0dcd12d}
+\subsubsection{2018-06-11 Monday}
+\label{sec:org46c9944}
+\textit{<06/11/18 Mon>}
+Today we spoke briefly about the goals of the rhetorical analysis part
+of the major project, and spent a majority of the class peer-reviewing
+our first rhetorical analysis assignment. I began working on the major
+project myself and discussed/solidified my intentions for the project
+after class with the professor.
+\begin{enumerate}
+\item {\bfseries\sffamily DONE} EAA chs. 18, 19, \& 20
+\label{sec:orgcd189e4}
+\end{enumerate}
+\subsubsection{2018-06-12 Tuesday}
+\label{sec:org68029af}
+\textit{<06/12/18 Tue>}
+\begin{enumerate}
+\item {\bfseries\sffamily OOPS} Finalize Analysis Claim
+\label{sec:org538235d}
+\end{enumerate}
+\subsubsection{2018-06-13 Wednesday}
+\label{sec:orga4ad7c1}
+\textit{<06/13/18 Wed>}
+Russell's email: r.w.carpenter@tcu.edu
+Russell's phone: 615-509-9817
+\subsubsection{2018-06-14 Thursday}
+\label{sec:org5b8fda2}
+\textit{<06/14/18 Thu>}
+\begin{itemize}
+\item Rubric review
+\begin{itemize}
+\item \textbf{not} talking about the issue but about the nature of someone's
+argument about the issue
+\item why might they be saying things in that way?
+\end{itemize}
+\item Track changes (copy-editing word documents)
+\item Master tropes
+\begin{itemize}
+\item Metaphor
+\item Metonymy 
+\begin{itemize}
+\item using separate idea to describe a whole "The crown rules over us all"
+\end{itemize}
+\item Synecdoche 
+\begin{itemize}
+\item using a part to describe a whole "Lend me your ear"
+\end{itemize}
+\item Irony
+\begin{itemize}
+\item saying the opposite of what's expeced (or what really is)
+\end{itemize}
+\end{itemize}
+\item Other tropes
+\begin{itemize}
+\item Litotes
+\begin{itemize}
+\item Negation for rhetorical effect "Damn, she is \emph{not} ugly!"
+\end{itemize}
+\item Hyperbole 
+\begin{itemize}
+\item Exaggeration
+\end{itemize}
+\item Antonomasia
+\begin{itemize}
+\item play on on the name of something "The donald" "make like a tree"
+\end{itemize}
+\item Rhetorical question
+\begin{itemize}
+\item question that does not really ask for an answer
+\end{itemize}
+\item Aposiopesia
+\begin{itemize}
+\item cutting off a sentence for rhetorical effect
+\end{itemize}
+\end{itemize}
+\end{itemize}
+\subsubsection{2018-06-15 Friday}
+\label{sec:orgf4ff25d}
+\textit{<06/15/18 Fri>}
+Today I have elected to turn in my english rhetorical
+analysis assignment by the end of the day, though I have not actually
+started writing the 1800 words and now the word wrap might keep going
+I am not sure whether I want to do this or not okay this is friggin
+sick! Now the word wrap goes all the way to the end of the document
+and I can just keep writing what I want to write I enjoy this
+immensely just kidding my thoughts are going. Must work on something
+now, but what? "By the end of the day" would definitely suggest that I
+would be turning the paper in before midnight\ldots{} but I don't imagine
+that my professor is still awake at this time and I may as well have
+uuntil the morning so I may stay up all night and get this done. The
+sacred space essay I also have until 11 or so tomorrow technically to
+still be able to receive an 80 on it. I had many thoughts in reading
+my classmate's paper. I said one thing earlier that I think may have
+been interpreted as an insult or narcissistic comment, about not
+needing to use the writing center that TCU provides, though I hope
+this was not this case. Anyways, I can begin brainstorming about the
+sacred space project. Just kidding, it would be more worth my time to
+focus on the rhetorical analysis paper that will analyze Dave Rubin's
+argument style in his internet address of the Intellectual Dark
+Web. The group of people and style of conversation definitely seems to
+be tthe kind of deep thinking, though the word "Intellectual" does
+also seem to bug me.
+
+Who gets to say, really, who is an intellectual?  Is this just a
+scholar? A smart person? Intelligence, I presume. I still am of the
+thought that no one really known what constitutes intelligence, seeing
+as we are still coming up with better ways to construct artificial
+intelligence. "If I cannot make it, then I do not understand it," is a
+saying that comes to mind which may apply to the current situation
+with regards to humans' understanding of intelligence. I want to say
+that Feynman was the one who said this, though I am also fairly
+certain that the quote is not exactly the way he said it.
+
+I have gotten side-tracked, perhaps? The rhetorical analysis, yes. Off
+the top of my head, I remember Rubin coming across as quite passionate
+about his viewpoint. This is alright insofar as he acknowledges that
+it is not \emph{the} viewpoint, which from his other podcasts and shows, it
+seems he has done a good job. Best shown in this address, however, is
+perhaps where he mentions how his political stance has changed in a
+number of ways. From the left more toward the right, in his case,
+generally speaking, but also toward strong defense of the principle of
+free speech. Here is where I anticipate the highest amount of public
+controversy. The question, "At what point does someone's right to
+freedom of speech trump another person's right not to be offended?"
+the answer to which would certainly correlate with one's perception of
+the whole Intellectual Dark Web movement.
+
+I think that I need to put more of my thoughts down onto my laptop, as
+I am doing now. I think also that I have been a slow writer
+recently. Not so sure that this is necessarily a bad thing, though I
+also think that there is some truth to the idea that one does not
+usually sit down with a blank document and start writing any piece in
+the way that it will be when it is finished. Outlining seems to be of
+great help, generalizing a topic into main categories and then into
+themes or the most important ideas involved. Then, expanding each
+point in a sort of tree, like fashion until the writing is at an
+appropriate level of detail. This is to be contrasted with just
+beginning at the final level of detail, not having any indication as
+to how long the writing may end up being if the writer is to keep said
+level of detail throughout all of the paper. Thus, it seems more
+vulnerable to inconsistencies and possibly getting side-tracked into
+irrelevant conversation. Losing sight of the big picture would be a
+good way to say what I mean.
+
+So alright, lets see what kinds of topics I will be covering. The
+"mind map" technique as discussed in class for the op-ed might also be
+a great way to structure this analysis writing. The main focus here
+being the specific argument of one stakeholder, Dave Rubin. Perhaps it
+is more of an attitude of "here is this issue that I am curious about
+and this person seems to have something to say about it - what is he
+saying and why might I be inclined to believe him?" This question is
+hard to phrase, considering that our professor has stated on multiple
+occasions that the analysis claim be about the \emph{nature} of the stake
+holder's argument on the issue, \textbf{not} about the issue itself. In the
+simplest terms I can imagine, "why should I listen to [stakeholder]?"
+is the question that it seems we are trying to answer. Though this is
+perhaps too broad in the sense that the focus should be just on the
+argument that is being made (from the specific source
+mentioned). Nonetheless, I like this approach as it is very relevant
+in research and forming an opinion on the issue, hearing what others
+are saying and how they are saying it.
+
+Free Speech is the largest topic Intellectual Dark Web is the subtopic
+The Rubin Report is the stakeholder YouTube is the media platform /
+communication medium
+
+At what point does one's right to freedom of speech trump one's right
+not to be offended?
+
+Free Speech vs. Hate speech debate?  Wikipedia, "fighting words" What
+is protected under the U.S. law?
+
+While the question is a rather controversial one, this is the main
+topic of my project.
+
+A situation is which one feels that by being honest and expressing
+one's opinion, in good faith, one may risk offending the person that
+is spoken to.
+
+I imagine the situation in which I have been born and raised in Nazi
+Germany in a family and community which supports the Nazi
+regime. Suppose I meet an outsider at a coffee shop and begin talking
+to them about life. Suppose also that this person is Jewish, and that
+I think Jewish people are evil and deserving of death based solely on
+the fact that they identify as a Jew. One major thing to note here is
+that, what if we also suppose that I am of the mind that \emph{cares} whether
+or not it is true that Jews are deserving of death. That is to say
+that, I am a unique kind of Nazi who believes in what he has been told
+insofar as this is all he has known, and that this is his best guess
+as to how to act in the world. Now, (and I suppose I am changing
+perspectives) if the Nazi were to tell the Jew that he thinks Jews
+should die, this would surely cause a great deal of distress and
+offensiveness. My question is, how would said Nazi be able to change
+his mind out of some radical position if no one allows him to state
+his position aloud? What if no one is there to hear his reasoning and
+try to correct his errors of judgment? It seems that he would instead
+be likely to face immediate retaliation with no explanation as to why
+his opponents are responding in this way. Such seems tragic as
+everyone involved may be doing only what he/she believes is correct,
+though there should surely be no tolerance for an opinion that wishes
+the death of another human. Such is to use freedom of expression to
+advocate the suppression of expression of another individual. Life
+seems as good an unalienable right as any, but what about freedom of
+expression? What is a good policy to take when someone is using their
+freedom of speech to interfere with someone else's freedom of speech?
+"I think that you shouldn't be able to say that" is a basic way of
+putting this, and it sounds an awful lot like the words of someone who
+may have just been offended. It seems identical to saying "I think
+people's speech should not be free under the law."
+
+An interesting thing to point out is also that any speech is
+ultimately subject to certain consequences, not just legal. If someone
+wants to fire someone for posting that their boss is a bitch to
+Facebook, certainly this is acceptable. For Sam Harris, who states
+frequently that it is important to be able to criticize bad ideas,
+what consequences should come of the opinion that Islam is the mother
+load of bad ideas? This is not to say that Muslims should be killed,
+of course, nothing at all about Muslims as human beings. The idea,
+however, that Muhammad is the final messiah and son of God and that
+the Koran contains the infallible word of god, (which indicates that
+certain members of a society are deserving of death), is argued to be
+one that should not be respected, perhaps? What do we mean by, I do
+not like this idea. Should we get rid of the idea? Death to an idea?
+Or advocation against the idea of Islam, perhaps? Being able to argue
+against it publicly so as to offer reasons not to become a Muslim and
+let those who read decide whether or not this is convincing? I think
+yes, this is what is meant by holding an opposition to an idea. It is
+only to say that "I think there are good reasons for \emph{not} believing in
+Islam," for example in this situation. It is a rather harmless
+statement of opinion, it seems. "I think it is a bad idea" turns into
+"I think I can convince you not to become a Muslim"
+
+I wonder if the controversy surrounding a phobia of Islam arises from
+the ambiguity of being a Muslim. The Koran might explicitly instruct
+believers to kill those who have turned their back on Allah, in which
+case we must know what is to be interpreted by someone identifying as
+Muslim? Is this equivalent to saying that one wishes death upon
+nonbelievers? Perhaps a clarification need to be made on a massive
+scale for the community of Muslims, thereby forcing those who wish
+death to be recognized and potentially face conflicts under the law
+should they not reevaluate their beliefs. Meanwhile, it should be
+encouraged that the Muslim community do this, if any of what I have
+said here has any correspondence with reality.
+
+I have, of course, gone way off topic here, I'm afraid. While my
+thoughts on the idea of free speech are more clear, I must still
+evaluate the argument style in Rubin's video. Let the all-nighter
+begin.
+\begin{enumerate}
+\item Freewrite
+\label{sec:org8e49e4b}
+
+\item Op-Eds
+\label{sec:org46e0810}
+\begin{itemize}
+\item Aimed at a specific audience (one per group member)
+\item Pick a venue
+\item Focus on a specific feature
+\item 1500 words
+\end{itemize}
+"Read an article by someone who looks different than you"
+"Hire more professors of color"
+\item Freewrite
+\label{sec:orgb5542a7}
+What audience will you focus on? List two or three. What venue would
+you imagine it being published in? (Newspaper, blog, website, etc.)
+Be specific. Is there a particular angle or feature of the debate
+you'd like to address?
+
+I would not change my argument for different audiences, rather, I
+would change the way that I communicate this argument so as to be
+understood best by those who read.
+
+I may focus not on the listeners and participants of the IDW, but the
+critics of the IDW. On a website or online media site perhaps. I would
+likely address the fundamentals of the IDW, and what they really seem
+to be. Whether or not I agree with them, just stating them and the
+things that these speakers are trying to achieve in getting together.
+\item Turn in Analysis and attach to email
+\label{sec:org09a02a1}
+\end{enumerate}
+\subsubsection{2018-06-16 Saturday}
+\label{sec:org1a27b09}
+\textit{<06/16/18 Sat>}
+Pre judge the contents of which to be censored.
+
+I'm wondering if perhaps I am incapable of holding an opinion.
+opinion: a view or judgment formed about something, not necessarily based on fact or knowledge.
+conclusion: a judgment or decision reached by reasoning.
+reasoning: the action of thinking about something in a logical, sensible way.
+
+I am rethink the usage of some words, opinion, agree, disagree.
+
+Alternative to "I agree"
+\begin{itemize}
+\item I think so
+\item This makes sense to me
+\end{itemize}
+
+Alternative to "I disagree"
+\begin{itemize}
+\item I do not understand
+\item This does not make sense to me
+\item I'm not following
+\end{itemize}
+
+\subsection{2018-W25}
+\label{sec:orgac3ed4f}
+\subsubsection{2018-06-18 Monday}
+\label{sec:org64ac46a}
+\textit{<06/18/18 Mon>}
+\begin{quote}
+Ask a scientist what he conceives the scientific method to be and he
+will adopt an expression that is at once solemn and shifty-eyed:
+solemn, because he feels he ought to declare an opinion; shifty-eyed,
+because he is wondering how to conceal the fact that he has no opinion
+to declare. -- Sir Peter Madawar
+\end{quote}
+\subsubsection{2018-06-19 Tuesday}
+\label{sec:org8e4f82a}
+\textit{<06/19/18 Tue>}
+Format for Op-ed Submission: "Turner op-ed \#1"
+\textbf{Heuristic} - "a tool that helps you make up things"
+\emph{Learning how to learn} (Soccer guy, "Chiche")
+\begin{enumerate}
+\item {\bfseries\sffamily DONE} EAA Ch. 14 \& 15 and "Document Design"
+\label{sec:org72ec5b3}
+\begin{enumerate}
+\item Document Design
+\label{sec:org9c8877e}
+\begin{itemize}
+\item \textbf{Document Design} = visual appearance (not content)
+\item \textbf{Unity} = repetition and consistency. 
+"Do all elements in my document work together visually?"
+\item \textbf{Variety} = varied, topic specific design choices
+\item \textbf{Balance} = harmony/equilibrum/proportionality
+\item \textbf{Emphasis} = drawing attention to important parts
+\item \textbf{Layout} = spatial arrangement
+\item \textbf{White Space} = easier to read
+\item ACADEMIC vs. BUSINESS WRITING ?
+\item \textbf{Typeface} = a general font (Verdana, Courier)
+\item \textbf{Font} = a specific font (Century \textbf{bold}, Verdana \emph{italics}, etc.)
+\item \textbf{Visuals}
+\begin{itemize}
+\item make simple and uncluttered
+\item only when necessary
+\item label/number tables and figures
+\item balance b/w figs and text
+\item give credit if not your own
+\end{itemize}
+\end{itemize}
+\item EAA 14
+\label{sec:orgf3fa0c4}
+\item EAA 15
+\label{sec:orgef77ae4}
+\begin{itemize}
+\item Formal Presentations: \textbf{Purpose}, \textbf{Audience}, \textbf{Structure}
+\item Strong introductions and conclusions
+\item Clear structures and signposts
+\item Straightforward syntax and concrete diction
+\item Repetition, parallelism, and climactic order
+\item \textbf{Oral} presentations: practice, time, and record
+\item Websites, Blogs, Wikis, Videos
+\end{itemize}
+\end{enumerate}
+\item {\bfseries\sffamily OOPS} LR2: Draft and Submit B1
+\label{sec:org92faf85}
+\begin{itemize}
+\item "These are words to help figure out how you're learning"
+\item Must talk about each of the course strands
+\item Can be bullet points with short introduction
+\end{itemize}
+
+\begin{center}
+\begin{tabular}{ll}
+Strands & Learning Dimensions\\
+\hline
+Rhetoric & Confidence/Independence\\
+Research & Skills/Knowledge\\
+Technology & Knowledge/Understanding\\
+\sout{Collaboration} & Use of prior emerging experience\\
+TCU Online & \textbf{Creativity/Originality/Imagination}\\
+\end{tabular}
+\end{center}
+
+\begin{itemize}
+\item \textbf{Rhetoric}
+\begin{itemize}
+\item Dealing with communicating uncertainty
+\end{itemize}
+\end{itemize}
+
+\item {\bfseries\sffamily OOPS} Op-ed Draft
+\label{sec:org8fa174e}
+"Here's what's wrong with the world and here's what has to change"
+\begin{itemize}
+\item don't forget \emph{action steps}
+\item must advocate for a specific position
+\item consider telling a story
+\end{itemize}
+\end{enumerate}
+\subsubsection{2018-06-20 Wednesday}
+\label{sec:org20e3546}
+\textit{<06/20/18 Wed>}
+How to make your op ed visually interesting
+\begin{enumerate}
+\item Single-spave
+\item Remove first line indents
+\item Add spaces between paragraphs
+
+\item Add section titles in bold
+\end{enumerate}
+
+Today I learned that most academic papers do not indent the first
+paragraph because there is no need.
+
+\subsubsection{2018-06-21 Thursday}
+\label{sec:org654b8e5}
+\textit{<06/21/18 Thu>}
+
+Going over LR2 requirements for B1 (midterm analysis of data) and C1
+(midterm evaluation and grade estimate). The midterm grade estimate a
+letter grade by itself or with either a plus or minus. Should be 8-16
+class observations and grammar girl exercises. LR2 contains
+"20803-LR2.docx" (with A1, A2, B1, C1), (other stuff) , Freewrites,
+and Grammar Girl.
+
+Successful strategy for C1
+\begin{itemize}
+\item Look at grading criteria
+\item Use grading criteria as evidence for claim (grade)
+\item Short paragraphs, sections, bullet points
+\end{itemize}
+Common Issues
+\begin{itemize}
+\item Using effort as evidence?
+\item (other stuff)
+\end{itemize}
+
+What Makes a Good Infographic? (piktochart)
+
+I feel like college doesn't teach students \emph{how to disagree}. By \emph{how to
+disagree} I mean how to deal with disgreement, or how to resolve
+disagreements in a civil manner. In a writing argument, I felt as
+though everyone in the class was learning how to be persuasive about
+whatever it is they think is true, that is, how to make it sound like
+you're right. Managing \emph{real} disagreement strikes me as precisely the
+activity that teaches people how to recognize when they are \emph{wrong}. If
+we are not practicing to recognize when we are wrong, but are instead
+only taught how to appear persuasive (often arguing against people who
+aren't in the classroom), it would follow that one never learns the
+appropriate way to react when in a disagreement, possibly sensitive?
+
+I have had this thought before, but it has just now come back to me: I
+think it best in any situation not to state a disagreement if you are
+not prepared to explain yourself.
+
+Have been spending valuable time on the internet reading articles and
+things on civil discourse, intellectual humility and scientific
+humility. I want to be able to describe the feelings that I have for
+the idea of 'humility,' but I am not so sure this is exactly the right
+way to describe the attitutes to which I am inclined. This began in my
+research of the Intellectual Dark Web and controversial speakers,
+first focusing on free speech and then narrowed into civil discourse.
+\subsubsection{2018-06-24 Sunday}
+\label{sec:org42d2d30}
+\textit{<06/24/18 Sun>}
+
+Finishing up my rhetorical analysis, I think the main points that I am
+trying to make are that Dr. Helms is influenced by postmodern
+thought. How much he ascribes to the messages is probably what I
+should focus on primarily, as opposed to the actual validity of the
+theory itself. Leaving the opinion for the op-ed.
+
+What has he done though, with respect to postmodern thought. The idea
+that clarity is a myth? Why, then, has he resorted to stating that
+sometimes we must take things on faith and not remain skeptical? 
+
+Today I am going to wing this motherfucking project like a
+motherfucking boss. Just kidding we will have to see how it turns out
+but I feel like I am on to something. Don't know quite what it is but
+it sure seems that postmodernism is a load of bullshit. Okay so how
+should I start off the argument? Will need to make a statement of
+rhetorical analysis of Dr. Helms. I have some data from a previous
+class, could go off of the template from the book about Obama:
+
+\begin{quote}
+Many people admire the vision and eloquence of President Obama; others
+are put off by his often distant tone and his “professorial” stance. A
+close look at several of his speeches will illuminate both sides of
+this debate.
+\end{quote}
+
+I may look at Dr. Helms and say that some people admire the "vision
+and eloquence," or something like this. I could probably do something
+like, instead of eloquence and vision I could do: well Dr. Helms is
+very polite in class, perhaps this would be one. He is very outspoken,
+passionate and motivated. Obviously he loves his job, I think that is
+clear. Devotion is a good term. On the other hand, I think he is
+fundamentally mistaken about some really core ideologies that he holds
+(if he indeed holds the ones that I think he does). 
+
+The public issue that I will be doing is postmodernism and its
+influence on the universities. The stakeholder will be Dr. Helms, as
+stated, and my rhetorical analysis claim could be that some people
+admire Dr. Helms' engaging and passionate teaching style, some are put
+off by the postmodern philosophy that has infected the university
+Humanities departments. Nah, perhaps that second part would instead
+focus on just how Dr. Helms seems to cause distress in students who
+really take the course seriously. No, I must not say this either in
+the event that this comes across as belittling toward my classmates. I
+am thinking that what I mean to say is probably something along the
+lines of how Dr. Helms teaching style does not lend itself to much
+skepticism. That is, the classroom environment does not set an
+atmosphere of civility and respect for the individual.
+
+Should I relate this back to the overall problem of Postmodernism that
+I am trying to address? It would have to be something like how the
+postmodern philosophies are affecting the classroom, or no, it must
+not involve my opinion so it would be more on the views of Dr. Helms
+and whether or not he displays any symptoms (lol) of postmodern
+thinking. 
+
+I really don't mean this in any sort of negative way, it just so
+happens that this philosophy has seemingly been the very root from
+which I have had my troubles with the English department at TCU.
+
+\subsection{2018-W26}
+\label{sec:orgfa98c87}
+\subsubsection{2018-06-25 Monday}
+\label{sec:orgf98bf03}
+\textit{<06/25/18 Mon>}
+
+Talking with Dr. Helms today
+\begin{itemize}
+\item I care and think alot about argumentative writing
+\item does my epistemology conflict with the nature of this course
+\item truth vs Truth and selective vs. genuine skepticism
+\item \emph{persuasion} is not my goal as a person, seeking Truth is
+\item "It seems to me like this would be a good idea, what do you think?"
+\item choosing you as stakeholder, value of two-sided disagreements, mediation
+\item focus on the writer, not the reader (writing for understanding, not action)
+\item Learning by resolving conflict - am I learning how to create them?
+\item figuring out how to interpret project goals
+\end{itemize}
+
+\begin{quote}
+Protest\ldots{} More diversity now! \ldots{} Chancellor Boschini\ldots{}  
+
+I'm part of a hiring comitee.
+
+Requires a diversity statement.
+
+Why is diversity important to you.
+
+To promote a more diverse population.
+\end{quote}
+
+It seems assumed that lack of diversity is a bad thing, with no
+exception or explanation.
+
+\begin{itemize}
+\item minority
+\item black
+\item white
+\end{itemize}
+
+giving groups the freedom to grow
+
+How white the national conference is
+
+"my field is 98\% white\ldots{} this is nuts!"
+
+You could persuade what 20803 should be about.
+
+Why 20803 should shift to being about Rogerian Argument (Carl Rogers)
+
+Possible propose "Democracy and Disagreement" course
+
+Suggested Readings:
+\begin{itemize}
+\item Thomas Khun "Structure of Scientific Revolutions"
+\item "Prayers and Tears of Jaque Derrida"
+\item Q-question:
+\item Kenneth Burke
+\end{itemize}
+
+\begin{enumerate}
+\item {\bfseries\sffamily DONE} Syllabus
+\label{sec:orga369db0}
+Make sure to keep the same course strands
+
+\begin{quote}
+The goal of this assignment is to provide you with a challenging
+opportunity to (a) analyze the depth and breadth of a public problem
+or issue, (b) identify a plausible solution, and (c) persuade others
+to agree with and take action to enact the solution, drawing on
+significant primary and secondary sources. You will learn to use
+advanced strategies for developing ideas and analyzing arguments, with
+evidence of critical thinking in both the conception and the
+development of the thesis. You will write in ways that define and
+develop an argument with a clear rationale and compelling supporting
+material, and you will participate in teamwork in ways that
+demonstrate interdependence and accountability.
+\end{quote}
+
+\begin{enumerate}
+\item analyze the depth and breadth of a public problem or issue
+\item develop your perspective on the issue
+\item explain why you
+\end{enumerate}
+
+Make an argument for intellectual humility.
+Present a way to publicly support viewpoint diversity.
+
+What do I actually want to argue for? Argue? Reason? What do I think?
+
+Hey Cole, what do you think about postmodernism?  In what sense?  This
+is what comes to my mind: Does this sound like postmodernism to you?
+crafting a rogerian argument for the sake of the person involved,
+trying to reach a common understanding. The postmodernist views are
+not exactly the most influential in the Humanities at TCU. What is
+misunderstood about them? What do I need to know about people who are in the humanities and practice postmodernism?
+
+We are trying to figure it out. I don't know what I am doing but gosh
+darn it I'm trying okay now let me get back to work.
+
+Hoepfully we can talk about the things that I will want to cover.
+
+Digital Design
+Responsibilities worksheet (6/29)
+Drafts (7/3)
+Tools
+\begin{itemize}
+\item Wordpress
+\item Wix
+\item MovieMaker
+\item iMovie
+\item Premiere
+\item Audacity
+\end{itemize}
+Design, Story, Shareability, Data
+
+\item {\bfseries\sffamily OOPS} Digital Design Proposal
+\label{sec:orgb1915bd}
+\sout{1000} 600 words, formatted appropriately (not an English
+paper: bullet points and short paragraphs)
+\begin{enumerate}
+\item audience analysis (Who? Values, desires, fears?)
+\item detailed description of the digital artifact (content, mode of delivery, persuasive strategy)
+\item project plan, with assignments to group members and deadlines associated with each task
+\end{enumerate}
+\item {\bfseries\sffamily OOPS} Op-Ed
+\label{sec:orgce72985}
+\item {\bfseries\sffamily OOPS} Infographic
+\label{sec:org15a1460}
+\end{enumerate}
+\subsubsection{2018-06-27 Wednesday}
+\label{sec:org4723f37}
+\textit{<06/27/18 Wed>}
+
+Action Steps
+\begin{itemize}
+\item Current students contact administrators
+\item Audience of
+\end{itemize}
+
+\textbf{lookup}: Dependent/Independent Clauses
+
+How to present you infographic
+\begin{itemize}
+\item Give an overview of the argument
+\item Give us a behind the scenes
+\begin{itemize}
+\item Why did you do what you did?
+\item Who was your audience?
+\item What surprised you most?
+\end{itemize}
+\item Each member should talk for roughly the same amount of time
+\end{itemize}
+
+Assignments
+\begin{itemize}
+\item Proposal (due 6/29): \sout{1800} words, one per group, formatted
+appropriately (not an English paper: bullet points and short
+paragraphs)
+\begin{enumerate}
+\item audience analysis
+\item detailed description of the digital artifact (content, mode of delivery, persuasive strategy)
+\item project plan, with assignments to group members and deadlines associated with each task
+\end{enumerate}
+\item Responsibilities worksheet (6/29)
+\item Draft (full draft due 7/3)
+\item Bring to class every day
+\item Final Draft (7/5)
+\item Presentation (7/6)
+\item \textbf{Infographic due tomorrow}
+\end{itemize}
+
+Creative cloud student discount
+
+Alright what is this going to be about now? I'm talking about the
+project that I should be working on.
+\subsubsection{2018-06-28 Thursday}
+\label{sec:orga911165}
+\textit{<06/28/18 Thu>}
+
+Disagreement
+Help keep the democracy alive people!
+
+Possible Solutions
+\begin{itemize}
+\item new core credit at tcu + value statement
+\item required course for all students?
+\end{itemize}
+
+Universities are a place of learning
+\subsubsection{2018-07-01 Sunday}
+\label{sec:orga31bdf4}
+\textit{<07/01/18 Sun>}
+
+\begin{enumerate}
+\item wb1.jpg
+\label{sec:orgba8315c}
+\begin{itemize}
+\item "makes sense"
+\item scientific theories are the most convincing arguments
+\item having to say X vs. having X to say (latter is more persuasive)
+\item "persuade others to agree"
+\item logical fallacies and non-explanations
+\item what if people don't care for full explanations?
+\begin{itemize}
+\item protest and maintain humility (is this possible?)
+\item or, explain to any who listen (convince or \uline{make corrections} accordingly)
+\item speaker cannot \uline{decide} to be persuasive
+\item good arguments draw from what listeners already believe (start from valid premises)
+\item honest arguments draw from what the speaker previously believed
+\end{itemize}
+\end{itemize}
+
+\item wb2.jpg
+\label{sec:org5d6de68}
+\begin{itemize}
+\item a good argument is a well-developed argument (has more answers to "why?" Qs)
+\begin{itemize}
+\item but persuasive arguments are not always good ones
+\end{itemize}
+\item must we always pick between good and persuasive? (perhaps, if the listener disagrees/is lazy)
+\item sometimes good arguments undermine listeners' other beliefs
+\begin{itemize}
+\item sometimes \uline{honest} arguments do this
+\end{itemize}
+\item listeners must be willing to challenge themselves (Intellectual Humility)
+\item reaching \uline{new} conclusions often is fine, challenging old ones often isn't
+\begin{itemize}
+\item judge an argument by its conclusion or a \uline{conclusion by its argument}? (listener's choice)
+\item HOW DO YOU DEAL WITH THE FORMER?!
+\end{itemize}
+\end{itemize}
+
+\item wb3.jpg
+\label{sec:orge25a1c2}
+\begin{itemize}
+\item the audience determines persuasiveness
+\item science cares about good arguments/explanations, not "persuasive" ones
+\item some audiences can be persuaded by \uline{bad} (fallacious) arguments
+\begin{itemize}
+\item and some don't know how to follow/identify \uline{good} (consistent) ones
+\end{itemize}
+\item am I persuading others of an \uline{argument} or of a \uline{conclusion}?
+\item if others judge my argument by its conclusion (and disagree), do I modify the conclusion?
+\begin{itemize}
+\item No, try to justify judging instead by the argument
+\end{itemize}
+\item it's not about what you think, but \uline{HOW} you think
+\item my goal is for what I say to "make sense" (it's followable, reasonable, specific, etc.)
+\begin{itemize}
+\item if it does, you might: 
+\begin{enumerate}
+\item think that it is correct and then believe in or adopt the argument
+\item disagree and understand where and why it is incorrect -> (EXPLAIN! PLEASE!)
+\end{enumerate}
+\item if it doesn't make sense, then I have failed. (would rather have said nothing)
+\end{itemize}
+\end{itemize}
+
+\item wb4.jpg
+\label{sec:org6f1ea77}
+\begin{itemize}
+\item I Understand
+\begin{itemize}
+\item Y -> I think you're \uline{\_\_}
+\begin{itemize}
+\item On to something -> I'll accept it
+\item Wrong -> and here's why\ldots{}
+\end{itemize}
+\item N -> But I \uline{\_}
+\begin{itemize}
+\item Agree
+\item Disagree
+\end{itemize}
+\end{itemize}
+\item seeking to be understood vs. in agreement
+\end{itemize}
+
+\begin{center}
+\begin{tabular}{ll}
+\textbf{persuade} & \textbf{explain}\\
+\hline
+"persuade others to agree" & "communicate effectively"\\
+agreeing & understanding\\
+same conclusion & same assumptions\\
+do I know it? & can I learn it?\\
+what to learn & how to learn\\
+knowledge & education\\
+\end{tabular}
+\end{center}
+
+\begin{itemize}
+\item similar methods => similar answers
+\item similar answers =/> similar methods
+\item (revised)
+\begin{itemize}
+\item similar assumptions => similar answers
+\item similar answers =/> similar assumptions
+\end{itemize}
+\item Is it okay to persuade \uline{without explanation}?
+\item public controversies often are the hardest to explain
+\begin{itemize}
+\item therefore, \uline{PERSUASION} (sad)
+\end{itemize}
+\end{itemize}
+
+\item Rogerian/Invitational Argument
+\label{sec:org80ab98a}
+\begin{quote}
+The key to Rogerian argumentation is a willingness to think about opposing positions and to describe
+them fairly. In a Rogerian structure, you have to acknowledge that alternatives to your claims exist
+and that they might be reasonable under certain circumstances. In tone, Rogerian arguments steer
+clear of heated and stereotypical language, emphasizing instead how all parties in a dispute might
+gain from working together.
+\end{quote}
+
+\begin{quote}
+such listening — in effect, walking in the other person’s shoes — helps you see that person’s points
+of view more clearly and thoroughly and thus offers a basis for moving together toward new
+understandings.
+\end{quote}
+
+\begin{quote}
+Invitational rhetoric has as its goal not winning over opponents but getting people and groups to
+work together and identify with each other; it strives for connection, collaboration, and the
+mutually informed creation of knowledge.
+\end{quote}
+
+\begin{quote}
+Remember that in such arguments, your goal is enhanced understanding so that you can open up a space
+for new perceptions and fresh ideas.
+\end{quote}
+
+\begin{quote}
+The lesson to take from Rogerian or invitational argument is that it makes good sense in structuring
+your own arguments to learn opposing positions well enough to state them accurately and honestly, to
+strive to understand the points of view of your opponents, to acknowledge those views fairly in your
+own work, and to look for solutions that benefit as many people as possible.
+\end{quote}
+
+\item Toulmin Argument
+\label{sec:orgb93b0bc}
+
+\begin{quote}
+The richest, most interesting part of a writer’s work — backing — remains to be done after the
+argument has been outlined. Clearly stated claims and warrants show you how much evidence you will
+need.
+\end{quote}
+
+\begin{quote}
+Experienced writers know that qualifying expressions make writing more precise and honest.
+\end{quote}
+
+On Page 143\ldots{}
+\begin{quote}
+For example, you may be a big fan of the Public Broadcasting Service (PBS) and the National
+Endowment for the Arts (NEA) and prefer that federal tax dollars be spent on these programs. So you
+offer the following claim:
+
+\textbf{Claim}: The federal government should support the arts.
+
+You need reasons to support this thesis, so you decide to present the issue as a matter of values:
+
+\textbf{Argument}:  The federal government should support the arts because in Brief it also supports the
+military.
+
+Now you’ve got an enthymeme and can test the warrant, or the premises of your claim:
+
+\textbf{Warrant}: if the federal government can support the military, then it can also support other
+programs.
+
+But the warrant seems frail: you can hear a voice over your shoulder saying, “In essence, you’re
+saying that Because we pay for a military, we should pay for everything!” So you decide to revise
+your claim:
+
+\textbf{Revised Argument}: if the federal government can spend huge amounts of money on the military, then it
+can afford to spend moderate amounts on arts programs.
+
+Now you’ve got a new warrant, too:
+
+\textbf{Revised Warrant}: A country that can fund expensive programs can also afford less expensive programs.
+
+This is a premise that you can defend, since you believe strongly that the arts are just as
+essential as a strong military is to the well-being of the country. Although the warrant now seems
+solid, you still have to offer strong grounds to support your specific and controversial claim. So
+you cite statistics from reputable sources, this time comparing the federal budgets for the military
+and the arts. You break them down in ways that readers can visualize, demonstrating that much less
+than a penny of every tax dollar goes to support the arts.
+\end{quote}
+
+\begin{quote}
+Dealing with conditions of rebuttal is an essential part of argument. But it’s important to
+understand rebuttal as more than mere opposition. Anticipating objections broadens your horizons,
+makes you more open to alternative viewpoints, and helps you understand what you need to do to
+support your claim.
+\end{quote}
+\end{enumerate}
+\subsection{2018-W27}
+\label{sec:org509335e}
+\subsubsection{2018-07-02 Monday}
+\label{sec:org6a12d8e}
+\textit{<07/02/18 Mon>}
+
+\begin{enumerate}
+\item {\bfseries\sffamily TODO} 750 word "op-ed"
+\label{sec:org53ccea7}
+\textbf{audience}: peers/students
+\textbf{venue}: as if it were to be in TCU360 
+\textbf{subject}: my experience in taking ENGL 20803
+\textbf{thesis}: (tentative) The more one tries to understand, the more difficult 20803 gets.
+
+ENGL 20803, Writing Argument. "If you care, beware"
+
+The course is heavily loaded against those who are simultaneously thoughtful and honest.
+
+\item {\bfseries\sffamily TODO} 8 page "report"
+\label{sec:org763ce7f}
+\textbf{audience}: the committee in charge of deciding the teaching of English 20803
+\textbf{subject}: my interpretations of the course
+\textbf{main point}: (tentative) the course seems to request dishonest behavior of the students?
+
+\textbf{format}:
+\begin{itemize}
+\item Executive summary
+\item Background (what's the problem? - set up the criteria)
+\item Evaluation
+\begin{itemize}
+\item Criteria/ratings
+\end{itemize}
+\item Solutions
+\item Recommendations
+\end{itemize}
+
+What are the criteria that I would want to introduce?
+\end{enumerate}
+\subsubsection{2018-07-05 Thursday}
+\label{sec:orgd2afd7f}
+\textit{<07/05/18 Thu>}
+
+[Executive Summary]
+
+What does is feel like to be wrong? According to Kathryn Schulz, "[being wrong] feels like being
+right." In her 2011 TED talk entitled, "On Being Wrong," Schulz observes that the embarrassment or
+dread that we typically associate with this state of mind does not arise in being wrong, but
+instead in the realization we were wrong. 
+
+I have been feeling as though the same can also be said about knowledge. What does it feel like to
+be ignorant? Side-stepping trite answer to this that we all know, it can be just as unpleasant as
+finding out you were wrong to realize that you don't really know a thing as well as you thought you
+did. I imagine that the academic reader perhaps knows this feeling all too well, though I wish to
+expand on being ignorant; it is just a special case of Schulz' "being wrong." The difference here is
+that instead of finding yourself with similar confidence and a recently inverted opinion, you
+discover a hole in your own credibility when it comes to forming an opinion. One could argue that
+this kind of epistemological realization can be much, much more unsettling than the first.
+
+I'm hoping to express that ignorance in the university classroom is not after all something to be
+feared, but to be sought; once it is internally recognized, one is free to try and fill the gap with
+new discoveries and understandings.
+
+Understanding the pain of realization that comes to many who do not make it a habit to seek out
+their flaws, an important tool in overcoming such feelings of solipsistic despair is deep, personal
+and empathetic conversation with peers or even strangers. "Sonder" provides perhaps the single most
+profound reason to include one's own capacity for skepticism in that of which she is skeptical.
+
+Insofar as one manages to doubt all things, it may then become a timely endeavor to never utter a
+lie; to do so would be to hold hostage any errors in the honest thoughts which go unsaid. To speak
+or compose for review in an inauthentic manner would similarly be a surefire way to halt
+intellectual growth in service of one's pride. As a fourth-year student - and I write knowing my own
+pride to be a consideration - I have seen myself grow recently in transformative ways, proportional
+to the percentage of my thoughts and actions that I will allow myself to doubt (while still unable
+to properly express the reasons for my distaste for congratulations). 
+
+A writing argument course should enable students to:
+\begin{itemize}
+\item learn how to recognize symptoms of ignorance within themselves
+\item discover reasons to engage in compassionate discourse with fellow classmates and professors
+\item always strive toward deeper understanding until needed to express an opinion
+\item compare past and present work and find motivation in their capacities for intellectual growth
+\end{itemize}
+
+Or, in brief, to discover the \textbf{self}, \textbf{discourse}, \textbf{humility}, and \textbf{growth}.
+
+The following criteria are proposed for each of the above learning goals. Throughout the course,
+students should be encouraged to:
+\begin{itemize}
+\item seek out and embrace instances of failure in their own work
+\item participate in peer-reviews of self-reflection writing
+\item avoid pathological science and insincerity in the development of all written works
+\item closely monitor and report any changes in rhetorical thought or writing abilities
+\end{itemize}
+
+[Solution]
+
+[Recommendations]
+\end{document}

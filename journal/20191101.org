@@ -1,0 +1,16 @@
+* Friday, 11/01/2019
+** DONE Program DSA from computer
+
+** 15:11
+sync up two diverged branches
+#+begin_src 
+git checkout a
+git pull --ff-only  # only if it's not your local branch
+git merge b
+git push
+git checkout b
+git merge a --ff-only
+git push
+#+end_src
+** 15:45
+Documentation on E drive in Isaac's folder.

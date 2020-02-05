@@ -1,0 +1,31 @@
+* Tuesday, 11/05/2019
+** TODO Learn cascade foundations
+** TODO Edit XM-A7X4 from 0804 to 0604
+** TODO Add a part to cascade
+
+** TODO ProgramIt add part search feature
+** TODO ProgramIt settings page
+** TODO Add XM part names to XM-MFG parts
+** TODO Learn git/magit
+
+** TODO question tracking in todo-list system
+** 10:32
+things to remove from the help page. 
+
+get_state
+attr_info
+** 12:25
+exit
+
+hidden commands:
+
+get_mac_addr
+get_version
+has-commands
+help
+home_screen
+len_parts
+list-commands
+list_addable_part_pn
+list_config
+

@@ -1,0 +1,88 @@
+% Created 2019-10-31 Thu 16:54
+% Intended LaTeX compiler: pdflatex
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{grffile}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\author{Cole Turner}
+\date{\today}
+\title{}
+\hypersetup{
+ pdfauthor={Cole Turner},
+ pdftitle={},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 26.3 (Org mode 9.2.5)}, 
+ pdflang={English}}
+\begin{document}
+
+\tableofcontents
+
+This script will allow you to run commands on the X-MW Controller.
+
+In order to do this you need to make sure the command server is enabled
+\begin{enumerate}
+\item You will need to make sure that you can use SSH
+\begin{itemize}
+\item on windows you can install an SSH client like PuTTY
+\item on Linux/Mac you can use the built in SSH command
+\end{itemize}
+\item connect the X-MW Controller to the same network as your computer via an ethernet cable
+\item find the ip address of the Controller
+\begin{itemize}
+\item click the Home icon in the top right
+(if you just started the Controller it should already show the Home screen)
+\item click the Question icon in the top right
+\item if you connected it directly to your computer use the "192.168.10.2"
+otherwise use the other ipv4 address
+\end{itemize}
+\item Login via SSH at that address with username: "pi", password: "raspberry"
+example: "ssh pi@192.168.1.146"
+\item You should see a prompt like this "pi@raspberrypi:\textasciitilde{} \$"
+\item Edit the X-MW.ini file
+\begin{itemize}
+\item type "nano \textasciitilde{}/.X-MW.ini" and press ENTER
+\item go to the line that says "host\textsubscript{cmd} = default" and change it to "host\textsubscript{cmd} = true"
+\item save and exit the file by pressing CTRL+X then "Y" to the "Save modified buffer" prompt
+\item then press ENTER when it asks for the filename to save it into
+\end{itemize}
+\item Reboot the controller by typing "sudo reboot" then ENTER
+\end{enumerate}
+
+Now the command server is enabled
+
+to use the command server follow these steps
+\begin{enumerate}
+\item make sure the Controller is connected to the network like in the previous steps
+\item You will need Python 3.5 or later installed on your computer
+(most Mac and Linux systems already have this)
+\begin{itemize}
+\item on windows you can get Python 3.5 or later by going to "\url{https://python.org/download}"
+\end{itemize}
+\item run this script by opening a terminal in the directory where you downloaded the code
+and typing "python ./X\textsubscript{MWcontroller}-interactive.py" when the script prompts you for the hostname,
+enter the ip address
+make sure you run this in python 3 (on Linux/Mac the command is "python3") on windows
+you may need to find the python3 executable and run that passing script as an argument
+\item you should now be in an interactive prompt. you can type commands here and press ENTER
+to send them to the Controller.
+\item to see a list of all the commands or to learn how to use the commands type "help"
+\begin{itemize}
+\item now you type commands
+\end{itemize}
+\end{enumerate}
+
+You may also use the python script as a module and import it into other scripts.
+the only variable you need to import is class XMWController.
+To see how to create a python script that runs these commands similar
+\end{document}

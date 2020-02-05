@@ -1,0 +1,52 @@
+#+TITLE: chturn.github.io
+#+DATE: [2018-05-30 Wed]
+#+AUTHOR: Cole Turner
+#+OPTIONS: ':t *:t -:t ::t <:t H:3 \n:nil ^:t arch:headline author:t broken-links:nil c:nil
+#+OPTIONS: creator:nil d:(not "LOGBOOK") date:t e:t email:nil f:t inline:t num:nil p:nil pri:nil
+#+OPTIONS: prop:nil stat:t tags:t tasks:t tex:t timestamp:t title:t toc:t todo:t |:tw
+#+LANGUAGE: en
+#+SELECT_TAGS: export
+#+EXCLUDE_TAGS: noexport
+#+OPTIONS: html-link-use-abs-url:nil html-postamble:auto html-preamble:t html-scripts:t
+#+OPTIONS: html-style:t html5-fancy:nil tex:t
+#+HTML_DOCTYPE: xhtml-strict
+#+HTML_CONTAINER: div
+#+DESCRIPTION:
+#+KEYWORDS:
+#+HTML_LINK_HOME:
+#+HTML_LINK_UP:
+#+HTML_MATHJAX:
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="gongzhitaao-theme-edit.css"/>
+#+HTML_HEAD_EXTRA:
+#+SUBTITLE:
+#+INFOJS_OPT:
+#+CREATOR: <a href="http://www.gnu.org/software/emacs/">Emacs</a> 25.1.1 (<a href="http://orgmode.org">Org</a> mode 9.0.5)
+#+LATEX_HEADER:
+
+#+MACRO:readtheorg [[https://github.com/fniessen/org-html-themes][ReadTheOrg]]
+#+MACRO:org-mode [[https://en.wikipedia.org/wiki/Org-mode][Org-mode]]
+#+MACRO:githubpages [[https://pages.github.com/][GitHub Pages]]
+#+MACRO:literateprogramming [[https://en.wikipedia.org/wiki/Literate_programming][Literate Programming]]
+#+MACRO:emacs [[https://www.gnu.org/software/emacs/][Emacs]]
+#+MACRO:haskell [[https://www.haskell.org/][Haskell]]
+#+MACRO:mellintransform [[https://en.wikipedia.org/wiki/Mellin_transform][Mellin transform]]
+#+MACRO:ism [[https://en.wikipedia.org/wiki/Inverse_scattering_transform][inverse scattering method]]
+#+MACRO:pde [[https://en.wikipedia.org/wiki/Partial_differential_equation][PDE]]
+#+MACRO:html [[https://en.wikipedia.org/wiki/HTML][HTML]]
+
+* About Me
+I'm some guy.
+* Sunday, 8/12/2018
+** 15:24 
+My website is up currently. I simply used the built-in html export feature in {{{org-mode}}} and styled it with the {{{readtheorg}}} theme. Was surprisingly simple to produce, also just using {{{githubpages}}}. While reading how to set this up, I also ran into an idea that I have run into before that is quite interesting (and is something that I feel I am well aquainted with) and this is {{{literateprogramming}}}. As my website evolves I suspect that I might include various tutorials on how to setup {{{emacs}}} to publish to my website, {{{haskell}}} programming, whatever physics I run into in my research, {{{mellintransform}}}s , the {{{ism}}}, {{{pde}}}s, nonlinear methods, etc. Hopefully after spending the time to configure {{{emacs}}} and {{{org-mode}}}, I won't have to also spend so much time learning too much {{{html}}}, or how to design a website. Would be very nice to keep my focus on other things while I update the site with little extra effort necessary.
+
+I wonder if I have mispelled necessary, just then, which reminds me that I still have not updated the "flyspell" spell-checker in {{{emacs}}} 26, though it was working fine in {{{emacs}}} 25. perhaps I should just keep with {{{emacs}}} 25 - I don't think that I should have any problems (though I haven't even looked at the changelog to see how much improved {{{emacs}}} 26 is..)
+
+** 15:34 
+Here, I am back and in {{{emacs}}} 25.1   
+
+* Current Projects
+
+* Thought Log
+
+* Links

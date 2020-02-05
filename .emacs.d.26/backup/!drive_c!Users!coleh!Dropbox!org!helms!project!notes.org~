@@ -1,0 +1,592 @@
+#+OPTIONS: ':t *:t -:t ::t <:t H:3 \n:nil ^:t arch:headline
+#+OPTIONS: author:t broken-links:nil c:nil creator:nil
+#+OPTIONS: d:(not "LOGBOOK") date:t e:t email:nil f:t inline:t num:t
+#+OPTIONS: p:nil pri:nil prop:nil stat:t tags:t tasks:t tex:t
+#+OPTIONS: timestamp:t title:t toc:nil todo:t |:t
+#+TITLE: Rhetorical Analysis Notes
+#+DATE: \today
+#+AUTHOR: Cole Turner
+#+EMAIL: c.h.turner@tcu.edu
+#+LANGUAGE: en
+#+SELECT_TAGS: export
+#+EXCLUDE_TAGS: noexport
+#+CREATOR: Emacs 25.1.1 (Org mode 9.0.5)
+#+LATEX_CLASS: article
+#+LATEX_CLASS_OPTIONS:
+#+LATEX_HEADER: \usepackage{apacite}
+#+LATEX_HEADER: \setlength{\parindent}{4em}
+#+LATEX_HEADER: \setlength{\parskip}{1em}
+#+LATEX_HEADER: \renewcommand{\baselinestretch}{1.6}
+#+LATEX_HEADER_EXTRA:
+#+DESCRIPTION:
+#+KEYWORDS:
+#+SUBTITLE:
+#+LATEX_COMPILER: pdflatex
+
+bibliographystyle:apacite
+
+* The Rubin Report
+
+"The Rubin Report is a political news talk show currently airing on
+YouTube, hosted by Dave Rubin. In The Rubin Report, Rubin interviews
+authors, activists, journalists, comedians, actors, and
+professors. From 2013 to 2015, The Rubin Report featured a panel of
+two guests and covered weekly news stories. After launching on Ora TV
+in 2015, the show took a more focused approach on the big ideas
+relating to politics and religion, as well as a focus on one on one
+interviews and monologues from Rubin. The following is a transcript
+taken from YouTube's closed captioning sevice of a Direct Message
+video segment by The Rubin Report, entitled: [[https://youtu.be/n5HN-KT9rj0][`What is the Intellectual
+Dark Web?'(link)]] , including my own edits made only for spacing,
+capitalization and punctuation.
+
+The Direct Message segment is a monologue delivered by Rubin that
+opens each episode of The Rubin Report. The segment features Rubin's
+personal views on the topic that will be discussed with the guest or
+panel in that episode." cite:wikirubin
+
+* Transcript
+#+BEGIN_CENTER
+\large What is the Intellectual Dark Web? cite:rubinrepidw
+#+END_CENTER
+
+"If you've been watching the show for a while, you know that some of
+my favorite guests include people who are firmly on the political left
+such as Sam Harris, Brett Weinstein, and Eric Weinstein, some people
+who are on the political right such as Ben Shapiro, Dennis Prager, and
+Larry Elder, as well as some people who are hard to place on the
+conventional spectrum such as Jordan Peterson, Phil DeFranco and
+Brandon O'Neil.
+
+Of course if you've been watching for a while you also know that I
+think that the left-right paradigm of politics is becoming
+increasingly meaningless and the new more relevant spectrum is one of
+personal freedom versus state power. You're either for a society based
+on laws which treat individual people equally with minimal involvement
+from the government in their day-to-day lives, or you prefer a society
+which treats certain groups differently based on immutable
+characteristics and thus the government must play a major role in
+whether they succeed or fail. The simplest way to say this is: you're
+either for your own determination, or you want to hand it off to
+someone else.
+
+If I've changed on anything in the past few years, it's that I
+consistently find myself agreeing with people who fight for individual
+choice over governmental authority. If you watch cable news or really
+listen to any of the mainstream media, this conversation about your
+ability to live your life as you see fit, which I believe to be the
+most important conversation happening right now, is barely happening
+at all.
+
+Actually I believe almost nothing of real value is happening anywhere
+in mainstream media. Cable news is force feeding you an endless
+back-and-forth by pundits who consistently get everything wrong
+(remember Hillary's 99% chance of winning in 2016) while at the same
+time they mask their opinions as facts and argue about the endless
+minutiae of a broken Washington DC instead of arming you with real
+knowledge and new ideas.
+
+I don't know that there's anyone specifically to blame for this other
+than the mainstream media is based on an old dying model that is being
+replaced by new media and new technology so quickly, that its faults
+are becoming glaringly obvious. Fortunately thanks to youtube,
+podcasting and however else you get shows like this one, the
+mainstream media's stranglehold on information, which really is a
+stranglehold on your ability to think clearly about the issues of the
+day, is crumbling at an incredible rate. Now the question is who and
+what will replace it?
+
+A few months ago one of my favorite people to sit across this table
+from Eric Weinstein came up with the phrase "Intellectual Dark Web" to
+describe this eclectic mix of people from Sam Harris to Ben Shapiro to
+his brother Brett Weinstein to Jordan Peterson all of whom are
+figuring out ways to have the important and often dangerous
+conversations that are completely ignored by the mainstream. 
+
+It's why I would argue that this collection of people are actually
+more influential at this point than whatever collection of cable news
+pundits you can come up with and it's not just those names I mentioned
+above but people like Joe Rogan who's absolutely killing it on his
+podcast every week. It's people like Christina Hoff Sommers who's
+fighting the intersectionality of third wave feminism while still
+holding hope for feminism's original ambitions of equality of
+opportunity. It's also people like James d'amour and Lindsey Shepard
+who are fighting for the true diversity of ideas at Google and at
+universities.
+
+This wide tent of people we're talking about have tremendous political
+differences when it comes to taxes, abortion, foreign policy and more,
+but we've all committed ourselves to fighting for our ideas honestly
+and passionately, but more importantly than that we've committed to
+the open exchange of ideas and not silencing our opponents no matter
+how many times they refuse to extend that same courtesy to us.
+
+If you think I'm being hyperbolic about the growing influence of this
+group just check the traction that these people get on Twitter or
+Facebook compared to our mainstream competitors. Twitter may not be
+real life as I say in my Twitter bio but it is some barometer of what
+the zeitgeist is right now. Not only will the numbers stand on their
+own, but when you realize that the mainstream people we're talking
+about have massive amounts of money and influence behind them, and all
+most of us have is grassroots support from people like you, you can
+really see what's happening here. Even look at this very show we've
+come together because we're fighting for our ability to agree to
+disagree before it's taken away from us.
+
+Last year I talked about a new center in politics, a place where
+liberals, libertarians, conservatives, anyone who wanted to fight
+authoritarianism, could put aside their differences and come together
+to find some new solutions as we watch our old institutions of
+politics and media crumble. 
+
+I now realize that the answer I was looking for wasn't purely
+political, but really cultural as well. There's something else
+happening here that we all kind of know but we haven't been able to
+totally define. It's why you watching this right now are actually part
+of this Intellectual Dark Web. If you engage with these ideas and
+you're trying to figure out what the hell is going on, then you are as
+much part of this thing as I am.
+
+The more you tweet, share posts, and
+get out there and fight for what you believe, the more space that we
+have to continue to do whatever it is each of us are doing.
+
+There are markers where some of this breaks through to the mainstream
+such as Ben Affleck's gross and racist comment hurled at Sam Harris,
+or when Ben Shapiro smackdown piers morgan about guns on CNN, or just
+this past week when Jordan Peterson calmly dissected an interviewer
+who was trying to paint him as an extremist for defending free
+speech.
+
+I suspect there will be many more moments like that this year
+because the mainstream is finally picking up on what you and I already
+see. As I said at the beginning of the year I believe 2018 will be the year
+of unusual alliances and this new Intellectual Dark Web will be at the
+forefront of that movement.
+
+Tomorrow I'll be in studio with two of those guys, Ben Shapiro and
+Jordan Peterson, and I fully expect to crash the internet - or at
+least get demonetised by YouTube." cite:video
+
+* Transcript Notes
+
+- Message initially directed at frequent viewers
+- Claims wide range of political perspectives on the show
+- Possible pidgeon-holing, "You're either for X or you're for Y"
+
+- Stating that his stances have changed over time (Ethos?)
+- "I constantly find myself" instead of "I think that"
+    - Comes across as a more honest description (Ethos)
+- Stating a problem with mainstream media
+- "force-feeding" and "endless" (x2) (Pathos)
+- "remember Hillary's 99% chance..." (Logos)
+- "endless minutiae" vs. "real knowledge and new ideas"
+- Possible solution to the problem
+    - "mainstream media's stranglehold on information ... crumbling at
+      an incredible rate"
+- Rhetorical question "who and what will replace [mainstream media]?"
+
+- These guests are "figuring out ways to have the important and often
+  dangerous conversations," makes the guests look noble (Ethos)
+- "It's people like..." makes me want to know who these people are
+- Open exchange of ideas despite tremendous political differences
+
+- "If you think I'm being hyperbolic..." addressing skepticism (Ethos)
+- "you watching this right now are actually a part..." (Pathos)
+- Connecting with the listener, using "we" statements (Pathos)
+- "mainstream is finally picking up on what you and I already see" (Pathos)
+- "Intellectual Dark Web will be at the forefront" - optimism (Pathos)
+- Humor and connecting with familiar audience (Pathos)
+    - "... or at least get demonetized by YouTube."
+
+** Formulating A Claim
+- The Rubin Report is trying to unite the people of the "Intellectual Dark Web"
+- The message is directed toward his subscribers and frequent viewers
+- Stats on [2018-06-12 Tue] show 141,374 views, 8.2K likes and 325 dislikes
+- It seems that Ethos of free speech is the most important part of the argument
+- Doesn't spend a lot of time establishing credibility (to subscribers)
+- Highlights his personal political philosophy
+- States a main problem, mainstream media is dishonest, forces against free speech
+
+- Dave Rubin is passionate?
+
+- Trying to persuade people to participate in the new IDW.
+
+*** Trying out Claims
+**** Claims which are too broad:
+- Perhaps scared by the current state of free speech in America,
+  todays most controversial thinkers have begun to turn to a budding
+  corner of the Internet given the name "The Intellectual Dark Web."
+
+- A YouTube channel known as The Rubin Report has now perhaps
+  identified itself as the center of the "Intellectual Dark Web."
+
+- Millions are listening in on what's going on in the Intellectual
+  Dark Web.
+
+- Who are these characters and why should we listen to them?
+
+- The Rubin Report seems to have taken center stage in the new
+  "Intellectual Dark Web" phenomenon.
+
+- Free speech and honest discussion in today's mainstream media
+
+IDW has formed to escape the sensational narratives created by the mainstream media. 
+The Rubin Report is an emerging part of this area of the internet.
+Are Rubin's direct messages hepling to facilitate the nuanced and anti-narrative approach?
+
+Many people appreciate and subscribe to the IDW for it's emphasis on
+providing long nuanced discussion of difficult topics via the
+internet.
+
+One such outlet has been The Rubin Report, where Dave Rubin
+frequently uploads interviews and mediated discussions between various
+controversial figures.
+
+The IDW has attracted people skeptical of mainstream media, trying to escape confirmation bias.
+
+** Rambling
+
+Today I have elected to turn in my english rhetorical analysis
+assignment by the end of the day, though I have not actually started
+writing the 1800 words. Must work on something now, but what?  "By the
+end of the day" would definitely suggest that I would be turning the
+paper in before midnight... but I don't imagine that my professor is
+still awake at this time and I may as well have until the morning so I
+may stay up all night and get this done. Focus on the rhetorical
+analysis paper that will analyze Dave Rubin's argument style in his
+internet address of the Intellectual Dark Web. The group of people and
+style of conversation definitely seems to be a kind of deep thinking,
+though the word "Intellectual" does also seem to bug me.
+
+Who gets to say, really, who is an intellectual? Is this just a
+scholar? A smart person? Intelligence, I presume is relevant. I still
+am of the thought that no one really known what constitutes
+intelligence, seeing as we are still coming up with better ways to
+construct artificial intelligence. "If I cannot make it, then I do not
+understand it," is a saying that comes to mind which may apply to the
+current situation with regards to humans' understanding of
+intelligence. I want to say that Feynman was the one who said this,
+though I am also fairly certain that the quote is not exactly the way
+he said it.
+
+I have gotten side-tracked, perhaps? The rhetorical analysis, yes. Off
+the top of my head, I remember Rubin coming across as quite passionate
+about his viewpoint. This is alright insofar as he acknowledges that
+it is not /the/ viewpoint, which from his other podcasts and shows, it
+seems he has done a good job. Best shown in this address, however, is
+perhaps where he mentions how his political stance has changed in a
+number of ways. From the left more toward the right, in his case,
+generally speaking, but also toward strong defense of the principle of
+free speech. Here is where I anticipate the highest amount of public
+controversy. The question, "At what point does someone's right to
+freedom of speech trump another person's right not to be offended?"
+the answer to which would certainly correlate with one's perception of
+the whole Intellectual Dark Web movement. 
+
+I think that I need to put more of my thoughts down onto my laptop, as
+I am doing now. I think also that I have been a slow writer
+recently. Not so sure that this is necessarily a bad thing, though I
+also think that there is some truth to the idea that one does not
+usually sit down with a blank document and start writing any piece in
+the way that it will be when it is finished. Outlining seems to be of
+great help, generalizing a topic into main categories and then into
+themes or the most important ideas involved. Then, expanding each
+point in a sort of tree, like fashion until the writing is at an
+appropriate level of detail. This is to be contrasted with just
+beginning at the final level of detail, not having any indication as
+to how long the writing may end up being if the writer is to keep said
+level of detail throughout all of the paper. Thus, it seems more
+vulnerable to inconsistencies and possibly getting side-tracked into
+irrelevant conversation. Losing sight of the big picture would be a
+good way to say what I mean. 
+
+So alright, lets see what kinds of topics I will be covering. The
+"mind map" technique as discussed in class for the op-ed might also be
+a great way to structure this analysis writing. The main focus here
+being the specific argument of one stakeholder, Dave Rubin. Perhaps it
+is more of an attitude of "here is this issue that I am curious about
+and this person seems to have something to say about it - what is he
+saying and why might I be inclined to believe him?" This question is
+hard to phrase, considering that our professor has stated on multiple
+occasions that the analysis claim be about the /nature/ of the stake
+holder's argument on the issue, *not* about the issue itself. In the
+simplest terms I can imagine, "why should I listen to [stakeholder]?"
+is the question that it seems we are trying to answer. Though this is
+perhaps too broad in the sense that the focus should be just on the
+argument that is being made (from the specific source
+mentioned). Nonetheless, I like this approach as it is very relevant
+in researching and forming an opinion on the issue, hearing what others
+are saying and how they are saying it.
+
+- Free Speech is the largest topic
+- Intellectual Dark Web is the subtopic
+- The Rubin Report is the stakeholder
+- YouTube is the media platform / communication medium
+
+At what point does one's right to freedom of speech trump one's right
+not to be offended?
+
+- Free Speech vs. Hate speech debate?
+- Wikipedia, "fighting words"
+- What is protected under the U.S. law?
+
+While the question is a rather controversial one, this could be the
+main issue for my project: situations in which one feels that by being
+honest and expressing one's opinion, in good faith, one is at risk of
+offending the person that is to be spoken to.
+
+I imagine the situation in which I have been born and raised in Nazi
+Germany in a family and community which supports the Nazi
+regime. Suppose I meet an outsider at a coffee shop and begin talking
+to them about life. Suppose also that this person is Jewish, and that
+I think Jewish people are evil and deserving of death based solely on
+the fact that they identify as a Jew. One major thing to note here is
+that, if we also suppose that I am of the mind that /cares/ whether or
+not it is true that Jews are deserving of death - that is to say that,
+I am a unique kind of Nazi who believes in what he has been told
+insofar as this is all he has known, and that this is his best guess
+as to how to act in the world (and I suppose I am changing
+perspectives) - if the Nazi were to tell the Jew that he thinks Jews
+should die, this would surely cause a great deal of distress and bring
+offensiveness. My question is, how would said Nazi be able to change
+his mind out of some radical position if no one allows him to state
+his position aloud? What if no one is there to hear his reasoning and
+try to correct his errors of judgment? It seems that he would instead
+be likely to face immediate retaliation with no explanation as to why
+his opponents are responding in this way.
+
+Such seems tragic as everyone involved may be doing only what he/she
+believes is correct, though ultimately there should surely be no
+tolerance for an opinion that wishes the death of another human. Such
+is to use freedom of expression to advocate the suppression of
+expression of another individual. Life seems as good an unalienable
+right as any, but what about freedom of expression? What is a good
+policy to take when someone is using their freedom of speech to
+interfere with someone else's freedom of speech? "I think that you
+shouldn't be able to say that" is a basic way of putting this, and it
+sounds an awful lot like the words of someone who may have just been
+offended. It seems identical to saying "I think this person's speech should
+not be protected under the law."
+
+An interesting thing to point out is also that any speech is
+ultimately subject to certain consequences, not just legal. If someone
+wants to fire someone for posting that their boss is a bitch to
+Facebook, certainly this is acceptable. For Sam Harris, who states
+frequently that it is important to be able to criticize bad ideas,
+what consequences should come of the opinion that Islam is the mother
+load of bad ideas? This is not to say that Muslims should be killed,
+of course - nothing at all about Muslims as human beings. The idea,
+however, that Muhammad is the final messiah and son of God and that
+the Koran contains the infallible word of god, (which indicates that
+certain members of a society are deserving of death), is argued to be
+one that should not be respected, perhaps? What do we mean by saying
+"I do not like this idea." Should we get rid of the idea? Death to an
+idea?  Or advocation against the idea of Islam, perhaps? Being able to
+argue against it publicly so as to offer reasons not to become a
+Muslim and let those who read decide whether or not this is
+convincing? I think yes, this is what is meant by holding an
+opposition to an idea. It is only to say that "I think there are good
+reasons for /not/ believing in Islam," for example in this situation. It
+is a rather harmless statement of opinion, it seems. "I think it is a
+bad idea" turns into "I think I can convince you not to become a
+Muslim"
+
+I wonder if the controversy surrounding a phobia of Islam arises from
+the ambiguity of being a Muslim. The Koran might explicitly instruct
+believers to kill those who have turned their back on Allah, in which
+case we must know what is to be interpreted by someone identifying as
+Muslim? Is this equivalent to saying that one wishes death upon
+nonbelievers? Perhaps a clarification need to be made on a massive
+scale for the community of Muslims, thereby forcing those who wish
+death to be recognized and potentially face conflicts under the law
+should they not reevaluate their beliefs. Meanwhile, it should be
+encouraged that the Muslim community do this, if any of what I have
+said here has any correspondence with reality.
+
+I have, of course, gone way off topic here, I'm afraid. While my
+thoughts on the idea of free speech are more clear, I must still
+evaluate the argument style in Rubin's video. Let the all-nighter
+begin.
+
+** Rubin's Claims
+
+#+BEGIN_QUOTE
+"As I said at the beginning of the
+year I believe 2018 will be the year of unusual alliances and this new
+Intellectual Dark Web will be at the forefront of that movement."
+#+END_QUOTE
+
+The Intellectual Dark Web is revolutionizing the way we talk about politics.
+
+As a place which values free speech and the open exchange of ideas,
+the IDW 
+
+The Intellectual Dark Web is the place to be if you want to understand
+what is going on in politics.
+
+Emphasizes the importance of his own viewership?
+
+The more and more I think about this the more that Rubin seems just
+like another news anchor for a media company.
+
+Boasts the inclusion of diverse political viewpoints on his show, yet
+also seems to create the narrative that excludes the methods of the
+mainstream media.
+
+#+BEGIN_QUOTE
+"...a new center in politics, a place where
+liberals, libertarians, conservatives, anyone who wanted to fight
+authoritarianism, could put aside their differences and come together
+to find some new solutions as we watch our old institutions of
+politics and media crumble."
+#+END_QUOTE
+
+Basically the IDW is the next step in the evolution of political commentary and coverage?
+
+His argument is that the mainstream media sucks ass and that the IDW
+is /where it's at/. (?)
+
+*** Outlining the arguments of his video
+- The Rubin Report boasts inclusion of many diverse opinions
+- Massive either-or distinction and deliberate straw-man?
+- Statement of support of individual choice
+- Nothing of value is coming from the mainstream media; methods are outdated
+- The mainstream media exercises authority over the information that
+  you see, instead of respecting individual freedom, and perhaps
+  "freethinking"; what will replace it?
+- Having the important and dangerous conversations which mainstream ignores
+- Committed to good faith arguments and the open exchange of ideas; anti-censorship
+- The IDW is focusing on people who are actually relevant in todays
+  politics (cites Twitter)
+- Popularity shifting to internet despite disproportionate funding;
+  emphasizes strength of movement (bandwagon?)
+- We, the IDW are a new center in politics where /you're/ in control!
+- /Look at us go, we are so smart; the mainstream will catch up one day/
+- IDW at the forefront of the "year of unusual alliances"
+
+It's like an advertisement for The Rubin Report using the banner of the IDW?
+The IDW exemplifies the future of political discourse,
+like he's a post-truth savior. "The Intellectual Dark Web: freethinkers haven of information"
+
+*** /Really/ Outlining the arguments of his video
+
+Trying to avoid falling for bandwagon appeals; heretical, nonconformist, freethinkers
+Conversation vs. violence, the business of exposing taboos, "think for yourself"
+
+Seems like Rubin is trying to
+- say that there is /something going on/ in the IDW; the next big thing in political discourse
+- explain feelings that drove the formation of the IDW, free speech concerns
+- make audience feel like a community; a part of something good
+
+What is the intellectual dark web and why is it here?
+
+A message to his audience that encourages awareness of what they are participating in?
+
+**** I NEARLY MISSED THE POINT (this will work for the op-ed):
+
+The bias present in the video helps show that perhaps the IDW really is a good thing.
+Speaks of the diversity of opinion in the IDW (while providing his own opinion).
+
+Overall topic question: Is the Intellectual Dark Web on to something? Should we be taking notes? ("Should we be listening?" -- Bari Weiss)
+
+Should we be listening to the Intellectual Dark Web?
+Can we learn something valuable from the Intellectual Dark Web?
+What the big deal about the Intellectual Dark Web?
+
+Rubin's position: Yes, the Intellectual Dark Web is the place to be.
+
+** The Analysis
+
+I have finally found a better way to state the larger problem at hand,
+that is the public issue of the "splinternet." Causes for the issue
+may be rampant confirmation bias and the dependence on clickbait or
+sensational journalism? Because of this, media consumers develop a
+sensitivity to ideas which conflict with their own that the media has
+so graciously protected. Finally, once the academics and thinkers come
+to have interviews on mainstream media, the sensitivity becomes
+overbearing and interviews turn into professional straw-man
+competitions and childish ad hominem fits, lending barely any time for
+the opposition to properly explain a position. Thus, the
+academics/intellectuals/thinkers flock to a corner of the internet (or
+a part of the internet flocks around them) and born is the place known
+as the Intellectual Dark Web. 
+
+The rhetorical analysis here is then assesing Rubin's solution to the
+issue of the current polarized climate, which is clearly the idea of
+good faith free speech. Specifically with emphasis on the idea that
+free speech extends not just to those people who you agree with, but
+to those who disagree and even those who might offend you. In this
+video, Rubin addresses his audience of YouTube subscribers the
+potential of the IDW to turn the tides of the mainstream towards a
+more bona fide search for truth cite:rubinrepidw.
+
+** The Analysis version 2
+
+- The people on my show are diverse.
+- False Dilemma.
+- Libertarianism. Questioning authority and the popular opinion.
+- Fake news, pointless conversation instead of real knowledge.
+- Critical of mainstream's information handling. IDW to replace mainstream.
+- IDW is where diverse and controversial opinions can be considered.
+- The people in the IDW are more influential. Hyperbole and favoritism.
+- Ethical principle of protecting free speech for the opposition.
+- Logical justification of the claim that IDW has great influence.
+- Hopes of establishing a new mainstream of open discussion while the
+- current mainstream fails.
+- Rallying rhetoric connecting to ethical principle of trying to figure it out. 
+- Contradictory call for audience to go out and fight for their opinions.
+- Reflects on popular clashes of the old and new discourse.
+- We're on to something, the IDW is going to become more mainstream.
+
+*** Thinking about content and organization
+
+- Facts about the text
+    - Dave Rubin, host of The Rubin Report
+    - "What is The Intellectual Dark Web?"
+    - YouTube channel, The Rubin Report
+    - Published on Jan 30, 2018
+    - Viewed on Jun 16, 2018
+        - 747K subscribers
+        - 142,228 views
+        - 8.2K likes
+        - 325 dislikes
+
+- Contexts for the argument
+
+The splinternet
+Recent mistrust in mainstream media
+Many podcasters and political commentators on youtube
+
+Academic outcasts, Jordan Peterson and Bret Weinstein
+also controversial: Sam Harris, Ben Shapiro
+The Rubin Report interview/talkshow
+
+Rubin is gay and married.
+Once identified with the left and now less so.
+"regressive left"
+
+- Synopsis of the text
+
+Personal freedom/autonomy and free speech, libertarian sounding.
+Associating this with the title: Intellectual Dark Web
+Empowering subscribers
+
+- Claim about the work's rhetorical effectiveness
+
+Generally effective in empowering frequent viewers
+Not so catered toward the skeptic or newcomer: (basically statement of position)
+interviewer should be strongheaded in opinion?
+Jumping the gun a bit on labeling the IDW
+Urges to go out and tweet and share IDW posts. /Rallies the troops/
+
+Dear Dave Rubin, "you have become the become the very thing you swore to destroy"
+
+- Detailed analysis of how the argument works
+
+- Evidence for every part of the analysis
+
+- An assessment of counterarguments and alternative views to your own analysis
+
+bibliography:refs.bib
+

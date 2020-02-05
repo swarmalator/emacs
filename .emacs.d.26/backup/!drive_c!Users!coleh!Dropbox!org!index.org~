@@ -1,0 +1,93 @@
+#+TITLE: swarmalator.github.io
+#+AUTHOR: Cole Turner
+#+OPTIONS: ':t *:t -:t ::t <:t H:3 \n:nil ^:t arch:headline author:t broken-links:nil c:nil
+#+OPTIONS: creator:nil d:(not "LOGBOOK") date:t e:t email:nil f:t inline:t num:nil p:nil pri:nil
+#+OPTIONS: prop:nil stat:t tags:t tasks:t tex:t timestamp:t title:t toc:t todo:t |:tw
+#+LANGUAGE: en
+#+SELECT_TAGS: export
+#+EXCLUDE_TAGS: noexport
+#+OPTIONS: html-link-use-abs-url:nil html-postamble:auto html-preamble:t html-scripts:t
+#+OPTIONS: html-style:t html5-fancy:nil tex:t
+#+HTML_DOCTYPE: xhtml-strict
+#+HTML_CONTAINER: div
+#+DESCRIPTION:
+#+KEYWORDS:
+#+HTML_LINK_HOME:
+#+HTML_LINK_UP:
+#+HTML_MATHJAX:
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="theme.css"/>
+#+HTML_HEAD_EXTRA:
+#+SUBTITLE:
+#+INFOJS_OPT:
+#+CREATOR: <a href="http://www.gnu.org/software/emacs/">Emacs</a> 25.1.1 (<a href="http://orgmode.org">Org</a> mode 9.0.5)
+#+LATEX_HEADER:
+
+#+MACRO:readtheorg [[https://github.com/fniessen/org-html-themes][ReadTheOrg]]
+#+MACRO:org-mode [[https://en.wikipedia.org/wiki/Org-mode][Org-mode]]
+#+MACRO:githubpages [[https://pages.github.com/][GitHub Pages]]
+#+MACRO:literateprogramming [[https://en.wikipedia.org/wiki/Literate_programming][Literate Programming]]
+#+MACRO:emacs [[https://www.gnu.org/software/emacs/][Emacs]]
+#+MACRO:haskell [[https://www.haskell.org/][Haskell]]
+#+MACRO:mellintransform [[https://en.wikipedia.org/wiki/Mellin_transform][Mellin transform]]
+#+MACRO:ism [[https://en.wikipedia.org/wiki/Inverse_scattering_transform][inverse scattering method]]
+#+MACRO:pde [[https://en.wikipedia.org/wiki/Partial_differential_equation][PDE]]
+#+MACRO:html [[https://en.wikipedia.org/wiki/HTML][HTML]]
+#+MACRO:diffusion [[https://en.wikipedia.org/wiki/Diffusion][diffusion]]
+#+MACRO:advection [[https://en.wikipedia.org/wiki/Advection][advection]]
+
+* About Me
+I'm some guy.
+
+** TODO Finish this About section
+* Projects
+I have two major research projects underway, both in nonlinear physics and both with publishable papers in progress. Turns out that I have been slacking a bit on these recently and they are both in need of a bit more attention. One project is about the chaotic dynamics of a realistic billiard in a cone under constant gravitational acceleration. Another project is about a nonlinear system of {{{pde}}}s which models the dynamics of an infected respiratory tract, following parameters for both {{{diffusion}}} and {{{advection}}}. I hope to include some of my more detailed write-ups on these projects on this website soon.    
+
+** TODO Include research specifics
+* Hobbies
+I spend a good deal of time on an assortment of hobbies, often without the consent of the more productive part of my brain.
+** Music
+From what I can recall, most of my life has been centered around music. I have many valuable memories from having made music such a huge part of my life during high school and the start of college. Someday I will include a link here for more information on my music experience for anyone who might be interested. Though I am a drummer by training, I've learned to play many popular songs on the piano and guitar which I might list here also someday. I do not really listen to music as much as I once did, but if I do it tends to be of more ambient or unfamiliar styles. Most songs seem to get old quickly for me, so I am always looking for a new genre. 
+
+*** TODO Include song list
+*** TODO Include musical experience
+
+** Fishing/Boating
+I own a small 14-foot bass fishing boat. It is a 1984 Gamefisher tri-hull boat made of fiberglass with an 1972 Johnson 20 horsepower outboard motor. Sooner or later I will include a picture here so I won't have to describe it too much. Most of the boat is homemade; the previous owner added a trolling motor, carpeting, and extended the casting deck in an effort to convert it to a bass boat. Recently, I have been tidying up the electrical system and performing maintenance on the outboard in hopes that she will be lake-ready for the fall season.
+
+*** TODO Include boat picture
+** RC Planes  
+I haven't really touched my RC stuff for a while, but I guess I enjoy it enough that I thought to put this section on this website. I should be picking it back up soon and will include details on whatever models I decide to build. In the meantime, check out Sam Sheppard on YouTube. I followed his video on building a foam RC plane from scratch, and it worked!
+
+** Golf
+Just this summer I have started to get into playing golf more often. I would consider myself average, at best, though I do seem to be making progress. More to be written here soon. /I fear that I will keep thinking of more and more of my hobbies as I continue in my thought logs../
+
+* Thought Log
+
+** Thursday, 8/23/2018
+
+My last log doesn't reflect the current state of the website anymore. Perhaps it's not useful to mention my thought processes about the website, on the website? On second thought, they are indeed my honest thoughts. It is late, however, and I must keep this log short. As a reminder to myself, I hope to write some about my feelings on having your own words edited by other people, as well as the most important theme that's been on my mind: questioning everything. I hope to type out my recent thoughts on confirmation bias, science, and seeking dis-confirmation. Worried that the website might end up a pitifully accurate representation of my thoughts - we will see!
+
+** Sunday, 8/12/2018
+
+#+BEGIN_EXPORT html
+<div class="row"><div class="col1">
+#+END_EXPORT
+
+My website is up currently. I simply used the built-in html export feature in {{{org-mode}}} and styled it with the {{{readtheorg}}} theme. Was surprisingly simple to produce, also just using {{{githubpages}}}. While reading how to set this up, I also ran into an idea that I have run into before that is quite interesting (and is something that I feel I am well aquainted with) and this is {{{literateprogramming}}}. As my website evolves I suspect that I might include various tutorials on how to setup {{{emacs}}} to publish to my website, {{{haskell}}} programming, whatever physics I run into in my research, {{{mellintransform}}}s , the {{{ism}}}, {{{pde}}}s, nonlinear methods, etc. Hopefully after spending the time to configure {{{emacs}}} and {{{org-mode}}}, I won't have to also spend so much time learning too much {{{html}}}, or how to design a website. Would be very nice to keep my focus on other things while I update the site with little extra effort necessary.
+
+I wonder if I have mispelled necessary, just then, which reminds me that I still have not updated the "flyspell" spell-checker in {{{emacs}}} 26, though it was working fine in {{{emacs}}} 25. perhaps I should just keep with {{{emacs}}} 25 - I don't think that I should have any problems (though I haven't even looked at the changelog to see how much improved {{{emacs}}} 26 is..)
+
+#+BEGIN_EXPORT html
+</div><div class="col2">
+#+END_EXPORT
+
+This is where I think it might be appropriate to throw in some topic links that are relevant to the log to the left. Perhaps more sections like this can be used just to keep a log of the noteworthy websites and/or videos that I come across on a given day?     
+
+#+BEGIN_EXPORT html
+</div></div>
+#+END_EXPORT
+* COMMENT html style specifications
+
+# Local Variables:
+# org-export-html-style: "<link rel=\"theme\" type=\"text/css\" href=\"css/theme.css\" />"
+# End:

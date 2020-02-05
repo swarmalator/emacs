@@ -1,0 +1,53 @@
+#+TITLE: Productivity
+#+INCLUDE: setup.setup
+* Productivity
+** Emacs
+- keyboard only (mechanical)
+- customization via emacs-lisp (everything is custom)
+- "soothe" theme (on MELPA)
+- IDE for java, haskell, python, c/c++, lisp
+- flyspell / aspell, minimap mode, smartparens
+*** org-mode
+- Note-taking, writing reports and LaTeX exporting
+- TODO lists, reminders and calendar
+- HTML exporting / simple website
+- Beorg mobile dropbox sync
+** Internet
+- Github
+- Keybr
+- Street Epistemology
+- Reddit 
+- Medium
+*** YouTube
+- Vsauce
+- Veritasium
+- 3blue1brown
+- Flammable Maths
+- Mathologer
+- Think Twice
+- Welch labs
+- Computerphile
+- Numberphile
+- Sixty Symbols
+- The Royal Institution
+- NileRed
+- Cody's Lab
+- DONG
+- Ben Eater
+- Sciencephile the AI
+- fish code studios
+- Sam Harris
+- The School of Life
+- PBS Space Time
+- jekor (Haskell)
+- David Gozzard
+- Anthony Magnabosco
+- Big Think
+- DeepSkyVideos
+- Samm Sheperd
+** Mobile
+- Beorg emacs org-mode TODO integration
+- Life Cycle and Sleep Cycle apps
+- YouTube, Medium.com, google 
+- Apple watch
+

@@ -1,0 +1,92 @@
+#+OPTIONS: ':nil *:t -:t ::t <:t H:3 \n:nil ^:t arch:headline
+#+OPTIONS: author:t broken-links:nil c:nil creator:nil
+#+OPTIONS: d:(not "LOGBOOK") date:t e:t email:nil f:t inline:t num:nil
+#+OPTIONS: p:nil pri:nil prop:nil stat:t tags:t tasks:t tex:t
+#+OPTIONS: timestamp:t title:t toc:nil todo:t |:t
+#+TITLE: Sacred Space
+#+DATE: \today
+#+AUTHOR: Cole Turner
+#+EMAIL: c.h.turner@tcu.edu
+#+LANGUAGE: en
+#+SELECT_TAGS: export
+#+EXCLUDE_TAGS: noexport
+#+CREATOR: Emacs 25.1.1 (Org mode 9.0.5)
+#+LATEX_CLASS: article
+#+LATEX_HEADER: \usepackage{apacite}
+#+LATEX_HEADER: \setlength{\parindent}{4em}
+#+LATEX_HEADER: \setlength{\parskip}{1em}
+#+LATEX_HEADER: \renewcommand{\baselinestretch}{1.6}
+#+LATEX_COMPILER: pdflatex
+
+bibliographystyle:apacite
+
+Growing up in Austin, Texas, the most obvious example of a violent
+event which shaped the city would have to be the well-known University
+of Texas Tower shooting in 1966. In fact, it has been quite difficult
+to find any other instances of sacred spaces in Austin which came
+about due to a tragic event. In my quest for something less known, I
+approached my mother and father about the idea who both recalled a
+specific tree seated just near downtown Austin called the Treaty Oak.
+
+Looking at the wiki, the Treaty Oak is apparently one of fourteen
+original trees that together formed a grove known to the Texas natives
+as the Council Oaks, some 300 years ago cite:wiki. On what looks like
+an old copper plaque which is still posted in front of the tree today,
+it is also stated that the grove was the site of the first boundary
+treaty between Natives and Europeans in Texas, though it may be that
+no historical records exist which support this cite:wiki. I imagine
+that it is also questionable whether or not the Comanche and Tonkawa
+tribes had used this unique landscape as a sacred meeting place for
+launching raids and peace treaties, or that the 7th governor of Texas
+Sam Houston actually did once rest under the Treaty Oak during the
+American Civil War cite:wiki. In either case, such tales as I have
+found reading various accounts of the tree seem to play a huge part in
+reflecting the admiration that Austinites have expressed for the tree
+over the years. But it was one year in particular which came to
+sharply ignite the bond between the city and this beloved tree, such
+that, at least in my family, it has become a household name.
+
+The story goes in a similar manner all across the web. It is 1989 and
+the Treaty Oak stands as the last remaining member of the original
+fourteen Council Oaks, "the most perfect specimen of a tree in North
+America" cite:plaque. Nestled on the side of the road in a small park
+just outside of downtown Austin, its branches spreading a distance of
+127 feet across, people familiar with the area had started to notice
+oak wilt and dying leaves. Soon after, it was discovered upon
+investigation of the soil that the tree had been deliberately poisoned
+at its base with an extremely large amount of Velpar herbicide.
+
+School children began sending letters, Native Americans in the area
+brought song and ritual, a herbicide manufacturer established a
+$10,000 bounty on the felon, and Texan billionaire Ross Perot gave a
+blank check to the local team tasked with saving the tree
+cite:wiki,statesman. A majority of the main branches had to be
+removed, and several small trees were planted around the Treaty Oak in
+hopes that they would be able to nurse it back to health. For eight
+years following the attack the tree still struggled to survive, each
+year passing without a single new crop of acorns cite:culturemap.
+
+When asked about how someone poisoning a tree could have possibly
+qualified as a tragic event, my mother replied in seriousness,
+describing frequent news coverage and televised vigils. One photograph
+from the same year as the poisoning shows a group of psychics
+conducting a "transferrance of energy" ritual on the tree
+cite:statesman. An article from the News 8 Austin website can also be
+found on the online web archive for 2004, which describes the
+dedication of one particular spiritual admirer of Native American
+culture, "Frank Stronghorse," who claims to have used a medicine pipe
+to "bring balance back to the tree" cite:news8.
+
+#+BEGIN_QUOTE
+Once you have identified a site, consider its current status. Is it
+sanctified, is it obliterated, or does it fall somewhere in between?
+Elements of the landscape, such as signs or monuments (or their lack)
+will indicate that status of the site.
+#+END_QUOTE
+
+#+BEGIN_QUOTE
+Take note of any debates that have occurred about what to do with this
+site. Has the status of the site changed over time? How?
+#+END_QUOTE
+
+bibliography:refs.bib

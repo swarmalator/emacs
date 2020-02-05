@@ -1,0 +1,884 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2019-11-01 Fri 12:44 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Emacs Settings</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="Cole Turner" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2019 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">Emacs Settings</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#orgd66d900">1. about this file</a></li>
+<li><a href="#org9b26a1b">2. appearance</a>
+<ul>
+<li><a href="#orgc731f84">2.1. theme</a></li>
+<li><a href="#org11ab152">2.2. mode line</a>
+<ul>
+<li><a href="#orgc502075">2.2.1. time and date</a></li>
+<li><a href="#org4978bc6">2.2.2. column numbers</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#orgab2ebbc">3. autocomplete</a>
+<ul>
+<li><a href="#org25a6f7f">3.1. spell checking</a></li>
+</ul>
+</li>
+<li><a href="#org6797d4b">4. backups</a></li>
+<li><a href="#orgb869690">5. bookmarks</a></li>
+<li><a href="#org4c24fac">6. personal dictionary</a></li>
+<li><a href="#orgb414552">7. helm</a></li>
+<li><a href="#orgcffda8f">8. initial buffer</a></li>
+<li><a href="#orgdcb4bda">9. movement keys</a></li>
+<li><a href="#org07e7259">10. my commands</a>
+<ul>
+<li><a href="#org8628263">10.1. transparency</a></li>
+<li><a href="#org032af82">10.2. comment/uncomment</a></li>
+<li><a href="#org9a92772">10.3. org time heading</a></li>
+<li><a href="#org840d198">10.4. pdict-add</a></li>
+<li><a href="#org4f615ad">10.5. minimap</a></li>
+</ul>
+</li>
+<li><a href="#org86b5907">11. org</a>
+<ul>
+<li><a href="#orgb0edb9d">11.1. org-mode</a>
+<ul>
+<li><a href="#org8b33049">11.1.1. indentation</a></li>
+<li><a href="#orgf421ed4">11.1.2. capture</a></li>
+<li><a href="#org75bffcf">11.1.3. agenda</a></li>
+<li><a href="#org7a05ae0">11.1.4. emphasized text</a></li>
+<li><a href="#orgc2939a5">11.1.5. ellipsis</a></li>
+</ul>
+</li>
+<li><a href="#org593f7c1">11.2. org-bullets</a></li>
+<li><a href="#orge9e2911">11.3. publish HTML</a></li>
+<li><a href="#org370e0a8">11.4. org-journal</a></li>
+<li><a href="#org240ea9a">11.5. mind mapping</a></li>
+</ul>
+</li>
+<li><a href="#orgb368c26">12. package archives</a></li>
+<li><a href="#org0d9f49a">13. smartparens</a>
+<ul>
+<li><a href="#org7cf4030">13.1. pairs</a></li>
+</ul>
+</li>
+<li><a href="#orgedc6e3c">14. word wrap</a>
+<ul>
+<li><a href="#org60a62fc">14.1. visual fill column</a></li>
+</ul>
+</li>
+<li><a href="#org9a46f7e">15. shell buffer</a></li>
+<li><a href="#org773e157">16. python</a>
+<ul>
+<li><a href="#org31ea0db">16.1. devel</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<p>
+This is my Emacs settings file.
+</p>
+
+<div id="outline-container-orgd66d900" class="outline-2">
+<h2 id="orgd66d900"><span class="section-number-2">1</span> about this file</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+This Dropbox setup should support both Emacs 25 and 26. Upon fresh installation, modify (on Linux) the .desktop file located in /usr/share/applications. This can be found with:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash">ls /usr/share/applications | grep emacs
+</pre>
+</div>
+
+<p>
+Then edit the file as superuser and change the "Exec" line so that running Emacs will execute the command:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash">emacs -q --load <span style="color: #009090; background-color: #031316;">"~/Dropbox/.emacs_config/init.el"</span>
+</pre>
+</div>
+
+<p>
+OR - just put the previous line as the first line in the .emacs file.
+</p>
+
+<p>
+This loads the Dropbox init.el file before establishing the default value of user-emacs-directory.
+</p>
+
+<p>
+The following additional packages are required and can be downloaded using "M-x package-install":    
+</p>
+<ul class="org-ul">
+<li>soothe-theme</li>
+<li>company</li>
+<li>helm</li>
+<li>org</li>
+<li>org-bullets</li>
+<li>org-journal</li>
+<li>org-mind-map</li>
+<li>smartparens</li>
+<li>visual-fill-column</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org9b26a1b" class="outline-2">
+<h2 id="org9b26a1b"><span class="section-number-2">2</span> appearance</h2>
+<div class="outline-text-2" id="text-2">
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(tool-bar-mode -1)
+(menu-bar-mode -1)
+(scroll-bar-mode -1)
+(set-face-attribute 'default nil <span style="color: #A23F1E; background-color: #1D1515;">:height</span> 150) <span style="color: #01535F; background-color: #111013; font-style: italic;">;; </span><span style="color: #7868B5; background-color: #111013; font-style: italic;">130 = 13pt font</span>
+</pre>
+</div>
+</div>
+<div id="outline-container-orgc731f84" class="outline-3">
+<h3 id="orgc731f84"><span class="section-number-3">2.1</span> theme</h3>
+<div class="outline-text-3" id="text-2-1">
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(<span style="color: #D94A05; background-color: #1F1710;">setq</span> custom-safe-themes
+   (<span style="color: #D94A05; background-color: #1F1710;">quote</span>       (<span style="color: #009090; background-color: #031316;">"a77ced882e25028e994d168a612c763a4feb8c4ab67c5ff48688654d0264370c"</span> default)))
+(load-theme 'soothe)
+(custom-set-faces
+ '(org-hide ((t (<span style="color: #A23F1E; background-color: #1D1515;">:background</span> <span style="color: #009090; background-color: #031316;">"#110F13"</span> <span style="color: #A23F1E; background-color: #1D1515;">:foreground</span> <span style="color: #009090; background-color: #031316;">"#110F13"</span>))))
+ <span style="color: #01535F; background-color: #111013; font-style: italic;">;</span><span style="color: #7868B5; background-color: #111013; font-style: italic;">'(font-lock-comment-face ((t (:background "#110F13" :foreground "#7868B5" :slant italic))))</span>
+)
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org11ab152" class="outline-3">
+<h3 id="org11ab152"><span class="section-number-3">2.2</span> mode line</h3>
+<div class="outline-text-3" id="text-2-2">
+</div>
+<div id="outline-container-orgc502075" class="outline-4">
+<h4 id="orgc502075"><span class="section-number-4">2.2.1</span> time and date</h4>
+<div class="outline-text-4" id="text-2-2-1">
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(<span style="color: #D94A05; background-color: #1F1710;">setq</span> display-time-day-and-date t)
+(display-time-mode t)
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org4978bc6" class="outline-4">
+<h4 id="org4978bc6"><span class="section-number-4">2.2.2</span> column numbers</h4>
+<div class="outline-text-4" id="text-2-2-2">
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(column-number-mode t)
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-orgab2ebbc" class="outline-2">
+<h2 id="orgab2ebbc"><span class="section-number-2">3</span> autocomplete</h2>
+<div class="outline-text-2" id="text-3">
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(<span style="color: #D94A05; background-color: #1F1710;">require</span> '<span style="color: #7868B5; background-color: #1D1B25;">company</span>)
+(global-company-mode t)
+(<span style="color: #D94A05; background-color: #1F1710;">require</span> '<span style="color: #7868B5; background-color: #1D1B25;">ido</span>)
+(ido-mode t)
+</pre>
+</div>
+</div>
+
+<div id="outline-container-org25a6f7f" class="outline-3">
+<h3 id="org25a6f7f"><span class="section-number-3">3.1</span> spell checking</h3>
+<div class="outline-text-3" id="text-3-1">
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(<span style="color: #D94A05; background-color: #1F1710;">setq</span> ispell-program-name <span style="color: #009090; background-color: #031316;">"/usr/bin/aspell"</span>)
+(add-hook 'org-mode-hook 'flyspell-mode)
+</pre>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org6797d4b" class="outline-2">
+<h2 id="org6797d4b"><span class="section-number-2">4</span> backups</h2>
+<div class="outline-text-2" id="text-4">
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(<span style="color: #D94A05; background-color: #1F1710;">setq</span> backup-directory-alist '((<span style="color: #009090; background-color: #031316;">"."</span> . <span style="color: #009090; background-color: #031316;">"~/.emacs.d/backup"</span>)))
+<span style="color: #01535F; background-color: #111013; font-style: italic;">;;</span><span style="color: #7868B5; background-color: #111013; font-style: italic;">(setq backup-directory-alist '(("." . (concat user-emacs-directory "backup"))))</span>
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgb869690" class="outline-2">
+<h2 id="orgb869690"><span class="section-number-2">5</span> bookmarks</h2>
+<div class="outline-text-2" id="text-5">
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(global-set-key (kbd <span style="color: #009090; background-color: #031316;">"C-c b"</span>) 'bookmark-jump)
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org4c24fac" class="outline-2">
+<h2 id="org4c24fac"><span class="section-number-2">6</span> personal dictionary</h2>
+<div class="outline-text-2" id="text-6">
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(<span style="color: #D94A05; background-color: #1F1710;">setq</span> ispell-personal-dictionary (expand-file-name <span style="color: #009090; background-color: #031316;">".ispell_pdict"</span> (file-name-directory user-init-file)))
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-orgb414552" class="outline-2">
+<h2 id="orgb414552"><span class="section-number-2">7</span> helm</h2>
+<div class="outline-text-2" id="text-7">
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(<span style="color: #D94A05; background-color: #1F1710;">require</span> '<span style="color: #7868B5; background-color: #1D1B25;">helm</span>)
+(helm-mode t)
+(global-set-key (kbd <span style="color: #009090; background-color: #031316;">"M-x"</span>) 'helm-M-x)
+(global-set-key (kbd <span style="color: #009090; background-color: #031316;">"C-x C-f"</span>) 'helm-find-files)
+(global-set-key (kbd <span style="color: #009090; background-color: #031316;">"C-x C-b"</span>) 'helm-buffers-list)
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgcffda8f" class="outline-2">
+<h2 id="orgcffda8f"><span class="section-number-2">8</span> initial buffer</h2>
+<div class="outline-text-2" id="text-8">
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(<span style="color: #D94A05; background-color: #1F1710;">setq</span> initial-buffer-choice t)
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-orgdcb4bda" class="outline-2">
+<h2 id="orgdcb4bda"><span class="section-number-2">9</span> movement keys</h2>
+<div class="outline-text-2" id="text-9">
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(global-set-key (kbd <span style="color: #009090; background-color: #031316;">"s-r"</span>) 'beginning-of-line)
+<span style="color: #01535F; background-color: #111013; font-style: italic;">;;</span><span style="color: #7868B5; background-color: #111013; font-style: italic;">(global-set-key (kbd "C-f") 'forward-word)</span>
+<span style="color: #01535F; background-color: #111013; font-style: italic;">;;</span><span style="color: #7868B5; background-color: #111013; font-style: italic;">(global-set-key (kbd "C-b") 'backward-word)</span>
+<span style="color: #01535F; background-color: #111013; font-style: italic;">;;</span><span style="color: #7868B5; background-color: #111013; font-style: italic;">(global-set-key (kbd "M-f") 'sp-forward-sexp)</span>
+<span style="color: #01535F; background-color: #111013; font-style: italic;">;;</span><span style="color: #7868B5; background-color: #111013; font-style: italic;">(global-set-key (kbd "M-b") 'sp-backward-sexp)</span>
+<span style="color: #01535F; background-color: #111013; font-style: italic;">;;</span><span style="color: #7868B5; background-color: #111013; font-style: italic;">(global-set-key (kbd "M-p") 'sp-up-sexp)</span>
+<span style="color: #01535F; background-color: #111013; font-style: italic;">;;</span><span style="color: #7868B5; background-color: #111013; font-style: italic;">(global-set-key (kbd "M-n") 'sp-down-sexp)</span>
+<span style="color: #01535F; background-color: #111013; font-style: italic;">;;</span><span style="color: #7868B5; background-color: #111013; font-style: italic;">(global-set-key (kbd "M-P") 'sp-backward-up-sexp)</span>
+<span style="color: #01535F; background-color: #111013; font-style: italic;">;;</span><span style="color: #7868B5; background-color: #111013; font-style: italic;">(global-set-key (kbd "M-N") 'sp-backward-down-sexp)</span>
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org07e7259" class="outline-2">
+<h2 id="org07e7259"><span class="section-number-2">10</span> my commands</h2>
+<div class="outline-text-2" id="text-10">
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(<span style="color: #D94A05; background-color: #1F1710;">defun</span> <span style="color: #B13120; background-color: #1D1515;">my-commands</span> () (<span style="color: #D94A05; background-color: #1F1710;">interactive</span>)
+       (<span style="color: #D94A05; background-color: #1F1710;">setq</span> unread-command-events (listify-key-sequence <span style="color: #009090; background-color: #031316;">"my-"</span>))
+       (call-interactively 'helm-M-x))
+(global-set-key (kbd <span style="color: #009090; background-color: #031316;">"M-X"</span>) 'my-commands)
+</pre>
+</div>
+</div>
+
+<div id="outline-container-org8628263" class="outline-3">
+<h3 id="org8628263"><span class="section-number-3">10.1</span> transparency</h3>
+<div class="outline-text-3" id="text-10-1">
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(<span style="color: #D94A05; background-color: #1F1710;">defun</span> <span style="color: #B13120; background-color: #1D1515;">my-transparency</span> () (<span style="color: #D94A05; background-color: #1F1710;">interactive</span>)
+       (<span style="color: #D94A05; background-color: #1F1710;">let</span> ((b (- (read-key <span style="color: #009090; background-color: #031316;">"Set transparency value [0-9]"</span>) 48)))
+         (<span style="color: #D94A05; background-color: #1F1710;">if</span> (&lt; b 10) (set-frame-parameter (selected-frame) 'alpha (- 100 (* b 4))))))
+(set-frame-parameter (selected-frame) 'alpha 100)
+(global-set-key (kbd <span style="color: #009090; background-color: #031316;">"C-c t"</span>) 'my-transparency)
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org032af82" class="outline-3">
+<h3 id="org032af82"><span class="section-number-3">10.2</span> comment/uncomment</h3>
+<div class="outline-text-3" id="text-10-2">
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(<span style="color: #D94A05; background-color: #1F1710;">defun</span> <span style="color: #B13120; background-color: #1D1515;">my-comment-or-uncomment</span> () (<span style="color: #D94A05; background-color: #1F1710;">interactive</span>)
+       (<span style="color: #D94A05; background-color: #1F1710;">if</span> (region-active-p)
+           (call-interactively 'comment-or-uncomment-region)
+         (comment-or-uncomment-region (point-at-bol) (point-at-eol))))
+(global-set-key (kbd <span style="color: #009090; background-color: #031316;">"C-c ;"</span>) 'my-comment-or-uncomment)
+</pre>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-org9a92772" class="outline-3">
+<h3 id="org9a92772"><span class="section-number-3">10.3</span> org time heading</h3>
+<div class="outline-text-3" id="text-10-3">
+<pre class="example">
+(require 'org-journal)
+(define-key org-journal-mode-map (kbd "C-c s") 'org-edit-headline)
+(define-key org-journal-mode-map (kbd "C-c C-&lt;return&gt;") 'insert-journal-entry)
+(define-key org-journal-mode-map (kbd "C-c RET") 'insert-timestamp)
+
+(defun insert-journal-entry () "Insert timestamp with new journal entry headline" (interactive)
+       (org-return)
+       (set-mark (point))
+       (sp-backward-whitespace)
+       (org-delete-backward-char 1)
+       (org-return)
+       (org-return)
+       (insert "** \n")
+       (insert-timestamp))
+
+(defun insert-timestamp () "Insert current date and time inactive timestamp" (interactive)
+       (org-time-stamp-inactive '(16))
+       (org-return))
+</pre>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(<span style="color: #D94A05; background-color: #1F1710;">require</span> '<span style="color: #7868B5; background-color: #1D1B25;">org-journal</span>)
+(<span style="color: #D94A05; background-color: #1F1710;">defun</span> <span style="color: #B13120; background-color: #1D1515;">insert-time</span> () <span style="color: #009090; background-color: #0A0A0A;">"Insert the current 24h time in HH:MM format"</span> (<span style="color: #D94A05; background-color: #1F1710;">interactive</span>)
+      (<span style="color: #D94A05; background-color: #1F1710;">let</span> ((arr (split-string (current-time-string) <span style="color: #009090; background-color: #031316;">":"</span>)))
+         (insert (concat (substring (first arr) -2) <span style="color: #009090; background-color: #031316;">":"</span> (nth 1 arr)))))
+(<span style="color: #D94A05; background-color: #1F1710;">defun</span> <span style="color: #B13120; background-color: #1D1515;">insert-time-heading</span> () <span style="color: #009090; background-color: #0A0A0A;">"Insert time as new org heading"</span> (<span style="color: #D94A05; background-color: #1F1710;">interactive</span>)
+       (org-insert-heading-respect-content)
+       (insert-time)
+       (org-beginning-of-line)
+       (set-mark (point))
+       (sp-backward-whitespace)
+       (org-delete-backward-char 1)
+       (org-return)
+       (org-return)
+       (org-end-of-line)
+       (org-return))
+(define-key org-mode-map (kbd <span style="color: #009090; background-color: #031316;">"C-c RET"</span>) 'insert-time-heading)
+</pre>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-org840d198" class="outline-3">
+<h3 id="org840d198"><span class="section-number-3">10.4</span> pdict-add</h3>
+<div class="outline-text-3" id="text-10-4">
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(<span style="color: #D94A05; background-color: #1F1710;">defun</span> <span style="color: #B13120; background-color: #1D1515;">pdict-add</span> () <span style="color: #009090; background-color: #0A0A0A;">"Add current word to dictionary"</span> (<span style="color: #D94A05; background-color: #1F1710;">interactive</span>)
+         (<span style="color: #D94A05; background-color: #1F1710;">setq</span> unread-command-events (listify-key-sequence <span style="color: #009090; background-color: #031316;">"iy"</span>))
+         (<span style="color: #D94A05; background-color: #1F1710;">if</span> (not (flyspell-check-previous-highlighted-word))
+             (<span style="color: #D94A05; background-color: #1F1710;">setq</span> unread-command-events (listify-key-sequence <span style="color: #009090; background-color: #031316;">""</span>))))
+(define-key org-mode-map (kbd <span style="color: #009090; background-color: #031316;">"C-c a"</span>) 'pdict-add)
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org4f615ad" class="outline-3">
+<h3 id="org4f615ad"><span class="section-number-3">10.5</span> minimap</h3>
+<div class="outline-text-3" id="text-10-5">
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(global-set-key (kbd <span style="color: #009090; background-color: #031316;">"C-c m"</span>) 'minimap-mode)
+</pre>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org86b5907" class="outline-2">
+<h2 id="org86b5907"><span class="section-number-2">11</span> org</h2>
+<div class="outline-text-2" id="text-11">
+</div>
+<div id="outline-container-orgb0edb9d" class="outline-3">
+<h3 id="orgb0edb9d"><span class="section-number-3">11.1</span> org-mode</h3>
+<div class="outline-text-3" id="text-11-1">
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(<span style="color: #D94A05; background-color: #1F1710;">require</span> '<span style="color: #7868B5; background-color: #1D1B25;">org</span>)
+
+(<span style="color: #D94A05; background-color: #1F1710;">setq</span> org-return-follows-link t)
+(global-set-key (kbd <span style="color: #009090; background-color: #031316;">"C-c l"</span>) 'org-store-link)
+</pre>
+</div>
+</div>
+
+<div id="outline-container-org8b33049" class="outline-4">
+<h4 id="org8b33049"><span class="section-number-4">11.1.1</span> indentation</h4>
+<div class="outline-text-4" id="text-11-1-1">
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(define-key org-journal-mode-map (kbd <span style="color: #009090; background-color: #031316;">"C-c &lt;right&gt;"</span>) 'insert-time-heading-demote)
+(define-key org-journal-mode-map (kbd <span style="color: #009090; background-color: #031316;">"C-c &lt;left&gt;"</span>) 'insert-time-heading-promote)
+
+(<span style="color: #D94A05; background-color: #1F1710;">defun</span> <span style="color: #B13120; background-color: #1D1515;">insert-time-heading-demote</span> () <span style="color: #009090; background-color: #0A0A0A;">""</span> (<span style="color: #D94A05; background-color: #1F1710;">interactive</span>)
+       (insert-time-heading)
+       (org-demote-subtree))
+
+(<span style="color: #D94A05; background-color: #1F1710;">defun</span> <span style="color: #B13120; background-color: #1D1515;">insert-time-heading-promote</span> () <span style="color: #009090; background-color: #0A0A0A;">""</span> (<span style="color: #D94A05; background-color: #1F1710;">interactive</span>)
+       (insert-time-heading)
+       (org-promote-subtree))
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-orgf421ed4" class="outline-4">
+<h4 id="orgf421ed4"><span class="section-number-4">11.1.2</span> capture</h4>
+<div class="outline-text-4" id="text-11-1-2">
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(global-set-key (kbd <span style="color: #009090; background-color: #031316;">"C-c c"</span>) 'org-capture)
+(<span style="color: #D94A05; background-color: #1F1710;">setq</span> org-directory <span style="color: #009090; background-color: #031316;">"~/Dropbox/beorg"</span>)
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org75bffcf" class="outline-4">
+<h4 id="org75bffcf"><span class="section-number-4">11.1.3</span> agenda</h4>
+<div class="outline-text-4" id="text-11-1-3">
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(global-set-key (kbd <span style="color: #009090; background-color: #031316;">"C-c a"</span>) 'org-agenda)
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org7a05ae0" class="outline-4">
+<h4 id="org7a05ae0"><span class="section-number-4">11.1.4</span> emphasized text</h4>
+<div class="outline-text-4" id="text-11-1-4">
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(<span style="color: #D94A05; background-color: #1F1710;">setq</span> org-hide-emphasis-markers t)
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-orgc2939a5" class="outline-4">
+<h4 id="orgc2939a5"><span class="section-number-4">11.1.5</span> ellipsis</h4>
+<div class="outline-text-4" id="text-11-1-5">
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(<span style="color: #D94A05; background-color: #1F1710;">setq</span> org-ellipsis <span style="color: #009090; background-color: #031316;">"&#9662;"</span>)
+</pre>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org593f7c1" class="outline-3">
+<h3 id="org593f7c1"><span class="section-number-3">11.2</span> org-bullets</h3>
+<div class="outline-text-3" id="text-11-2">
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(<span style="color: #D94A05; background-color: #1F1710;">require</span> '<span style="color: #7868B5; background-color: #1D1B25;">org-bullets</span>)
+(add-hook 'org-mode-hook 'org-bullets-mode)
+(<span style="color: #D94A05; background-color: #1F1710;">setq</span> org-bullets-bullet-list (<span style="color: #D94A05; background-color: #1F1710;">quote</span> (<span style="color: #009090; background-color: #031316;">"&#8594;"</span>)))
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-orge9e2911" class="outline-3">
+<h3 id="orge9e2911"><span class="section-number-3">11.3</span> publish HTML</h3>
+<div class="outline-text-3" id="text-11-3">
+<div class="org-src-container">
+<pre class="src src-emacs-lisp"><span style="color: #01535F; background-color: #111013; font-style: italic;">;;</span><span style="color: #7868B5; background-color: #111013; font-style: italic;">(global-set-key (kbd "C-c p") 'org-publish-project)</span>
+<span style="color: #01535F; background-color: #111013; font-style: italic;">;;</span><span style="color: #7868B5; background-color: #111013; font-style: italic;">(global-set-key (kbd "C-c P") 'org-publish-all)</span>
+(<span style="color: #D94A05; background-color: #1F1710;">setq</span> org-publish-project-alist
+      '(
+        (<span style="color: #009090; background-color: #031316;">"org-html"</span>
+         <span style="color: #A23F1E; background-color: #1D1515;">:base-directory</span> <span style="color: #009090; background-color: #031316;">"~/Documents/web/src"</span>
+         <span style="color: #A23F1E; background-color: #1D1515;">:base-extension</span> <span style="color: #009090; background-color: #031316;">"org"</span>
+         <span style="color: #A23F1E; background-color: #1D1515;">:publishing-directory</span> <span style="color: #009090; background-color: #031316;">"~/Documents/web/html"</span>
+         <span style="color: #A23F1E; background-color: #1D1515;">:recursive</span> nil
+         <span style="color: #A23F1E; background-color: #1D1515;">:publishing-function</span> org-html-publish-to-html
+         <span style="color: #A23F1E; background-color: #1D1515;">:headline-levels</span> 4             <span style="color: #01535F; background-color: #111013; font-style: italic;">; </span><span style="color: #7868B5; background-color: #111013; font-style: italic;">Just the default for this project.</span>
+         <span style="color: #A23F1E; background-color: #1D1515;">:auto-preamble</span> t
+         <span style="color: #A23F1E; background-color: #1D1515;">:auto-sitemap</span> t
+         <span style="color: #A23F1E; background-color: #1D1515;">:sitemap-sort-folders</span> ignore)
+        (<span style="color: #009090; background-color: #031316;">"org-resources"</span>
+         <span style="color: #A23F1E; background-color: #1D1515;">:base-directory</span> <span style="color: #009090; background-color: #031316;">"~/Documents/web/src"</span> 
+         <span style="color: #A23F1E; background-color: #1D1515;">:base-extension</span> <span style="color: #009090; background-color: #031316;">"css</span><span style="color: #009090; background-color: #031316; font-weight: bold;">\\</span><span style="color: #009090; background-color: #031316; font-weight: bold;">|</span><span style="color: #009090; background-color: #031316;">js</span><span style="color: #009090; background-color: #031316; font-weight: bold;">\\</span><span style="color: #009090; background-color: #031316; font-weight: bold;">|</span><span style="color: #009090; background-color: #031316;">png</span><span style="color: #009090; background-color: #031316; font-weight: bold;">\\</span><span style="color: #009090; background-color: #031316; font-weight: bold;">|</span><span style="color: #009090; background-color: #031316;">jpg</span><span style="color: #009090; background-color: #031316; font-weight: bold;">\\</span><span style="color: #009090; background-color: #031316; font-weight: bold;">|</span><span style="color: #009090; background-color: #031316;">gif</span><span style="color: #009090; background-color: #031316; font-weight: bold;">\\</span><span style="color: #009090; background-color: #031316; font-weight: bold;">|</span><span style="color: #009090; background-color: #031316;">pdf</span><span style="color: #009090; background-color: #031316; font-weight: bold;">\\</span><span style="color: #009090; background-color: #031316; font-weight: bold;">|</span><span style="color: #009090; background-color: #031316;">mp3</span><span style="color: #009090; background-color: #031316; font-weight: bold;">\\</span><span style="color: #009090; background-color: #031316; font-weight: bold;">|</span><span style="color: #009090; background-color: #031316;">ogg</span><span style="color: #009090; background-color: #031316; font-weight: bold;">\\</span><span style="color: #009090; background-color: #031316; font-weight: bold;">|</span><span style="color: #009090; background-color: #031316;">swf"</span>
+         <span style="color: #A23F1E; background-color: #1D1515;">:publishing-directory</span> <span style="color: #009090; background-color: #031316;">"~/Documents/web/html"</span>
+         <span style="color: #A23F1E; background-color: #1D1515;">:recursive</span> t
+         <span style="color: #A23F1E; background-color: #1D1515;">:publishing-function</span> org-publish-attachment
+         )
+        (<span style="color: #009090; background-color: #031316;">"org-journal"</span>
+         <span style="color: #A23F1E; background-color: #1D1515;">:base-directory</span> <span style="color: #009090; background-color: #031316;">"~/Documents/journal/"</span>
+         <span style="color: #A23F1E; background-color: #1D1515;">:base-extension</span> <span style="color: #009090; background-color: #031316;">"org"</span>
+         <span style="color: #A23F1E; background-color: #1D1515;">:publishing-directory</span> <span style="color: #009090; background-color: #031316;">"~/Documents/web/html/journal"</span> 
+         <span style="color: #A23F1E; background-color: #1D1515;">:recursive</span> nil
+         <span style="color: #A23F1E; background-color: #1D1515;">:publishing-function</span> org-publish-attachment
+         )))
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org370e0a8" class="outline-3">
+<h3 id="org370e0a8"><span class="section-number-3">11.4</span> org-journal</h3>
+<div class="outline-text-3" id="text-11-4">
+<p>
+For Emacs 24, download org-journal version 1.13.1 from
+<a href="https://github.com/bastibe/org-journal/releases">https://github.com/bastibe/org-journal/releases</a>
+</p>
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(<span style="color: #D94A05; background-color: #1F1710;">require</span> '<span style="color: #7868B5; background-color: #1D1B25;">org-journal</span>)
+(global-set-key (kbd <span style="color: #009090; background-color: #031316;">"C-c j"</span>) 'org-journal-new-entry)
+(global-set-key (kbd <span style="color: #009090; background-color: #031316;">"C-c J"</span>) (<span style="color: #D94A05; background-color: #1F1710;">lambda</span> () <span style="color: #009090; background-color: #0A0A0A;">""</span> (<span style="color: #D94A05; background-color: #1F1710;">interactive</span>) (org-journal-new-entry t) (read-only-mode)))
+(<span style="color: #D94A05; background-color: #1F1710;">setq</span> org-journal-dir <span style="color: #009090; background-color: #031316;">"~/Dropbox/journal"</span>) <span style="color: #01535F; background-color: #111013; font-style: italic;">;; </span><span style="color: #7868B5; background-color: #111013; font-style: italic;">needed in customize</span>
+(<span style="color: #D94A05; background-color: #1F1710;">setq</span> org-journal-file-format <span style="color: #009090; background-color: #031316;">"%Y%m%d.org"</span>)
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org240ea9a" class="outline-3">
+<h3 id="org240ea9a"><span class="section-number-3">11.5</span> mind mapping</h3>
+<div class="outline-text-3" id="text-11-5">
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(<span style="color: #D94A05; background-color: #1F1710;">require</span> '<span style="color: #7868B5; background-color: #1D1B25;">ox-org</span>)
+(<span style="color: #D94A05; background-color: #1F1710;">require</span> '<span style="color: #7868B5; background-color: #1D1B25;">cl</span>) <span style="color: #01535F; background-color: #111013; font-style: italic;">;; </span><span style="color: #7868B5; background-color: #111013; font-style: italic;">this fixed export problem, not sure why     </span>
+(load (concat user-emacs-directory <span style="color: #009090; background-color: #031316;">"elpa/org-mind-map-20180826.2340/org-mind-map.el"</span>))
+(<span style="color: #D94A05; background-color: #1F1710;">org-mind-map-make-node-fn</span> default <span style="color: #009090; background-color: #031316;">"Makes a plain box node without double borders"</span> nil <span style="color: #009090; background-color: #031316;">"box"</span>)
+
+(<span style="color: #D94A05; background-color: #1F1710;">setq</span> org-mind-map-node-formats (<span style="color: #D94A05; background-color: #1F1710;">quote</span> ((<span style="color: #009090; background-color: #031316;">"default"</span> . org-mind-map-default-node))))
+</pre>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgb368c26" class="outline-2">
+<h2 id="orgb368c26"><span class="section-number-2">12</span> package archives</h2>
+<div class="outline-text-2" id="text-12">
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(<span style="color: #D94A05; background-color: #1F1710;">setq</span> package-archives
+   (<span style="color: #D94A05; background-color: #1F1710;">quote</span>
+    ((<span style="color: #009090; background-color: #031316;">"gnu"</span> . <span style="color: #009090; background-color: #031316;">"http://elpa.gnu.org/packages/"</span>)
+     (<span style="color: #009090; background-color: #031316;">"melpa"</span> . <span style="color: #009090; background-color: #031316;">"http://melpa.milkbox.net/packages/"</span>))))
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org0d9f49a" class="outline-2">
+<h2 id="org0d9f49a"><span class="section-number-2">13</span> smartparens</h2>
+<div class="outline-text-2" id="text-13">
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(smartparens-global-mode t)
+(show-smartparens-global-mode t)
+(define-key smartparens-mode-map (kbd <span style="color: #009090; background-color: #031316;">"C-S-&lt;left&gt;"</span>) 'sp-forward-barf-sexp)
+(define-key smartparens-mode-map (kbd <span style="color: #009090; background-color: #031316;">"C-S-&lt;right&gt;"</span>) 'sp-forward-slurp-sexp)
+(<span style="color: #D94A05; background-color: #1F1710;">setq</span> sp-use-subword t)
+</pre>
+</div>
+</div>
+<div id="outline-container-org7cf4030" class="outline-3">
+<h3 id="org7cf4030"><span class="section-number-3">13.1</span> pairs</h3>
+<div class="outline-text-3" id="text-13-1">
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(sp-local-pair '(emacs-lisp-mode lisp-interaction-mode) <span style="color: #009090; background-color: #031316;">"'"</span> nil <span style="color: #A23F1E; background-color: #1D1515;">:actions</span> nil)
+(sp-local-pair '(org-mode tex-mode) <span style="color: #009090; background-color: #031316;">"$"</span> <span style="color: #009090; background-color: #031316;">"$"</span>)
+(sp-local-pair '(org-mode tex-mode) <span style="color: #009090; background-color: #031316;">"\\textit{"</span> <span style="color: #009090; background-color: #031316;">"}"</span> <span style="color: #A23F1E; background-color: #1D1515;">:insert</span> <span style="color: #009090; background-color: #031316;">"C-S-i"</span>)
+(sp-local-pair '(org-mode tex-mode) <span style="color: #009090; background-color: #031316;">"\\textbf{"</span> <span style="color: #009090; background-color: #031316;">"}"</span> <span style="color: #A23F1E; background-color: #1D1515;">:insert</span> <span style="color: #009090; background-color: #031316;">"C-S-b"</span>)
+<span style="color: #01535F; background-color: #111013; font-style: italic;">;;</span><span style="color: #7868B5; background-color: #111013; font-style: italic;">(sp-local-pair '(org-mode tex-mode) "\\left(" "\\right)" :insert "C-c l")</span>
+<span style="color: #01535F; background-color: #111013; font-style: italic;">;;</span><span style="color: #7868B5; background-color: #111013; font-style: italic;">(sp-local-pair '(org-mode tex-mode) "\\left[" "\\right]" :insert "C-c L")</span>
+(sp-local-pair '(java-mode) <span style="color: #009090; background-color: #031316;">"System.out.println("</span> <span style="color: #009090; background-color: #031316;">")"</span> <span style="color: #A23F1E; background-color: #1D1515;">:trigger</span> <span style="color: #009090; background-color: #031316;">"syso"</span>)
+</pre>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-orgedc6e3c" class="outline-2">
+<h2 id="orgedc6e3c"><span class="section-number-2">14</span> word wrap</h2>
+<div class="outline-text-2" id="text-14">
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(toggle-word-wrap)
+(add-hook 'org-mode-hook 'visual-line-mode)
+</pre>
+</div>
+</div>
+<div id="outline-container-org60a62fc" class="outline-3">
+<h3 id="org60a62fc"><span class="section-number-3">14.1</span> visual fill column</h3>
+<div class="outline-text-3" id="text-14-1">
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(<span style="color: #D94A05; background-color: #1F1710;">require</span> '<span style="color: #7868B5; background-color: #1D1B25;">visual-fill-column</span>)
+(add-hook 'visual-line-mode-hook 'visual-fill-column-mode)
+</pre>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org9a46f7e" class="outline-2">
+<h2 id="org9a46f7e"><span class="section-number-2">15</span> shell buffer</h2>
+<div class="outline-text-2" id="text-15">
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(global-set-key (kbd <span style="color: #009090; background-color: #031316;">"C-!"</span>) 'shell)
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org773e157" class="outline-2">
+<h2 id="org773e157"><span class="section-number-2">16</span> python</h2>
+<div class="outline-text-2" id="text-16">
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(elpy-enable)
+</pre>
+</div>
+</div>
+<div id="outline-container-org31ea0db" class="outline-3">
+<h3 id="org31ea0db"><span class="section-number-3">16.1</span> devel</h3>
+<div class="outline-text-3" id="text-16-1">
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(<span style="color: #D94A05; background-color: #1F1710;">when</span> (<span style="color: #D94A05; background-color: #1F1710;">require</span> '<span style="color: #7868B5; background-color: #1D1B25;">flycheck</span> nil t)
+  (<span style="color: #D94A05; background-color: #1F1710;">setq</span> elpy-modules (delq 'elpy-module-flymake elpy-modules))
+  (add-hook 'elpy-mode-hook 'flycheck-mode))
+
+(<span style="color: #D94A05; background-color: #1F1710;">require</span> '<span style="color: #7868B5; background-color: #1D1B25;">py-autopep8</span>)
+(add-hook 'elpy-mode-hook 'py-autopep8-enable-on-save)
+
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Cole Turner</p>
+<p class="date">Created: 2019-11-01 Fri 12:44</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

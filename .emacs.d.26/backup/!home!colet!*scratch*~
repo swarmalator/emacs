@@ -1,0 +1,4 @@
+;; This buffer is for text that is not saved, and for Lisp evaluation.
+;; To create a file, visit it with C-x C-f and enter text in its buffer.
+
+using this scratch buffer to type some stuff that I think I shoul do in Emacs. Organize it to store my thoughts about stuff like I used to. I always have had good thoughts about writing my thoughts down but

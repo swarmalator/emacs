@@ -1,0 +1,32 @@
+module PDESolver where
+
+import Graphics.Gloss
+import Graphics.Gloss.Data.Color (makeColor, yellow, white)
+import PowerSeries
+import Data.Stream as DS
+import Prelude as P
+
+main :: IO()
+main = simulate
+       (InWindow "Plotting PDEs" (500,500) (10,10))
+       (makeColor 0.0 0.0 0.0 1)
+       10
+       (gausS, 0)
+       toPicture
+       (\vp dt (s,t) -> (s,t+dt/1000))
+
+func = spde
+
+toPicture :: (Stream Float, Float) -> Picture
+toPicture (s,t) = Color white $ Line $ P.zip (P.map (100*) xs) ys
+  where xs = [(-2),(-1.9)..2]
+        ys = P.map ((100*) . eval2 20 (spde 50 s) t) xs
+
+-- WHY CAN'T POWER SERIES LOOK GOOD IN SIMULATIONS?
+
+eval3 :: Num a => Int -> Stream (Stream a) -> a -> a -> a
+eval3 n fs t x = P.sum $ P.zipWith (*) (toList (powers x)) $ P.map (P.sum . P.zipWith (*) (toList (powers t)) ) $ P.zipWith DS.take [(n+1),n..] $ DS.take (n+1) fs
+
+
+
+--testEval3 n fs = P.zipWith DS.take [(n+1),n..] $ DS.take (n+1) fs

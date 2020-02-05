@@ -1,0 +1,39 @@
+* Tuesday, 12/03/2019
+** Cascade
+** Controller
+** IT
+** Emacs/Misc
+** 08:10
+One file for TODO stuff? Journal is fine? "work" and "home" todo items? I could use tags. Or just make new entries. Should be based on location.  
+** 14:13
+- pn 
+- mfgCode (lookup table, device table)
+- mfgPart (xmpbd)
+- catId (lookup)
+- ffNum
+- testCode (xmpdb)
+- price
+- priceType = cents
+- filtermask? (2=hidden?3=shown?)
+- cltBoard
+- eccn (make blank)
+- bn (pcb no.) (make 4 digits)
+- description
+- assyDwg (make blank)
+- landingPage (build from PN)
+- mfgLandingPage (device registry)
+- datasheetURL
+- quote (add to cart?)
+- props (XMW com parametric, make empty)
+- images 
+- models
+- sparamLinks
+
+
+JSON FILES
+- parts
+- formFactors
+- categories
+- showCategories
+- manufs
+- units?

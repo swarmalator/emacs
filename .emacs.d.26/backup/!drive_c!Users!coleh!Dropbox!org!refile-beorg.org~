@@ -1,0 +1,57 @@
+#+OPTIONS: ':nil *:t -:t ::t <:t H:3 \n:nil ^:t arch:headline
+#+OPTIONS: author:t broken-links:nil c:nil creator:nil
+#+OPTIONS: d:(not "LOGBOOK") date:t e:t email:nil f:t inline:t num:t
+#+OPTIONS: p:nil pri:nil prop:nil stat:t tags:t tasks:t tex:t
+#+OPTIONS: timestamp:t title:t toc:nil todo:t |:t
+#+TITLE: refile-beorg
+#+DATE: <2018-05-10 Thu>
+#+AUTHOR: Cole Turner
+#+EMAIL: c.h.turner@tcu.edu
+#+LANGUAGE: en
+#+SELECT_TAGS: export
+#+EXCLUDE_TAGS: noexport
+#+CREATOR: Emacs 25.1.1 (Org mode 9.0.5)
+
+| Macros             | Keys         | C-u    |
+|--------------------+--------------+--------|
+| Inactive timestamp | C-c !        | + Time |
+| Active timestamp   | C-c .        | + Time |
+| Archive subtree    | C-c $        |        |
+| Prompt TODO        | C-c C-t      |        |
+| Edit TODO          | S-LEFT/RIGHT |        |
+| Edit Priority      | S-UP/DOWN    |        |
+| Org Capture        | C-c c        |        |
+
+* FINISH [#A] Write Poems
+[2018-05-20 Sun 18:12]
+
+* DO [#A] Email Miller
+[2018-05-20 Sun 18:09]
+
+* DO [#A] Diffusion Model Paper
+[2018-05-15 Tue 16:48]
+
+* FINISH [#A] Cone Chaos Paper
+[2018-05-15 Tue 16:45]
+
+* DONE [#A] Hana LaTeX Update
+[2018-05-16 Wed 19:07]
+
+* DO [#B] Refill Prescription
+[2018-05-16 Wed 13:05]
+
+* DO [#C] Add Hamiltonian GBC to Github
+[2018-05-15 Tue 23:29]
+
+* FINISH [#C] Upload github distributions
+[2018-05-11 Fri 11:22]
+
+* START [#C] Category Theory
+[2018-05-12 Sat 10:32]
+
+* START [#C] Quantum Field Theory
+[2018-05-11 Fri 11:24]
+
+* DO Get Last Two English Books
+[2018-05-22 Tue 13:22]
+

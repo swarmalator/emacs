@@ -1,0 +1,279 @@
+(package-initialize)
+
+(add-to-list 'load-path "~/.emacs.d/setup.el")
+
+;; custom-set-variables
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(ansi-color-faces-vector
+   [default bold shadow italic underline bold bold-italic bold])
+ '(ansi-term-color-vector
+   [unspecified "#14191f" "#d15120" "#81af34" "#deae3e" "#7e9fc9" "#a878b5" "#7e9fc9" "#dcdddd"])
+ '(auto-hscroll-mode t)
+ '(backup-directory-alist (quote (("." . "~/.emacs.d/backup"))))
+ '(beacon-color "#cc6666")
+ '(company-minimum-prefix-length 3)
+ '(company-quickhelp-color-background "#b0b0b0")
+ '(company-quickhelp-color-foreground "#232333")
+ '(company-show-numbers t)
+ '(compilation-message-face (quote default))
+ '(cua-global-mark-cursor-color "#2aa198")
+ '(cua-normal-cursor-color "#839496")
+ '(cua-overwrite-cursor-color "#b58900")
+ '(cua-read-only-cursor-color "#859900")
+ '(current-language-environment "English")
+ '(custom-enabled-themes (quote (soothe)))
+ '(custom-safe-themes
+   (quote
+    ("8ba71524213f751c3cd16819a5872c39fb2142d9877d3e738520f2d5fda65d88" "a77ced882e25028e994d168a612c763a4feb8c4ab67c5ff48688654d0264370c" "38e66a2a20fa9a27af5ffc4f4dd54f69e3fef6b51be7b351e137b24958bfebd7" "1e67765ecb4e53df20a96fb708a8601f6d7c8f02edb09d16c838e465ebe7f51b" "bc40f613df8e0d8f31c5eb3380b61f587e1b5bc439212e03d4ea44b26b4f408a" "1db337246ebc9c083be0d728f8d20913a0f46edc0a00277746ba411c149d7fe5" "5e2dc1360a92bb73dafa11c46ba0f30fa5f49df887a8ede4e3533c3ab6270e08" "b9b1a8d2ec1d5c17700e1a09256f33c2520b26f49980ed9e217e444c381279a9" "ab0950f92dc5e6b667276888cb0cdbc35fd1c16f667170a62c15bd3ed5ae5c5a" "d3a7eea7ebc9a82b42c47e49517f7a1454116487f6907cf2f5c2df4b09b50fc1" "0309f5d28c57c327283e579abd9059fe7b4b32e2599879cd78846e2368f8e6e8" "b550fc3d6f0407185ace746913449f6ed5ddc4a9f0cf3be218af4fb3127c7877" "bea5fd3610ed135e6ecc35bf8a9c27277d50336455dbdd2969809f7d7c1f7d79" "72759f4e42617df7a07d0a4f4b08982314aa97fbd495a5405c9b11f48bd6b839" "3edbdd0ad45cb8f7c2575c0ad8f6625540283c6e928713c328b0bacf4cfbb60f" "41f90b83fae6e57d37617a9998424cb78fa064fc79706442e677201084ee181d" "9fe1540491fcf692b8c639a3abacd32b29233bc4cb834a12a0fd1e01cbd0a128" "081d0f8a263358308245355f0bb242c7a6726fc85f0397d65b18902ea95da591" "a6a1939a4f1175218e1c7dcb39102e7f99ec546451cde0df1276dd2100814fd7" "3c5ca0615e9a3c10826cb615989d27a33f730552e1c3a4118ad16056047344e4" "4e63466756c7dbd78b49ce86f5f0954b92bf70b30c01c494b37c586639fa3f6f" "628278136f88aa1a151bb2d6c8a86bf2b7631fbea5f0f76cba2a0079cd910f7d" "bb08c73af94ee74453c90422485b29e5643b73b05e8de029a6909af6a3fb3f58" "1b8d67b43ff1723960eb5e0cba512a2c7a2ad544ddb2533a90101fd1852b426e" "82d2cac368ccdec2fcc7573f24c3f79654b78bf133096f9b40c20d97ec1d8016" "06f0b439b62164c6f8f84fdda32b62fb50b6d00e8b01c2208e55543a6337433a" "8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" default)))
+ '(default-justification (quote left))
+ '(display-battery-mode t)
+ '(display-time-day-and-date t)
+ '(display-time-mode t)
+ '(doc-view-continuous t)
+ '(electric-indent-mode t)
+ '(electric-pair-delete-adjacent-pairs t)
+ '(electric-pair-mode nil)
+ '(electric-pair-open-newline-between-pairs t)
+ '(electric-pair-skip-self (quote electric-pair-default-skip-self))
+ '(electric-quote-mode nil)
+ '(electric-quote-string t)
+ '(enable-completion nil)
+ '(fill-column 100)
+ '(find-file-visit-truename t)
+ '(fit-frame-to-buffer-margins (quote (nil nil 20 nil)))
+ '(flycheck-color-mode-line-face-to-color (quote mode-line-buffer-id))
+ '(frame-background-mode (quote dark))
+ '(global-company-mode t)
+ '(global-linum-mode nil)
+ '(global-visual-fill-column-mode nil)
+ '(global-visual-line-mode nil)
+ '(goal-column nil)
+ '(gradle-mode nil)
+ '(helm-mode t)
+ '(highlight-changes-colors (quote ("#d33682" "#6c71c4")))
+ '(highlight-symbol-colors
+   (--map
+    (solarized-color-blend it "#002b36" 0.25)
+    (quote
+     ("#b58900" "#2aa198" "#dc322f" "#6c71c4" "#859900" "#cb4b16" "#268bd2"))))
+ '(highlight-symbol-foreground-color "#93a1a1")
+ '(highlight-tail-colors
+   (quote
+    (("#073642" . 0)
+     ("#546E00" . 20)
+     ("#00736F" . 30)
+     ("#00629D" . 50)
+     ("#7B6000" . 60)
+     ("#8B2C02" . 70)
+     ("#93115C" . 85)
+     ("#073642" . 100))))
+ '(hl-bg-colors
+   (quote
+    ("#7B6000" "#8B2C02" "#990A1B" "#93115C" "#3F4D91" "#00629D" "#00736F" "#546E00")))
+ '(hl-fg-colors
+   (quote
+    ("#002b36" "#002b36" "#002b36" "#002b36" "#002b36" "#002b36" "#002b36" "#002b36")))
+ '(hl-paren-colors (quote ("#FCE8C3" "#519F50" "#2C78BF" "#918175")))
+ '(ido-mode (quote both) nil (ido))
+ '(inhibit-startup-screen nil)
+ '(initial-buffer-choice t)
+ '(linum-format "%3d  ")
+ '(magit-diff-use-overlays nil)
+ '(menu-bar-mode nil)
+ '(minimap-major-modes (quote (prog-mode)))
+ '(minimap-mode nil)
+ '(minimap-width-fraction 0.1)
+ '(minimap-window-location (quote right))
+ '(mouse-wheel-scroll-amount (quote (1 ((shift) . 1) ((control)))))
+ '(next-line-add-newlines nil)
+ '(nrepl-message-colors
+   (quote
+    ("#dc322f" "#cb4b16" "#b58900" "#546E00" "#B4C342" "#00629D" "#2aa198" "#d33682" "#6c71c4")))
+ '(openwith-associations
+   (quote
+    (("\\.jar\\'" "java"
+      (file))
+     ("\\.pdf\\'" "acroread"
+      (file))
+     ("\\.mp3\\'" "xmms"
+      (file))
+     ("\\.\\(?:mpe?g\\|avi\\|wmv\\|m4a\\)\\'" "mplayer"
+      ("-idx" file))
+     ("\\.\\(?:jp?g\\|png\\)\\'" "display"
+      (file))
+     ("\\.\\(doc\\|docx\\)\\'" "winword"
+      (file))
+     ("\\.\\(ppt\\|pptx\\)\\'" "powerpnt"
+      (file))
+     ("\\.\\(xls\\|xlsx\\)\\'" "excel"
+      (file)))))
+ '(org-M-RET-may-split-line nil)
+ '(org-agenda-dim-blocked-tasks nil)
+ '(org-agenda-files (quote ("c:/Users/coleh/Dropbox/org")))
+ '(org-agenda-skip-deadline-if-done t)
+ '(org-agenda-skip-scheduled-if-done t)
+ '(org-agenda-todo-keyword-format "%-4s")
+ '(org-agenda-todo-list-sublevels nil)
+ '(org-archive-location "~/.emacs.d/archive.org::")
+ '(org-archive-mark-done t)
+ '(org-blank-before-new-entry (quote ((heading . auto) (plain-list-item . auto))))
+ '(org-bullets-bullet-list (quote ("•" "‣" "⁃" "→")))
+ '(org-capture-bookmark nil)
+ '(org-capture-templates
+   (quote
+    (("t" "task" entry
+      (file "c:/Users/coleh/Dropbox/org/capture.org")
+      "* TODO %i%?
+%U" :jump-to-captured t :unnarrowed t))))
+ '(org-clock-out-remove-zero-time-clocks t)
+ '(org-clock-sound t)
+ '(org-closed-keep-when-no-todo t)
+ '(org-cycle-max-level nil)
+ '(org-datetree-add-timestamp nil)
+ '(org-default-priority 66)
+ '(org-directory "c:/Users/coleh/Dropbox/org")
+ '(org-display-custom-times t)
+ '(org-edit-timestamp-down-means-later nil)
+ '(org-ellipsis "▾")
+ '(org-enforce-todo-checkbox-dependencies t)
+ '(org-enforce-todo-dependencies t)
+ '(org-extend-today-until 0)
+ '(org-fontify-emphasized-text t)
+ '(org-hidden-keywords nil)
+ '(org-hide-block-startup t)
+ '(org-hide-emphasis-markers t)
+ '(org-hide-leading-stars t)
+ '(org-hide-macro-markers t)
+ '(org-highest-priority 65)
+ '(org-highlight-latex-and-related (quote (latex script entities)))
+ '(org-html-head
+   "<link rel=\"stylesheet\" type=\"text/css\" href=\"css/theme.css\"/>")
+ '(org-html-head-include-default-style t)
+ '(org-html-validation-link "")
+ '(org-indent-indentation-per-level 2)
+ '(org-insert-mode-line-in-empty-file t)
+ '(org-journal-enable-agenda-integration t)
+ '(org-journal-file-format "%Y%m%d.org")
+ '(org-latex-packages-alist nil)
+ '(org-latex-pdf-process
+   (quote
+    ("pdflatex -interaction nonstopmode -output-directory %o %f" "bibtex %b" "pdflatex -interaction nonstopmode -output-directory %o %f" "pdflatex -interaction nonstopmode -output-directory %o %f")))
+ '(org-list-indent-offset 2)
+ '(org-log-done (quote time))
+ '(org-log-into-drawer t)
+ '(org-log-note-clock-out nil)
+ '(org-log-redeadline nil)
+ '(org-log-reschedule nil)
+ '(org-lowest-priority 68)
+ '(org-modules
+   (quote
+    (org-bbdb org-bibtex org-docview org-gnus org-habit org-info org-irc org-mhe org-rmail org-w3m)))
+ '(org-plain-list-ordered-item-terminator t)
+ '(org-pretty-entities nil)
+ '(org-pretty-entities-include-sub-superscripts nil)
+ '(org-priority-faces
+   (quote
+    ((65 . font-lock-negation-char-face)
+     (66 . font-lock-keyword-face)
+     (67 . font-lock-warning-face)
+     (68 . font-lock-constant-face))))
+ '(org-provide-todo-statistics (quote (("TODO") ("DONE"))))
+ '(org-return-follows-link t)
+ '(org-scheduled-delay-days 0)
+ '(org-sparse-tree-default-date-type (quote all))
+ '(org-special-ctrl-a/e nil)
+ '(org-special-ctrl-k nil)
+ '(org-startup-align-all-tables t)
+ '(org-startup-folded (quote content))
+ '(org-startup-indented t)
+ '(org-startup-truncated nil)
+ '(org-tag-alist (quote (("meta" . 109))))
+ '(org-tags-column -77)
+ '(org-todo-interpretation (quote type))
+ '(org-todo-keyword-faces (quote (("PROG" . font-lock-keyword-face))))
+ '(org-todo-keywords
+   (quote
+    ((sequence "TODO(t)" "DONE(d)")
+     (sequence "15m" "30m" "1hr" "2hr" "3hr" "DONE"))))
+ '(org-treat-insert-todo-heading-as-state-change t)
+ '(org-use-fast-todo-selection t)
+ '(org-use-property-inheritance t)
+ '(org-use-sub-superscripts (quote {}))
+ '(package-archives
+   (quote
+    (("gnu" . "http://elpa.gnu.org/packages/")
+     ("melpa" . "http://melpa.milkbox.net/packages/"))))
+ '(package-selected-packages
+   (quote
+    (lorem-ipsum xah-css-mode visual-fill-column skewer-mode minimap goose-theme paganini-theme soothe-theme ample-zen-theme twilight-anti-bright-theme suscolors-theme warm-night-theme jazz-theme mustard-theme gotham-theme anti-zenburn-theme exotica-theme northcode-theme cyberpunk-theme atom-one-dark-theme nova-theme tangotango-theme srcery-theme openwith color-theme-sanityinc-tomorrow org gradle-mode)))
+ '(pdf-view-midnight-colors (quote ("#232333" . "#c7c7c7")))
+ '(pos-tip-background-color "#073642")
+ '(pos-tip-foreground-color "#93a1a1")
+ '(scroll-bar-mode nil)
+ '(selective-display-ellipses nil)
+ '(show-smartparens-global-mode t)
+ '(show-trailing-whitespace nil)
+ '(smartparens-global-mode t)
+ '(smartrep-mode-line-active-bg (solarized-color-blend "#859900" "#073642" 0.2))
+ '(sp-autoskip-closing-pair (quote always-end))
+ '(sp-navigate-consider-stringlike-sexp (quote (latex-mode java-mode)))
+ '(sp-use-subword t)
+ '(standard-indent 8)
+ '(tab-always-indent (quote complete))
+ '(term-default-bg-color "#002b36")
+ '(term-default-fg-color "#839496")
+ '(tex-fontify-script nil)
+ '(tool-bar-mode nil)
+ '(track-eol t)
+ '(uniquify-buffer-name-style (quote post-forward-angle-brackets) nil (uniquify))
+ '(user-full-name "Cole Turner")
+ '(user-mail-address "c.h.turner@tcu.edu")
+ '(vc-annotate-background nil)
+ '(vc-annotate-background-mode nil)
+ '(vc-annotate-color-map
+   (quote
+    ((20 . "#c82829")
+     (40 . "#f5871f")
+     (60 . "#eab700")
+     (80 . "#718c00")
+     (100 . "#3e999f")
+     (120 . "#4271ae")
+     (140 . "#8959a8")
+     (160 . "#c82829")
+     (180 . "#f5871f")
+     (200 . "#eab700")
+     (220 . "#718c00")
+     (240 . "#3e999f")
+     (260 . "#4271ae")
+     (280 . "#8959a8")
+     (300 . "#c82829")
+     (320 . "#f5871f")
+     (340 . "#eab700")
+     (360 . "#718c00"))))
+ '(vc-annotate-very-old-color nil)
+ '(visual-line-fringe-indicators (quote (nil right-curly-arrow)))
+ '(weechat-color-list
+   (quote
+    (unspecified "#002b36" "#073642" "#990A1B" "#dc322f" "#546E00" "#859900" "#7B6000" "#b58900" "#00629D" "#268bd2" "#93115C" "#d33682" "#00736F" "#2aa198" "#839496" "#657b83")))
+ '(words-include-escapes t)
+ '(xterm-color-names
+   ["#073642" "#dc322f" "#859900" "#b58900" "#268bd2" "#d33682" "#2aa198" "#eee8d5"])
+ '(xterm-color-names-bright
+   ["#002b36" "#cb4b16" "#586e75" "#657b83" "#839496" "#6c71c4" "#93a1a1" "#fdf6e3"]))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(default ((t (:inherit nil :stipple nil :background "#111013" :foreground "#C5D4DD" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 99 :width normal :foundry "outline" :family "Courier New"))))
+ '(minimap-active-region-background ((t (:background "gray20"))))
+ '(org-ellipsis ((t (:foreground "LightGoldenrod" :underline nil))))
+ '(org-hide ((t (:background "#111013" :foreground "#111013"))))
+ '(stripe-highlight ((t (:background "gray10")))))
+
+(put 'set-goal-column 'disabled nil)
+;; THIS IS FROM THE ORG (org-babel-load-file (expand-file-name "setup.org" user-emacs-directory))

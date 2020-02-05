@@ -1,0 +1,35 @@
+* Thursday, 01/02/2020
+** IT [2/11]
+*** DONE [#A] Server Software
+| VMware vSphere Essentials Kit | $576.96 |
+| Windows 10 Pro                | $199.99 |
+|                               |         |
+(866) 425-4709
+Need Windows server that covers 32 cores and only 5 CALs
+*** DONE [#A] New engineer laptop setup
+
+Already set this up but the information is:
+- Amy Ho
+SN>2eLuL
+** Cascade [0/7]
+** Controller [1/9]
+*** DONE [#B] Create better python example on TCP control guide
+[[http://xmwcontroller.xmicrowave.com/]]
+** FileMaker [1/6]
+*** DONE [#B] Make ports input page
+Look into clickable SVG file in FileMaker
+*** DONE (Erik) Upload fixed PCB svgs
+CLOSED: [2020-01-02 Thu 19:14]
+** Misc [1/4]
+*** DONE [#F] Archive when DONE
+** 10:14
+Service specific error: 2148081683
+
+Tried to add the revocation checking back into the certificate services with the following:
+
+certutil –setreg ca\CRLFlags -CRLF_REVCHECK_IGNORE_OFFLINE
+
+net stop certsvc
+net start certsvc
+
+But I had to add it back because doing this gave me that error. Changed the minus to a plus before CRLF_REVCHECK_IGNORE_OFFLINE.

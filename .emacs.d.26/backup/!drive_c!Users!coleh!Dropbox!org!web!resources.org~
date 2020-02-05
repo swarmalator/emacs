@@ -1,0 +1,92 @@
+#+TITLE: Resources
+#+INCLUDE: setup.setup
+
+- Contact me at [[mailto:swarmalator@gmail.com][swarmalator@gmail.com]]
+- [[file:files/cv.pdf][Resume/CV]] (/because I hear this is a good thing to have... needs updating/)
+
+* B.S. Physics
+Texas Christian University
+
+/Begin Fall 2015 - Graduated Aug 2018/
+** Classical Mechanics
+- Inertial and rotating frames
+- Lagrangian and Hamiltonian mechanics
+*** Texts
+- /Classical Mechanics/, John R. Taylor
+- /Classical Mechanics/, Tom W. B. Kibble
+** Nonlinear Dynamics and Chaos
+- Cobweb and Bifurcation diagrams
+- Stability analysis
+- Poincaré surfaces of section
+- Chaos in iterative maps
+- Nonlinear Waves and Solitions
+- Laplace and Mellin transforms
+- Convolution theorems
+*** Texts
+- /Nonlinear Dynamics and Chaos/, Steven Strogatz
+- /Chaotic Dynamics of Nonlinear Systems/, S. Neil Rasband
+- /Chaos in Dynamical Systems/, Edward Ott
+- /Chaos and Time Series Analysis/, Julien C. Sprott
+
+** Electricity and Magnetism
+- Maxwell's equations
+- Green's and Stokes' theorems and EM concepts
+- /Introduction to Electrodynamics/, David J. Griffiths
+** Optics
+- 3D EM wave visualization
+- Reflection, transmission, and polarization
+- Biomedical imaging
+- Ideal lenses and matrix methods
+- Ray-tracing algorithm (and implementation)
+- /Optics/, Eugene Hecht
+** Quantum Mechanics
+- Operational calculus
+- Hilbert Space
+- Schrödinger's cat and equation
+- Fourier transform
+- /Introduction to Quantum Mechanics/, David J. Griffiths
+** Computational Methods
+- Solving differential equations  
+- Simulating physical systems in time  
+- Nondimensionalization
+** Statistical / Thermal Physics 
+- Central limit theorem
+- /Fundamentals of Statistical Physics/, F. Reif
+
+* Minor Computer Science
+** Object Oriented Programming (OOP)
+- Java
+- Python
+- C/C++
+** Functional programming
+- Haskell
+- Lisp
+- /Learn You a Haskell for Great Good/, Miran Lipovaca
+** Computer Fundamentals
+- Logic gates and boolean algebra
+- Turing completeness
+- Assembly / machine code
+- Computer Organization
+- Assembly debugging and compiling
+** Operating Systems
+- UNIX file system
+- Virtual file systems and paging algorithms
+- Fragmentation and memory access techniques
+- Deadlocks and solutions
+- Processes, threads and scheduling algorithms
+- LINUX kernel API (Debian)
+- Distributed systems synchronization problems
+
+* Minor Mathematics
+** Calculus
+- Integration and differentiation
+- Solving ordinary and partial differential equations
+** Linear algebra
+- Vector spaces
+- Matrix transform analysis
+** Complex Analysis
+- Complex polar form and Euler's formula
+- Contour integration and residues
+** Higher geometry
+- Algebraic and geometric proofs
+- Non-euclidean geometry (spherical, hyperbolic)

@@ -1,0 +1,7 @@
+* Thursday, 12/26/2019
+** IT [2/8]
+** Cascade [3/10]
+*** FileMaker
+** Controller [0/7]
+** Emacs/Misc [2/3]
+** 10:41

@@ -1,0 +1,20 @@
+;; Emacs-W3 HTTP cookies file
+;; Automatically generated file!!! DO NOT EDIT!!!
+
+(setq url-cookie-storage
+ '(("linkinghub.elsevier.com"
+  [url-cookie "Max-Age" "2147483647" "02-Jan-2086 09:46:09.00 GMT" "/" "linkinghub.elsevier.com" nil]
+  [url-cookie "visitorId" "pQolnkVnIKRkE1PyWAB8" "02-Jan-2086 09:46:09.00 GMT" "/" "linkinghub.elsevier.com" nil])
+ (".google.com"
+  [url-cookie "1P_JAR" "2019-07-23-19" "Thu, 22-Aug-2019 19:29:02 GMT" "/" ".google.com" nil]
+  [url-cookie "NID" "188=f4za7CeSMdNqWEvldyjKew_uSNf29LHOzIBskY_ZmuXHAhZDB_oYUUEj8Imsj80ZRW4Asu-bS7772LyLg32naO79twzdIHa72dQBc7xYXJNeDlR6yAkjAwC8disLZSxvE7Bc1KmK4CmriTkn2qx0Gl6LGEv4VA7qLJOGqRgPhHU" "Wed, 22-Jan-2020 19:29:02 GMT" "/" ".google.com" nil]
+  [url-cookie "CGIC" "IgMqLyo" "Sun, 19-Jan-2020 19:29:02 GMT" "/complete/search" ".google.com" nil]
+  [url-cookie "CGIC" "IgMqLyo" "Sun, 19-Jan-2020 19:29:02 GMT" "/search" ".google.com" nil]))
+)
+(setq url-cookie-secure-storage
+ 'nil)
+
+;; Local Variables:
+;; version-control: never
+;; no-byte-compile: t
+;; End:

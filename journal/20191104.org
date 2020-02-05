@@ -1,0 +1,20 @@
+* Monday, 11/04/2019
+
+** 09:31
+Need to roll out version 0.36 soon. I think the only thing left to do is to run the tests on every part screen and then to have Erik confirm that the generated documentation is good enough for the pi.  
+** 09:48
+What would I guess Erik would say for me to do. Look at cascade tool documentation? Figure out how to add a part? That is on my list of things to do. I could also add part names to the pi program. Could also finish the settings page for the pi. Could also add the search feature.
+
+** DONE Auto-create directories on build
+
+** DONE Fix whitespace in [[file:~/Documents/programit/ProgramItKivy-1/ProgramIt/LibBaseProgPart.py::from%20.Logging%20import%20get_tm_fmt][LibBaseProgPart.py]] 
+
+** DONE Reset MFA on AWS
+** DONE Reset MFA on GitLab
+** 13:58
+Need to keep track of questions somehow. 
+** 14:25
+
+
+** 17:37
+one message and multiple message sequence.

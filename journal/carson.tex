@@ -1,0 +1,198 @@
+% Created 2019-11-20 Wed 15:41
+% Intended LaTeX compiler: pdflatex
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{grffile}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\author{Cole Turner, Carson Page}
+\date{\textit{<2019-11-20 Wed>}}
+\title{IT meeting}
+\hypersetup{
+ pdfauthor={Cole Turner, Carson Page},
+ pdftitle={IT meeting},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 26.3 (Org mode 9.2.5)}, 
+ pdflang={English}}
+\begin{document}
+
+\maketitle
+\tableofcontents
+
+
+\section*{Initial questions}
+\label{sec:org799ee5b}
+\begin{itemize}
+\item AWS unknowns?
+\item vLAN map/verify
+\item UPS login?
+\item vSphere HA replication
+\item Switch/patch panel labels
+\item GENESYS walkthrough
+\begin{itemize}
+\item Simulator/x-parameters
+\item Sys parameter model
+\item GENESYS library
+\end{itemize}
+\item \href{https://www.minicircuits.com/WebStore/x\_mwblock.html}{minicircuits} web-API (searchAPI)
+\item extra server ideas?
+\item Where did we get SSL cert? How is it renewed?
+\end{itemize}
+
+\section*{12:32 - S3 buckets}
+\label{sec:org98f56f9}
+\begin{itemize}
+\item cf-templates X
+\item elasticbeanstalk X
+\item cjk-cascade-test X
+\item kops-xmicrowave-store X
+\item pki.xmicrowave.com KEEP
+\item prod-kops X
+\item x-microwave.com KEEP
+\item x-microwave.net KEEP
+\item xm-codedeploy X
+\item datapipeline KEEP
+\item elb logs KEEP
+\item raspi image X?
+\item serverless deploy stuff ??
+\end{itemize}
+
+\section*{{\bfseries\sffamily TODO} Centralized logging on S3}
+\label{sec:orged365bf}
+\section*{13:19 - CASCADE DB}
+\label{sec:org0aef436}
+\begin{itemize}
+\item deploy.sh - \textbf{CI/CD} instance
+\item DockerFile
+\begin{itemize}
+\item alpine Linux, layered cache
+\item creates docker container on CI/CD instance
+\item CI/CD uploads on gitlab
+\item \texttt{.gitlab-ci.yml} how it's deployed
+\begin{itemize}
+\item then \texttt{deploy.sh}
+\begin{itemize}
+\item kills docker container
+\item removes it
+\item manage secret variables
+\item replace and run
+\item traefik: port router within docker
+\item network web: docker vLan equiv
+\end{itemize}
+\item \emph{Portainer is just a convenient human tool}
+\end{itemize}
+\end{itemize}
+\end{itemize}
+
+\subsection*{{\bfseries\sffamily TODO} centralized logging on docker}
+\label{sec:org3c114e9}
+
+\section*{13:53 Gitlab runner}
+\label{sec:org275c6e5}
+\begin{itemize}
+\item CI/CD machine
+\end{itemize}
+
+\section*{{\bfseries\sffamily TODO} edit .gitlab-ci files}
+\label{sec:org96c4c58}
+\begin{itemize}
+\item don't overwrite temp folder (env, dp)
+\item see Sparameter viewerNX
+\end{itemize}
+
+\section*{14:01 Genesys}
+\label{sec:org1e65a3e}
+\begin{enumerate}
+\item add-part json
+\item job queue, translate json to automation (mouse/click sequence)
+\item genesys runner
+
+\item integrate genesys in with cascade and filemaker info
+\end{enumerate}
+
+\section*{14:05 Simulator}
+\label{sec:orgf10b22a}
+\begin{itemize}
+\item generated genesys XML library
+\item json data in mongoDB
+\item reverse proxy is similar to traefik
+\item converted json to genesys XML in simulator
+\item REDIS is used as the queue server by javascript in simulator
+\item \emph{Genesys XML format help - reach out to Carson}
+\begin{itemize}
+\item filemaker genesys file scripts are documented, read those
+\end{itemize}
+\item Genesys packager
+\begin{itemize}
+\item update library from the website
+\end{itemize}
+\end{itemize}
+
+\section*{14:28 Sys parameters}
+\label{sec:orgf2b02ff}
+\begin{itemize}
+\item cross between X params and S-params
+\item look for genesys "import/export sys parameters" on filemaker
+\end{itemize}
+
+\section*{14:37 minicircuits web api}
+\label{sec:org3c2e731}
+\begin{itemize}
+\item SearchApi internally uses filemaker "SearchTool"
+\item minicircuits emulates older search api
+\item see "proto buf"
+
+\item filemaker -> mer file (basically csv) -> main.rs w/ serde library -> rustoso tool
+\end{itemize}
+
+\section*{14:47 Networking}
+\label{sec:org2fcf006}
+\begin{itemize}
+\item See networking in the wiki
+\item CIDR networking concepts
+\item pfBlocker Black list
+\end{itemize}
+\subsection*{{\bfseries\sffamily TODO} colored lists, varying security levels}
+\label{sec:org3ade6c0}
+\begin{itemize}
+\item black -> red -> yellow
+\end{itemize}
+
+\section*{14:55 UPS}
+\label{sec:org07c5ff9}
+\begin{itemize}
+\item don't rely on automatic shut down stuff currently
+\end{itemize}
+
+\subsection*{{\bfseries\sffamily TODO} Find and/or reset login}
+\label{sec:org186eb10}
+\subsection*{{\bfseries\sffamily TODO} Automatic server shut down}
+\label{sec:orgae71a58}
+
+\section*{14:56 HA cluster}
+\label{sec:orgf734d88}
+\begin{itemize}
+\item r610s can't run latest ESXi
+\item turn r610s into VMware HA SAN server (isczi)?
+\end{itemize}
+
+\section*{15:00 Getting new servers}
+\label{sec:org201d5b3}
+\begin{itemize}
+\item Dell servers
+\item Trend Micro custom built
+\item Ryzen servers, AMD epic.
+\item "whitebox" your own
+\item deals on craigslist
+\end{itemize}
+\end{document}

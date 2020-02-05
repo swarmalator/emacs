@@ -1,0 +1,6 @@
+* Saturday, 12/08/2018
+
+** 13:22 
+So the trick is in Haskell the types contain the bottom value. Categories don't take into account time. Time is really hard to describe in mathematics. Computation is worried about time. Long calculations are useless. Infinite return times on functions, where bottom is the non terminating value of the infinite function. Never-ending calculations, basically. 
+
+ 

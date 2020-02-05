@@ -1,0 +1,68 @@
+#+OPTIONS: ':nil *:t -:t ::t <:t H:3 \n:nil ^:t arch:headline
+#+OPTIONS: author:t broken-links:nil c:nil creator:nil
+#+OPTIONS: d:(not "LOGBOOK") date:t e:t email:nil f:t inline:t num:t
+#+OPTIONS: p:nil pri:nil prop:nil stat:t tags:t tasks:t tex:t
+#+OPTIONS: timestamp:t title:t toc:nil todo:t |:t
+#+TITLE: beorg
+#+DATE: <2018-05-10 Thu>
+#+AUTHOR: Cole Turner
+#+EMAIL: c.h.turner@tcu.edu
+#+LANGUAGE: en
+#+SELECT_TAGS: export
+#+EXCLUDE_TAGS: noexport
+#+CREATOR: Emacs 25.1.1 (Org mode 9.0.5)
+
+* Lemon [0/1]
+** TODO Get Last Two English Books
+<2018-05-24 Thu 13:()  ()>
+** Write Poems
+[2018-05-20 Sun 18:12]
+* Hana [0/1]
+
+** TODO Diffusion Model Paper
+[2018-05-15 Tue 16:48]
+
+* Miller [0/2]
+
+** TODO Cone Chaos Paper
+[2018-05-15 Tue 16:45]
+
+** TODO Schedule Meeting
+[2018-05-20 Sun 18:09]
+
+* Cole [0/5]
+
+** TODO Refill Prescription
+[2018-05-16 Wed 13:05]
+** TODO Add Hamiltonian GBC to Github
+[2018-05-15 Tue 23:29]
+** TODO Upload github distributions
+[2018-05-11 Fri 11:22]
+** TODO Category Theory
+[2018-05-12 Sat 10:32]
+** TODO Quantum Field Theory                                 :urgent:important:
+[2018-05-11 Fri 11:24]
+
+* TODO Email workshopping notes
+[2018-05-24 Thu 14:59]
+
+* TODO RAAW Project 2
+[2018-05-29 Tue 15:03]
+
+* TODO RAAW Project 3
+[2018-05-29 Tue 15:04]
+
+* TODO Fix org-capture templates
+:LOGBOOK:
+- State "TODO"       from "WAIT"       [2018-05-30 Wed 17:42]
+- State "WAIT"       from "DONE"       [2018-05-30 Wed 17:41] \\
+  rittby email
+- State "DONE"       from "TODO"       [2018-05-30 Wed 17:41]
+- State "TODO"       from "DONE"       [2018-05-30 Wed 17:41]
+- State "DONE"       from "TODO"       [2018-05-30 Wed 17:41]
+- State "TODO"       from "DONE"       [2018-05-30 Wed 17:41]
+- State "DONE"       from "TODO"       [2018-05-30 Wed 17:41]
+:END:
+[2018-05-29 Tue 15:04]
+
+

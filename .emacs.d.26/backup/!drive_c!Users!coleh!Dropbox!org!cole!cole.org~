@@ -1,0 +1,67 @@
+#+OPTIONS: ':nil *:t -:t ::t <:t H:3 \n:nil ^:t arch:headline
+#+OPTIONS: author:t broken-links:nil c:nil creator:nil
+#+OPTIONS: d:(not "LOGBOOK") date:t e:t email:nil f:t inline:t num:t
+#+OPTIONS: p:nil pri:nil prop:nil stat:t tags:t tasks:t tex:t
+#+OPTIONS: timestamp:t title:t toc:nil todo:t |:t
+#+TITLE: cole
+#+DATE: [2018-05-30 Wed]
+#+AUTHOR: Cole Turner
+#+EMAIL: c.h.turner@tcu.edu
+#+LANGUAGE: en
+#+SELECT_TAGS: export
+#+EXCLUDE_TAGS: noexport
+#+CREATOR: Emacs 25.1.1 (Org mode 9.0.5)
+
+* 2018
+
+** 2018-W22
+*** 2018-05-30 Wednesday
+[2018-05-30 Wed]
+**** DONE [#2] Refill Prescription
+CLOSED: [2018-06-01 Fri 15:08] SCHEDULED: <2018-05-30 Wed> DEADLINE: <2018-05-31 Thu>
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2018-06-01 Fri 15:08]
+- State "TODO"       from              [2018-05-30 Wed 18:09]
+:END:
+**** TODO Upload Executables/Distributions
+:LOGBOOK:
+- State "TODO"       from              [2018-05-30 Wed 18:10]
+:END:
+**** TODO Read into Category Theory
+:LOGBOOK:
+- State "TODO"       from              [2018-05-30 Wed 18:11]
+:END:
+**** TODO Read into Quantum Field Theory
+:LOGBOOK:
+- State "TODO"       from "DONE"       [2018-06-01 Fri 15:53]
+- State "DONE"       from "CANCELLED"  [2018-06-01 Fri 15:53]
+- State "CANCELLED"  from "DONE"       [2018-06-01 Fri 15:53]
+- State "DONE"       from "TODO"       [2018-06-01 Fri 15:53]
+- State "TODO"       from "DONE"       [2018-06-01 Fri 15:53]
+- State "DONE"       from "CANCELLED"  [2018-06-01 Fri 15:53]
+- State "CANCELLED"  from "DONE"       [2018-06-01 Fri 15:53]
+- State "DONE"       from "TODO"       [2018-06-01 Fri 15:53]
+- State "TODO"       from "DONE"       [2018-06-01 Fri 15:53]
+- State "DONE"       from "CANCELLED"  [2018-06-01 Fri 15:53]
+- State "CANCELLED"  from "DONE"       [2018-06-01 Fri 15:53]
+- State "DONE"       from "TODO"       [2018-06-01 Fri 15:53]
+- State "TODO"       from "+TODO+"     [2018-06-01 Fri 15:52]
+- State "+TODO+"     from "DONE"       [2018-06-01 Fri 15:52]
+- State "DONE"       from "+TODO+"     [2018-06-01 Fri 15:52]
+- State "+TODO+"     from "TODO"       [2018-06-01 Fri 15:52]
+- State "TODO"       from              [2018-06-01 Fri 15:52]
+- State "+TODO+"     from "TODO"       [2018-06-01 Fri 15:13]
+- State "TODO"       from "+TODO+"     [2018-06-01 Fri 15:13]
+- State "+TODO+"     from "DONE"       [2018-06-01 Fri 15:13]
+- State "DONE"       from "+TODO+"     [2018-06-01 Fri 15:13]
+- State "+TODO+"     from "TODO"       [2018-06-01 Fri 15:13]
+- State "TODO"       from "+TODO+"     [2018-06-01 Fri 15:13]
+- State "+TODO+"     from "TODO"       [2018-06-01 Fri 15:13]
+- State "TODO"       from              [2018-05-30 Wed 18:11]
+:END:
+*** 2018-06-03 Sunday
+[2018-06-03 Sun]
+**** TODO Version Control in Emacs
+:LOGBOOK:
+- State "TODO"       from              [2018-06-03 Sun 05:48]
+:END:

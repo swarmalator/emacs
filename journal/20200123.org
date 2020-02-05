@@ -1,0 +1,38 @@
+* Thursday, 01/23/2020
+** 14:01
+Okay I am chilling. What am I about to do. I was just there looking at the cords and the graphics cards that we have here at work. Looking at them for non work related stuff. Need to get my dad a graphics card and one of the graphics cards here is the perfect type. I think. Just needs HDMI and needs to support audio. Anyways, I guess we could just go out and buy a new one that doesn't have super high specs. Anyways I should think about work related stuff now.
+
+** 14:03
+I have been working on the formFactors for a bit. Experimenting in Inkscape, seeing if there is a faster way to add new formFactors that are accurately configured. Mom sent a bunch of apartments. Another not work related thing. Okay.
+
+** 14:05
+Lets pull up my TODOs. There are some parts in cascade that are funky. They really aren't that bad, but it's the kind of nitpicky thing that someone might point out. I think that the infrastructure behind how we add parts is the main reason why it is hard to do that. I can add the formfactors for all the odd-ball parts, but that might not be a efficient use of my time. Sitting here doing nothing is definitely not an efficient use either.
+
+** 14:09
+Definitely took me a long time to make those parts and put them on cascade. There were just two of them, the baluns. I was starting to think that blockbuilder that Isaac made actually is pretty good, especially when it comes to making the purple pictures as well. The only thing that needs to happen when the pictures get saved is to do a union on the metal parts and the white parts. I think I should take a look at a blockbuilder export and see if the svg can still be separated out into the layers.
+
+** 14:11
+If I did that, and it worked, then what? Then I could potentially call a union inkscape command from the command line when the picture gets exported and it would make blockbuilder that much better. I could try that.
+
+** 14:12
+The thing that I was working on yesterday still isn't finished. For some reason Filemaker pushes some weird files to s3 whenever I try to upload the exports. Something to do with the encoding of the original document? Idk but it is very weird.
+
+** 15:02
+Just tried to install cam350 on Justin's remote desktop. I spoofed the MAC address and it did not like it at all.
+
+** 15:27
+Okay I just got coffee with Markus. Going to think about what to do now. Just disabled the shortcut that kept getting weird in Emacs.
+
+** 15:29
+I should look into Doom Emacs. Probably not something to do in work hours though. Alright time to look at my list and decide what to do. Funky parts. Add formFactors. Update and restart the NAS. Install quickbooks 20. Change out the detector icon. The rule for the single value properties is important.
+
+** 15:36
+Erik and Dwayne are looking and a board that has something wrong with it. Some customer sent an email about it. What can I do though. What topic do I work on. 
+** 16:01
+Okay time to go through the other stuff that I said I would do. Labelmaker.   
+** 16:18
+Okay now I am going through the TODOs for Cascade. Needed to change out the detector icon. I am so close to finishing that. I could think about the auto lids to the cascade tool. That's an algorithmic problem. That would be fun to think about. 
+** 17:28
+Alright I spent enough time thinking about the automatic lids algorithm. The walls algorithms also needs some tweaking it seems. What I came up with was thinking about Pieces fitting together in terms of male and female pieces. The lids have four points of contact. The regular lids have three female sides and one male side. The T-Lid has all four female. Walls have only one point of contact, and are always male. Walls can have much different lengths, though.
+
+

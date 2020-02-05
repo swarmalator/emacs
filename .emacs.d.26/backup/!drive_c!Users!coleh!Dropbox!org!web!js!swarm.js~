@@ -1,0 +1,319 @@
+window.requestAnimFrame = (function(callback) {
+    return window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.oRequestAnimationFrame || window.msRequestAnimationFrame ||
+        function(callback) {
+            window.setTimeout(callback, 0);//1000 / 60);
+        };
+})();
+
+
+// ---------------------
+
+// function slider(_min, _max, _inc, _val, _left, _right, _yp, _sliderw){
+
+//     this.minv= _min,
+//     this.maxv= _max;
+//     this.inc= _inc;
+//     this.val= _val;
+//     this.range = (_max - _min) 
+
+//     this.left = _left;
+//     this.right = _right;
+//     this.width = (_right - _left);
+//     this.get_sp = function(){ return this.width*(this.val - this.minv)/this.range }
+//     this.sp = this.get_sp();
+//     this.yp = _yp;
+//     this.sliderw = _sliderw; 
+
+//     this.update = function(tinitx){
+// 	this.val = Math.min( this.maxv,Math.max( this.minv + this.range*(tinitx - this.left)/this.width, this.minv ) ); 
+//     }
+
+//     this.draw = function(ctx){
+// 	this.sp = this.get_sp(); 
+// 	ctx.beginPath();  
+// 	ctx.moveTo(this.left,this.yp);
+// 	ctx.lineTo(this.right,this.yp);
+// 	ctx.stroke(); 
+// 	ctx.fillRect(this.left + this.sp-this.sliderw/2, this.yp-this.sliderw,this.sliderw,2*this.sliderw); 
+//     }
+// }
+
+var canvas;
+var context;
+
+//var canvas2;
+//var context2;
+
+var size;
+var offset;
+var scale;
+var marginx;
+
+var shw=35;
+var shh=35;
+
+var N = 100;
+var J = 1;
+var K = -0.8;
+var dt = 0.05;
+
+var oN = 1.0/N;
+var runAnimation = {value: true};
+
+var twopi = 2.0*Math.PI;
+var torad = Math.PI/180;
+var todeg = 180/Math.PI;
+var birdrad = 3;
+
+var birds = new Array(N);
+var vel = new Array(N);
+for (var i = 0; i < N; i++) { 
+    birds[i] = new Array(3); //x, y, angle 
+    vel[i] = new Array(3); //vx, vy, vangle 
+}
+
+
+
+// var sliderw=10;
+// var mysliderN = new slider(1,500,1,N, size/4, 3*size/4, 15 ,sliderw);
+// var mysliderJ = new slider(-2,2,0.01,J, size/4, 3*size/4, 40 ,sliderw);
+// var mysliderK = new slider(-2,2,0.01,K, size/4, 3*size/4, 65 ,sliderw);
+// var mysliderdt = new slider(0.01,0.05,0.01,dt, size/4, 3*size/4, 90 ,sliderw);
+// var sliders = new Array(4);
+// sliders[0] = mysliderN;
+// sliders[1] = mysliderJ;
+// sliders[2] = mysliderK;
+// sliders[3] = mysliderdt;
+
+function random_init(){
+    for (var i = 0; i < N; i++) { 
+	birds[i][0] = 2*Math.random(); 
+	birds[i][1] = 2*Math.random(); 
+	birds[i][2] = twopi * Math.random(); 
+    }
+}
+
+function draw_birds(){
+    for (var i = 0; i < N; i++) { 
+	if( offset + birds[i][0]*scale > 0 && 
+	    offset + birds[i][0]*scale < size && 
+	    offset + birds[i][1]*scale > 0 && 
+	    offset + birds[i][1]*scale < size){
+	    context.beginPath();  
+	    context.arc(marginx + offset + birds[i][0]*scale, offset + birds[i][1]*scale,birdrad,0,twopi,0);
+	    context.fillStyle="hsl("+birds[i][2]*todeg+", 100%, 50%)";  
+	    context.fill();
+	}
+    }
+}
+
+var close = (1.0*birdrad)/scale;
+function update_velocity(){
+    
+    for (var i = 0; i < N; i++) { vel[i][0] = 0; vel[i][1] = 0; vel[i][2] = 0; }
+    
+    for (var i = 0; i < N; i++) { 
+
+
+	for (var j = i+1; j < N; j++) { 
+	    if( j!= i ){
+		var dist0 = (birds[j][0] - birds[i][0]);
+		var dist1 = (birds[j][1] - birds[i][1]);
+		var dist2 = (birds[j][2] - birds[i][2]);
+		var distmag2 = dist0*dist0 + dist1*dist1;
+		var distmag = Math.sqrt(distmag2);
+		var radinc = ((1 + (1 + J*Math.cos(dist2)) )*distmag - 1)/distmag2;
+
+		vel[i][0] += dist0 * radinc; vel[j][0] -= dist0 * radinc;
+		vel[i][1] += dist1 * radinc; vel[j][1] -= dist1 * radinc;
+		var ang = Math.sin(dist2) / distmag;
+		vel[i][2] += ang; vel[j][2] -= ang; 
+	    }
+	}
+
+
+    }
+    
+}
+
+function update_swarm(){
+    
+    update_velocity();
+    
+    var toN = dt*oN;
+    var KtoN = dt*K*oN;
+    for (var i = 0; i < N; i++) { 
+	birds[i][0] += toN * vel[i][0];
+	birds[i][1] += toN * vel[i][1];
+	birds[i][2] += KtoN * vel[i][2];
+    }
+}
+
+function animate_birds(runAnimation, canvas, context) {
+
+    if(runAnimation.value) {
+	context.clearRect(-size,-size,3*size,3*size);
+	context.strokeRect(0,0,size,size);
+	update_swarm();
+	draw_birds();
+    }
+    setTimeout(function() {
+	requestAnimFrame(function() {
+	    animate_birds( runAnimation, canvas, context);
+	});
+    }, 0);
+
+}
+
+
+// function draw_sliders(){ 
+//     context3.clearRect(0,0,size,size);
+//     for(var i=0; i<4; ++i){ sliders[i].draw(context3); }
+//     context3.fillStyle="black";  
+//     context3.font="15px Verdana";
+//     var width = 40;
+//     var fs = "N = " + N.toFixed(0).toString();
+//     context3.fillText(fs ,sliders[0].left-80, sliders[0].yp, 70); 
+//     fs = "J = " + J.toFixed(2).toString(); context3.fillText(fs ,sliders[1].left-80, sliders[1].yp, 70); 
+//     fs = "K = " + K.toFixed(2).toString(); context3.fillText(fs ,sliders[2].left-80, sliders[2].yp, 70); 
+//     fs = "dt = " + dt.toFixed(2).toString(); context3.fillText(fs ,sliders[3].left-80, sliders[3].yp, 70); 
+// }
+
+// function update_data(which_slider, tinitx){
+//  sliders[which_slider].update(tinitx); 
+//  switch(which_slider){
+//   case 0:
+//    runAnimation = {value: false};
+//    N = Math.round( sliders[which_slider].val );
+//     birds = new Array(N);
+//     vel = new Array(N);
+//  for (var i = 0; i < N; i++) { 
+//   birds[i] = new Array(3); //x, y, angle 
+//   vel[i] = new Array(3); //vx, vy, vangle 
+//  }
+//  random_init();
+//  draw_birds();
+//  runAnimation = {value: true};
+//   break;
+//   case 1:
+//    J = sliders[which_slider].val;
+//    break;
+//   case 2:
+//    K = sliders[which_slider].val;
+//    break;
+//   case 3:
+//    dt = sliders[which_slider].val;
+//    break;
+//   default:
+//    return 1;
+//  }
+//  draw_sliders();
+//  return 0;
+// }
+
+// function update_data(which_slider, tinitx){
+function update_data(){
+    // sliders[which_slider].update(tinitx); 
+    // switch(which_slider){
+    // case 0:
+    // runAnimation = {value: false};
+    // N = Math.round( sliders[which_slider].val );
+    //  birds = new Array(N);
+    //  vel = new Array(N);
+    for (var i = 0; i < N; i++) { 
+	birds[i] = new Array(3); //x, y, angle 
+	vel[i] = new Array(3); //vx, vy, vangle 
+    }
+    random_init();
+    draw_birds();
+    runAnimation = {value: true};
+    //  break;
+    //  case 1:
+    //   J = sliders[which_slider].val;
+    //   break;
+    //  case 2:
+    //   K = sliders[which_slider].val;
+    //   break;
+    //  case 3:
+    //   dt = sliders[which_slider].val;
+    //   break;
+    //  default:
+    //   return 1;
+    // }
+    // draw_sliders();
+    return 0;
+}
+
+function add_event_listeners(){
+    canvas.addEventListener('mousedown', mdown, false);
+}
+function remove_event_listeners(){
+    canvas.removeEventListener('mousemove', mmove);
+    canvas.removeEventListener('mouseup', mup);
+}
+
+//var which_slider;
+function mdown(evt){
+    console.log('mdown');
+    // var rect = canvas3 .getBoundingClientRect(); 
+    // var tinitx = evt.clientX - rect.left - shw 
+    // var tinity = evt.clientY - rect.top - shh 
+
+    // for(var i=0; i<4; i++){
+	
+    // 	//check for slider position
+    // 	if( ( tinitx > sliders[i].left ) && ( tinitx < sliders[i].right ) && Math.abs( tinity - sliders[i].yp ) < sliderw ){
+    // 	    canvas3.addEventListener('mousemove', mmove3, false);
+    // 	    canvas3.addEventListener('mouseup', mup3, false);
+    // 	    which_slider = i;
+    // 	    update_data(which_slider, tinitx);
+    // 	    return 0
+    // 	}
+
+    // }
+
+}
+
+function mmove(evt){
+    console.log('mmove');
+    // var rect = canvas3 .getBoundingClientRect(); 
+    // var tinitx = evt.clientX - rect.left - shw 
+    // var tinity = evt.clientY - rect.top - shh 
+
+    // update_data(which_slider, tinitx);
+
+}
+
+function mup(evt){
+    console.log('mup');
+    // remove_event_listeners3(); 
+}
+
+function init_swarm(){
+    canvas = document.querySelector('canvas');
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    context = canvas.getContext("2d");
+    context.translate(shw, shh);
+
+    size = canvas.height;
+    offset = size*0.05;
+    scale = size*0.45;
+    marginx = (canvas.width - size) / 2 - offset;
+
+    // canvas3 = document.getElementById("canvas3");
+    // context3 = canvas3.getContext("2d");
+    // context3.translate(shw, shh);
+    
+    context.strokeRect(0,0,size,size);
+    
+    random_init();
+    draw_birds();
+//    draw_sliders();
+    add_event_listeners();
+    animate_birds(runAnimation, canvas, context);
+}
+
+init_swarm();
+
+

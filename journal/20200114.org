@@ -1,0 +1,52 @@
+* Tuesday, 01/14/2020
+** 16:33 IT Priorities
+Here is the list that Erik wrote down:
+1. Systems
+   Do work w/o disruption
+   - monitors
+   - SW
+   - Processing
+   - Connectivity
+2. Connectivity
+   - Web
+   - Phone
+   - Email
+3. Data
+   - Security
+   - Backup
+   - Recovery
+4. Access
+   - Permission
+   - Speed
+   - VLAN
+
+- Security
+  - Firewall
+  - Virus scan
+  - Permissions
+  - Password policy?
+
+and another list he wrote about what to do. This is more in order of priority. 
+1. Migrate VMs to new servers (ESXi)
+2. AD Migration
+3. Backup/Restore all systems
+4. Google -> Microsoft (trial before decide)
+
+** 16:37 Infrastructure names
+This is a list of the names I could think of for systems infrastructure. 
+- Dijkstra
+- Maxwell
+- Gauss
+- Pauli
+- Weinberg
+- Feynman
+- Ramanujan
+- Euler
+- Shannon
+- Edison
+- Musk
+- Fermi
+- Knuth
+- Lovelace
+- (Von) Neumann
+

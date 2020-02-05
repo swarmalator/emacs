@@ -1,0 +1,184 @@
+import numpy as np
+import matplotlib.pyplot as plt
+from matplotlib.pyplot import axes, xlabel, ylabel
+import matplotlib.animation as animation
+from scipy.misc import derivative as diff
+from scipy.integrate import odeint
+from scipy.optimize import curve_fit
+from scipy.special import erf
+
+#######################################################################
+#  CONSTANTS
+#######################################################################
+
+# beta                     Virion/Target interaction strength        m  /  ( TCID50/mL * d )
+# tau_e:                   Eclipse phase timescale                   d
+# tau_i:                   Infected phase timescale                  d
+# diffusion:               Spatial diffusion rate                    m^2 / d
+# advection:               Advection rate                            m / d
+# virus_production         Virion production rate                    ( TCID50/mL )  /  ( cell * d )
+# virus_clearance          Virion clearance rate                     1 / d
+# tract_depth              Depth of the respiratory tract            m
+# total_cells              Initial total number of target cells      cell                             
+# total_initial_virus      Initial virion exposure                   TCID50/mL
+# initial_virus_spread     Width of initial virion exposure          m
+# simulation_time          Duration of the simulation                d
+
+beta = 0.003
+tau_e = 0.25
+tau_i = 0.19
+diffusion = 10**(-9)
+advection = 0.0
+virus_production = 2*10**7
+virus_clearance = 5.2
+total_cells = 1.0
+total_initial_virus = 0.075
+initial_virus_spread = 0.001
+simulation_time = 14
+simulation_depth = 0.15
+
+######################################################################
+
+time_points = 200             # number of points in time to compute
+space_points = 400            # number of points in space to compute
+virus_scale_factor = 10**-6   # corrects for order of magnitude difference from cells to TCID_50/mL
+length_scale_factor = 10**0   # sets length scale of simulation (10^0 == meters,   10^-3 == millimeters, etc.)
+framerate = 26                # simulation framerate
+
+######################################################################
+# Scaled Simulation Parameters
+######################################################################
+
+b = beta * length_scale_factor / virus_scale_factor
+p = virus_production * virus_scale_factor
+d = diffusion * length_scale_factor**2
+v = advection * length_scale_factor
+te = tau_e
+ti = tau_i
+c = virus_clearance
+Ti = total_cells
+Vi = total_initial_virus * virus_scale_factor / initial_virus_spread
+a = initial_virus_spread
+
+#####################################################################
+
+TMAX = simulation_time    # Maximum simulation time
+XMAX = simulation_depth   # Maximum x plot value
+YMAX = 1.5 * Ti           # Maximum y plot value
+INT = 1000 / framerate    # Simulation step time interval
+NT = time_points
+NX = space_points
+
+ts = np.linspace(0, TMAX, NT)   # time points array
+xs = np.linspace(0, XMAX, NX)   # space points array
+
+dx = xs[1]-xs[0]   # distance between space points
+dt = ts[1]-ts[0]   # distance between time points
+
+NA = int( a / dx ) # number of space points spanned by initial virus exposure
+
+#####################################################################
+# Diffusion-Advection Model
+#####################################################################
+def model(X, t):
+    # this is an ordinary differential equation with respect to time consisting of
+    # NX*4 differential equations, for each function at each space point...
+    
+    T, E, I, V = X[:NX], X[NX:2*NX], X[2*NX:3*NX], X[3*NX:]
+
+    dTdt = -b*T*V
+    dEdt = b*T*V-E/te
+    dIdt = E/te-I/ti
+
+    # Finite difference methods:
+
+    # first order spatial derivative
+    ddx = np.zeros(NX)
+
+    # central difference for x in range(1:-1)
+    ddx[1:-1] += V[2:] - V[:-2]
+    ddx = ddx/2;
+
+    # forward difference at xs[0]
+    ddx[0] += V[1] - V[0]
+
+    # backward difference at xs[-1]
+    ddx[-1] += V[-1] - V[-2]
+    
+    ddx = ddx/dx
+    
+    # second order spatial derivative
+    d2dx = np.zeros(NX)
+    d2dx[1:] = -2*V[1:]
+    d2dx[1:-1] += V[2:] + V[:-2]
+    d2dx[0] += V[0] - 2*V[1] + V[2]
+    d2dx[-1] += V[-2]
+    d2dx = d2dx/(dx*dx)
+    # (No flux at second boundary)
+    
+    dVdt = d*d2dx+v*ddx+p*I-c*V
+
+    return np.concatenate((dTdt, dEdt, dIdt, dVdt), axis=0)
+
+# Initial Conditions
+T0 = np.full(NX, Ti)
+E0 = np.zeros(NX)
+I0 = np.zeros(NX)
+V0 = np.zeros(NX)
+V0[:NA] += np.full(NA, Vi)
+
+X0 = np.concatenate((T0, E0, I0, V0), axis=0)
+
+Xs = odeint(model, X0, ts)
+
+#####################################################################
+# Plotting
+#####################################################################
+fig, ax = plt.subplots()
+fig.patch.set_facecolor('white')
+ax = axes(xlim=(0,XMAX), ylim=(0,YMAX))
+time = 0
+lastx = 0
+
+tline, = ax.plot([], [], color='blue', lw=2, label="Target")
+eline, = ax.plot([], [], color='green', lw=2, label="Eclipse")
+iline, = ax.plot([], [], color='red', lw=2, label="Infection")
+vline, = ax.plot([], [], color='purple', lw=2, label="Virus")
+fitline, = ax.plot([], [], color='black', lw=0)
+
+plt.legend(handles=[tline, eline, iline, vline], loc=1)
+
+ax.grid()
+plt.rcParams.update({'font.size': 14})
+plt.rc('xtick', labelsize=14) 
+plt.rc('ytick', labelsize=14)
+xlabel('Distance')
+ylabel('Concentration')
+
+def init():
+    global time
+    time = 0
+    tline.set_data([], [])
+    eline.set_data([], [])
+    iline.set_data([], [])
+    vline.set_data([], [])
+    fitline.set_data([],[])
+    return tline, eline, iline, vline
+
+def update(data):
+    global time
+    global lastx
+    time += dt
+    Ts, Es, Is, Vs = data[:NX], data[NX:2*NX], data[2*NX:3*NX], data[3*NX:]
+    tline.set_data(xs, Ts)
+    eline.set_data(xs, Es)
+    iline.set_data(xs, Is)
+    vline.set_data(xs, Vs)
+    xlabel("                          Distance (m)                      Time = " + '{0:}'.format((int)(time)) + " d")
+    return vline,
+
+ani = animation.FuncAnimation(fig, update, Xs, blit=False, interval=INT,
+                              repeat=True, init_func=init)
+ani.save('dm.gif', writer='imagemagick', fps=framerate);
+plt.show()
+

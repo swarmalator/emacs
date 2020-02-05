@@ -1,0 +1,498 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2019-11-20 Wed 15:36 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>IT meeting with Carson</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="Cole Turner" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2019 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">IT meeting with Carson</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org2dd257e">1. Initial questions</a></li>
+<li><a href="#org2f25169">2. 12:32 - S3 buckets</a></li>
+<li><a href="#orgf01cad8">3. <span class="todo TODO">TODO</span> Centralized logging on S3/EC2mbch9O2piaDwQbQ6G6DgbeZb</a></li>
+<li><a href="#org7770ffd">4. 13:19 - CASCADE DB</a>
+<ul>
+<li><a href="#orgf31efe7">4.1. <span class="todo TODO">TODO</span> centralized logging on docker</a></li>
+</ul>
+</li>
+<li><a href="#org699260e">5. 13:53 Gitlab runner</a></li>
+<li><a href="#org9309669">6. <span class="todo TODO">TODO</span> edit .gitlab-ci files</a></li>
+<li><a href="#org6eb06b6">7. 14:01 Genesys</a></li>
+<li><a href="#org3aa8dff">8. 14:05 Simulator</a></li>
+<li><a href="#orgf15af7d">9. 14:28 Sys parameters</a></li>
+<li><a href="#orga91c8ee">10. 14:37 minicircuits web api</a></li>
+<li><a href="#org0bef31f">11. 14:47 Networking</a>
+<ul>
+<li><a href="#orgadc2de5">11.1. <span class="todo TODO">TODO</span> colored lists, varying security levels</a></li>
+</ul>
+</li>
+<li><a href="#orgf334721">12. 14:55 UPS</a>
+<ul>
+<li><a href="#org5d9f736">12.1. <span class="todo TODO">TODO</span> Find and/or reset login</a></li>
+<li><a href="#org753d52e">12.2. <span class="todo TODO">TODO</span> Automatic server shut down</a></li>
+</ul>
+</li>
+<li><a href="#orgc6ac664">13. 14:56 HA cluster</a></li>
+<li><a href="#orgc987ad8">14. 15:00 Getting new servers</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org2dd257e" class="outline-2">
+<h2 id="org2dd257e"><span class="section-number-2">1</span> Initial questions</h2>
+<div class="outline-text-2" id="text-1">
+<ul class="org-ul">
+<li>AWS unknowns?</li>
+<li>vLAN map/verify</li>
+<li>UPS login?</li>
+<li>vSphere HA replication</li>
+<li>Switch/patch panel labels</li>
+<li>GENESYS walkthrough
+<ul class="org-ul">
+<li>Simulator/x-parameters</li>
+<li>Sys parameter model</li>
+<li>GENESYS library</li>
+</ul></li>
+<li><a href="https://www.minicircuits.com/WebStore/x_mwblock.html">minicircuits</a> web-API (searchAPI)</li>
+<li>extra server ideas?</li>
+<li>Where did we get SSL cert? How is it renewed?</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org2f25169" class="outline-2">
+<h2 id="org2f25169"><span class="section-number-2">2</span> 12:32 - S3 buckets</h2>
+<div class="outline-text-2" id="text-2">
+<ul class="org-ul">
+<li>cf-templates X</li>
+<li>elasticbeanstalk X</li>
+<li>cjk-cascade-test X</li>
+<li>kops-xmicrowave-store X</li>
+<li>pki.xmicrowave.com KEEP</li>
+<li>prod-kops X</li>
+<li>x-microwave.com KEEP</li>
+<li>x-microwave.net KEEP</li>
+<li>xm-codedeploy X</li>
+<li>datapipeline KEEP</li>
+<li>elb logs KEEP</li>
+<li>raspi image X?</li>
+<li>serverless deploy stuff ??</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgf01cad8" class="outline-2">
+<h2 id="orgf01cad8"><span class="section-number-2">3</span> <span class="todo TODO">TODO</span> Centralized logging on S3/EC2mbch9O2piaDwQbQ6G6DgbeZb</h2>
+</div>
+<div id="outline-container-org7770ffd" class="outline-2">
+<h2 id="org7770ffd"><span class="section-number-2">4</span> 13:19 - CASCADE DB</h2>
+<div class="outline-text-2" id="text-4">
+<ul class="org-ul">
+<li>deploy.sh - <b>CI/CD</b> instance</li>
+<li>DockerFile
+<ul class="org-ul">
+<li>alpine Linux, layered cache</li>
+<li>creates docker container on CI/CD instance</li>
+<li>CI/CD uploads on gitlab</li>
+<li><code>.gitlab-ci.yml</code> how it's deployed
+<ul class="org-ul">
+<li>then <code>deploy.sh</code>
+<ul class="org-ul">
+<li>kills docker container</li>
+<li>removes it</li>
+<li>manage secret variables</li>
+<li>replace and run</li>
+<li>traefik: port router within docker</li>
+<li>network web: docker vLan equiv</li>
+</ul></li>
+<li><i>Portainer is just a convenient human tool</i></li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+
+<div id="outline-container-orgf31efe7" class="outline-3">
+<h3 id="orgf31efe7"><span class="section-number-3">4.1</span> <span class="todo TODO">TODO</span> centralized logging on docker</h3>
+</div>
+</div>
+
+<div id="outline-container-org699260e" class="outline-2">
+<h2 id="org699260e"><span class="section-number-2">5</span> 13:53 Gitlab runner</h2>
+<div class="outline-text-2" id="text-5">
+<ul class="org-ul">
+<li>CI/CD machine</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org9309669" class="outline-2">
+<h2 id="org9309669"><span class="section-number-2">6</span> <span class="todo TODO">TODO</span> edit .gitlab-ci files</h2>
+<div class="outline-text-2" id="text-6">
+<ul class="org-ul">
+<li>don't overwrite temp folder (env, dp)</li>
+<li>see Sparameter viewerNX</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org6eb06b6" class="outline-2">
+<h2 id="org6eb06b6"><span class="section-number-2">7</span> 14:01 Genesys</h2>
+<div class="outline-text-2" id="text-7">
+<ol class="org-ol">
+<li>add-part json</li>
+<li>job queue, translate json to automation (mouse/click sequence)</li>
+<li>genesys runner</li>
+
+<li>integrate genesys in with cascade and filemaker info</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org3aa8dff" class="outline-2">
+<h2 id="org3aa8dff"><span class="section-number-2">8</span> 14:05 Simulator</h2>
+<div class="outline-text-2" id="text-8">
+<ul class="org-ul">
+<li>generated genesys XML library</li>
+<li>json data in mongoDB</li>
+<li>reverse proxy is similar to traefik</li>
+<li>converted json to genesys XML in simulator</li>
+<li>REDIS is used as the queue server by javascript in simulator</li>
+<li><i>Genesys XML format help - reach out to Carson</i>
+<ul class="org-ul">
+<li>filemaker genesys file scripts are documented, read those</li>
+</ul></li>
+<li>Genesys packager
+<ul class="org-ul">
+<li>update library from the website</li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgf15af7d" class="outline-2">
+<h2 id="orgf15af7d"><span class="section-number-2">9</span> 14:28 Sys parameters</h2>
+<div class="outline-text-2" id="text-9">
+<ul class="org-ul">
+<li>cross between X params and S-params</li>
+<li>look for genesys "import/export sys parameters" on filemaker</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orga91c8ee" class="outline-2">
+<h2 id="orga91c8ee"><span class="section-number-2">10</span> 14:37 minicircuits web api</h2>
+<div class="outline-text-2" id="text-10">
+<ul class="org-ul">
+<li>SearchApi internally uses filemaker "SearchTool"</li>
+<li>minicircuits emulates older search api</li>
+<li>see "proto buf"</li>
+
+<li>filemaker -&gt; mer file (basically csv) -&gt; main.rs w/ serde library -&gt; rustoso tool</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org0bef31f" class="outline-2">
+<h2 id="org0bef31f"><span class="section-number-2">11</span> 14:47 Networking</h2>
+<div class="outline-text-2" id="text-11">
+<ul class="org-ul">
+<li>See networking in the wiki</li>
+<li>CIDR networking concepts</li>
+<li>pfBlocker Black list</li>
+</ul>
+</div>
+<div id="outline-container-orgadc2de5" class="outline-3">
+<h3 id="orgadc2de5"><span class="section-number-3">11.1</span> <span class="todo TODO">TODO</span> colored lists, varying security levels</h3>
+<div class="outline-text-3" id="text-11-1">
+<ul class="org-ul">
+<li>black -&gt; red -&gt; yellow</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgf334721" class="outline-2">
+<h2 id="orgf334721"><span class="section-number-2">12</span> 14:55 UPS</h2>
+<div class="outline-text-2" id="text-12">
+<ul class="org-ul">
+<li>don't rely on automatic shut down stuff currently</li>
+</ul>
+</div>
+
+<div id="outline-container-org5d9f736" class="outline-3">
+<h3 id="org5d9f736"><span class="section-number-3">12.1</span> <span class="todo TODO">TODO</span> Find and/or reset login</h3>
+</div>
+<div id="outline-container-org753d52e" class="outline-3">
+<h3 id="org753d52e"><span class="section-number-3">12.2</span> <span class="todo TODO">TODO</span> Automatic server shut down</h3>
+</div>
+</div>
+
+<div id="outline-container-orgc6ac664" class="outline-2">
+<h2 id="orgc6ac664"><span class="section-number-2">13</span> 14:56 HA cluster</h2>
+<div class="outline-text-2" id="text-13">
+<ul class="org-ul">
+<li>r610s can't run latest ESXi</li>
+<li>turn r610s into VMware HA SAN server (isczi)?</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgc987ad8" class="outline-2">
+<h2 id="orgc987ad8"><span class="section-number-2">14</span> 15:00 Getting new servers</h2>
+<div class="outline-text-2" id="text-14">
+<ul class="org-ul">
+<li>Dell servers</li>
+<li>Trend Micro custom built</li>
+<li>Ryzen servers, AMD epic.</li>
+<li>"whitebox" your own</li>
+<li>deals on craigslist</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Cole Turner</p>
+<p class="date">Created: 2019-11-20 Wed 15:36</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

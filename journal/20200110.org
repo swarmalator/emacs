@@ -1,0 +1,3 @@
+* Friday, 01/10/2020
+** 13:42
+I am currently copying DokuWiki over to one of the new ESXi servers. I am using the guide on [[http://www.vmwarearena.com/how-to-copy-files-between-esxi-hosts-using-scp-command/][this website]]. I basically just enable ssh for both hosts and then scp the folder over from one datastore to the other.  

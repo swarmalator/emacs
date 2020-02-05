@@ -1,0 +1,107 @@
+% Created 2018-06-10 Sun 12:18
+% Intended LaTeX compiler: pdflatex
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{grffile}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\usepackage[""]{exam}
+\usepackage[mathscr]{euscript}
+\usepackage{indentfirst}
+\newcommand{\scr}{\mathscr}
+\usepackage{amssymb}
+\usepackage{titlesec}
+\titleformat*{\section}{\large\bfseries}
+\author{Cole H. Turner and Bruce N. Miller\thanks{\{c.h.turner, b.n.miller\}@tcu.edu}}
+\date{\emph{Department of Physics and Astronomy, Texas Christian University}}
+\title{\Large \textbf{Dynamics of a Realistic, Gravitational Billiard in a Cone}}
+\hypersetup{
+ pdfauthor={Cole H. Turner and Bruce N. Miller},
+ pdftitle={\Large \textbf{Dynamics of a Realistic, Gravitational Billiard in a Cone}},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 25.1.1 (Org mode 9.0.5)}, 
+ pdflang={English}}
+\begin{document}
+
+\maketitle
+\begin{abstract}
+\end{abstract}
+
+\section{INTRODUCTION}
+\label{sec:orgcbf8c5b}
+\begin{itemize}
+\item gravitational dynamical systems
+\item ergodic theory and the one-dimensional self-gravitating system (\(N=3\))
+\item billiard systems
+\item gravitational wedge billiard (Lehtihet and Miller, 1986)
+\item experiments on the wedge billiard (Milner et al., 2001; Feldt and Olafsen, 2005)
+\item realistic wedge billiard system (Hartl et al., 2011; Hartl et al., 2013)
+\item gravitational cone billiard system (Langer and Miller, 2015)
+\end{itemize}
+\begin{equation}
+H = \frac{1}{2} \left[ p_r^2 + \frac{1}{r^2} \left( p_\theta^2 + \frac{ p_\phi^2 }{ \sin^2\theta}\right)\right] + g r \cos\theta.
+\end{equation}
+\begin{itemize}
+\item what happens when you drop a realistic billiard into a cone?
+\end{itemize}
+\section{TRAJECTORY MODEL}
+\label{sec:org997fcde}
+\begin{itemize}
+\item standard gravitational kinematics
+\item flight time equation (time until next collision)
+\end{itemize}
+\begin{equation}
+\frac{1}{4}g^2\tau^3-gv_z\tau^2+\left(v_z^2-gz-v_{xy}^2\cot^2\theta\right)\tau+2z\left(v_z+v_{xy}\cos\varphi\cot\theta\right)=0.
+\end{equation}
+\begin{itemize}
+\item choosing ideal mapping coordinates
+\end{itemize}
+\section{IMPACT THEORY}
+\label{sec:org8959fea}
+\begin{itemize}
+\item correction to the Kane-Levinson model
+\item derivation of exit velocity equations
+\item cases for coefficients of restitution and friction
+\begin{itemize}
+\item sticky without damping (ideal)
+\item sticky with damping
+\item slippery without damping
+\item slippery with damping
+\item velocity-dependent coefficient of restitution (variable damping)
+\end{itemize}
+\item rotational driving (around the axis of symmetry)
+\item derivation of the mapping(s)
+\end{itemize}
+\section{SIMULATIONS}
+\label{sec:orgf82a4e1}
+\begin{itemize}
+\item hamiltonian system for comparison
+\item sticky without damping
+\item sticky with damping
+\item slippery without damping
+\item slippery with damping
+\item effects of variable damping
+\item effects of rotational driving
+\end{itemize}
+\section{DISCUSSION}
+\label{sec:orgec69b40}
+\begin{itemize}
+\item (each of the simulated cases)
+\end{itemize}
+\section{CONCLUSION}
+\label{sec:org41921ac}
+\begin{itemize}
+\item suggestions for experiment
+\item possibilities for future
+\end{itemize}
+\end{document}

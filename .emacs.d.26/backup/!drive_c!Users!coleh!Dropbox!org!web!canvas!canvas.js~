@@ -1,0 +1,60 @@
+var canvas = document.querySelector('canvas');
+
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+var c = canvas.getContext('2d');
+//c.fillRect(50, 50, 100, 30);
+
+var grav = 0.2;
+var mx = 0.0;
+var my = 0.0;
+
+function Swarmalator(x, y, radius) {
+    this.x = x;
+    this.y = y;
+    this.vx = 0.0;
+    this.vy = 0.0;
+    this.radius = radius;
+
+    this.draw = function() {
+	c.beginPath();
+	c.arc(this.x,this.y,this.radius,0,2*Math.PI);
+	c.fillStyle='black';
+	c.fill();
+    }
+
+    this.update = function() {
+	this.vx += grav / (mx - this.x) * Math.abs(mx - this.x);
+	this.vy += grav / (my - this.y) * Math.abs(my - this.y);
+	this.x += this.vx;
+	this.y += this.vy;
+    }
+}
+
+var swarmy = new Swarmalator(100.0, 75.0, 5.0);
+
+function handler(e) {
+    mx = e.clientX;
+    my = e.clientY;
+}
+
+
+function animate() {
+    c.clearRect(0, 0, innerWidth, innerHeight);
+    swarmy.update();
+    swarmy.draw();
+    c.beginPath();
+    c.arc(mx,my,5,0,2*Math.PI);
+    c.fillStyle='red';
+    c.fill();
+
+    requestAnimationFrame(animate);
+}
+
+if (document.attachEvent) document.attachEvent('onclick', handler);
+else document.addEventListener('click', handler);
+
+animate();
+
+

@@ -1,0 +1,8 @@
+* Tuesday, 11/19/2019
+** 09:35
+Need to remember the InternalTools VM programs are running in =/var/Node/=. 
+
+** 12:30
+genesys is not in an S3 bucket. All local. 
+** 17:58
+SSL encryption is not going to be easy for FileMaker running locally.

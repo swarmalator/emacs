@@ -1,0 +1,52 @@
+((("complete?" .
+   [0 0 0 1 0 0 0 0 0])
+  ("auto" .
+   [1 0 0 0])
+  ("do" .
+   [1 1])
+  ("for" .
+   [1 0 0])
+  ("saved" .
+   [0 1 0 0 0])
+  ("the" .
+   [2 0 0])
+  ("is" .
+   [1 0])
+  ("c" .
+   [1])
+  ("ido-mode" .
+   [1 0 0 0 0 0 0 0])
+  ("cursor-type" .
+   [0 0 0 0 0 0 0 0 0 1 0])
+  ("default" .
+   [1 0 0 0 0 0 0])
+  ("set" .
+   [1 0 0])
+  ("scroll-bar-mode" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("tool-bar-mode" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("menu-bar-mode" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("setq" .
+   [1 0 0 0])
+  ("load-theme" .
+   [0 0 0 0 0 0 0 0 1 0])
+  ("out" .
+   [1 0 0])
+  ("System" .
+   [1 0 0 0 0 0])
+  ("Runnable - java.lang" .
+   [0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("invokeLater(Runnable arg0) : void - SwingUtilities" .
+   [0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("SwingUtilities - javax.swing" .
+   [0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("System - java.lang" .
+   [0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("Dimension - java.awt" .
+   [0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("Dimension(int arg0, int arg1) - Dimension" .
+   [0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("JPanel - javax.swing" .
+   [0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0])))

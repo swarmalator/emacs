@@ -1,0 +1,111 @@
+#+TITLE: Distractions
+#+INCLUDE: setup.setup
+* Distractions
+Here is a working list of what seems to distract me regularly (you could call some of them hobbies).
+** Productivity
+*** Emacs
+- keyboard only (mechanical)
+- customization via emacs-lisp (everything is custom)
+- "soothe" theme (on MELPA)
+- IDE for java, haskell, python, c/c++, lisp
+- flyspell / aspell, minimap mode, smartparens
+*** org-mode
+- Note-taking, writing reports and LaTeX exporting
+- TODO lists, reminders and calendar
+- HTML exporting / simple website
+- Beorg mobile dropbox sync
+** Internet
+*** Sites
+- Github
+- YouTube
+- Keybr
+- Reddit
+- Medium
+*** YouTube Subscriptions
+- Vsauce
+- Veritasium
+- 3blue1brown
+- Flammable Maths
+- Mathologer
+- Think Twice
+- Welch labs
+- Computerphile
+- Numberphile
+- Sixty Symbols
+- The Royal Institution
+- NileRed
+- Cody's Lab
+- DONG
+- Ben Eater
+- Sciencephile the AI
+- fish code studios
+- Sam Harris
+- The School of Life
+- PBS Space Time
+- jekor (Haskell)
+- David Gozzard
+- Anthony Magnabosco
+- Big Think
+- DeepSkyVideos
+- Samm Sheperd
+** iPhone
+*** Apps
+- Beorg (Emacs org-mode agenda integration)
+- Life Cycle 
+- Sleep Cycle
+- YouTube
+- Medium
+- Google
+*** Jailbreak
+- Custom theming and internals lockscreen
+- Autotouch macros (siri, beorg, spotify, Reddit)
+- Tweak List /(coming soon)/
+** Piano
+*** Favorites 
+- Maple Leaf Rag, Scott Joplin
+- Foreplay / Long Time, Boston
+- One Summer's Day, from Spirited Away
+- Fairy Fountain Theme, from Legend of Zelda
+
+** Guitar
+*** Favorites
+- The Trees, Rush
+- Reckless, Kevin Krauter
+- Long Cool Woman, The Hollies
+- Danny Boy (Classical)
+
+** Spotify
+*** Playlists
+- Discover Weekly
+- Musing
+- Orchestral Percussions
+- Old Music
+
+** Fishing
+*** 1984 Sears Gamefisher, fiberglass tri-hull
+- marine and lawn battery 
+- installed custom electrical system 
+- installed custom navigation lights and switch
+- custom DC power outlet install
+- casting deck repair (twice)
+*** 1972 Johnson 20hp outboard
+- Carburetor rebuild
+- Pull Start / recoil spring rebuild
+- Compression and spark testing
+- Ignition coil testing / magneto rebuild
+*** Tackle
+- Crankbait box
+- Spinnerbait box
+- Jig / Skirt bait box
+- Terminal box
+- Curly tail worm bag
+- Straight worm / dropshot plastics
+- Critters / trailers bag 
+- Paddle / swimming plastics bag
+** RC Planes
+*** Foam Trainer
+- Weight and lift balancing 
+- Electronic speed controller (ESC) repair 
+- Servo install and custom control surfaces
+- Samm Sheperd $5 trainer and engineering videos 
+- Bush plane model / Cessna 175 / Piper cub / Dihedral wings

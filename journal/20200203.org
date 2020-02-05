@@ -1,0 +1,47 @@
+* Monday, 02/03/2020
+** 10:32
+Just worked on the datatables test table site for a bit. I can't get the stinking images to show up. Only 85 will show up in orer when i break the datatables thing and with the datatables thing there are even fewer. It seems like of the 85 that load when datatables is killed, every second or third image is removed/doesn't load for some reason      
+** 11:15
+
+#+begin_src html
+ <span class="wcpt-tooltip  wcpt-1558923528915">
+	<span class="wcpt-tooltip-label">
+		<div class="wcpt-item-row wcpt-1558923528935 "><div class="wcpt-product-image-wrapper  wcpt-1558923534865 wcpt-lightbox-icon-position-bottom_right" data-wcpt-image-size="thumbnail"><img src="https://www.xmicrowave.com/wp-content/uploads/0530A_GREY_WEB-150x150.png" class=" wcpt-1558923534865 wp-post-image" alt="" title="0530A_GREY_WEB" srcset="https://www.xmicrowave.com/wp-content/uploads/0530A_GREY_WEB-150x150.png 150w, https://www.xmicrowave.com/wp-content/uploads/0530A_GREY_WEB-300x300.png 300w, https://www.xmicrowave.com/wp-content/uploads/0530A_GREY_WEB-324x324.png 324w, https://www.xmicrowave.com/wp-content/uploads/0530A_GREY_WEB-100x100.png 100w, https://www.xmicrowave.com/wp-content/uploads/0530A_GREY_WEB.png 359w" sizes="(max-width: 150px) 100vw, 150px" width="150" height="150"></div></div>	</span>
+	<span class="wcpt-tooltip-content-wrapper" style="width: 200px;" data-wcpt-position="">
+		<span class="wcpt-tooltip-content">
+
+			<!-- close -->
+			<!-- <svg class="wcpt-tooltip-close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+				<line x1="18" y1="6" x2="6" y2="18"></line>
+				<line x1="6" y1="6" x2="18" y2="18"></line>
+			</svg> -->
+
+			<!-- arrow -->
+			<svg class="wcpt-tooltip-arrow" viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg" style="left: -10px;">
+				<path d="M 0 100 L 200 100 L 100 0 z" fill="rgb(255, 255, 255)" stroke-width="0"></path>
+			</svg>
+			<div class="wcpt-item-row wcpt-1558923528941 "><a class="wcpt-product-image-wrapper  wcpt-1558923550100 wcpt-lightbox-icon-position-bottom_right" data-wcpt-image-size="medium" href="https://www.xmicrowave.com/product/xm-a112-0404d/"><img src="https://www.xmicrowave.com/wp-content/uploads/0530A_GREY_WEB-300x300.png" class=" wcpt-1558923550100 wp-post-image" alt="" title="0530A_GREY_WEB" srcset="https://www.xmicrowave.com/wp-content/uploads/0530A_GREY_WEB-300x300.png 300w, https://www.xmicrowave.com/wp-content/uploads/0530A_GREY_WEB-150x150.png 150w, https://www.xmicrowave.com/wp-content/uploads/0530A_GREY_WEB-324x324.png 324w, https://www.xmicrowave.com/wp-content/uploads/0530A_GREY_WEB-100x100.png 100w, https://www.xmicrowave.com/wp-content/uploads/0530A_GREY_WEB.png 359w" sizes="(max-width: 300px) 100vw, 300px" width="300" height="300"></a></div>		</span>
+	</span>
+
+</span>
+#+end_src
+** 13:18
+#+begin_src html
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-external-link"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+#+end_src
+#+begin_src
+<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"feather feather-external-link\"><path d=\"M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6\"></path><polyline points=\"15 3 21 3 21 9\"></polyline><line x1=\"10\" y1=\"14\" x2=\"21\" y2=\"3\"></line></svg>
+#+end_src
+
+** 13:41
+List of tweaks for the search table
+- Move search bar up
+- Add hover image (if it's easy and still fast)
+- Keep icon column a consistent width (100x100)
+- Add drop-down MFG selector
+- Add drop-down Type selector
+- datasheet link/icon left of mfr
+- alternate row shading all columns
+  - make xm part slightly darker?
+- don't post broken links same as active ones (e.g. MMA datasheet)
+** 14:03

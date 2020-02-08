@@ -1,47 +1,101 @@
 #+SETUPFILE: setupfile
 ----------------------
-* TODO [#A] Bug: Cannot use keyboard shortcuts after placing configurable
-In Firefox this happens. Console Warnings as well
+* DONE [#A] Fix Print button scaling
 * WAIT [#B] Run FormFactors and BRD Image checker
 I have updated the cascade database on S3 since Isaac sent me those emails with the lists of bad parts. We should run those tests again to see what is left to edit.
+* TODO [#B] Rebuild Demod/UPCs
+* TODO [#A] Rebuild detectors
+* TODO [#B] 'X' to close cascade windows
+* TODO [#B] Add switch path for splitters/combiners
+Imres request. So we can use splitters as combiners
+* TODO [#B] TML Size 1608 needs to be curved
+* TODO [#C] Make dividers, switches, DSAs "programmable"
+We need to be able to change things like the switch path and have the part not turn purple. We will add a new divider category soon with multiple division options. (Would this apply to DSAs as well? Need to think of a way to implement)
+This will probably require a brand new UI design
 * TODO [#A] List all non cascade functional categories and prioritize
-John said to make a list of all the parts that don't currently work in cascade and then together we can prioritize which ones customers will probably like use more than others.  
+John said to make a list of all the parts that don't currently work in cascade and then together we can prioritize which ones customers will probably like use more than others.
 
-- Circulator
+Email from Isaac
+#+begin_quote
+AMP,
+LPF,HPF,BPF,BSF,MXR(and the like)
+SP2 (only splitters)
+SW2 (only one switch path)
+PAD
+configuration required: DSA, VVA, TVA
+CPL
+EQL
+DPX
+OSC
+MUL
+DIV
+TML
+VCO (configure Out Frequency)
+PSH (configure IL)
 
-* TODO [#C] Check parameters by category
-[2020-01-20 Mon 10:07]
+So that leaves CMP, DIO, SYN, PLL, DTC and HOU
+UPC,DNC,MOD,DMD
+CIR
+#+end_quote
 
-Configurable
-- correct sign
-- limit to valid range i.e. no negative NF
+[2020-02-07 Fri]
+From showCategories:
+- [ ] DTC Detector
+- [ ] CIR Circulator 
+- [ ] CMP Comparator
+- [ ] PLL 
+- [ ] SP2 Use splitter as Combiner
 
-- IL = (+)pos
-- NF = (+)pos
-* WAIT [#D] Support for cascading circulator
-[2020-01-20 Mon 10:43]
-Circulators are supposed to act like directional couplers with the thru port being the immediate next port around the circle and the cpl port being the next one after that
+- [X] DIO Diode
+- [X] BLN
+- [X] 50O
+- [X] BTE
+- [X] OSC
+- [X] VCO (configure out frequency)
+- [X] SYN
+- [X] PSH
+- [X] PLM
+- [X] AMP
+- [X] MXR
+- [X] MUL
+- [X] DIV (bad data)
+- [X] LPF
+- [X] BPF
+- [X] BSF
+- [X] HPF
+- [X] BPT
+- [X] SP2 (but not as combiners)
+- [X] CPL
+- [X] SW2
+- [X] EQL
+- [X] PAD
+- [X] VVA (configure)
+- [X] TVA (configure)
+- [X] DSA (configure)
+- [X] TML
+- [X] DPX
+- [X] HOU
+- [X] VRG
+- [X] CTL
+* WIP [#C] Auto lids to cascade tool
+Can be done but not finished.
+
+Alright I spent enough time thinking about the automatic lids algorithm. The walls algorithms also needs some tweaking it seems. What I came up with was thinking about Pieces fitting together in terms of male and female pieces. The lids have four points of contact. The regular lids have three female sides and one male side. The T-Lid has all four female. Walls have only one point of contact, and are always male. Walls can have much different lengths, though.
+* TODO [#D] Bug: Cannot use keyboard shortcuts after placing configurable
+In Firefox this happens. Console Warnings as well
 * TODO [#D] search part always drop in view area
-* Fixes
-** TODO [#A] Has S-Param column is not accurate
-** WIP [#A] Fix Print button scaling
-** TODO [#B] Rebuild Demod/UPCs
-** TODO [#B] Rebuild detectors
-** TODO [#D] Quicker switch path editing
-** TODO [#D] TML Size 1608 needs to be curved 
-** TODO [#E] Done button for customDataEntry is not immediately obvious
+* WIP [#D] Quicker switch path editing
+* TODO [#D] BOM count number of screws
+* TODO [#D] Outside Frequency Range indication
+Just thought perhaps we could make the ports turn red or something whenever someone tried to provide an input that is not within the acceptable range, lfreq hfreq, of that part.
+* TODO [#E] Done button for customDataEntry is not immediately obvious
 [2020-01-17 Fri 14:12]
 Too many buttons between #customDataEntry
 And #modeSelector
-* Additions
-** TODO [#B] 'X' to close cascade windows 
-** TODO [#D] BOM count number of screws
-
-** TODO [#D] Outside Frequency Range indication
-Just thought perhaps we could make the ports turn red or something whenever someone tried to provide an input that is not within the acceptable range, lfreq hfreq, of that part.  
-** WIP [#C] Auto lids to cascade tool
-Can be done but not finished.
-
-Alright I spent enough time thinking about the automatic lids algorithm. The walls algorithms also needs some tweaking it seems. What I came up with was thinking about Pieces fitting together in terms of male and female pieces. The lids have four points of contact. The regular lids have three female sides and one male side. The T-Lid has all four female. Walls have only one point of contact, and are always male. Walls can have much different lengths, though. 
-** TODO [#B] Make dividers, switches, DSAs "programmable"
-We need to be able to change things like the switch path and have the part not turn purple. We will add a new divider category soon with multiple division options. (Would this apply to DSAs as well? Need to think of a way to implement)
+* DONE [#B] A259D.s2p sparameter shows positive gain (negative loss) for a power limiter
+[2020-02-07 Fri 11:53]
+* WAIT [#C] Ports are only white in the print/report view
+[2020-02-07 Fri 15:12]
+* TODO [#C] Print report link back to cascade
+[2020-02-07 Fri 16:05]
+Erik was talking about how it would be cool for the customer to receive the report of a cascade design (the html file via email) and be able to click a link that takes them to the cascade tool with the design loaded so they can edit it. Would have to embed the file in the link somehow? Is it possible?

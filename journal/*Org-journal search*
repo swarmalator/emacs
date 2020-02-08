@@ -1,0 +1,5 @@
+Search results for "CRLF" between Tuesday, 12/03/2019 and Wednesday, 01/08/2020: 
+
+Thursday, 01/02/2020	But I had to add it back because doing this gave me that error. Changed the minus to a plus before CRLF_REVCHECK_IGNORE_OFFLINE.
+Thursday, 01/02/2020	certutil –setreg ca\CRLFlags -CRLF_REVCHECK_IGNORE_OFFLINE
+Thursday, 01/02/2020	certutil –setreg ca\CRLFlags -CRLF_REVCHECK_IGNORE_OFFLINE

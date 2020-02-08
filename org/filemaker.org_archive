@@ -1,0 +1,103 @@
+#    -*- mode: org -*-
+
+
+Archived entries from file /home/cole/Dropbox/orgsite/filemaker.org
+
+* DONE [#A] Funky Parts
+:PROPERTIES:
+:ARCHIVE_TIME: 2020-01-27 Mon 13:14
+:ARCHIVE_FILE: ~/Dropbox/orgsite/filemaker.org
+:ARCHIVE_CATEGORY: filemaker
+:ARCHIVE_TODO: DONE
+:END:
+Taking note of the parts in Cascade that are funky:
+
+- [X] B1T8 Weird PCB No. "0934-BKR"
+- [X] 1206 REV C no photo
+- [X] 0558 REV A no photo
+- [X] 0409 REV E no photo (x4)
+- [X] 1431 REV A no photo
+- [ ] 1061 REV B no photo
+- [ ] 0540 No screw holes
+- [ ] 1205 White screw holes
+- [ ] 0559 White screw holes
+- [ ] 0569 Half-white screw holes
+- [X] A3J5 Wrong formfactor and MXR PCB?
+- [X] 0519 REV = A
+- [X] B1V9 and 1268 0804 -> 0604
+- [X] A638 (UPC) Has MXR Formfactor
+- [X] 0605 REV = B
+- [X] B6K4 (UPC) Has MXR Formfactor
+- [X] 0498 No REVo
+- [X] 0529 No REV
+- [X] 0044 No REV
+- [X] A9M6 Wrong Formfactor
+- [X] B131 Wrong Formfactor
+- [X] B1F4 Wrong Formfactor
+- [X] B5A6 Wrong Formfactor
+- [X] B7V6 Wrong Formfactor
+- [X] B8T6 Wrong Formfactor
+- [X] A2C4 Wrong Formfactor
+- [X] A2U1 Wrong Formfactor
+- [X] 0177 No REV
+- [X] 0513 No REV
+- [X] 0514 No REV
+- [X] 0563 REV A no photo
+
+STOPPED AT ATTENUATES
+
+
+* DONE [#F] Fix json UTF16 to UTF8 weirdness
+:PROPERTIES:
+:ARCHIVE_TIME: 2020-01-27 Mon 17:06
+:ARCHIVE_FILE: ~/Dropbox/orgsite/filemaker.org
+:ARCHIVE_CATEGORY: filemaker
+:ARCHIVE_TODO: DONE
+:END:
+
+* TODO [#D] Website exports database
+:PROPERTIES:
+:ARCHIVE_TIME: 2020-02-05 Wed 11:07
+:ARCHIVE_FILE: ~/Dropbox/org/filemaker.org
+:ARCHIVE_CATEGORY: filemaker
+:ARCHIVE_TODO: TODO
+:END:
+
+* DONE [#B] Add Missing PCB Revisions/photos
+:PROPERTIES:
+:ARCHIVE_TIME: 2020-02-06 Thu 14:14
+:ARCHIVE_FILE: ~/Dropbox/org/filemaker.org
+:ARCHIVE_CATEGORY: filemaker
+:ARCHIVE_TODO: DONE
+:END:
+Susana is working on this
+
+PCB Images needed:
+- [X] 558 Rev A no Photo
+
+- [X] 563 Rev A no Photo
+- [X] 1357 Rev A no photo
+
+- [X] 1516 no Rev and no photos
+- [X] 1548 no Rev and no photos
+- [X] 1554 no Rev and no photos
+- [X] 1557 no Rev and no photos
+
+* TODO [#A] Decide rule for single number value properties 
+:PROPERTIES:
+:ARCHIVE_TIME: 2020-02-06 Thu 15:39
+:ARCHIVE_FILE: ~/Dropbox/org/filemaker.org
+:ARCHIVE_CATEGORY: filemaker
+:ARCHIVE_TODO: TODO
+:END:
+- Dividers have multiple division numbers.
+
+    
+
+* TODO [#C] Cascade SVG generate paths
+:PROPERTIES:
+:ARCHIVE_TIME: 2020-02-06 Thu 16:28
+:ARCHIVE_FILE: ~/Dropbox/org/filemaker.org
+:ARCHIVE_CATEGORY: filemaker
+:ARCHIVE_TODO: TODO
+:END:

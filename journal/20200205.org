@@ -1,0 +1,6 @@
+* Wednesday, 02/05/2020
+** 16:16
+- Put Type under Category
+- Category drop-down
+- Manufacturer drop-down
+** 16:55

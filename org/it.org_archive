@@ -71,3 +71,104 @@ The actual product number and verification code for quikcbooks 2020 are:
 :ARCHIVE_CATEGORY: it
 :ARCHIVE_TODO: DONE
 :END:
+
+* TODO [#D] Setup new computer
+SCHEDULED: <2020-02-07 Fri>
+:PROPERTIES:
+:ARCHIVE_TIME: 2020-02-05 Wed 10:06
+:ARCHIVE_FILE: ~/Dropbox/org/it.org
+:ARCHIVE_CATEGORY: it
+:ARCHIVE_TODO: TODO
+:END:
+
+* WAIT [#D] ADS Licensing solution
+:PROPERTIES:
+:ARCHIVE_TIME: 2020-02-05 Wed 11:06
+:ARCHIVE_FILE: ~/Dropbox/org/it.org
+:ARCHIVE_CATEGORY: it
+:ARCHIVE_TODO: WAIT
+:END:
+- look for ADS software viewer and not editor.
+- look into sharing ADS on server
+** ADS license for Amy
+
+* TODO [#C] New big monitor for engineering
+:PROPERTIES:
+:ARCHIVE_TIME: 2020-02-05 Wed 11:10
+:ARCHIVE_FILE: ~/Dropbox/org/it.org
+:ARCHIVE_CATEGORY: it
+:ARCHIVE_TODO: TODO
+:END:
+
+* TODO [#A] CentOS NCentral installs
+:PROPERTIES:
+:ARCHIVE_TIME: 2020-02-05 Wed 14:16
+:ARCHIVE_FILE: ~/Dropbox/org/it.org
+:ARCHIVE_CATEGORY: it
+:ARCHIVE_TODO: TODO
+:END:
+
+* DONE [#A] Setup Brenda's computer
+SCHEDULED: <2020-02-06 Thu>
+:PROPERTIES:
+:ARCHIVE_TIME: 2020-02-06 Thu 15:31
+:ARCHIVE_FILE: ~/Dropbox/org/it.org
+:ARCHIVE_CATEGORY: it
+:ARCHIVE_TODO: DONE
+:END:
+
+* TODO [#A] Update and Restart NAS
+:PROPERTIES:
+:ARCHIVE_TIME: 2020-02-06 Thu 15:39
+:ARCHIVE_FILE: ~/Dropbox/org/it.org
+:ARCHIVE_CATEGORY: it
+:ARCHIVE_TODO: TODO
+:END:
+
+* TODO [#A] Engineering ADS Expiration?
+:PROPERTIES:
+:ARCHIVE_TIME: 2020-02-06 Thu 16:22
+:ARCHIVE_FILE: ~/Dropbox/org/it.org
+:ARCHIVE_CATEGORY: it
+:ARCHIVE_TODO: TODO
+:END:
+On Justin's computer. 
+Cam350 expires in 30 days? 
+ADS expires in 29 days?
+
+[2020-02-06 Thu]
+On all the engineers' computer.. Were they supposed to last?
+nope - They expire on march 7th. 
+
+* DONE [#C] DataBase Admin VM and login
+:PROPERTIES:
+:ARCHIVE_TIME: 2020-02-07 Fri 10:59
+:ARCHIVE_FILE: ~/Dropbox/org/it.org
+:ARCHIVE_CATEGORY: it
+:ARCHIVE_TODO: DONE
+:END:
+
+* WIP [#A] Engineering ADS Expiration?
+:PROPERTIES:
+:ARCHIVE_TIME: 2020-02-07 Fri 11:09
+:ARCHIVE_FILE: ~/Dropbox/org/it.org
+:ARCHIVE_CATEGORY: it
+:ARCHIVE_TODO: WIP
+:END:
+On Justin's computer.
+Cam350 expires in 30 days?
+ADS expires in 29 days?
+
+[2020-02-06 Thu]
+On all the engineers' computer.. Were they supposed to last?
+nope - They expire on march 7th.
+
+[2020-02-07 Fri] John has this now
+
+* DONE [#A] Disable any extraneous old employee/admin accounts
+:PROPERTIES:
+:ARCHIVE_TIME: 2020-02-07 Fri 11:09
+:ARCHIVE_FILE: ~/Dropbox/org/it.org
+:ARCHIVE_CATEGORY: it
+:ARCHIVE_TODO: DONE
+:END:

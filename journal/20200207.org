@@ -1,4 +1,20 @@
-* Friday, 2/7/2020
-** 20:11
-** 20:24
-Need to configure the spell checker for windows.   
+* Friday, 02/07/2020
+** 09:19
+Okay I got here a bit late 
+** 10:20
+Sick I just enabled the Emacs shortcut thing so gnome doesn't try to pick up on my shortcuts while I am in Emacs.
+** 13:47
+- 2919
+- 1204
+- 1604
+- 1809
+- 2404
+- 3004
+- 3419
+- 0806
+- 0809
+
+** 15:03
+FAR 52.204-21
+DFARS 252.204-7012
+** 16:42

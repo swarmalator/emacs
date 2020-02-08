@@ -1,0 +1,37 @@
+* Wednesday, 12/11/2019
+** Cascade
+*** TODO Assembly instructions export
+*** TODO add sparam viewer to the cascade tool
+To start this I could find out how the sparam viewer is embedded on the website in HTML and try to edit the index.html of the CASCADE tool to have something similar there. Then need to figure out how to add a toggle 
+*** TODO add auto lids to cascade tool
+*** TODO number of screws from cascade tool
+*** TODO Make "Balun" searchable
+*** TODO Balun symbol on top bar
+** Controller
+*** TODO X-MWc add part search feature
+*** TODO X-MWc settings page
+*** TODO Add XM part names to XM-MFG parts
+*** TODO edit .gitlab-ci files
+
+- don't overwrite temp folder (env, dp)
+- see Sparameter viewerNX
+*** TODO fix python example on TCP control guide
+
+** IT
+*** TODO AD certificates issue
+*** TODO colored lists, varying security levels 
+*** TODO Find and/or reset UPS login
+*** TODO UPS automatic server shut down
+*** TODO Connect phone
+*** TODO update passwords file
+*** TODO Make labelmaker data faster
+quickbooks -> sharepoint -> filemaker label thing 
+*** TODO Centralized logging on S3/EC2/Docker
+** Emacs/Misc
+*** TODO question tracking in todo-list system
+*** TODO org-capture templates
+** TODO SQL data structures
+** TODO Filemaker videos
+
+
+** 00:03

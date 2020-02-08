@@ -359,3 +359,38 @@ Parts for Anaren not in CASCADE:
 - [X] C3V7 (Board 1463?)
 - [X] C444
 
+
+* WAIT [#D] Support for cascading circulator
+:PROPERTIES:
+:ARCHIVE_TIME: 2020-02-05 Wed 11:08
+:ARCHIVE_FILE: ~/Dropbox/org/cascade.org
+:ARCHIVE_CATEGORY: cascade
+:ARCHIVE_TODO: WAIT
+:END:
+[2020-01-20 Mon 10:43]
+Circulators are supposed to act like directional couplers with the thru port being the immediate next port around the circle and the cpl port being the next one after that
+
+* DONE [#B] Has S-Param column is not accurate
+:PROPERTIES:
+:ARCHIVE_TIME: 2020-02-06 Thu 16:23
+:ARCHIVE_FILE: ~/Dropbox/org/cascade.org
+:ARCHIVE_OLPATH: Fixes
+:ARCHIVE_CATEGORY: cascade
+:ARCHIVE_TODO: DONE
+:END:
+
+* TODO [#C] Check parameters by category
+:PROPERTIES:
+:ARCHIVE_TIME: 2020-02-06 Thu 16:25
+:ARCHIVE_FILE: ~/Dropbox/org/cascade.org
+:ARCHIVE_CATEGORY: cascade
+:ARCHIVE_TODO: TODO
+:END:
+[2020-01-20 Mon 10:07]
+
+Configurable
+- correct sign
+- limit to valid range i.e. no negative NF
+
+- IL = (+)pos
+- NF = (+)pos

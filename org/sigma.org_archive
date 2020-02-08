@@ -1,0 +1,94 @@
+#    -*- mode: org -*-
+
+
+Archived entries from file /home/cole/Dropbox/org/sigma.org
+
+
+* TODO [#F] Figure out AD certificates issue
+:PROPERTIES:
+:ARCHIVE_TIME: 2020-02-05 Wed 10:10
+:ARCHIVE_FILE: ~/Dropbox/org/sigma.org
+:ARCHIVE_CATEGORY: sigma
+:ARCHIVE_TODO: TODO
+:END:
+[[https://social.technet.microsoft.com/Forums/windowsserver/en-US/e150a463-7826-4151-9623-a6e655b6540e/issuing-cas-crl-checking-not-working?forum=winserversecurity][See this discussion]]
+
+[2020-01-06 Mon]
+- *AIA*: Authority Information Access
+- *CDP*: Certificate Distribution Point
+- *CRL*: Certificate Revocation List
+
+[2019-12-31 Tue]
+Service specific error: 2148081683
+
+Tried to add the revocation checking back into the certificate services with the following:
+
+certutil –setreg ca\CRLFlags -CRLF_REVCHECK_IGNORE_OFFLINE
+
+net stop certsvc
+net start certsvc
+
+But I had to add it back because doing this gave me that error. Changed the minus to a plus before CRLF_REVCHECK_IGNORE_OFFLINE.
+
+
+Archived entries from file /home/cole/Dropbox/org/sigma.org
+
+
+* TODO [#F] Domain Controller setup/migration
+:PROPERTIES:
+:ARCHIVE_TIME: 2020-02-05 Wed 10:10
+:ARCHIVE_FILE: ~/Dropbox/org/sigma.org
+:ARCHIVE_CATEGORY: sigma
+:ARCHIVE_TODO: TODO
+:END:
+Learn how to configure Certificate Authorities
+
+Archived entries from file /home/cole/Dropbox/org/sigma.org
+
+
+* TODO [#F] NIST Compliance
+:PROPERTIES:
+:ARCHIVE_TIME: 2020-02-05 Wed 10:10
+:ARCHIVE_FILE: ~/Dropbox/org/sigma.org
+:ARCHIVE_CATEGORY: sigma
+:ARCHIVE_TODO: TODO
+:END:
+
+Archived entries from file /home/cole/Dropbox/org/sigma.org
+
+
+* TODO [#E] iDRAC
+:PROPERTIES:
+:ARCHIVE_TIME: 2020-02-05 Wed 10:10
+:ARCHIVE_FILE: ~/Dropbox/org/sigma.org
+:ARCHIVE_CATEGORY: sigma
+:ARCHIVE_TODO: TODO
+:END:
+
+* TODO [#C] Configure phone(s)
+:PROPERTIES:
+:ARCHIVE_TIME: 2020-02-05 Wed 11:08
+:ARCHIVE_FILE: ~/Dropbox/org/sigma.org
+:ARCHIVE_CATEGORY: sigma
+:ARCHIVE_TODO: TODO
+:END:
+Tried to configure some old Grandstream phones but I couldn't get them to work. Looked on 3CX and the provisioning seemed to be the same as the other phones. On the phone's display it kept saying that it wasn't configured. Seems like we need to just order some new phones that are the same kind as the others.
+
+Erik's phone is the model GXP2170
+[[https://www.amazon.com/Grandstream-GS-GXP2170-VoIP-Phone-Device/dp/B019X06IFS/ref=sr_1_1?keywords=gpx+2170&qid=1578338057&sr=8-1][amazon link]]
+
+* TODO [#C] Migrate all vsphere-01 VMs
+:PROPERTIES:
+:ARCHIVE_TIME: 2020-02-05 Wed 11:08
+:ARCHIVE_FILE: ~/Dropbox/org/sigma.org
+:ARCHIVE_CATEGORY: sigma
+:ARCHIVE_TODO: TODO
+:END:
+
+* TODO [#C] Migrate FileMaker Server
+:PROPERTIES:
+:ARCHIVE_TIME: 2020-02-05 Wed 11:08
+:ARCHIVE_FILE: ~/Dropbox/org/sigma.org
+:ARCHIVE_CATEGORY: sigma
+:ARCHIVE_TODO: TODO
+:END:

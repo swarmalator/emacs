@@ -1,0 +1,94 @@
+% Created 2020-01-31 Fri 10:21
+% Intended LaTeX compiler: lualatex
+\documentclass[11pt]{article}
+\usepackage{graphicx}
+\usepackage{grffile}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\author{Cole Turner}
+\date{\textit{<2019-01-24 Thu>}}
+\title{TODOs\\\medskip
+\large \href{it.org}{IT} -- \href{cascade.org}{CASCADE} -- \href{controller.org}{CONTROLLER} -- \href{filemaker.org}{FILEMAKER} -- \href{misc.org}{MISC}}
+\hypersetup{
+ pdfauthor={Cole Turner},
+ pdftitle={TODOs},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 26.3 (Org mode 9.2.5)}, 
+ pdflang={English}}
+\begin{document}
+
+\maketitle
+\tableofcontents
+
+
+\noindent\rule{\textwidth}{0.5pt}
+\section*{{\bfseries\sffamily TODO} \framebox{\#C} Setup Microsoft Teams}
+\label{sec:orgc5c6773}
+
+\section*{{\bfseries\sffamily TODO} \framebox{\#C} UPS automatic graceful shut down}
+\label{sec:org0b5e900}
+Waiting for the new server to get in to do this. For now, the UPS client is running on the Filemaker machine and is sending status notifications to my email.\\
+\begin{itemize}
+\item Periodic extra drive backup.\\
+\end{itemize}
+\begin{itemize}
+\item iDRAC?$\backslash$\\
+\item \href{http://aka.ms/WindowsAdminCenter}{Windows Admin Center}?\\
+\end{itemize}
+\section*{{\bfseries\sffamily TODO} \framebox{\#C} Migrate FileMaker Server}
+\label{sec:org6545001}
+\section*{{\bfseries\sffamily TODO} \framebox{\#C} Migrate all vsphere-01 VMs}
+\label{sec:org3ee80ed}
+\section*{{\bfseries\sffamily TODO} \framebox{\#C} Configure phone(s)}
+\label{sec:orgc37c745}
+Tried to configure some old Grandstream phones but I couldn't get them to work. Looked on 3CX and the provisioning seemed to be the same as the other phones. On the phone's display it kept saying that it wasn't configured. Seems like we need to just order some new phones that are the same kind as the others.\\
+
+Erik's phone is the model GXP2170\\
+\href{https://www.amazon.com/Grandstream-GS-GXP2170-VoIP-Phone-Device/dp/B019X06IFS/ref=sr\_1\_1?keywords=gpx+2170\&qid=1578338057\&sr=8-1}{amazon link}* List for Sigma IT contractor\\
+\section*{{\bfseries\sffamily TODO} \framebox{\#B} Configure NUMA}
+\label{sec:org3f32b04}
+\begin{itemize}
+\item AMD EPYC 7302\\
+\item 2 sockets\\
+\item 64 Logical processors\\
+\item 16 cores per socket\\
+\item Hyperthreading enabled\\
+\end{itemize}
+\section*{{\bfseries\sffamily TODO} \framebox{\#E} iDRAC}
+\label{sec:org56838b5}
+\section*{{\bfseries\sffamily TODO} \framebox{\#F} NIST Compliance}
+\label{sec:org8c90a1a}
+\section*{{\bfseries\sffamily TODO} \framebox{\#F} Domain Controller setup/migration}
+\label{sec:orgb638d13}
+Learn how to configure Certificate Authorities\\
+\section*{{\bfseries\sffamily TODO} \framebox{\#F} Figure out AD certificates issue}
+\label{sec:orgef413dc}
+\href{https://social.technet.microsoft.com/Forums/windowsserver/en-US/e150a463-7826-4151-9623-a6e655b6540e/issuing-cas-crl-checking-not-working?forum=winserversecurity}{See this discussion}\\
+
+\textit{[2020-01-06 Mon]}\\
+\begin{itemize}
+\item \textbf{AIA}: Authority Information Access\\
+\item \textbf{CDP}: Certificate Distribution Point\\
+\item \textbf{CRL}: Certificate Revocation List\\
+\end{itemize}
+
+\textit{[2019-12-31 Tue]}\\
+Service specific error: 2148081683\\
+
+Tried to add the revocation checking back into the certificate services with the following:\\
+
+certutil –setreg ca\CRLFlags -CRLF\_REVCHECK\_IGNORE\_OFFLINE\\
+
+net stop certsvc\\
+net start certsvc\\
+
+But I had to add it back because doing this gave me that error. Changed the minus to a plus before CRLF\_REVCHECK\_IGNORE\_OFFLINE.\\
+\end{document}

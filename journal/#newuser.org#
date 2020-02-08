@@ -4,6 +4,7 @@
 #+options: p:nil pri:nil prop:nil stat:t tags:t tasks:t tex:t
 #+options: timestamp:nil title:t toc:nil todo:t |:t
 #+title: X-Microwave New Employee Login
+#+date: 2019-12-05 Thu
 #+author: {{{Name}}}
 #+language: en
 #+select_tags: export
@@ -15,10 +16,9 @@
 #+LATEX_HEADER: \setmainfont{Ubuntu Mono}
 #+LATEX_HEADER: \linespread{0.8}
 
-#+MACRO: First   Brenda
-#+MACRO: Last    Zavala
-#+MACRO: pw      Cusa4284
-#+date: 2020-02-06 Thu
+#+MACRO: First    Jeffrey
+#+MACRO: Last    Dobbs
+#+MACRO: pw      Zutu3192
 
 #+MACRO: acct  \MakeLowercase{{{{First}}}}.\MakeLowercase{{{{Last}}}}
 #+MACRO: Name   {{{First}}} {{{Last}}}

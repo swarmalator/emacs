@@ -1,45 +1,93 @@
 #+setupfile: setupfile
 ----------------------
-* TODO [#A] Update and Restart NAS
-* TODO [#C] Solidworks for John
-  - Remember to turn off antivirus software during install
-* TODO [#C] Shipping room general login
-Need to not have this computer use Dwayne's login
-* TODO [#E] Make labelmaker data faster
-quickbooks -> sharepoint -> filemaker label thing
+* TODO [#A] Prep for migration 2/23 [3/7]
+DEADLINE: <2020-02-23 Sun>
 
-Need to ask Kristen: "What do you do when you create labels for spring pin boards"
+- [ ] Deployment of Carbon Black EDR to all nodes
 
-1. Auto serialize parts
-2. Spring pin boards
-* WAIT [#D] ADS Licensing solution
-- look for ADS software viewer and not editor.
-- look into sharing ADS on server
-** ADS license for Amy
-* WIP [#B] Get Engineering Laptops 
-* TODO [#C] New big monitor for engineering
-* TODO [#C] Low latency configuration for RDP servers?
-* TODO [#A] CentOS NCentral installs
-* TODO [#A] Justin ADS Expiration?
-On Justin's computer. 
-Cam350 expires in 30 days? 
-ADS expires in 29 days?
+- Creation of Sigma accounts to replace shared administration accounts
+
+- Confirm receipt of all ordered hardware for potential install on 2/16/2020
+
+- [X] Disable any extraneous old employee or administrator accounts in AD (X-Microwave to disable or provide list)
+
+- [X] Confirm with John/Cole on potential downtime during 2/16/2020 to install new hardware (X-Microwave to decide best day/time)
+
+- [X] Confirm all regulatory requirements – ie SOC, NIST, ISO – needed at X-Microwave for their clients (X-Microwave to provide)
+
+- [ ] Automated patching schedule for workstation (X-Microwave to decide best times)
+
+- [ ] Manual patching/maintenance schedules for Servers (X-Microwave to decide best times)
+
+- [ ] Verify N-Central portal for all new N-Central installs from today (Sigma to check, X-Microwave to install any missing nodes)
+
+- Deploy VEEAM Backup client (Requested by X-Microwave to hold off VEEAM deployment until the new servers were in place)
+* DONE [#A] Sigma cybersecurity planning
+SCHEDULED: <2020-02-07 Fri 14:45>
+Talking about FAR 52.204-21 and
+DFARS 252.204-7012 compliance (part of NIST)
+#+begin_quote
+Hi Cole,
+
+I was able to speak with the security team today. Unfortunately, with your current environment you would not adhere to either of those cybersecurity compliance requirements. In order to get you to a state that is within tolerance, we would need to have a security audit of your environment, then make the appropriate changes. The team said that the initial assessment would take at least a few weeks, and would need to be done when you are on the new equipment, rather than the old. Additionally, the timeframe for resolving the issues found in the security assessment would be based on what is found, and would most likely take some time.
+
+It does look as though a security revision is part of the original onboarding process - currently set as phase 4. If you would like, we can set a time for a call tomorrow and discuss the possibility of trying to fastrack this section. Remember that the security audit needs to be done on the final setup, so if there are sweeping changes (to thing such as hardware, OS versions, email platforms, network topology) we need to have the audit scheduled for after this.
+#+end_quote
+
+Also ask about the following:
+- Installing Carbon Black EDR
+- Macbook NCentral installer
+
+* WIP [#B] Get Engineering Laptops
 * TODO [#B] Computer Inventory
 Start with engineering. New monitors? Will computers be able to drive another monitor?
-* TODO [#D] Setup new computer
-SCHEDULED: <2020-02-07 Fri>
-* TODO [#C] Sigma list for 2/16
-DEADLINE: <2020-02-16 Sun>
+* TODO [#B] NCentral on Erik's laptop
+[2020-02-07 Fri 10:52]
+* TODO [#C] Solidworks for John
+  - Remember to turn off antivirus software during install
+* TODO [#C] Research System Deployment
+#+begin_quote
+Hi Cole,
 
-- Deployment of Carbon Black EDR to all nodes
-- Creation of Sigma accounts to replace shared administration accounts
-- Confirm receipt of all ordered hardware for potential install on 2/16/2020
-- [ ] Disable any extraneous old employee or administrator accounts in AD (X-Microwave to disable or provide list)
-- [ ] Confirm with John/Erik/Cole on potential downtime during 2/16/2020 to install new hardware (X-Microwave to decide best day/time)
-- [ ] Confirm all regulatory requirements – ie SOC, NIST, ISO – needed at X-Microwave for their clients (X-Microwave to provide)
-- [ ] Automated patching schedule for workstation (X-Microwave to decide best times)
-- [ ] Manual patching/maintenance schedules for Servers (X-Microwave to decide best times)
-- [ ] Verify N-Central portal for all new N-Central installs from today (Sigma to check, X-Microwave to install any missing nodes)
-- [ ] Deploy VEEAM Backup client (Requested by X-Microwave to hold off VEEAM deployment until the new servers were in place)
-* TODO [#A] Setup Brenda's computer
-SCHEDULED: <2020-02-06 Thu>
+
+
+If you are looking for general guides I would start by reading through Microsoft’s documents for the how behind deployment types like sysprep, PXE (preboot execution environment), WDS (windows deployment services), or SCCM (Microsoft system center configuration) services. If you’re looking for videos guides on these topics CBTNuggets would be my go to recommendation. CBNuggets also has courses directed towards certain tech certifications – CCENT, CCNA, MCSA, etc. which you may find useful. Finally, Spiceworks Community would be for any specific questions or concerns. It has a lot of techs who voice real world scenario and opinions (that may not be covered in Microsoft’s ‘perfect’ documented environments) but you may need to filter out the good and creative recommendations from bad ones.
+
+
+
+Microsoft Docs:
+
+https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/use-answer-files-with-sysprep
+
+
+
+CBT Nugget:
+
+https://www.cbtnuggets.com/
+
+
+
+Spiceworks:
+
+https://community.spiceworks.com/
+
+
+
+If you wanted to get more in-depth Sigma can always help you to learn the best practices and even to investigate, build, and implement whichever system would be best for X-Microwave. With how time intensive any knowledge transfer can be, I’d like to first have you look through the above links before we commit an unknown amount of hours against your current retainer for something like this.
+
+
+
+Thanks,
+
+
+
+Ben Best, Consultant
+#+end_quote
+* TODO [#E] Get cheap SSDs
+https://www.amazon.com/Silicon-Power-Performance-Internal-SP256GBSS3A55S25/dp/B075RJS55D/ref=pd_cp_147_1/135-9574313-0233445?_encoding=UTF8&pd_rd_i=B075RJS55D&pd_rd_r=c15fc237-72a6-4b6b-b096-c9153004cb64&pd_rd_w=5qUGj&pd_rd_wg=4OjzW&pf_rd_p=592dc715-8438-4207-b7fa-4c7afdeb6112&pf_rd_r=GFAKJX1NY5GKQVQR84D0&psc=1&refRID=GFAKJX1NY5GKQVQR84D0
+* TODO [#A] Office 365 Migration
+[2020-02-07 Fri]
+- Install outlook on workstations
+* TODO [#B] Azure Sigma admin account
+[2020-02-07 Fri 15:55]
+add sigmaadmin@xmicrowave.com to Azure

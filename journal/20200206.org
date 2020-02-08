@@ -1,0 +1,16 @@
+* Thursday, 02/06/2020
+** 10:55
+Pictures that are not found on the search   
+- 0202I
+
+** 13:32
+Erik was just at the door telling me about learning from the sigma guys. He made an analogy to being a kid and having your parents drive you everywhere - then when you turn 15 and start learning to drive you all of a sudden become curious about how they drive. I am the learner and sigma is the parent. I have to be curious and learn how they are doing things. That is the goal, anyways.
+** 14:14
+these two didn't come up on the quick search table
+- [ ] 939 Rev B no Photo (no pic)
+- [ ] 1008 no Rev and no photos (not there)
+** 15:10
+Brenda Zavala's temp password
+Cusa4284
+** 16:04
+Typing out an email to John about the ADS licenses expiring, I realized that we might be able to transition to the RDP server and also get new server licensing that works with that setup. Not sure I want to send the email anymore because we haven't completely decided on using ADS remotely. I think that if we can spoof the MAC addresses, then we might as well do that again because we could configure it either way. Would be more work to set up each one. This is the move, I think. Make sure they are floating licenses.             

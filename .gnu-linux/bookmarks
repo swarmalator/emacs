@@ -1,0 +1,80 @@
+;;;; Emacs Bookmark Format Version 1 ;;;; -*- coding: utf-8-emacs -*- 
+;;; This format is meant to be slightly human-readable;
+;;; nevertheless, you probably don't want to edit it.
+;;; -*- End Of Bookmark File Format Version Stamp -*-
+(("Dropbox"
+ (filename . "~/Dropbox/")
+ (front-context-string . ".dropbox\n  drwxr")
+ (rear-context-string . "42 Jan 15 10:02 ")
+ (position . 219))
+("misc.org"
+ (filename . "~/Dropbox/org/misc.org")
+ (front-context-string . "#+setupfile: set")
+ (rear-context-string)
+ (position . 1))
+("filemaker.org"
+ (filename . "~/Dropbox/orgsite/filemaker.org")
+ (front-context-string . "#+setupfile: set")
+ (rear-context-string)
+ (position . 1))
+("it.org"
+ (filename . "~/Dropbox/orgsite/it.org")
+ (front-context-string . "#+setupfile: set")
+ (rear-context-string)
+ (position . 1))
+("cascade.org"
+ (filename . "~/Dropbox/org/cascade.org")
+ (front-context-string . "#+SETUPFILE: set")
+ (rear-context-string)
+ (position . 1))
+("xmicro-cascade-data"
+ (filename . "~/Downloads/xmicro-cascade-data/")
+ (front-context-string)
+ (rear-context-string . " 20 10:47 parts\n")
+ (position . 244))
+("orgsite"
+ (filename . "~/Dropbox/org/")
+ (front-context-string . "all.html\n  -rw-r")
+ (rear-context-string . "49 Jan  3 14:01 ")
+ (position . 218))
+("blockbuilder"
+ (filename . "~/Documents/blockbuilder/")
+ (front-context-string . "dist\n  -rw------")
+ (rear-context-string . "96 Nov 11 16:35 ")
+ (position . 234))
+("Downloads"
+ (filename . "~/Downloads/")
+ (front-context-string . "A111 (1).s2p\n  -")
+ (rear-context-string . "47 Nov 12 10:57 ")
+ (position . 238))
+("Documents"
+ (filename . "~/Documents/")
+ (front-context-string . "blockbuilder\n  d")
+ (rear-context-string . "96 Nov 11 16:35 ")
+ (position . 218))
+("programit"
+ (filename . "~/Documents/programit/")
+ (front-context-string . "bit_helpers.py\n ")
+ (rear-context-string . "90 Oct 24 09:38 ")
+ (position . 222))
+("org-refile-last-stored"
+ (filename . "~/Dropbox/journal/20190715.org")
+ (front-context-string . "** 15:02\nOk I am")
+ (rear-context-string . "have to pee.   \n")
+ (position . 10382))
+("Lisa's journal"
+ (filename . "~/Dropbox/Share/journal/")
+ (front-context-string . "20190510.org\n  -")
+ (rear-context-string . "58 May 10 12:28 ")
+ (position . 230))
+("home.org"
+ (filename . "~/Dropbox/Lisa/emacs/home.org")
+ (front-context-string . "#+TITLE: Welcome")
+ (rear-context-string)
+ (position . 1))
+("settings.org"
+ (filename . "~/Dropbox/.emacs_config/settings.org")
+ (front-context-string . "#+TITLE: Emacs S")
+ (rear-context-string)
+ (position . 1))
+)

@@ -1,0 +1,4 @@
+* Friday, 2/7/2020
+** 20:11
+** 20:24
+Need to configure the spell checker for windows.   

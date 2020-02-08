@@ -1,7 +1,0 @@
-module Triples where
-
-data Triple = SphVec {rad, theta, phi :: Double}
-
-fnt (x,_,_) = x
-mid (_,x,_) = x
-bck (_,_,x) = x

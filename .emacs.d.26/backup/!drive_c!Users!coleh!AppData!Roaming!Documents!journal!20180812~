@@ -1,9 +1,0 @@
-* Sunday, 8/12/2018
-
-** 15:24 
-My website is up currently. I simply used the built-in html export feature in org-mode and styled it with the [[https://github.com/fniessen/org-html-themes][ReadTheOrg]] theme. Was surprisingly simple to produce, also just using github pages. While reading how to set this up, I also ran into an idea that I have run into before that is quite interesting (and is something that I feel I am well aquainted with) and this is [[https://en.wikipedia.org/wiki/Literate_programming][Literate Programming]]. As my website evolves I suspect that I might include various tutorials on how to setup emacs to publish to my website, Haskell programming, whatever physics I run into in my research, Mellin transforms, the inverse scattering method, partial differential equations, nonlinear methods, etc. Hopefully after spending the time to configure Emacs and org-mode, I won't have to also spend so much time learning too much HTML, or how to design a website. Would be very nice to keep my focus on other things while I update the site with little extra effort necessary. 
-
-I wonder if I have mispelled necessary, just then, which reminds me that I still have not updated the "flyspell" spellchecker in Emacs 26, though it was working fine in emacs 25. perhaps I should just keep with emacs 25 - I don't think that I should have any problems (though I haven't even looked at the changelog to see how much improved emacs 26 is..)
-
-** 15:34 
-Here, I am back and in Emacs 25.1

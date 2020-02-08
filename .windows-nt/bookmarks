@@ -23,7 +23,7 @@
  (rear-context-string)
  (position . 1))
 ("cascade.org"
- (filename . "~/Dropbox/org/cascade.org")
+ (filename . "c:/Users/coleh/Documents/Emacs/org/cascade.org")
  (front-context-string . "#+SETUPFILE: set")
  (rear-context-string)
  (position . 1))

@@ -1,6 +1,6 @@
 (setq user-init-file (or load-file-name (buffer-file-name)))
 (setq user-emacs-directory (concat
-      	      "~/Dropbox/.emacs.d."
+      	      (if (string-equal system-type "windows-nt") "C:/Users/coleh/Documents/emacs/.emacs.d." "~/Documents/emacs/.emacs.d.")
 	      (int-to-string emacs-major-version)
 	      "/"))
 
@@ -23,7 +23,7 @@
  '(custom-enabled-themes (quote (soothe)))
  '(custom-safe-themes
    (quote
-    ("2f4f50d98073c01038b518066840638455657dc91dd1a225286d573926f36914" "10a31b6c251640d04b2fa74bd2c05aaaee915cbca6501bcc82820cdc177f5a93" "a77ced882e25028e994d168a612c763a4feb8c4ab67c5ff48688654d0264370c" default)))
+    ("06589250ab29513fe389b36799d709686ace3598ff24987e8ecc89e529470fa5" "2f4f50d98073c01038b518066840638455657dc91dd1a225286d573926f36914" "10a31b6c251640d04b2fa74bd2c05aaaee915cbca6501bcc82820cdc177f5a93" "a77ced882e25028e994d168a612c763a4feb8c4ab67c5ff48688654d0264370c" default)))
  '(custom-theme-directory "~/.emacs.d/")
  '(elpy-get-info-from-shell-timeout 2)
  '(elpy-rpc-python-command "python3")
@@ -150,7 +150,8 @@
     (org-ehtml web-server org-noter hacker-typer company-tern tern tide js-react-redux-yasnippets typescript-mode magit py-autopep8 flycheck elpy org-brain twittering-mode heroku-theme northcode-theme haskell-mode visual-fill-column soothe-theme smartparens org-mind-map org-journal org-bullets helm company)))
  '(powerline-color1 "#1E1E1E")
  '(powerline-color2 "#111111")
- '(python-shell-interpreter "python3"))
+ '(python-shell-interpreter "python3")
+ '(ring-bell-function (quote ignore)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

@@ -1,2 +1,2 @@
-#s(hash-table size 65 test equal rehash-size 1.5 rehash-threshold 0.8125 data ("/home/cole/Dropbox/journal/20200204.org" (2 4 2020)))
-#s(hash-table size 65 test equal rehash-size 1.5 rehash-threshold 0.8125 data ("/home/cole/Dropbox/journal/20200204.org" (24122 2890 858853 784000)))
+#s(hash-table size 65 test equal rehash-size 1.5 rehash-threshold 0.8125 data ("c:/Users/coleh/AppData/Roaming/Dropbox/journal/20200207.org" (2 7 2020)))
+#s(hash-table size 65 test equal rehash-size 1.5 rehash-threshold 0.8125 data ("c:/Users/coleh/AppData/Roaming/Dropbox/journal/20200207.org" (24126 4588 0 0)))

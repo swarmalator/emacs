@@ -48,7 +48,7 @@
  (rear-context-string . "47 Nov 12 10:57 ")
  (position . 238))
 ("Documents"
- (filename . "~/Documents/")
+ (filename . "c:/Users/coleh/Documents/")
  (front-context-string . "blockbuilder\n  d")
  (rear-context-string . "96 Nov 11 16:35 ")
  (position . 218))

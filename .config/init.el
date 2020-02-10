@@ -1,6 +1,6 @@
 (setq user-init-file (or load-file-name (buffer-file-name)))
 (setq home-directory (if
-			 (substitute "-" "/" (string-equal system-type "windows-nt"))
+			 (string-equal system-type "windows-nt")
 			 (concat "C:/Users/" user-login-name)
 		       "~"))
 (setq user-emacs-directory (concat

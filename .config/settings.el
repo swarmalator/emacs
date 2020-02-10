@@ -1,56 +1,16 @@
-#+TITLE: Emacs Settings
-
-This is my Emacs settings file.
-
-* about this file
-*need to rewrite this*
-This Dropbox setup should support both Emacs 25 and 26. Upon fresh installation, modify (on Linux) the .desktop file located in /usr/share/applications. This can be found with:
-
-#+BEGIN_SRC bash
-ls /usr/share/applications | grep emacs
-#+END_SRC
-
-pThen edit the file as superuser and change the "Exec" line so that running Emacs will execute the command:
-
-#+BEGIN_SRC bash
-emacs -q --load "../.config/init.el"
-#+END_SRC
-
-OR - just put the previous line as the first line in the .emacs file.
-
-This loads the Dropbox init.el file before establishing the default value of user-emacs-directory.
-
-The following additional packages are required and can be downloaded using "M-x package-install":    
-- soothe-theme
-- company
-- helm
-- org
-- org-bullets
-- org-journal
-- org-mind-map
-- smartparens
-- visual-fill-column
-
-* appearance
-#+BEGIN_SRC emacs-lisp
 (tool-bar-mode -1)
 (menu-bar-mode -1)
 (scroll-bar-mode -1)
 (set-face-attribute 'default nil :height 150) ;; 130 = 13pt font
 (add-hook 'dired-mode-hook 'dired-hide-details-mode)
-#+END_SRC
 
-#+begin_src emacs-lisp
 (if (string-equal system-type "windows-nt")
 (progn (make-frame '((undecorated . t)))
 (add-to-list 'default-frame-alist '(drag-internal-border . 1))
 (add-to-list 'default-frame-alist '(internal-border-width . 5))
 (delete-frame)
 ))
-#+end_src
 
-Set the soothe-theme as my theme. Also tweak the org-hide face because I don't like how it is visible by default. 
-#+BEGIN_SRC emacs-lisp
 (setq custom-safe-themes
    (quote       ("a77ced882e25028e994d168a612c763a4feb8c4ab67c5ff48688654d0264370c" default)))
 (load-theme 'soothe)
@@ -58,36 +18,20 @@ Set the soothe-theme as my theme. Also tweak the org-hide face because I don't l
  '(org-hide ((t (:background "#110F13" :foreground "#110F13"))))
  ;'(font-lock-comment-face ((t (:background "#110F13" :foreground "#7868B5" :slant italic))))
 )
-#+END_SRC
 
-Add the time and date to the mode line at the bottom. 
-#+BEGIN_SRC emacs-lisp
 (setq display-time-day-and-date t)
 (display-time-mode t)
-#+END_SRC
 
-Show the column number in addition to the line number in the mode line at the bottom.    
-#+BEGIN_SRC emacs-lisp
 (column-number-mode t)
-#+END_SRC
-* autocomplete
-Autocomplete stuff. I think ido is only for C-x b. Company is in-buffer autocomplete  
-#+BEGIN_SRC emacs-lisp
+
 (require 'company)
 (global-company-mode t)
 (require 'ido)
 (ido-mode t)
-#+END_SRC
 
-** spell checking
-#+BEGIN_SRC emacs-lisp
 (setq ispell-program-name "/usr/bin/aspell")
 (add-hook 'org-mode-hook 'flyspell-mode)
-#+END_SRC
 
-** javascript
-got this from [[https://emacs.cafe/emacs/javascript/setup/2017/05/09/emacs-setup-javascript-2.html]]
-#+begin_src emacs-lisp
 (require 'js2-mode)
 (add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
 
@@ -106,41 +50,22 @@ got this from [[https://emacs.cafe/emacs/javascript/setup/2017/05/09/emacs-setup
 ;; Disable completion keybindings, as we use xref-js2 instead
 (define-key tern-mode-keymap (kbd "M-.") nil)
 (define-key tern-mode-keymap (kbd "M-,") nil)
-#+end_src
-* backups
-Backup files locally instead of creating those stupid backup files where each file is.  
-#+BEGIN_SRC emacs-lisp
+
 (setq backup-directory-alist '(("." . "~/.emacs.d/backup")))
 ;;(setq backup-directory-alist '(("." . (concat user-emacs-directory "backup"))))
-#+END_SRC
 
-* bookmarks
-Add a shortcut for bookmarks. 
-#+BEGIN_SRC emacs-lisp
 (global-set-key (kbd "C-c b") 'bookmark-jump)
-#+END_SRC
-* personal dictionary
-Set the location of the dictionary to the same as the init file. 
-#+BEGIN_SRC emacs-lisp
+
 (setq ispell-personal-dictionary (expand-file-name ".ispell_pdict" (file-name-directory user-init-file)))
-#+END_SRC
-* helm
-full-featured command completion and other stuff.     
-#+BEGIN_SRC emacs-lisp 
+
 (require 'helm)
 (helm-mode t)
 (global-set-key (kbd "M-x") 'helm-M-x)
 (global-set-key (kbd "C-x C-f") 'helm-find-files)
 (global-set-key (kbd "C-x C-b") 'helm-buffers-list)
-#+END_SRC
-   
-* initial buffer
-This sets the first buffer as the scratch buffer
-#+BEGIN_SRC emacs-lisp
+
 (setq initial-buffer-choice t)
-#+END_SRC
-* movement keys
-#+BEGIN_SRC emacs-lisp 
+
 (require 'dired)
 (define-key dired-mode-map (kbd "C-<up>") 'dired-up-directory)
 ;;(global-set-key (kbd "s-r") 'beginning-of-line)
@@ -152,63 +77,24 @@ This sets the first buffer as the scratch buffer
 ;;(global-set-key (kbd "M-n") 'sp-down-sexp)
 ;;(global-set-key (kbd "M-P") 'sp-backward-up-sexp)
 ;;(global-set-key (kbd "M-N") 'sp-backward-down-sexp)
-#+END_SRC
 
-* my commands
-shortcut to my commands that have the "my-" prefix. I don't really use this naming anymore 
-#+BEGIN_SRC emacs-lisp
 (defun my-commands () (interactive)
        (setq unread-command-events (listify-key-sequence "my-"))
        (call-interactively 'helm-M-x))
 (global-set-key (kbd "M-X") 'my-commands)
-#+END_SRC
 
-** transparency
-Set the transparency from 0-9 with C-c t
-#+BEGIN_SRC emacs-lisp
 (defun my-transparency () (interactive)
        (let ((b (- (read-key "Set transparency value [0-9]") 48)))
 	 (if (< b 10) (set-frame-parameter (selected-frame) 'alpha (- 100 (* b 4))))))
 (set-frame-parameter (selected-frame) 'alpha 100)
 (global-set-key (kbd "C-c t") 'my-transparency)
-#+END_SRC
 
-** comment/uncomment
-Change the functionality of C-c ; to work on regions also. 
-#+BEGIN_SRC emacs-lisp
 (defun my-comment-or-uncomment () (interactive)
        (if (region-active-p)
 	   (call-interactively 'comment-or-uncomment-region)
 	 (comment-or-uncomment-region (point-at-bol) (point-at-eol))))
 (global-set-key (kbd "C-c ;") 'my-comment-or-uncomment)
-#+END_SRC
 
-
-** org time heading
-:OLD:
-#+BEGIN_SRC
-(require 'org-journal)
-(define-key org-journal-mode-map (kbd "C-c s") 'org-edit-headline)
-(define-key org-journal-mode-map (kbd "C-c C-<return>") 'insert-journal-entry)
-(define-key org-journal-mode-map (kbd "C-c RET") 'insert-timestamp)
-
-(defun insert-journal-entry () "Insert timestamp with new journal entry headline" (interactive)
-       (org-return)
-       (set-mark (point))
-       (sp-backward-whitespace)
-       (org-delete-backward-char 1)
-       (org-return)
-       (org-return)
-       (insert "** \n")
-       (insert-timestamp))
-
-(defun insert-timestamp () "Insert current date and time inactive timestamp" (interactive)
-       (org-time-stamp-inactive '(16))
-       (org-return))
-#+END_SRC
-:END:
-
-#+BEGIN_SRC emacs-lisp
 (require 'org-journal)
 (defun insert-time () "Insert the current 24h time in HH:MM format" (interactive)
       (let ((arr (split-string (current-time-string) ":")))
@@ -225,16 +111,9 @@ Change the functionality of C-c ; to work on regions also.
        (org-end-of-line)
        (org-return))
 (define-key org-mode-map (kbd "C-c RET") 'insert-time-heading)
-#+END_SRC
 
-** org sort priority
-Sort the org headings in the current file by priority. 
-#+begin_src emacs-lisp
 (define-key org-mode-map (kbd "C-c s") (lambda () (interactive) (beginning-of-buffer) (setq unread-command-events (listify-key-sequence "p")) (org-sort) (org-shifttab)))
-#+end_src
-** org journal filename
-This is a wrapper function to use with the org-capture template so I can capture my TODO items in my latest journal. 
-#+begin_src emacs-lisp
+
 (defun org-journal-new-entry-filename () (interactive)
        (call-interactively 'org-journal-new-entry)
        (previous-line)
@@ -243,33 +122,21 @@ This is a wrapper function to use with the org-capture template so I can capture
        (kill-line)
        (buffer-file-name)
        )
-#+end_src
-** pdict-add
-#+BEGIN_SRC emacs-lisp
+
 (defun pdict-add () "Add current word to dictionary" (interactive)
 	 (setq unread-command-events (listify-key-sequence "iy"))
 	 (if (not (flyspell-check-previous-highlighted-word))
 	     (setq unread-command-events (listify-key-sequence ""))))
 (define-key org-mode-map (kbd "C-c d") 'pdict-add)
-#+END_SRC
 
-** minimap
-#+begin_src emacs-lisp
 (global-set-key (kbd "C-c m") 'minimap-mode)
 (setq unread-command-events (listify-key-sequence "\C-cm"))
-#+end_src
 
-* org
-Save a link to the current place in an org file so that it can be used later with C-c C-l
-#+BEGIN_SRC emacs-lisp
 (require 'org)
 
 (setq org-return-follows-link t)
 (global-set-key (kbd "C-c l") 'org-store-link)
-#+END_SRC
 
-*** indentation
-#+BEGIN_SRC emacs-lisp 
 (define-key org-journal-mode-map (kbd "C-c <right>") 'insert-time-heading-demote)
 (define-key org-journal-mode-map (kbd "C-c <left>") 'insert-time-heading-promote)
 
@@ -280,14 +147,10 @@ Save a link to the current place in an org file so that it can be used later wit
 (defun insert-time-heading-promote () "" (interactive)
        (insert-time-heading)
        (org-promote-subtree))
-#+END_SRC
-*** capture
-#+BEGIN_SRC emacs-lisp
+
 (global-set-key (kbd "C-c c") 'org-capture)
 (setq org-directory (concat home-directory "/Dropbox/org"))
-#+END_SRC
-I LEARNED WHAT `BACKQUOTE IS. 
-#+begin_src emacs-lisp
+
 (setq org-capture-templates
       (backquote
        (("e" "erik" entry
@@ -314,29 +177,17 @@ I LEARNED WHAT `BACKQUOTE IS.
 	 (file
 	  ,(concat home-directory "/Dropbox/org/it.org"))
 	 "* TODO %?"))))
-#+end_src
 
-*** agenda
-#+BEGIN_SRC emacs-lisp
 (global-set-key (kbd "C-c a") 'org-agenda)
-#+END_SRC
 
-*** emphasized text
-#+BEGIN_SRC emacs-lisp
 (setq org-hide-emphasis-markers t)
-#+END_SRC
-*** ellipsis
-#+BEGIN_SRC emacs-lisp
+
 (setq org-ellipsis "▾")
-#+END_SRC
-** org-bullets
-#+BEGIN_SRC emacs-lisp
+
 (require 'org-bullets)
 (add-hook 'org-mode-hook 'org-bullets-mode)
 (setq org-bullets-bullet-list (quote ("→")))
-#+END_SRC
-** publish HTML
-#+BEGIN_SRC emacs-lisp
+
 (require 'htmlize)
 
 (global-set-key (kbd "C-c P") (lambda () "" (interactive) (org-publish-all t)))
@@ -353,9 +204,7 @@ I LEARNED WHAT `BACKQUOTE IS.
 	 :auto-preamble t
 	 :auto-sitemap t
 	 :sitemap-sort-folders ignore)))
-#+END_SRC
-*** export on save
-#+begin_src emacs-lisp
+
 (defun toggle-org-publish-on-save ()
   (interactive)
   (if (memq 'org-publish-all after-save-hook)
@@ -365,58 +214,35 @@ I LEARNED WHAT `BACKQUOTE IS.
     (add-hook 'after-save-hook 'org-publish-all nil t)
     (message "Enabled org publish on save for current buffer...")))
 (global-set-key (kbd "C-c p") 'toggle-org-publish-on-save)
-#+end_src
-** org-journal
 
-
-
-For Emacs 24, download org-journal version 1.13.1 from
-https://github.com/bastibe/org-journal/releases
-#+BEGIN_SRC emacs-lisp
 (require 'org-journal)
 (global-set-key (kbd "C-c j") 'org-journal-new-entry)
 (global-set-key (kbd "C-c J") (lambda () "" (interactive) (org-journal-new-entry t) (read-only-mode)))
 (setq org-journal-dir (concat home-directory "/Dropbox/journal")) ;; needed in customize
 (setq org-journal-file-format "%Y%m%d.org")
-#+END_SRC
 
-** org-protocol
-#+begin_src emacs-lisp
 (require 'org-protocol)
 (add-to-list 'load-path (concat user-emacs-directory "elpa/org-9.2.5/org-protocol.el"))
 (server-start)
-#+end_src
 
-** mind mapping
-#+BEGIN_SRC emacs-lisp
 (require 'ox-org)
 (require 'cl) ;; this fixed export problem, not sure why     
 (load (concat user-emacs-directory "elpa/org-mind-map-20180826.2340/org-mind-map.el"))
 (org-mind-map-make-node-fn default "Makes a plain box node without double borders" nil "box")
 
 (setq org-mind-map-node-formats (quote (("default" . org-mind-map-default-node))))
-#+END_SRC
 
-* package archives
-#+BEGIN_SRC emacs-lisp
 (setq package-archives
    (quote
     (("gnu" . "http://elpa.gnu.org/packages/")
      ("melpa" . "http://melpa.milkbox.net/packages/"))))
-#+END_SRC
 
-* smartparens
-
-
-#+BEGIN_SRC emacs-lisp 
 (smartparens-global-mode t)
 (show-smartparens-global-mode t)
 (define-key smartparens-mode-map (kbd "C-S-<left>") 'sp-forward-barf-sexp)
 (define-key smartparens-mode-map (kbd "C-S-<right>") 'sp-forward-slurp-sexp)
 (setq sp-use-subword t)
-#+END_SRC
-** pairs
-#+BEGIN_SRC emacs-lisp
+
 (sp-local-pair '(emacs-lisp-mode lisp-interaction-mode) "'" nil :actions nil)
 (sp-local-pair '(org-mode tex-mode) "$" "$")
 (sp-local-pair '(org-mode tex-mode) "\\textit{" "}" :insert "C-S-i")
@@ -424,27 +250,17 @@ https://github.com/bastibe/org-journal/releases
 ;;(sp-local-pair '(org-mode tex-mode) "\\left(" "\\right)" :insert "C-c l")
 ;;(sp-local-pair '(org-mode tex-mode) "\\left[" "\\right]" :insert "C-c L")
 (sp-local-pair '(java-mode) "System.out.println(" ")" :trigger "syso")
-#+END_SRC
-* word wrap
-#+BEGIN_SRC emacs-lisp
+
 (toggle-word-wrap)
 (add-hook 'org-mode-hook 'visual-line-mode)
-#+END_SRC
-** visual fill column
-#+BEGIN_SRC emacs-lisp
+
 (require 'visual-fill-column)
 (add-hook 'visual-line-mode-hook 'visual-fill-column-mode)
-#+END_SRC
-* shell buffer
-#+BEGIN_SRC emacs-lisp
+
 (global-set-key (kbd "C-!") 'shell)
-#+END_SRC
-* python
-#+begin_src emacs-lisp
+
 (elpy-enable)
-#+end_src
-** devel
-#+begin_src emacs-lisp
+
 (when (require 'flycheck nil t)
   (setq elpy-modules (delq 'elpy-module-flymake elpy-modules))
   (add-hook 'elpy-mode-hook 'flycheck-mode))
@@ -452,10 +268,5 @@ https://github.com/bastibe/org-journal/releases
 (require 'py-autopep8)
 (add-hook 'elpy-mode-hook 'py-autopep8-enable-on-save)
 
-#+end_src
-* magit
-#+begin_src emacs-lisp
 (global-set-key (kbd "C-x g") 'magit-status)
 (global-set-key (kbd "C-x M-g") 'magit-dispatch)
-#+end_src
-

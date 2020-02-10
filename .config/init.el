@@ -29,7 +29,7 @@
  '(custom-safe-themes
    (quote
     ("06589250ab29513fe389b36799d709686ace3598ff24987e8ecc89e529470fa5" "2f4f50d98073c01038b518066840638455657dc91dd1a225286d573926f36914" "10a31b6c251640d04b2fa74bd2c05aaaee915cbca6501bcc82820cdc177f5a93" "a77ced882e25028e994d168a612c763a4feb8c4ab67c5ff48688654d0264370c" default)))
- '(custom-theme-directory (concat home-directory "/Documents/Emacs/.emacs.d/"))
+ `(custom-theme-directory ,(concat home-directory "/Documents/Emacs/.emacs.d/"))
  '(elpy-get-info-from-shell-timeout 2)
  '(elpy-rpc-python-command "python3")
  '(fci-rule-character-color "#202020")
@@ -74,31 +74,30 @@
      ("elisp" . "el")
      ("python" . "py"))))
  '(org-capture-bookmark nil)
- '(org-capture-templates
+ `(org-capture-templates
    (quote
     (("e" "erik" entry
-      (file
-       (concat home-directory "/Dropbox/org/erik.org"))
+      (function nil)
       "* TODO %?")
      ("m" "MISC" entry
       (file
-       (concat home-directory "/Dropbox/org/misc.org"))
+       ,(concat home-directory "/Dropbox/org/misc.org"))
       "* TODO %?")
      ("f" "FILEMAKER" entry
       (file
-       (concat home-directory "/Dropbox/org/filemaker.org"))
+       ,(concat home-directory "/Dropbox/org/filemaker.org"))
       "* TODO %?")
      ("p" "CONTROLLER" entry
       (file
-       (concat home-directory "/Dropbox/org/controller.org"))
+       ,(concat home-directory "/Dropbox/org/controller.org"))
       "* TODO %?")
      ("c" "CASCADE" entry
       (file
-       (concat home-directory "/Dropbox/org/cascade.org"))
+       ,(concat home-directory "/Dropbox/org/cascade.org"))
       "* TODO %?")
      ("i" "IT" entry
       (file
-       (concat home-directory "/Dropbox/org/it.org"))
+       ,(concat home-directory "/Dropbox/org/it.org"))
       "* TODO %?"))))
  '(org-default-priority 70)
  '(org-export-with-priority t)

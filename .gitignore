@@ -1,9 +1,8 @@
-.emacs.d/session.*
-.emacs.d/abbrev_defs
-.emacs.d/ac-comphist.dat
-.emacs.d/auto-save-list/*
-.emacs.d/backup/*
-.emacs.d/ido.last
-.emacs.d.26/*
-.emacs.d/server/*
-.emacs.d/org-journal.cache
+/.emacs.d/session.*
+/.emacs.d/abbrev_defs
+/.emacs.d/ac-comphist.dat
+/.emacs.d/auto-save-list/**
+/.emacs.d/backup/**
+/.emacs.d/ido.last
+/.emacs.d/server/**
+*.cache

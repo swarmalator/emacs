@@ -1,12 +1,12 @@
 (setq user-init-file (or load-file-name (buffer-file-name)))
 (setq home-directory (if
-			 (string-equal system-type "windows-nt")
+			 (substitute "-" "/" (string-equal system-type "windows-nt"))
 			 (concat "C:/Users/" user-login-name)
 		       "~"))
 (setq user-emacs-directory (concat
 			    home-directory
 			    "/Documents/Emacs/.emacs.d/"))
-(setq os-directory (concat user-emacs-directory "." (symbol-name system-type) "/"))
+(setq os-directory (concat user-emacs-directory "." (replace-regexp-in-string "/" "-" (symbol-name system-type)) "/"))
 
 
 (require 'package)

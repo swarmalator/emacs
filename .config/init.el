@@ -1,13 +1,13 @@
 (setq user-init-file (or load-file-name (buffer-file-name)))
-(setq working-directory (concat (if
-				    (string-equal system-type "windows-nt")
-				    "C:/Users/coleh"
-				  "~")
-				"/Documents/Emacs/"))
-(setq os-directory (concat working-directory "." (symbol-name system-type) "/"))
+(setq home-directory (if
+			 (string-equal system-type "windows-nt")
+			 (concat "C:/Users/" user-login-name)
+		       "~"))
 (setq user-emacs-directory (concat
-			    working-directory
-			    ".emacs.d/"))
+			    home-directory
+			    "/Documents/Emacs/.emacs.d/"))
+(setq os-directory (concat user-emacs-directory "." (symbol-name system-type) "/"))
+
 
 (require 'package)
 (package-initialize)
@@ -29,7 +29,7 @@
  '(custom-safe-themes
    (quote
     ("06589250ab29513fe389b36799d709686ace3598ff24987e8ecc89e529470fa5" "2f4f50d98073c01038b518066840638455657dc91dd1a225286d573926f36914" "10a31b6c251640d04b2fa74bd2c05aaaee915cbca6501bcc82820cdc177f5a93" "a77ced882e25028e994d168a612c763a4feb8c4ab67c5ff48688654d0264370c" default)))
- '(custom-theme-directory "~/.emacs.d/")
+ '(custom-theme-directory (concat home-directory "/Documents/Emacs/.emacs.d/"))
  '(elpy-get-info-from-shell-timeout 2)
  '(elpy-rpc-python-command "python3")
  '(fci-rule-character-color "#202020")
@@ -78,32 +78,32 @@
    (quote
     (("e" "erik" entry
       (file
-       (concat working-directory "org/erik.org"))
+       (concat home-directory "/Dropbox/org/erik.org"))
       "* TODO %?")
      ("m" "MISC" entry
       (file
-       (concat working-directory "org/misc.org"))
+       (concat home-directory "/Dropbox/org/misc.org"))
       "* TODO %?")
      ("f" "FILEMAKER" entry
       (file
-       (concat working-directory "org/filemaker.org"))
+       (concat home-directory "/Dropbox/org/filemaker.org"))
       "* TODO %?")
      ("p" "CONTROLLER" entry
       (file
-       (concat working-directory "org/controller.org"))
+       (concat home-directory "/Dropbox/org/controller.org"))
       "* TODO %?")
      ("c" "CASCADE" entry
       (file
-       (concat working-directory "org/cascade.org"))
+       (concat home-directory "/Dropbox/org/cascade.org"))
       "* TODO %?")
      ("i" "IT" entry
       (file
-       (concat working-directory "org/it.org"))
+       (concat home-directory "/Dropbox/org/it.org"))
       "* TODO %?"))))
  '(org-default-priority 70)
  '(org-export-with-priority t)
  '(org-highest-priority 65)
- '(org-journal-dir (concat working-directory "journal/"))
+ '(org-journal-dir (concat home-directory "/Dropbox/journal/"))
  '(org-journal-enable-agenda-integration t)
  '(org-journal-file-format "%Y%m%d.org")
  '(org-journal-find-file (quote find-file))

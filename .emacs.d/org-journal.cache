@@ -1,2 +1,2 @@
-#s(hash-table size 65 test equal rehash-size 1.5 rehash-threshold 0.8125 data ("c:/Users/coleh/Documents/Emacs/journal/20200207.org" (2 7 2020)))
-#s(hash-table size 65 test equal rehash-size 1.5 rehash-threshold 0.8125 data ("c:/Users/coleh/Documents/Emacs/journal/20200207.org" (24126 6347 0 0)))
+#s(hash-table size 65 test equal rehash-size 1.5 rehash-threshold 0.8125 data ("c:/Users/coleh/Documents/Emacs/journal/20200209.org" (2 9 2020)))
+#s(hash-table size 65 test equal rehash-size 1.5 rehash-threshold 0.8125 data ("c:/Users/coleh/Documents/Emacs/journal/20200209.org" (24128 51203 0 0)))

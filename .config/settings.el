@@ -3,10 +3,13 @@
 (scroll-bar-mode -1)
 (set-face-attribute 'default nil :height 150) ;; 130 = 13pt font
 (add-hook 'dired-mode-hook 'dired-hide-details-mode)
-(make-frame '((undecorated . t)))
+
+(if (string-equal system-type "windows-nt")
+(progn (make-frame '((undecorated . t)))
 (add-to-list 'default-frame-alist '(drag-internal-border . 1))
 (add-to-list 'default-frame-alist '(internal-border-width . 5))
 (delete-frame)
+))
 
 (setq custom-safe-themes
    (quote       ("a77ced882e25028e994d168a612c763a4feb8c4ab67c5ff48688654d0264370c" default)))
@@ -146,7 +149,7 @@
        (org-promote-subtree))
 
 (global-set-key (kbd "C-c c") 'org-capture)
-(setq org-directory (concat working-directory "org"))
+(setq org-directory (concat home-directory "/Dropbox/org"))
 
 (global-set-key (kbd "C-c a") 'org-agenda)
 
@@ -164,7 +167,7 @@
 (setq org-publish-project-alist
       '(
 	("orgsite-html"
-	 :base-directory (concat working-directory "org/")
+	 :base-directory (org-directory)
 	 :base-extension "org"
 	 ;;	 :publishing-directory "~/Documents/orgsite/"
 	 :publishing-directory "/run/user/1000/gvfs/smb-share:server=warehouse14.local,share=e_drive/_Working Cole/org/"
@@ -188,7 +191,7 @@
 (require 'org-journal)
 (global-set-key (kbd "C-c j") 'org-journal-new-entry)
 (global-set-key (kbd "C-c J") (lambda () "" (interactive) (org-journal-new-entry t) (read-only-mode)))
-(setq org-journal-dir (concat working-directory "journal")) ;; needed in customize
+(setq org-journal-dir (concat home-directory "/Dropbox/journal")) ;; needed in customize
 (setq org-journal-file-format "%Y%m%d.org")
 
 (require 'org-protocol)

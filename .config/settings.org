@@ -284,7 +284,7 @@ Save a link to the current place in an org file so that it can be used later wit
 *** capture
 #+BEGIN_SRC emacs-lisp
 (global-set-key (kbd "C-c c") 'org-capture)
-(setq org-directory (concat working-directory "org"))
+(setq org-directory (concat home-directory "/Dropbox/org"))
 #+END_SRC
 *** agenda
 #+BEGIN_SRC emacs-lisp
@@ -313,7 +313,7 @@ Save a link to the current place in an org file so that it can be used later wit
 (setq org-publish-project-alist
       '(
 	("orgsite-html"
-	 :base-directory (concat working-directory "org/")
+	 :base-directory (org-directory)
 	 :base-extension "org"
 	 ;;	 :publishing-directory "~/Documents/orgsite/"
 	 :publishing-directory "/run/user/1000/gvfs/smb-share:server=warehouse14.local,share=e_drive/_Working Cole/org/"
@@ -346,7 +346,7 @@ https://github.com/bastibe/org-journal/releases
 (require 'org-journal)
 (global-set-key (kbd "C-c j") 'org-journal-new-entry)
 (global-set-key (kbd "C-c J") (lambda () "" (interactive) (org-journal-new-entry t) (read-only-mode)))
-(setq org-journal-dir (concat working-directory "journal")) ;; needed in customize
+(setq org-journal-dir (concat home-directory "/Dropbox/journal")) ;; needed in customize
 (setq org-journal-file-format "%Y%m%d.org")
 #+END_SRC
 

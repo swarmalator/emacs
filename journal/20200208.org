@@ -3,4 +3,5 @@
 ** 03:00
 Just set up the emacs thing and I am going from windows to linux and it is working I think. Going to push and then go to windows now. should work. boom.  
 
-
+** 03:04
+Boom it worked and I  switched over to windows. Dunno how cumbersome it is going to be to have the journals in the git. Maybe I can just keep the journals and the org folder on the dropbox so I can sync with Isaac and stuff. 

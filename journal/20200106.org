@@ -1,9 +1,0 @@
-* Monday, 01/06/2020
-** 15:55
-Imre asked me to fix the frequent DHCP auto-renew for four of his devices and a raspberry pi. I made some reservations for the following MAC addresses:
-- 8009020A5477 (Power Supply)
-- 8009020A5419 (Power Supply)
-- 80090201E088 (Digit Multimeter)
-- 00306431C665 (NVNA)
-
-Raspberry Pi (XMWcontroller) IP: 10.105.20.154

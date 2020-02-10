@@ -1,8 +1,0 @@
-* Tuesday, 11/05/2019
-** 10:32
-things to remove from the help page. 
-
-get_state
-attr_info
-** 17:53
-Fix incomplete file generation error

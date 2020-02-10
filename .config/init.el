@@ -108,8 +108,6 @@
  '(org-journal-file-format "%Y%m%d.org")
  '(org-journal-find-file (quote find-file))
  '(org-journal-hide-entries-p t)
- '(org-journal-time-format "%R
-")
  '(org-latex-compiler "lualatex")
  '(org-latex-pdf-process
    (quote

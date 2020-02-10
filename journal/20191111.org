@@ -1,5 +1,0 @@
-* Monday, 11/11/2019
-** 14:06
-Knowing the origin story is good. But when the code isn't documented and the origin story lives only in the original developers head, it's really freaking tedious too. 
-** 14:07
-Part of me wants to annoy Isaac with questions and say "this is what you get for not documenting your code."

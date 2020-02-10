@@ -1,9 +1,0 @@
-* Monday, 12/30/2019
-** IT [0/8]
-** Cascade [3/10]
-** FileMaker [0/5]
-** Controller [1/10]
-*** DONE [#A] B1R8 (MA4AGSW2)
-** Emacs/Misc [2/3]
-** 08:12
-It is Monday morning and I am going to do stuff.   

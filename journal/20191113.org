@@ -1,7 +1,0 @@
-* Wednesday, 11/13/2019
-** 09:19
-Ok about making an org-mode wiki. What will it be a wiki about? The IT stuff? It could be like what Carson was trying to make but instead of hosting it on one of the servers I can just put up a static website. What about though
-
-** 09:21
-Documenting everything I am learning. Preferably as I go I do that, but I have already been here for two weeks. 
-

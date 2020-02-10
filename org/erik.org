@@ -1,5 +1,0 @@
-#+setupfile: setupfile
-----------------------
-* [#C] Additional category for dividers
-* [#C] Store T-Lines as single Category
-Cascade uses the Part database categories as the names that are put on the website. Currently all transmission lines are labeled as "T-Line_90deg" because the cascade db treats them as the same type and grabs the first association in the lookup table. Right now we are hard-coding the name "T-Line" to apply to all of the categories in cascade. 

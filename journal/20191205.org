@@ -1,5 +1,0 @@
-* Thursday, 12/05/2019
-** Cascade
-** Controller
-** IT
-** Emacs/Misc

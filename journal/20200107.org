@@ -1,5 +1,0 @@
-* Tuesday, 01/07/2020
-** 08:35
-  
-** 09:16
-Going through the code for cascade with Isaac right now. Looking at _DataTransformations.js and Constants.js to try and finish lining up the new slugs with the cascading functionality.     

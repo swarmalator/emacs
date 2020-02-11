@@ -66,7 +66,7 @@
       (file)))))
  '(openwith-mode nil)
  '(org-adapt-indentation nil)
- `(org-agenda-files ,(concat os-directory ".agenda_files"))
+ '(org-agenda-files "~/Documents/Emacs/.emacs.d/.gnu-linux/.agenda_files")
  '(org-babel-tangle-lang-exts
    (quote
     (("emacs-lisp" . "el")
@@ -117,8 +117,8 @@
  '(org-todo-keyword-faces
    (quote
     (("WIP" . font-lock-negation-char-face)
-     ("WAIT" . font-lock-keyword-face))))
- '(org-todo-keywords (quote ((sequence "WAIT" "TODO" "WIP" "DONE"))))
+     ("PLAN" . font-lock-keyword-face))))
+ '(org-todo-keywords (quote ((sequence "PLAN" "TODO" "WIP" "DONE"))))
  '(package-selected-packages
    (quote
     (org-ehtml web-server org-noter hacker-typer company-tern tern tide js-react-redux-yasnippets typescript-mode magit py-autopep8 flycheck elpy org-brain twittering-mode heroku-theme northcode-theme haskell-mode visual-fill-column soothe-theme smartparens org-mind-map org-journal org-bullets helm company)))

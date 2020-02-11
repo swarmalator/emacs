@@ -51,13 +51,18 @@ The following additional packages are required and can be downloaded using "M-x 
 
 Set the soothe-theme as my theme. Also tweak the org-hide face because I don't like how it is visible by default. 
 #+BEGIN_SRC emacs-lisp
+;;(setq custom-safe-themes
+  ;;    (quote       ("a77ced882e25028e994d168a612c763a4feb8c4ab67c5ff48688654d0264370c" default)))
+(setq custom-theme-directory user-emacs-directory)
 (setq custom-safe-themes
-   (quote       ("a77ced882e25028e994d168a612c763a4feb8c4ab67c5ff48688654d0264370c" default)))
+   (quote
+    ("06589250ab29513fe389b36799d709686ace3598ff24987e8ecc89e529470fa5" "2f4f50d98073c01038b518066840638455657dc91dd1a225286d573926f36914" "10a31b6c251640d04b2fa74bd2c05aaaee915cbca6501bcc82820cdc177f5a93" "a77ced882e25028e994d168a612c763a4feb8c4ab67c5ff48688654d0264370c" default)))
 (load-theme 'soothe)
 (custom-set-faces
  '(org-hide ((t (:background "#110F13" :foreground "#110F13"))))
- ;'(font-lock-comment-face ((t (:background "#110F13" :foreground "#7868B5" :slant italic))))
-)
+					;'(font-lock-comment-face ((t (:background "#110F13" :foreground "#7868B5" :slant italic))))
+ )
+
 #+END_SRC
 
 Add the time and date to the mode line at the bottom. 
@@ -69,6 +74,7 @@ Add the time and date to the mode line at the bottom.
 Show the column number in addition to the line number in the mode line at the bottom.    
 #+BEGIN_SRC emacs-lisp
 (column-number-mode t)
+
 #+END_SRC
 * autocomplete
 Autocomplete stuff. I think ido is only for C-x b. Company is in-buffer autocomplete  

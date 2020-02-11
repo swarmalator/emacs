@@ -11,13 +11,17 @@
 (delete-frame)
 ))
 
+;;(setq custom-safe-themes
+  ;;    (quote       ("a77ced882e25028e994d168a612c763a4feb8c4ab67c5ff48688654d0264370c" default)))
+(setq custom-theme-directory user-emacs-directory)
 (setq custom-safe-themes
-   (quote       ("a77ced882e25028e994d168a612c763a4feb8c4ab67c5ff48688654d0264370c" default)))
+   (quote
+    ("06589250ab29513fe389b36799d709686ace3598ff24987e8ecc89e529470fa5" "2f4f50d98073c01038b518066840638455657dc91dd1a225286d573926f36914" "10a31b6c251640d04b2fa74bd2c05aaaee915cbca6501bcc82820cdc177f5a93" "a77ced882e25028e994d168a612c763a4feb8c4ab67c5ff48688654d0264370c" default)))
 (load-theme 'soothe)
 (custom-set-faces
  '(org-hide ((t (:background "#110F13" :foreground "#110F13"))))
- ;'(font-lock-comment-face ((t (:background "#110F13" :foreground "#7868B5" :slant italic))))
-)
+					;'(font-lock-comment-face ((t (:background "#110F13" :foreground "#7868B5" :slant italic))))
+ )
 
 (setq display-time-day-and-date t)
 (display-time-mode t)
@@ -179,6 +183,7 @@
 	 "* TODO %?"))))
 
 (global-set-key (kbd "C-c a") 'org-agenda)
+(setq org-agenda-files (concat os-directory ".agenda_files"))
 
 (setq org-hide-emphasis-markers t)
 

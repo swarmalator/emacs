@@ -66,7 +66,7 @@
       (file)))))
  '(openwith-mode nil)
  '(org-adapt-indentation nil)
- '(org-agenda-files (concat os-directory ".agenda_files"))
+ `(org-agenda-files ,(concat os-directory ".agenda_files"))
  '(org-babel-tangle-lang-exts
    (quote
     (("emacs-lisp" . "el")

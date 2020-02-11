@@ -325,6 +325,7 @@ I LEARNED WHAT `BACKQUOTE IS.
 *** agenda
 #+BEGIN_SRC emacs-lisp
 (global-set-key (kbd "C-c a") 'org-agenda)
+(setq org-agenda-files (concat os-directory ".agenda_files"))
 #+END_SRC
 
 *** emphasized text

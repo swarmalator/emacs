@@ -73,7 +73,7 @@
  (rear-context-string)
  (position . 1))
 ("settings.org"
- (filename . "~/Dropbox/.emacs_config/settings.org")
+ (filename . "c:/Users/coleh/Documents/Emacs/.config/settings.org")
  (front-context-string . "#+TITLE: Emacs S")
  (rear-context-string)
  (position . 1))

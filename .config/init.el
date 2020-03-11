@@ -28,7 +28,7 @@
  '(custom-enabled-themes (quote (soothe)))
  '(custom-safe-themes
    (quote
-    ("06589250ab29513fe389b36799d709686ace3598ff24987e8ecc89e529470fa5" default)))
+    ("a77ced882e25028e994d168a612c763a4feb8c4ab67c5ff48688654d0264370c" "5ac259a7a0a0d2b541199480c58510b4f9f244e810da999d3f22d5e3bb0ad208" "fd3b1531faea72f67620800a332e790f9f67b04412ef335c396971fc73bee24b" "06589250ab29513fe389b36799d709686ace3598ff24987e8ecc89e529470fa5" default)))
  '(elpy-get-info-from-shell-timeout 2)
  '(elpy-rpc-python-command "python3")
  '(fci-rule-character-color "#202020")
@@ -41,6 +41,7 @@
  '(global-linum-mode nil)
  '(hacker-typer-show-hackerman t)
  '(hacker-typer-type-rate 20)
+ '(helm-completion-style (quote emacs))
  '(js-indent-level 2)
  '(kmacro-call-repeat-key 101)
  '(main-line-color1 "#1E1E1E")
@@ -48,7 +49,7 @@
  '(main-line-separator-style (quote chamfer))
  '(minimap-automatically-delete-window nil)
  '(minimap-major-modes (quote (prog-mode artist-mode)))
- '(minimap-mode t)
+ '(minimap-mode nil)
  '(minimap-window-location (quote right))
  '(openwith-associations
    (quote
@@ -73,8 +74,32 @@
      ("elisp" . "el")
      ("python" . "py"))))
  '(org-capture-bookmark nil)
+ '(org-capture-templates
+   (quote
+    (("s" "SITE" entry
+      (file "~/Dropbox/org/site.org")
+      "* TODO %?")
+     ("e" "ERIK" entry
+      (file "~/Dropbox/org/erik.org")
+      "* TODO %?")
+     ("m" "MISC" entry
+      (file "~/Dropbox/org/misc.org")
+      "* TODO %?")
+     ("f" "FILEMAKER" entry
+      (file "~/Dropbox/org/filemaker.org")
+      "* TODO %?")
+     ("p" "CONTROLLER" entry
+      (file "~/Dropbox/org/controller.org")
+      "* TODO %?")
+     ("c" "CASCADE" entry
+      (file "~/Dropbox/org/cascade.org")
+      "* TODO %?")
+     ("i" "IT" entry
+      (file "~/Dropbox/org/it.org")
+      "* TODO %?"))))
  '(org-default-priority 70)
  '(org-export-with-priority t)
+ '(org-fontify-emphasized-text t)
  '(org-highest-priority 65)
  '(org-journal-dir (concat home-directory "/Dropbox/journal/"))
  '(org-journal-enable-agenda-integration t)
@@ -121,16 +146,37 @@
  '(org-todo-keywords (quote ((sequence "PLAN" "TODO" "WIP" "DONE"))))
  '(package-selected-packages
    (quote
-    (org-ehtml web-server org-noter hacker-typer company-tern tern tide js-react-redux-yasnippets typescript-mode magit py-autopep8 flycheck elpy org-brain twittering-mode heroku-theme northcode-theme haskell-mode visual-fill-column soothe-theme smartparens org-mind-map org-journal org-bullets helm company)))
+    (overcast-theme mandm-theme org-ehtml web-server org-noter hacker-typer company-tern tern tide js-react-redux-yasnippets typescript-mode magit py-autopep8 flycheck elpy org-brain twittering-mode heroku-theme northcode-theme haskell-mode visual-fill-column soothe-theme smartparens org-mind-map org-journal org-bullets helm company)))
  '(powerline-color1 "#1E1E1E")
  '(powerline-color2 "#111111")
  '(python-shell-interpreter "python3")
- '(ring-bell-function (quote ignore)))
+ '(ring-bell-function (quote ignore))
+ '(vc-annotate-background "#000000000000")
+ '(vc-annotate-color-map
+   (quote
+    ((20 . "#ebf122411a75")
+     (40 . "#EE3932")
+     (60 . "#FF7509")
+     (80 . "#e047d4d80000")
+     (100 . "#efa3e36c0000")
+     (120 . "#FFF200")
+     (140 . "#4355c7106ffd")
+     (160 . "#57CD7F")
+     (180 . "#62ccd08f8801")
+     (200 . "#6e99d41e9103")
+     (220 . "#7676d67e9704")
+     (240 . "#8632db3da306")
+     (260 . "#93E0E3")
+     (280 . "#00d857c4898e")
+     (300 . "#00f864c09de9")
+     (320 . "#014f8877d5e3")
+     (340 . "#0be6a625fe7f")
+     (360 . "#DDA0DD"))))
+ '(vc-annotate-very-old-color "#DDA0DD"))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(minimap-active-region-background ((t (:background "black"))))
- '(org-hide ((t (:background "#110F13" :foreground "#110F13")))))
+ '(minimap-active-region-background ((t (:background "black")))))
 (put 'scroll-left 'disabled nil)

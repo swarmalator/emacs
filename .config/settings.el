@@ -3,6 +3,7 @@
 (scroll-bar-mode -1)
 (set-face-attribute 'default nil :height 150) ;; 130 = 13pt font
 (add-hook 'dired-mode-hook 'dired-hide-details-mode)
+(toggle-frame-fullscreen)
 
 (if (string-equal system-type "windows-nt")
 (progn (make-frame '((undecorated . t)))
@@ -16,12 +17,14 @@
 (setq custom-theme-directory user-emacs-directory)
 (setq custom-safe-themes
    (quote
-    ("06589250ab29513fe389b36799d709686ace3598ff24987e8ecc89e529470fa5" "2f4f50d98073c01038b518066840638455657dc91dd1a225286d573926f36914" "10a31b6c251640d04b2fa74bd2c05aaaee915cbca6501bcc82820cdc177f5a93" "a77ced882e25028e994d168a612c763a4feb8c4ab67c5ff48688654d0264370c" default)))
+    ("a77ced882e25028e994d168a612c763a4feb8c4ab67c5ff48688654d0264370c" "5ac259a7a0a0d2b541199480c58510b4f9f244e810da999d3f22d5e3bb0ad208" "fd3b1531faea72f67620800a332e790f9f67b04412ef335c396971fc73bee24b" "06589250ab29513fe389b36799d709686ace3598ff24987e8ecc89e529470fa5" default)))
+;;   (quote
+;;    ("06589250ab29513fe389b36799d709686ace3598ff24987e8ecc89e529470fa5" "2f4f50d98073c01038b518066840638455657dc91dd1a225286d573926f36914" "10a31b6c251640d04b2fa74bd2c05aaaee915cbca6501bcc82820cdc177f5a93" "a77ced882e25028e994d168a612c763a4feb8c4ab67c5ff48688654d0264370c" default)))
 (load-theme 'soothe)
-(custom-set-faces
- '(org-hide ((t (:background "#110F13" :foreground "#110F13"))))
+;(custom-set-faces
+; '(org-hide ((t (:background "#110F13" :foreground "#110F13"))))
 					;'(font-lock-comment-face ((t (:background "#110F13" :foreground "#7868B5" :slant italic))))
- )
+; )
 
 (setq display-time-day-and-date t)
 (display-time-mode t)

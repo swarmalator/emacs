@@ -7,3 +7,4 @@
 /.emacs.d/server/**
 *.cache
 /.emacs.d/elpa/archives/*
+*cache*

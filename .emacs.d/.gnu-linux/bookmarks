@@ -58,7 +58,7 @@
  (rear-context-string . "96 Nov 11 16:35 ")
  (position . 218))
 ("programit"
- (filename . "~/Documents/programit/")
+ (filename . "~/programit/")
  (front-context-string . "bit_helpers.py\n ")
  (rear-context-string . "90 Oct 24 09:38 ")
  (position . 222))

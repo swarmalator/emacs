@@ -172,7 +172,7 @@ shortcut to my commands that have the "my-" prefix. I don't really use this nami
 (global-set-key (kbd "M-X") 'my-commands)
 #+END_SRC
 
-** transparency
+** COMMENT transparency
 Set the transparency from 0-9 with C-c t
 #+BEGIN_SRC emacs-lisp
 (defun my-transparency () (interactive)
@@ -221,7 +221,7 @@ Change the functionality of C-c ; to work on regions also.
 (require 'org-journal)
 (defun insert-time () "Insert the current 24h time in HH:MM format" (interactive)
       (let ((arr (split-string (current-time-string) ":")))
-	 (insert (concat (substring (first arr) -2) ":" (nth 1 arr)))))
+	 (insert (concat (substring (first arr) -2) ":" (nth 1 arr) " "))))
 (defun insert-time-heading () "Insert time as new org heading" (interactive)
        (org-insert-heading-respect-content)
        (insert-time)
@@ -267,6 +267,7 @@ This is a wrapper function to use with the org-capture template so I can capture
 (global-set-key (kbd "C-c m") 'minimap-mode)
 (setq unread-command-events (listify-key-sequence "\C-cm"))
 #+end_src
+
 
 * org
 Save a link to the current place in an org file so that it can be used later with C-c C-l
@@ -329,6 +330,9 @@ I LEARNED WHAT `BACKQUOTE IS.
 #+BEGIN_SRC emacs-lisp
 (global-set-key (kbd "C-c a") 'org-agenda)
 (setq org-agenda-files (concat os-directory ".agenda_files"))
+(fset 'my-agenda-view
+   [?\C-c ?a ?n ?\C-x ?0 ?\C-x ?3 ?\C-x ?o ?\C-x ?b return])
+(global-set-key (kbd "C-c A") 'my-agenda-view)
 #+END_SRC
 
 *** emphasized text

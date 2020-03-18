@@ -67,7 +67,12 @@
       (file)))))
  '(openwith-mode nil)
  '(org-adapt-indentation nil)
- '(org-agenda-files "~/Documents/Emacs/.emacs.d/.gnu-linux/.agenda_files")
+ '(org-agenda-files
+   (quote
+    ("/home/cole/Dropbox/org/capture.org" "/home/cole/Dropbox/org/cascade.org" "/home/cole/Dropbox/org/controller.org" "/home/cole/Dropbox/org/erik.org" "/home/cole/Dropbox/org/file.org" "/home/cole/Dropbox/org/filemaker.org" "/home/cole/Dropbox/org/admin.org" "/home/cole/Dropbox/org/isaac.org" "/home/cole/Dropbox/org/john.org" "/home/cole/Dropbox/org/misc.org" "/home/cole/Dropbox/org/newuser.org" "/home/cole/Dropbox/org/newuser_old.org" "/home/cole/Dropbox/org/questions.org" "/home/cole/Dropbox/org/sigma.org" "/home/cole/Dropbox/org/site.org" "/home/cole/Dropbox/org/sitemap.org")))
+ '(org-agenda-show-future-repeats nil)
+ '(org-agenda-todo-ignore-scheduled (quote future))
+ '(org-archive-mark-done nil)
  '(org-babel-tangle-lang-exts
    (quote
     (("emacs-lisp" . "el")
@@ -94,8 +99,11 @@
      ("c" "CASCADE" entry
       (file "~/Dropbox/org/cascade.org")
       "* TODO %?")
-     ("i" "IT" entry
-      (file "~/Dropbox/org/it.org")
+     ("i" "ISAAC" entry
+      (file "~/Dropbox/org/isaac.org")
+      "* TODO %?")
+     ("a" "ADMIN" entry
+      (file "~/Dropbox/org/admin.org")
       "* TODO %?"))))
  '(org-default-priority 70)
  '(org-export-with-priority t)
@@ -110,6 +118,7 @@
  '(org-latex-pdf-process
    (quote
     ("%latex -interaction nonstopmode -output-directory %o %f" "%latex -interaction nonstopmode -output-directory %o %f" "%latex -interaction nonstopmode -output-directory %o %f")))
+ '(org-log-done nil)
  '(org-lowest-priority 70)
  '(org-mind-map-default-edge-attribs (quote (("dir" . "none"))))
  '(org-mind-map-default-graph-attribs
@@ -143,7 +152,10 @@
    (quote
     (("WIP" . font-lock-negation-char-face)
      ("PLAN" . font-lock-keyword-face))))
- '(org-todo-keywords (quote ((sequence "PLAN" "TODO" "WIP" "DONE"))))
+ '(org-todo-keywords
+   (quote
+    ((sequence "TODO(t)" "WIP(w)" "DONE(d@)")
+     (sequence "PLAN(p)" "|"))))
  '(package-selected-packages
    (quote
     (overcast-theme mandm-theme org-ehtml web-server org-noter hacker-typer company-tern tern tide js-react-redux-yasnippets typescript-mode magit py-autopep8 flycheck elpy org-brain twittering-mode heroku-theme northcode-theme haskell-mode visual-fill-column soothe-theme smartparens org-mind-map org-journal org-bullets helm company)))

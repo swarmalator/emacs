@@ -90,12 +90,6 @@
        (call-interactively 'helm-M-x))
 (global-set-key (kbd "M-X") 'my-commands)
 
-(defun my-transparency () (interactive)
-       (let ((b (- (read-key "Set transparency value [0-9]") 48)))
-	 (if (< b 10) (set-frame-parameter (selected-frame) 'alpha (- 100 (* b 4))))))
-(set-frame-parameter (selected-frame) 'alpha 100)
-(global-set-key (kbd "C-c t") 'my-transparency)
-
 (defun my-comment-or-uncomment () (interactive)
        (if (region-active-p)
 	   (call-interactively 'comment-or-uncomment-region)

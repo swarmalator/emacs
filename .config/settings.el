@@ -1,26 +1,20 @@
 (tool-bar-mode -1)
 (menu-bar-mode -1)
 (scroll-bar-mode -1)
-(set-face-attribute 'default nil :height 150) ;; 130 = 13pt font
+;(set-face-attribute 'default nil :height 150) ;; 130 = 13pt font
 (add-hook 'dired-mode-hook 'dired-hide-details-mode)
 (toggle-frame-fullscreen)
-
-(if (string-equal system-type "windows-nt")
-(progn (make-frame '((undecorated . t)))
-(add-to-list 'default-frame-alist '(drag-internal-border . 1))
-(add-to-list 'default-frame-alist '(internal-border-width . 5))
-(delete-frame)
-))
 
 ;;(setq custom-safe-themes
   ;;    (quote       ("a77ced882e25028e994d168a612c763a4feb8c4ab67c5ff48688654d0264370c" default)))
 (setq custom-theme-directory user-emacs-directory)
 (setq custom-safe-themes
    (quote
-    ("a77ced882e25028e994d168a612c763a4feb8c4ab67c5ff48688654d0264370c" "5ac259a7a0a0d2b541199480c58510b4f9f244e810da999d3f22d5e3bb0ad208" "fd3b1531faea72f67620800a332e790f9f67b04412ef335c396971fc73bee24b" "06589250ab29513fe389b36799d709686ace3598ff24987e8ecc89e529470fa5" default)))
+    ("10a31b6c251640d04b2fa74bd2c05aaaee915cbca6501bcc82820cdc177f5a93" "2f4f50d98073c01038b518066840638455657dc91dd1a225286d573926f36914" "a77ced882e25028e994d168a612c763a4feb8c4ab67c5ff48688654d0264370c" "5ac259a7a0a0d2b541199480c58510b4f9f244e810da999d3f22d5e3bb0ad208" "fd3b1531faea72f67620800a332e790f9f67b04412ef335c396971fc73bee24b" "06589250ab29513fe389b36799d709686ace3598ff24987e8ecc89e529470fa5" default)))
 ;;   (quote
 ;;    ("06589250ab29513fe389b36799d709686ace3598ff24987e8ecc89e529470fa5" "2f4f50d98073c01038b518066840638455657dc91dd1a225286d573926f36914" "10a31b6c251640d04b2fa74bd2c05aaaee915cbca6501bcc82820cdc177f5a93" "a77ced882e25028e994d168a612c763a4feb8c4ab67c5ff48688654d0264370c" default)))
-(load-theme 'soothe)
+;(load-theme 'soothe)
+(load-theme 'northcode)
 ;(custom-set-faces
 ; '(org-hide ((t (:background "#110F13" :foreground "#110F13"))))
 					;'(font-lock-comment-face ((t (:background "#110F13" :foreground "#7868B5" :slant italic))))
@@ -128,7 +122,7 @@
 	 (setq unread-command-events (listify-key-sequence "iy"))
 	 (if (not (flyspell-check-previous-highlighted-word))
 	     (setq unread-command-events (listify-key-sequence ""))))
-(define-key org-mode-map (kbd "C-c d") 'pdict-add)
+;(define-key org-mode-map (kbd "C-c d") 'pdict-add)
 
 (global-set-key (kbd "C-c m") 'minimap-mode)
 (setq unread-command-events (listify-key-sequence "\C-cm"))
@@ -181,6 +175,12 @@
 
 (global-set-key (kbd "C-c a") 'org-agenda)
 (setq org-agenda-files (concat os-directory ".agenda_files"))
+(fset 'my-agenda-view
+   [?\C-c ?a ?n ?\C-x ?0 ?\C-x ?3 ?\C-x ?o ?\C-x ?b return])
+(global-set-key (kbd "C-c A") 'my-agenda-view)
+(fset 'my-todo-view
+   [?\C-c ?a ?T return])
+(global-set-key (kbd "C-c T") 'my-todo-view)
 
 (setq org-hide-emphasis-markers t)
 
@@ -219,7 +219,7 @@
 
 (require 'org-journal)
 (global-set-key (kbd "C-c j") 'org-journal-new-entry)
-(global-set-key (kbd "C-c J") (lambda () "" (interactive) (org-journal-new-entry t) (read-only-mode)))
+(global-set-key (kbd "C-c J") (lambda () "" (interactive) (org-journal-new-entry " ") (beginning-of-buffer) (message "Displaying journal...")))
 (setq org-journal-dir (concat home-directory "/Dropbox/journal")) ;; needed in customize
 (setq org-journal-file-format "%Y%m%d.org")
 
@@ -272,3 +272,20 @@
 
 (global-set-key (kbd "C-x g") 'magit-status)
 (global-set-key (kbd "C-x M-g") 'magit-dispatch)
+
+(require 'epa-file)
+(epa-file-enable)
+(setq org-tag-alist '(("crypt" . ?C)))
+(fset 'my-org-crypt-tag
+   [?\C-c ?\C-q ?C return])
+
+(use-package org
+    :bind ("C-c d" . org-decrypt-entry)
+    :bind ("C-c e" . my-org-crypt-tag)
+    :init (org-crypt-use-before-save-magic)
+    :custom
+    (org-tags-exclude-from-inheritance (quote ("crypt")))
+    (org-crypt-key "F686C2025524DD00E3A074D53DADAAB8E7794AA7")
+    (auto-save-default nil))
+
+(global-set-key (kbd "C-c w") 'whitespace-cleanup)

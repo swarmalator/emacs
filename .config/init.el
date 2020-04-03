@@ -11,6 +11,8 @@
 
 (require 'package)
 (package-initialize)
+(require 'use-package)
+(require 'org-crypt)
 (require 'org)
 (require 'htmlize)
 (org-babel-load-file
@@ -24,11 +26,12 @@
  '(Linum-format "%7i ")
  '(ansi-color-names-vector
    ["#110F13" "#B13120" "#719F34" "#CEAE3E" "#7C9FC9" "#7868B5" "#009090" "#F4EAD5"])
+ '(auto-save-default nil)
  '(bookmark-default-file (concat os-directory "bookmarks"))
- '(custom-enabled-themes (quote (soothe)))
+ '(custom-enabled-themes (quote (northcode)))
  '(custom-safe-themes
    (quote
-    ("a77ced882e25028e994d168a612c763a4feb8c4ab67c5ff48688654d0264370c" "5ac259a7a0a0d2b541199480c58510b4f9f244e810da999d3f22d5e3bb0ad208" "fd3b1531faea72f67620800a332e790f9f67b04412ef335c396971fc73bee24b" "06589250ab29513fe389b36799d709686ace3598ff24987e8ecc89e529470fa5" default)))
+    ("10a31b6c251640d04b2fa74bd2c05aaaee915cbca6501bcc82820cdc177f5a93" "2f4f50d98073c01038b518066840638455657dc91dd1a225286d573926f36914" "a77ced882e25028e994d168a612c763a4feb8c4ab67c5ff48688654d0264370c" "5ac259a7a0a0d2b541199480c58510b4f9f244e810da999d3f22d5e3bb0ad208" "fd3b1531faea72f67620800a332e790f9f67b04412ef335c396971fc73bee24b" "06589250ab29513fe389b36799d709686ace3598ff24987e8ecc89e529470fa5" default)))
  '(elpy-get-info-from-shell-timeout 2)
  '(elpy-rpc-python-command "python3")
  '(fci-rule-character-color "#202020")
@@ -49,7 +52,7 @@
  '(main-line-separator-style (quote chamfer))
  '(minimap-automatically-delete-window nil)
  '(minimap-major-modes (quote (prog-mode artist-mode)))
- '(minimap-mode nil)
+ '(minimap-mode t)
  '(minimap-window-location (quote right))
  '(openwith-associations
    (quote
@@ -105,6 +108,7 @@
      ("a" "ADMIN" entry
       (file "~/Dropbox/org/admin.org")
       "* TODO %?"))))
+ '(org-crypt-key "E9AADC49E94A672D1A07D49B208FCDBB98190562")
  '(org-default-priority 70)
  '(org-export-with-priority t)
  '(org-fontify-emphasized-text t)
@@ -114,10 +118,12 @@
  '(org-journal-file-format "%Y%m%d.org")
  '(org-journal-find-file (quote find-file))
  '(org-journal-hide-entries-p t)
+ '(org-journal-time-format "%R")
  '(org-latex-compiler "lualatex")
  '(org-latex-pdf-process
    (quote
     ("%latex -interaction nonstopmode -output-directory %o %f" "%latex -interaction nonstopmode -output-directory %o %f" "%latex -interaction nonstopmode -output-directory %o %f")))
+ '(org-load-modules-maybe t)
  '(org-log-done nil)
  '(org-lowest-priority 70)
  '(org-mind-map-default-edge-attribs (quote (("dir" . "none"))))
@@ -147,7 +153,8 @@
  '(org-src-preserve-indentation t)
  '(org-src-tab-acts-natively t)
  '(org-startup-indented t)
- '(org-tags-column -70)
+ '(org-tags-column 0)
+ '(org-tags-exclude-from-inheritance (quote ("crypt")))
  '(org-todo-keyword-faces
    (quote
     (("WIP" . font-lock-negation-char-face)
@@ -158,7 +165,7 @@
      (sequence "PLAN(p)" "|"))))
  '(package-selected-packages
    (quote
-    (overcast-theme mandm-theme org-ehtml web-server org-noter hacker-typer company-tern tern tide js-react-redux-yasnippets typescript-mode magit py-autopep8 flycheck elpy org-brain twittering-mode heroku-theme northcode-theme haskell-mode visual-fill-column soothe-theme smartparens org-mind-map org-journal org-bullets helm company)))
+    (use-package overcast-theme mandm-theme org-ehtml web-server org-noter hacker-typer company-tern tern tide js-react-redux-yasnippets typescript-mode magit py-autopep8 flycheck elpy org-brain twittering-mode heroku-theme northcode-theme haskell-mode visual-fill-column soothe-theme smartparens org-mind-map org-journal org-bullets helm company)))
  '(powerline-color1 "#1E1E1E")
  '(powerline-color2 "#111111")
  '(python-shell-interpreter "python3")

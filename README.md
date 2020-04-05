@@ -20,3 +20,6 @@ git clone git@github.com:swarmalator/emacs.git
 sudo add-apt-repository ppa:kelleyk/emacs
 sudo apt-get update
 sudo apt install emacs26
+
+7. Create Batch script
+echo export DISPLAY=:0 ^^^&^^^& export LIBGL_ALWAYS_INDIRECT=1 ^^^&^^^& setsid emacs -geometry 80x24 ^^^& | wsl && exit

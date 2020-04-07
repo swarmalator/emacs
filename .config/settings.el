@@ -288,4 +288,9 @@
 
 (global-set-key (kbd "C-c w") 'whitespace-cleanup)
 
-(global-set-key (kbd "C-c s") (lambda () (interactive) (message "Syncing...") (shell-command "rclone sync ~/Dropbox emacsdb:")))
+(defun my-rclone-sync () (interactive)
+       (message "Syncing...") (shell-command "rclone sync ~/Dropbox emacsdb:")
+       )
+(global-set-key (kbd "C-c s") 'my-rclone-sync)
+
+(global-set-key (kbd "C-x C-c") (lambda () (interactive) (my-rclone-sync) (save-buffers-kill-terminal)))

@@ -107,8 +107,6 @@
        (org-return))
 (define-key org-mode-map (kbd "C-c RET") 'insert-time-heading)
 
-(define-key org-mode-map (kbd "C-c s") (lambda () (interactive) (beginning-of-buffer) (setq unread-command-events (listify-key-sequence "p")) (org-sort) (org-shifttab)))
-
 (defun org-journal-new-entry-filename () (interactive)
        (call-interactively 'org-journal-new-entry)
        (previous-line)
@@ -285,7 +283,9 @@
     :init (org-crypt-use-before-save-magic)
     :custom
     (org-tags-exclude-from-inheritance (quote ("crypt")))
-    (org-crypt-key "F686C2025524DD00E3A074D53DADAAB8E7794AA7")
     (auto-save-default nil))
+(setq org-crypt-key "F686C2025524DD00E3A074D53DADAAB8E7794AA7")
 
 (global-set-key (kbd "C-c w") 'whitespace-cleanup)
+
+(global-set-key (kbd "C-c s") (lambda () (interactive) (message "Syncing...") (shell-command "rclone sync ~/Dropbox emacsdb:")))

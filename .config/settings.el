@@ -56,6 +56,7 @@
 ;;(setq backup-directory-alist '(("." . (concat user-emacs-directory "backup"))))
 
 (global-set-key (kbd "C-c b") 'bookmark-jump)
+(setq bookmark-default-file (concat os-directory "bookmarks"))
 
 (setq ispell-personal-dictionary (expand-file-name ".ispell_pdict" (file-name-directory user-init-file)))
 
@@ -276,15 +277,6 @@
 (setq org-tag-alist '(("crypt" . ?C)))
 (fset 'my-org-crypt-tag
    [?\C-c ?\C-q ?C return])
-
-(use-package org
-    :bind ("C-c d" . org-decrypt-entry)
-    :bind ("C-c e" . my-org-crypt-tag)
-    :init (org-crypt-use-before-save-magic)
-    :custom
-    (org-tags-exclude-from-inheritance (quote ("crypt")))
-    (auto-save-default nil))
-(setq org-crypt-key "F686C2025524DD00E3A074D53DADAAB8E7794AA7")
 
 (global-set-key (kbd "C-c w") 'whitespace-cleanup)
 

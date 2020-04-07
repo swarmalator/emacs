@@ -129,6 +129,7 @@ Backup files locally instead of creating those stupid backup files where each fi
 Add a shortcut for bookmarks. 
 #+BEGIN_SRC emacs-lisp
 (global-set-key (kbd "C-c b") 'bookmark-jump)
+(setq bookmark-default-file (concat os-directory "bookmarks"))
 #+END_SRC
 * personal dictionary
 Set the location of the dictionary to the same as the init file. 
@@ -485,8 +486,9 @@ https://github.com/bastibe/org-journal/releases
 (fset 'my-org-crypt-tag
    [?\C-c ?\C-q ?C return])
 #+end_src
-* use-package
+* COMMENT use-package
 #+begin_src emacs-lisp
+(require 'use-package)
 (use-package org
     :bind ("C-c d" . org-decrypt-entry)
     :bind ("C-c e" . my-org-crypt-tag)

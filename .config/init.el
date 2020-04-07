@@ -11,7 +11,7 @@
 
 (require 'package)
 (package-initialize)
-(require 'use-package)
+;(require 'use-package)
 (require 'org-crypt)
 (require 'org)
 (require 'htmlize)
@@ -165,7 +165,8 @@
      (sequence "PLAN(p)" "|"))))
  '(package-selected-packages
    (quote
-    (use-package overcast-theme mandm-theme org-ehtml web-server org-noter hacker-typer company-tern tern tide js-react-redux-yasnippets typescript-mode magit py-autopep8 flycheck elpy org-brain twittering-mode heroku-theme northcode-theme haskell-mode visual-fill-column soothe-theme smartparens org-mind-map org-journal org-bullets helm company)))
+    ;; removed use-package
+    (overcast-theme mandm-theme org-ehtml web-server org-noter hacker-typer company-tern tern tide js-react-redux-yasnippets typescript-mode magit py-autopep8 flycheck elpy org-brain twittering-mode heroku-theme northcode-theme haskell-mode visual-fill-column soothe-theme smartparens org-mind-map org-journal org-bullets helm company)))
  '(powerline-color1 "#1E1E1E")
  '(powerline-color2 "#111111")
  '(python-shell-interpreter "python3")

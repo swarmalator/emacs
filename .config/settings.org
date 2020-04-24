@@ -503,7 +503,7 @@ https://github.com/bastibe/org-journal/releases
 #+begin_src emacs-lisp
 (global-set-key (kbd "C-c w") 'whitespace-cleanup)
 #+end_src
-* rclone-sync
+* COMMENT rclone-sync
 #+begin_src emacs-lisp
 (defun my-rclone-sync () (interactive)
        (message "Syncing...") (shell-command "rclone sync ~/Dropbox emacsdb:")
@@ -511,7 +511,7 @@ https://github.com/bastibe/org-journal/releases
 (global-set-key (kbd "C-c s") 'my-rclone-sync)
 #+end_src
 
-* kill terminal
+* COMMENT kill terminal
 #+begin_src emacs-lisp
 (global-set-key (kbd "C-x C-c") (lambda () (interactive) (my-rclone-sync) (save-buffers-kill-terminal)))
 #+end_src

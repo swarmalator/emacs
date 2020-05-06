@@ -518,7 +518,8 @@ https://github.com/bastibe/org-journal/releases
 (defun my-alpha (b) (interactive "P")
        (set-frame-parameter (selected-frame) 'alpha (if b (+ (* b 5) 50) 100)))
 (defun my-clean-lines () (interactive)
-       (replace-string "" "" nil 0 (buffer-size) nil))
+       (replace-string "
+" "" nil 0 (buffer-size) nil))
 
 ;; (defun my-explorer () (interactive)
 ;;        (shell-command (concat "explorer " (replace-regexp-in-string "/" "\\" default-directory t t))))

@@ -1,23 +1,26 @@
-(setq user-init-file (or load-file-name (buffer-file-name)))
-(setq home-directory (if
-			 (string-equal system-type "windows-nt")
-			 (concat "C:/Users/" user-login-name)
-		       "~"))
-(setq user-emacs-directory (concat
-			    home-directory
-			    "/Documents/Emacs/.emacs.d/"))
-(setq os-directory (concat user-emacs-directory "." (replace-regexp-in-string "/" "-" (symbol-name system-type)) "/"))
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+(setq user-init-file (or load-file-name (buffer-file-name)))
+(setq user-emacs-directory (concat (file-name-directory user-init-file) ".emacs.d/"))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (require 'package)
 (package-initialize)
-;(require 'use-package)
-(require 'org-crypt)
+
 (require 'org)
 (require 'htmlize)
-(org-babel-load-file
- (expand-file-name "settings.org" (file-name-directory user-init-file)))
- 
+
+(org-babel-load-file (expand-file-name "emacs.org" (file-name-directory user-init-file)))
+(delete-file (expand-file-name "emacs.el" (file-name-directory user-init-file)))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -27,7 +30,6 @@
  '(ansi-color-names-vector
    ["#110F13" "#B13120" "#719F34" "#CEAE3E" "#7C9FC9" "#7868B5" "#009090" "#F4EAD5"])
  '(auto-save-default nil)
- '(bookmark-default-file (concat os-directory "bookmarks"))
  '(custom-enabled-themes (quote (northcode)))
  '(custom-safe-themes
    (quote
@@ -113,7 +115,6 @@
  '(org-export-with-priority t)
  '(org-fontify-emphasized-text t)
  '(org-highest-priority 65)
- '(org-journal-dir (concat home-directory "/Dropbox/journal/"))
  '(org-journal-enable-agenda-integration t)
  '(org-journal-file-format "%Y%m%d.org")
  '(org-journal-find-file (quote find-file))

@@ -72,9 +72,6 @@
       (file)))))
  '(openwith-mode nil)
  '(org-adapt-indentation nil)
- '(org-agenda-files
-   (quote
-    ("/home/cole/Dropbox/org/capture.org" "/home/cole/Dropbox/org/cascade.org" "/home/cole/Dropbox/org/controller.org" "/home/cole/Dropbox/org/erik.org" "/home/cole/Dropbox/org/file.org" "/home/cole/Dropbox/org/filemaker.org" "/home/cole/Dropbox/org/admin.org" "/home/cole/Dropbox/org/isaac.org" "/home/cole/Dropbox/org/john.org" "/home/cole/Dropbox/org/misc.org" "/home/cole/Dropbox/org/newuser.org" "/home/cole/Dropbox/org/newuser_old.org" "/home/cole/Dropbox/org/questions.org" "/home/cole/Dropbox/org/sigma.org" "/home/cole/Dropbox/org/site.org" "/home/cole/Dropbox/org/sitemap.org")))
  '(org-agenda-show-future-repeats nil)
  '(org-agenda-todo-ignore-scheduled (quote future))
  '(org-archive-mark-done nil)
@@ -84,32 +81,6 @@
      ("elisp" . "el")
      ("python" . "py"))))
  '(org-capture-bookmark nil)
- '(org-capture-templates
-   (quote
-    (("s" "SITE" entry
-      (file "~/Dropbox/org/site.org")
-      "* TODO %?")
-     ("e" "ERIK" entry
-      (file "~/Dropbox/org/erik.org")
-      "* TODO %?")
-     ("m" "MISC" entry
-      (file "~/Dropbox/org/misc.org")
-      "* TODO %?")
-     ("f" "FILEMAKER" entry
-      (file "~/Dropbox/org/filemaker.org")
-      "* TODO %?")
-     ("p" "CONTROLLER" entry
-      (file "~/Dropbox/org/controller.org")
-      "* TODO %?")
-     ("c" "CASCADE" entry
-      (file "~/Dropbox/org/cascade.org")
-      "* TODO %?")
-     ("i" "ISAAC" entry
-      (file "~/Dropbox/org/isaac.org")
-      "* TODO %?")
-     ("a" "ADMIN" entry
-      (file "~/Dropbox/org/admin.org")
-      "* TODO %?"))))
  '(org-crypt-key "E9AADC49E94A672D1A07D49B208FCDBB98190562")
  '(org-default-priority 70)
  '(org-export-with-priority t)

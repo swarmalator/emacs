@@ -108,7 +108,7 @@ Backup files locally instead of creating those stupid backup files where each fi
 Add a shortcut for bookmarks. 
 #+BEGIN_SRC emacs-lisp
 (global-set-key (kbd "C-c b") 'bookmark-jump)
-;(setq bookmark-default-file (concat os-directory "bookmarks"))
+(setq bookmark-default-file (concat org-directory ".bookmarks"))
 #+END_SRC
 * personal dictionary
 Set the location of the dictionary to the same as the init file. 
@@ -241,7 +241,7 @@ This is a wrapper function to use with the org-capture template so I can capture
 	 (setq unread-command-events (listify-key-sequence "iy"))
 	 (if (not (flyspell-check-previous-highlighted-word))
 	     (setq unread-command-events (listify-key-sequence ""))))
-;(define-key org-mode-map (kbd "C-c d") 'pdict-add)
+(define-key org-mode-map (kbd "C-c d") 'pdict-add)
 #+END_SRC
 
 ** minimap
@@ -301,16 +301,16 @@ I LEARNED WHAT `BACKQUOTE IS.
 	 (file
 	  ,(concat org-directory "cascade.org"))
 	 "* TODO %?")
-	("i" "IT" entry
+	("a" "ADMIN" entry
 	 (file
-	  ,(concat org-directory "it.org"))
+	  ,(concat org-directory "admin.org"))
 	 "* TODO %?"))))
 #+end_src
 
 *** agenda
 #+BEGIN_SRC emacs-lisp
 (global-set-key (kbd "C-c a") 'org-agenda)
-;(setq org-agenda-files (concat os-directory ".agenda_files"))
+(setq org-agenda-files (concat org-directory ".agenda_files"))
 (fset 'my-agenda-view
    [?\C-c ?a ?n ?\C-x ?0 ?\C-x ?3 ?\C-x ?o ?\C-x ?b return])
 (global-set-key (kbd "C-c A") 'my-agenda-view)
@@ -362,7 +362,7 @@ I LEARNED WHAT `BACKQUOTE IS.
         (message "Disabled org publish on save for current buffer..."))
     (add-hook 'after-save-hook 'org-publish-all nil t)
     (message "Enabled org publish on save for current buffer...")))
-(global-set-key (kbd "C-c p") 'toggle-org-publish-on-save)
+;(global-set-key (kbd "C-c p") 'toggle-org-publish-on-save)
 #+end_src
 ** org-journal
 
@@ -496,6 +496,39 @@ https://github.com/bastibe/org-journal/releases
 #+end_src
 
 * COMMENT OLD SETUP
+old agenda / capture from init.el
+#+begin_src 
+ '(org-agenda-files
+   (quote
+    ("/home/cole/Dropbox/org/capture.org" "/home/cole/Dropbox/org/cascade.org" "/home/cole/Dropbox/org/controller.org" "/home/cole/Dropbox/org/erik.org" "/home/cole/Dropbox/org/file.org" "/home/cole/Dropbox/org/filemaker.org" "/home/cole/Dropbox/org/admin.org" "/home/cole/Dropbox/org/isaac.org" "/home/cole/Dropbox/org/john.org" "/home/cole/Dropbox/org/misc.org" "/home/cole/Dropbox/org/newuser.org" "/home/cole/Dropbox/org/newuser_old.org" "/home/cole/Dropbox/org/questions.org" "/home/cole/Dropbox/org/sigma.org" "/home/cole/Dropbox/org/site.org" "/home/cole/Dropbox/org/sitemap.org")))
+ '(org-capture-templates
+   (quote
+    (("s" "SITE" entry
+      (file "~/Dropbox/org/site.org")
+      "* TODO %?")
+     ("e" "ERIK" entry
+      (file "~/Dropbox/org/erik.org")
+      "* TODO %?")
+     ("m" "MISC" entry
+      (file "~/Dropbox/org/misc.org")
+      "* TODO %?")
+     ("f" "FILEMAKER" entry
+      (file "~/Dropbox/org/filemaker.org")
+      "* TODO %?")
+     ("p" "CONTROLLER" entry
+      (file "~/Dropbox/org/controller.org")
+      "* TODO %?")
+     ("c" "CASCADE" entry
+      (file "~/Dropbox/org/cascade.org")
+      "* TODO %?")
+     ("i" "ISAAC" entry
+      (file "~/Dropbox/org/isaac.org")
+      "* TODO %?")
+     ("a" "ADMIN" entry
+      (file "~/Dropbox/org/admin.org")
+      "* TODO %?"))))
+#+end_src
+
 #+begin_src emacs-lisp
 ;;; begin setup file
 (require 'org)
@@ -673,4 +706,6 @@ https://github.com/bastibe/org-journal/releases
   (org-mind-map-write nil)
   (my-omm-view))
 #+end_src
+
+* 
 

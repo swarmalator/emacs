@@ -93,4 +93,4 @@ save-buffer
 
 C-x C-c
 
-save-buffer-kill-terminals`
+save-buffer-kill-terminals

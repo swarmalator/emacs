@@ -50,16 +50,6 @@ Show the column number in addition to the line number in the mode line at the bo
 (column-number-mode t)
 
 #+END_SRC
-** COMMENT windows appearance
-#+begin_src emacs-lisp
-(if (string-equal system-type "windows-nt")
-(progn (make-frame '((undecorated . t)))
-(add-to-list 'default-frame-alist '(drag-internal-border . 1))
-(add-to-list 'default-frame-alist '(internal-border-width . 5))
-(delete-frame)
-))
-#+end_src
-
 * autocomplete
 Autocomplete stuff. I think ido is only for C-x b. Company is in-buffer autocomplete  
 #+BEGIN_SRC emacs-lisp
@@ -154,16 +144,6 @@ shortcut to my commands that have the "my-" prefix. I don't really use this nami
 (global-set-key (kbd "M-X") 'my-commands)
 #+END_SRC
 
-** COMMENT transparency
-Set the transparency from 0-9 with C-c t
-#+BEGIN_SRC emacs-lisp
-(defun my-transparency () (interactive)
-       (let ((b (- (read-key "Set transparency value [0-9]") 48)))
-	 (if (< b 10) (set-frame-parameter (selected-frame) 'alpha (- 100 (* b 4))))))
-(set-frame-parameter (selected-frame) 'alpha 100)
-(global-set-key (kbd "C-c t") 'my-transparency)
-#+END_SRC
-
 ** comment/uncomment
 Change the functionality of C-c ; to work on regions also. 
 #+BEGIN_SRC emacs-lisp
@@ -218,11 +198,6 @@ Change the functionality of C-c ; to work on regions also.
 (define-key org-mode-map (kbd "C-c RET") 'insert-time-heading)
 #+END_SRC
 
-** COMMENT org sort priority
-Sort the org headings in the current file by priority. 
-#+begin_src emacs-lisp
-(define-key org-mode-map (kbd "C-c s") (lambda () (interactive) (beginning-of-buffer) (setq unread-command-events (listify-key-sequence "p")) (org-sort) (org-shifttab)))
-#+end_src
 ** org journal filename
 This is a wrapper function to use with the org-capture template so I can capture my TODO items in my latest journal. 
 #+begin_src emacs-lisp

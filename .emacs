@@ -47,6 +47,12 @@
  '(hacker-typer-show-hackerman t)
  '(hacker-typer-type-rate 20)
  '(helm-completion-style (quote emacs))
+ '(initial-major-mode (quote org-mode))
+ '(initial-scratch-message
+   "# This buffer is for text that is not saved
+# To create a file, visit it with \\[find-file] and enter text in its buffer.
+
+")
  '(js-indent-level 2)
  '(kmacro-call-repeat-key 101)
  '(main-line-color1 "#1E1E1E")
@@ -137,7 +143,6 @@
      (sequence "PLAN(p)" "|"))))
  '(package-selected-packages
    (quote
-    ;; removed use-package
     (overcast-theme mandm-theme org-ehtml web-server org-noter hacker-typer company-tern tern tide js-react-redux-yasnippets typescript-mode magit py-autopep8 flycheck elpy org-brain twittering-mode heroku-theme northcode-theme haskell-mode visual-fill-column soothe-theme smartparens org-mind-map org-journal org-bullets helm company)))
  '(powerline-color1 "#1E1E1E")
  '(powerline-color2 "#111111")

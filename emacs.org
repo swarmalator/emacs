@@ -136,22 +136,22 @@ This sets the first buffer as the scratch buffer
 #+END_SRC
 
 * my commands
-shortcut to my commands that have the "my-" prefix. I don't really use this naming anymore 
+shortcut to my commands that have the "swrm-" prefix. I don't really use this naming anymore 
 #+BEGIN_SRC emacs-lisp
-(defun my-commands () (interactive)
-       (setq unread-command-events (listify-key-sequence "my-"))
+(defun swrm-commands () (interactive)
+       (setq unread-command-events (listify-key-sequence "swrm-"))
        (call-interactively 'helm-M-x))
-(global-set-key (kbd "M-X") 'my-commands)
+(global-set-key (kbd "M-X") 'swrm-commands)
 #+END_SRC
 
 ** comment/uncomment
 Change the functionality of C-c ; to work on regions also. 
 #+BEGIN_SRC emacs-lisp
-(defun my-comment-or-uncomment () (interactive)
+(defun swrm-comment-or-uncomment () (interactive)
        (if (region-active-p)
 	   (call-interactively 'comment-or-uncomment-region)
 	 (comment-or-uncomment-region (point-at-bol) (point-at-eol))))
-(global-set-key (kbd "C-c ;") 'my-comment-or-uncomment)
+(global-set-key (kbd "C-c ;") 'swrm-comment-or-uncomment)
 #+END_SRC
 
 
@@ -286,12 +286,12 @@ I LEARNED WHAT `BACKQUOTE IS.
 #+BEGIN_SRC emacs-lisp
 (global-set-key (kbd "C-c a") 'org-agenda)
 (setq org-agenda-files (concat org-directory ".agenda_files"))
-(fset 'my-agenda-view
+(fset 'swrm-agenda-view
    [?\C-c ?a ?n ?\C-x ?0 ?\C-x ?3 ?\C-x ?o ?\C-x ?b return])
-(global-set-key (kbd "C-c A") 'my-agenda-view)
-(fset 'my-todo-view
+(global-set-key (kbd "C-c A") 'swrm-agenda-view)
+(fset 'swrm-todo-view
    [?\C-c ?a ?T return])
-(global-set-key (kbd "C-c T") 'my-todo-view)
+(global-set-key (kbd "C-c T") 'swrm-todo-view)
 #+END_SRC
 
 *** emphasized text
@@ -435,15 +435,15 @@ https://github.com/bastibe/org-journal/releases
 (require 'epa-file)
 (epa-file-enable)
 (setq org-tag-alist '(("crypt" . ?C)))
-(fset 'my-org-crypt-tag
+(fset 'swrm-org-crypt-tag
    [?\C-c ?\C-q ?C return])
 #+end_src
 
 * scratch buffer
 #+begin_src emacs-lisp
-(fset 'my-scratch-journal
+(fset 'swrm-scratch-journal
    [?\C-w ?\C-c ?j return ?\C-y ?\C-x ?\C-s ?\C-x ?b return])
-(define-key org-mode-map (kbd "C-c s") 'my-scratch-journal)
+(define-key org-mode-map (kbd "C-c s") 'swrm-scratch-journal)
 #+end_src
 * whitespace clean
 #+begin_src emacs-lisp

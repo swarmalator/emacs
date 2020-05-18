@@ -26,6 +26,15 @@ My GNU Emacs startup files
     
 That's it! Running GNU Emacs (GUI) should load these startup files and look pretty. If you want the vanilla emacs experience again, simply remove or rename the `~/.emacs` file.
 
+## Updating
+
+1. Use C-c j to open up your journal
+2. Make sure files are saved with C-x C-s
+3. Open up magit buffer with C-x g
+4. Skip this step if you don't see "unstaged changes" - If there are "unstaged changes", use TAB on each of the changes to view it in case you want to add them again after the update. Make sure the changes are removed by clicking "unstaged changes" and typing "k"
+5. Type "F" and then "u" while in the magit buffer to fetch the latest update
+6. Restart Emacs
+
 ## Some Useful Commands
 
 - *C-x is short for Control + x*

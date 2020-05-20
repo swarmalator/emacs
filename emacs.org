@@ -20,9 +20,9 @@ This is the Emacs startup file.
 
 * appearance
 #+BEGIN_SRC emacs-lisp
-(tool-bar-mode -1)
-(menu-bar-mode -1)
-(scroll-bar-mode -1)
+;(tool-bar-mode -1)
+;(menu-bar-mode -1)
+;(scroll-bar-mode -1)
 (set-face-attribute 'default nil :height 110) ;; 110 = 11pt font
 (add-hook 'dired-mode-hook 'dired-hide-details-mode)
 ; (toggle-frame-fullscreen)

@@ -79,6 +79,7 @@
  '(openwith-mode nil)
  '(org-adapt-indentation nil)
  '(org-agenda-show-future-repeats nil)
+ '(org-agenda-skip-deadline-if-done t)
  '(org-agenda-todo-ignore-scheduled (quote future))
  '(org-archive-mark-done nil)
  '(org-babel-tangle-lang-exts
@@ -131,6 +132,12 @@
  '(org-src-preserve-indentation t)
  '(org-src-tab-acts-natively t)
  '(org-startup-indented t)
+ '(org-tag-alist
+   (quote
+    (("free" . 102)
+     ("home" . 104)
+     ("work" . 119)
+     ("crypt" . 99))))
  '(org-tags-column 0)
  '(org-tags-exclude-from-inheritance (quote ("crypt")))
  '(org-todo-keyword-faces

@@ -93,7 +93,7 @@
  '(org-export-with-priority t)
  '(org-fontify-emphasized-text t)
  '(org-highest-priority 65)
- '(org-journal-enable-agenda-integration t)
+ '(org-journal-enable-agenda-integration nil)
  '(org-journal-file-format "%Y%m%d.org")
  '(org-journal-find-file (quote find-file))
  '(org-journal-hide-entries-p t)

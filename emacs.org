@@ -4,7 +4,8 @@ This is the Emacs startup file.
 
 #+begin_src emacs-lisp
 (setq org-directory (concat (file-name-directory user-init-file) "org/"))
-(setq org-journal-dir (concat org-directory "journal/"))
+;;(setq org-journal-dir (concat org-directory "journal/"))
+(setq org-journal-dir "/ssh:pi@192.168.1.15:/home/pi/Documents/Emacs/org/journal/")
 #+end_src
 
 * required packages
@@ -20,9 +21,9 @@ This is the Emacs startup file.
 
 * appearance
 #+BEGIN_SRC emacs-lisp
-;(tool-bar-mode -1)
-;(menu-bar-mode -1)
-;(scroll-bar-mode -1)
+(tool-bar-mode -1)
+(menu-bar-mode -1)
+(scroll-bar-mode -1)
 (set-face-attribute 'default nil :height 110) ;; 110 = 11pt font
 (add-hook 'dired-mode-hook 'dired-hide-details-mode)
 ; (toggle-frame-fullscreen)
@@ -225,6 +226,12 @@ This is a wrapper function to use with the org-capture template so I can capture
 (setq unread-command-events (listify-key-sequence "\C-cm"))
 #+end_src
 
+** gestures
+#+begin_src emacs-lisp
+(fset 'swrm-restart-gestures
+   [?\M-! ?l ?i ?b ?i ?n ?p ?u ?t ?- ?g ?e ?s ?t ?u ?r ?e ?s ?- ?s ?e ?t ?u ?p ?  ?r ?e ?s ?t ?a ?r ?t return])
+(global-set-key (kbd "C-c g") 'swrm-restart-gestures)
+#+end_src
 * org
 Save a link to the current place in an org file so that it can be used later with C-c C-l
 #+BEGIN_SRC emacs-lisp
@@ -368,6 +375,7 @@ https://github.com/bastibe/org-journal/releases
 (org-mind-map-make-node-fn default "Makes a plain box node without double borders" nil "box")
 
 (setq org-mind-map-node-formats (quote (("default" . org-mind-map-default-node))))
+;;(setq org-mind-map-default-edge-attribs (quote (("dir" . "none"))))
 #+END_SRC
 
 * package archives

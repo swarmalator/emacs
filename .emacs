@@ -47,6 +47,11 @@
  '(hacker-typer-show-hackerman t)
  '(hacker-typer-type-rate 20)
  '(helm-completion-style (quote emacs))
+ '(initial-frame-alist
+   (quote
+    ((vertical-scroll-bars)
+     (width . 150)
+     (height . 40))))
  '(initial-major-mode (quote org-mode))
  '(initial-scratch-message
    "# This buffer is for text that is not saved
